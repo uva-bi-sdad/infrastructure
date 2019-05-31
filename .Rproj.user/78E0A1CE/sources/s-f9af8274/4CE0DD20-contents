@@ -1,0 +1,14 @@
+# base
+df <- data.frame(column_1 = c(1, 2, 3), column_b = c("A", "B", "C"))
+names(df)[names(df) == 'column_b'] <- 'column_2'
+print(df)
+
+# dplyr (need to assign to new data.frame)
+df <- data.frame(column_1 = c(1, 2, 3), column_b = c("A", "B", "C"))
+df <- dplyr::rename(df, "column_2" = column_b)
+print(df)
+
+# data.table
+df <- data.frame(column_1 = c(1, 2, 3), column_b = c("A", "B", "C"))
+data.table::setnames(df, "column_b", "column_2")
+print(df)

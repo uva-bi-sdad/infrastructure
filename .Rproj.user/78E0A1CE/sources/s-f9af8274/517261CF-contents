@@ -1,0 +1,1 @@
+dc[, Sum := rowSums(.SD, na.rm = TRUE), .SDcols = grep("[0-9][0-9][0-9][0-9]", names(dc))]

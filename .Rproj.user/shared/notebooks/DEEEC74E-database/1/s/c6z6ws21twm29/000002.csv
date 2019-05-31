@@ -1,0 +1,34 @@
+"0","```r
+con <- DBI::dbConnect(
+  drv = RPostgreSQL::PostgreSQL() ,
+  dbname = \"lexicon\",
+  host = \"127.0.0.1\",
+  port = \"5433\",
+  user = \"anonymous\",
+  password = \"anonymous\"
+)
+sql <- \"DROP TABLE IF EXISTS metadata_dataset;
+        CREATE TABLE metadata_dataset (
+        dataset_id SERIAL PRIMARY KEY,
+        datasource_id SERIAL REFERENCES metadata_datasource(datasource_id),
+        dataset_name text,
+        display_name character varying(25) NULL,
+        description text NULL,
+        categories character varying(25)[] NULL,
+        subcategories character varying(25)[] NULL,
+        keywords character varying(25)[] NULL,
+        geo_location_name text NULL,
+        geo_resolution char[2] NULL,
+        critical_changes text NULL,
+        updated date[] NULL,
+        updated_by character varying(25)[] NULL
+        );\"
+DBI::dbSendQuery(con, sql)
+```"
+"1","<PostgreSQLResult>
+"
+"0","```r
+DBI::dbDisconnect(con)
+```"
+"1","[1] TRUE
+"

@@ -1,0 +1,15 @@
+version: '3'
+
+networks:
+  default:
+    external:
+      name: root_default
+
+services:
+  selenium_chrome:
+    image: selenium/standalone-chrome
+    container_name: selenium_chrome
+    volumes:
+        - /dev/shm:/dev/shm
+    ports:
+        - "4444:4444"

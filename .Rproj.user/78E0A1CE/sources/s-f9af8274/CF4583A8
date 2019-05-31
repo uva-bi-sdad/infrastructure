@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1559326039402.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2868695104",
+    "id" : "CF4583A8",
+    "lastKnownWriteTime" : 1548802480,
+    "last_content_update" : 1548802480,
+    "path" : "~/git/sdad-servers/check_container.sh",
+    "project_path" : null,
+    "properties" : {
+    },
+    "relative_order" : 14,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "sh"
+}

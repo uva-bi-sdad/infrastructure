@@ -1,0 +1,8 @@
+"0","```r
+df <-
+  dplyr::tbl(con, \"metadata_datasource\") %>% 
+  dplyr::filter(!is.na(datasource_name)) %>% 
+  dplyr::select(datasource_id, datasource_name, datasource_abrv, datasource_last_updated) %>%
+  as.data.frame()
+df
+```"

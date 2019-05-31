@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1559326939688.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "4098805254",
+    "id" : "3959D6",
+    "lastKnownWriteTime" : 1559327012,
+    "last_content_update" : 1559327012914,
+    "path" : "~/git/docker_sdad/startup.sh",
+    "project_path" : "startup.sh",
+    "properties" : {
+        "cursorPosition" : "1,0",
+        "scrollLine" : "0",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 15,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "sh"
+}

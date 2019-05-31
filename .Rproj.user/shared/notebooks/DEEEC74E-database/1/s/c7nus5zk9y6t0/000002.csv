@@ -1,0 +1,4 @@
+"0","```r
+library(dplyr)
+con <- DBI::dbConnect(drv = RPostgreSQL::PostgreSQL() , dbname=\"lexicon\", host = \"127.0.0.1\", port = \"5433\", user = \"aschroed\", password = \"Iwnftp$2\")
+```"

@@ -1,0 +1,16 @@
+version: '3'
+
+networks:
+  default:
+    external:
+      name: root_default
+
+services:
+  adminer:
+    image: adminer
+    container_name: adminer
+    restart: always
+    links:
+      - postgis
+    ports:
+      - 8080:8080

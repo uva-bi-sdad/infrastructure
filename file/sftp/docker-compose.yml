@@ -1,0 +1,19 @@
+version: '3'
+
+networks:
+  default:
+    external:
+      name: root_default
+
+volumes:
+  sftp:
+
+services:
+  sftp:
+    image: atmoz/sftp
+    container_name: sftp
+    volumes:
+        - sftp:/home
+        - ./ftp_users.conf:/etc/sftp/users.conf:ro
+    ports:
+        - "2222:22"

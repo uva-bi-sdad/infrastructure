@@ -1,0 +1,18 @@
+version: '3'
+
+networks:
+  default:
+    external:
+      name: root_default
+
+volumes:
+  shy_apps:
+
+services:
+  shiny:
+    image: rocker/shiny-verse
+    container_name: shiny
+    volumes:
+        - shy_apps:/srv/shiny-server/sdad
+    ports:
+        - "3838:3838"

@@ -1,0 +1,26 @@
+version: '3'
+
+networks:
+  default:
+    external:
+      name: root_default
+
+volumes:
+  pgdata:
+
+services:
+  postgis:
+    image: kartoza/postgis:9.6-2.4
+    image: postgres
+    container_name: postgis
+    restart: always
+    volumes:
+      #- pgdata:/var/lib/postgresql/data
+      - /var/lib/docker/volumes/root_pgdata/_data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: gisuser
+      POSTGRES_DBNAME: gis
+      POSTGRES_PASSWORD: example
+      ALLOW_IP_RANGE: 0.0.0.0/0
+    ports:
+      - 5433:5432

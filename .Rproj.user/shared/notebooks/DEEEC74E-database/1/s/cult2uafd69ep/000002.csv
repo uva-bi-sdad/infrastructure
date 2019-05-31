@@ -1,0 +1,4 @@
+"0","```r
+id <- df$datasource_id[1]
+update <- DBI::dbSendQuery(con, paste(\"update metadata_datasource set datasource_abrv = 'ds1' where datasource_id =\", id))
+```"

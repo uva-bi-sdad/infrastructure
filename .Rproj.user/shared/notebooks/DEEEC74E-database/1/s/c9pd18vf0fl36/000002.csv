@@ -1,0 +1,4 @@
+"0","```r
+tbl(pool, \"metadata_datasource\") %>%
+  select(datasource_id, datasource_name)
+```"

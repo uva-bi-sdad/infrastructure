@@ -1,0 +1,1063 @@
+
+local               docker_sdad_dpl7_sites
+local               docker_sdad_dpl7_themes
+local               docker_sdad_gitlab_config
+local               docker_sdad_gitlab_data
+local               docker_sdad_gitlab_logs
+local               docker_sdad_gitlab_pg_data
+local               docker_sdad_nginx
+local               docker_sdad_nginx-certs
+local               docker_sdad_pg_data
+local               docker_sdad_pgdata
+local               docker_sdad_sftp
+local               docker_sdad_shy_apps
+local               dpl7_modules
+local               dpl7_profiles
+local               dpl7_sites
+local               dpl7_themes
+local               e5cdc24f775e20c7f415db8b7a843da253fba84cc0ecd93f93cebd066da13ed5
+local               e7476cd87509d790f3c15142897e015224096bbcd51a52e66daa158792c95fdf
+local               ecac9ca0055ab6d5477364b884a436e7691810521e2533d343c17989e6dd8cad
+local               ee3f2b26b83951e8740a2c674e246da298e443a64464cc125247e23200845b95
+local               eec5274b1983545fc3dd5ef4ecd209077465992c2d8e89ccd10e80abb931d53f
+local               f34bb4b2fcc663767e522be8695fc0b95b4b3a52c39ed6ab8c2f2f05302b00dd
+local               f64a122a21fb916d33a20e179b86fc8a59267c7ec85c5fb5769a1b2b21b7c7bc
+local               fbdb6c6c28f880553f4b6ddf4fe64d33ee305607f1e9991164497789fa235c7e
+local               nextcloud_db
+local               nextcloud_nextcloud
+local               nginx-certs
+local               nginx_conf
+local               pg_data
+local               pgdata
+local               postgis_pgdata
+local               root_certs
+local               root_checkpoint
+local               root_dpl7_modules
+local               root_dpl7_profiles
+local               root_dpl7_sites
+local               root_dpl7_themes
+local               root_gitlab_config
+local               root_gitlab_data
+local               root_gitlab_logs
+local               root_gitlab_pg_data
+local               root_nginx
+local               root_nginx-certs
+local               root_pg_data
+local               root_pgdata
+local               root_rpkgs
+local               root_sftp
+local               root_shy_apps
+local               sftp_sftp
+local               shinystudio_influxdb_data
+local               shinystudio_pwsh_modules
+local               shinystudio_py_environment
+local               shinystudio_r_libraries
+local               xwiki_xwiki-data
+local               xwiki_xwiki-postgres-data
+]0;/home/aschroed/git/ShinyStudio]0;aschroed@docker-s-12vcpu-48gb-nyc1-01: ~/git/ShinyStudio[01;32maschroed@docker-s-12vcpu-48gb-nyc1-01[00m:[01;34m~/git/ShinyStudio[00m$ [K]0;aschroed@docker-s-12vcpu-48gb-nyc1-01: ~/git/ShinyStudio[01;32maschroed@docker-s-12vcpu-48gb-nyc1-01[00m:[01;34m~/git/ShinyStudio[00m$ [K]0;aschroed@docker-s-12vcpu-48gb-nyc1-01: ~/git/ShinyStudio[01;32maschroed@docker-s-12vcpu-48gb-nyc1-01[00m:[01;34m~/git/ShinyStudio[00m$ docker ps
+CONTAINER ID        IMAGE                               COMMAND                  CREATED             STATUS                  PORTS                                                                                                                                                                                        NAMES
+e1914ee1037a        shinystudio_rstudio_rshiny_vscode   "/start.sh rstudio"      10 minutes ago      Up 10 minutes           3838/tcp, 8787/tcp                                                                                                                                                                           hardcore_raman
+941dfee9750c        shinystudio_shinyproxy              "/opt/shinyproxy/sta…"   11 minutes ago      Up 11 minutes           0.0.0.0:8084->8080/tcp                                                                                                                                                                       shinystudio_shinyproxy_run_1
+6ef61e4f61fb        shinystudio_influxdb                "/entrypoint.sh infl…"   11 minutes ago      Up 11 minutes           0.0.0.0:8886->8086/tcp                                                                                                                                                                       shinystudio_influxdb_1
+ff64ab712f5b        adminer                             "entrypoint.sh docke…"   About an hour ago   Up About an hour        0.0.0.0:8080->8080/tcp                                                                                                                                                                       adminer
+23f85cfc9e57        postgres                            "docker-entrypoint.s…"   3 weeks ago         Up 3 weeks              0.0.0.0:5433->5432/tcp                                                                                                                                                                       postgis
+ffade29e8265        sharelatex/sharelatex               "/sbin/my_init"          5 weeks ago         Up 5 weeks              0.0.0.0:3000->80/tcp                                                                                                                                                                         sharelatex
+a519b3acd388        mongo                               "docker-entrypoint.s…"   5 weeks ago         Up 5 weeks              27017/tcp                                                                                                                                                                                    mongo
+d274a100230f        nextcloud                           "/entrypoint.sh apac…"   5 weeks ago         Up 5 weeks              0.0.0.0:8082->80/tcp                                                                                                                                                                         nextcloud_app_1
+426a43e2fc6a        mariadb                             "docker-entrypoint.s…"   5 weeks ago         Up 5 weeks              3306/tcp                                                                                                                                                                                     nextcloud_db_1
+83bee15da508        atmoz/sftp                          "/entrypoint"            5 weeks ago         Up 5 weeks              0.0.0.0:2222->22/tcp                                                                                                                                                                         sftp
+2661c8ecd4cd        sdad/plumber:0.1                    "R -e 'pr <- plumber…"   7 weeks ago         Up 7 weeks              0.0.0.0:8000->8000/tcp                                                                                                                                                                       api1
+098c6cb5c4fc        rocker/geospatial                   "/init"                  2 months ago        Up 2 months             0.0.0.0:38787->8787/tcp                                                                                                                                                                      rstudio_chend
+e38be69be7c8        rocker/geospatial                   "/init"                  2 months ago        Up 2 months             0.0.0.0:28787->8787/tcp                                                                                                                                                                      rstudio_aschroed
+e68c72c81258        xwiki:postgres-tomcat               "docker-entrypoint.s…"   3 months ago        Up 3 months             0.0.0.0:8081->8080/tcp                                                                                                                                                                       xwiki-postgres-tomcat-web
+80288e447225        postgres:9.5                        "docker-entrypoint.s…"   3 months ago        Up 3 months             5432/tcp                                                                                                                                                                                     xwiki-postgres-db
+c0142bf447d3        plexinc/pms-docker                  "/init"                  3 months ago        Up 3 months (healthy)   0.0.0.0:3005->3005/tcp, 0.0.0.0:8324->8324/tcp, 0.0.0.0:1900->1900/udp, 0.0.0.0:32410->32410/udp, 0.0.0.0:32400->32400/tcp, 0.0.0.0:32412-32414->32412-32414/udp, 0.0.0.0:32469->32469/tcp   plx
+dcca26723b4e        rocker/shiny-verse                  "/usr/bin/shiny-serv…"   4 months ago        Up 3 months             0.0.0.0:3838->3838/tcp                                                                                                                                                                       shiny
+5dadbf5002f5        sdal/dpl7                           "docker-php-entrypoi…"   5 months ago        Up 3 months             0.0.0.0:8383->80/tcp                                                                                                                                                                         drupal7
+7422bd8fbf28        gitlab/gitlab-ce:9.1.0-ce.0         "/assets/wrapper"        6 months ago        Up 3 months (healthy)   80/tcp, 443/tcp, 0.0.0.0:30080->30080/tcp, 0.0.0.0:30022->22/tcp                                                                                                                             gitlab
+c2bc4d51fbd0        postgres:9.6.2-alpine               "docker-entrypoint.s…"   6 months ago        Up 3 months             5432/tcp                                                                                                                                                                                     gitlab_pg
+7ba7a7ae3b76        redis:3.0.7-alpine                  "docker-entrypoint.s…"   6 months ago        Up 3 months             6379/tcp                                                                                                                                                                                     redis
+]0;/home/aschroed/git/ShinyStudio]0;aschroed@docker-s-12vcpu-48gb-nyc1-01: ~/git/ShinyStudio[01;32maschroed@docker-s-12vcpu-48gb-nyc1-01[00m:[01;34m~/git/ShinyStudio[00m$ [K]0;aschroed@docker-s-12vcpu-48gb-nyc1-01: ~/git/ShinyStudio[01;32maschroed@docker-s-12vcpu-48gb-nyc1-01[00m:[01;34m~/git/ShinyStudio[00m$ [K]0;aschroed@docker-s-12vcpu-48gb-nyc1-01: ~/git/ShinyStudio[01;32maschroed@docker-s-12vcpu-48gb-nyc1-01[00m:[01;34m~/git/ShinyStudio[00m$ docker ps
+CONTAINER ID        IMAGE                               COMMAND                  CREATED             STATUS                  PORTS                                                                                                                                                                                        NAMES
+e1914ee1037a        shinystudio_rstudio_rshiny_vscode   "/start.sh rstudio"      11 minutes ago      Up 11 minutes           3838/tcp, 8787/tcp                                                                                                                                                                           hardcore_raman
+941dfee9750c        shinystudio_shinyproxy              "/opt/shinyproxy/sta…"   12 minutes ago      Up 12 minutes           0.0.0.0:8084->8080/tcp                                                                                                                                                                       shinystudio_shinyproxy_run_1
+6ef61e4f61fb        shinystudio_influxdb                "/entrypoint.sh infl…"   12 minutes ago      Up 12 minutes           0.0.0.0:8886->8086/tcp                                                                                                                                                                       shinystudio_influxdb_1
+ff64ab712f5b        adminer                             "entrypoint.sh docke…"   About an hour ago   Up About an hour        0.0.0.0:8080->8080/tcp                                                                                                                                                                       adminer
+23f85cfc9e57        postgres                            "docker-entrypoint.s…"   3 weeks ago         Up 3 weeks              0.0.0.0:5433->5432/tcp                                                                                                                                                                       postgis
+ffade29e8265        sharelatex/sharelatex               "/sbin/my_init"          5 weeks ago         Up 5 weeks              0.0.0.0:3000->80/tcp                                                                                                                                                                         sharelatex
+a519b3acd388        mongo                               "docker-entrypoint.s…"   5 weeks ago         Up 5 weeks              27017/tcp                                                                                                                                                                                    mongo
+d274a100230f        nextcloud                           "/entrypoint.sh apac…"   5 weeks ago         Up 5 weeks              0.0.0.0:8082->80/tcp                                                                                                                                                                         nextcloud_app_1
+426a43e2fc6a        mariadb                             "docker-entrypoint.s…"   5 weeks ago         Up 5 weeks              3306/tcp                                                                                                                                                                                     nextcloud_db_1
+83bee15da508        atmoz/sftp                          "/entrypoint"            5 weeks ago         Up 5 weeks              0.0.0.0:2222->22/tcp                                                                                                                                                                         sftp
+2661c8ecd4cd        sdad/plumber:0.1                    "R -e 'pr <- plumber…"   7 weeks ago         Up 7 weeks              0.0.0.0:8000->8000/tcp                                                                                                                                                                       api1
+098c6cb5c4fc        rocker/geospatial                   "/init"                  2 months ago        Up 2 months             0.0.0.0:38787->8787/tcp                                                                                                                                                                      rstudio_chend
+e38be69be7c8        rocker/geospatial                   "/init"                  2 months ago        Up 2 months             0.0.0.0:28787->8787/tcp                                                                                                                                                                      rstudio_aschroed
+e68c72c81258        xwiki:postgres-tomcat               "docker-entrypoint.s…"   3 months ago        Up 3 months             0.0.0.0:8081->8080/tcp                                                                                                                                                                       xwiki-postgres-tomcat-web
+80288e447225        postgres:9.5                        "docker-entrypoint.s…"   3 months ago        Up 3 months             5432/tcp                                                                                                                                                                                     xwiki-postgres-db
+c0142bf447d3        plexinc/pms-docker                  "/init"                  3 months ago        Up 3 months (healthy)   0.0.0.0:3005->3005/tcp, 0.0.0.0:8324->8324/tcp, 0.0.0.0:1900->1900/udp, 0.0.0.0:32410->32410/udp, 0.0.0.0:32400->32400/tcp, 0.0.0.0:32412-32414->32412-32414/udp, 0.0.0.0:32469->32469/tcp   plx
+dcca26723b4e        rocker/shiny-verse                  "/usr/bin/shiny-serv…"   4 months ago        Up 3 months             0.0.0.0:3838->3838/tcp                                                                                                                                                                       shiny
+5dadbf5002f5        sdal/dpl7                           "docker-php-entrypoi…"   5 months ago        Up 3 months             0.0.0.0:8383->80/tcp                                                                                                                                                                         drupal7
+7422bd8fbf28        gitlab/gitlab-ce:9.1.0-ce.0         "/assets/wrapper"        6 months ago        Up 3 months (healthy)   80/tcp, 443/tcp, 0.0.0.0:30080->30080/tcp, 0.0.0.0:30022->22/tcp                                                                                                                             gitlab
+c2bc4d51fbd0        postgres:9.6.2-alpine               "docker-entrypoint.s…"   6 months ago        Up 3 months             5432/tcp                                                                                                                                                                                     gitlab_pg
+7ba7a7ae3b76        redis:3.0.7-alpine                  "docker-entrypoint.s…"   6 months ago        Up 3 months             6379/tcp                                                                                                                                                                                     redis
+]0;/home/aschroed/git/ShinyStudio]0;aschroed@docker-s-12vcpu-48gb-nyc1-01: ~/git/ShinyStudio[01;32maschroed@docker-s-12vcpu-48gb-nyc1-01[00m:[01;34m~/git/ShinyStudio[00m$ cd [K[K[Kcd ../docker_sdad/
+]0;/home/aschroed/git/docker_sdad]0;aschroed@docker-s-12vcpu-48gb-nyc1-01: ~/git/docker_sdad[01;32maschroed@docker-s-12vcpu-48gb-nyc1-01[00m:[01;34m~/git/docker_sdad[00m$ ls
+[0m[01;34mMyJSSArticle[0m  docker-compose.yml  docker_sdad.Rproj  [01;34mnextcloud[0m  [01;34mpostgis[0m  rmdtest.Rmd  [01;34mrmdtest_files[0m  [01;34mrstudio[0m  [01;34msftp[0m  [01;34msharelatex[0m  [01;34mshiny[0m  testrmd.Rmd  testrmd.log  testrmd.tex  [01;34mxwiki[0m
+]0;/home/aschroed/git/docker_sdad]0;aschroed@docker-s-12vcpu-48gb-nyc1-01: ~/git/docker_sdad[01;32maschroed@docker-s-12vcpu-48gb-nyc1-01[00m:[01;34m~/git/docker_sdad[00m$ docker-compose up -d gitlab_pg
+Creating gitlab_pg ... 
+[1A[2KCreating gitlab_pg ... [32mdone[0m[1B]0;/home/aschroed/git/docker_sdad]0;aschroed@docker-s-12vcpu-48gb-nyc1-01: ~/git/docker_sdad[01;32maschroed@docker-s-12vcpu-48gb-nyc1-01[00m:[01;34m~/git/docker_sdad[00m$ docker ps
+CONTAINER ID        IMAGE                         COMMAND                  CREATED             STATUS                  PORTS                                                                                                                                                                                        NAMES
+143209e906ff        postgres:9.6.2-alpine         "docker-entrypoint.s…"   5 seconds ago       Up 4 seconds            5432/tcp                                                                                                                                                                                     gitlab_pg
+941dfee9750c        shinystudio_shinyproxy        "/opt/shinyproxy/sta…"   16 minutes ago      Up 16 minutes           0.0.0.0:8084->8080/tcp                                                                                                                                                                       shinystudio_shinyproxy_run_1
+6ef61e4f61fb        shinystudio_influxdb          "/entrypoint.sh infl…"   16 minutes ago      Up 16 minutes           0.0.0.0:8886->8086/tcp                                                                                                                                                                       shinystudio_influxdb_1
+ff64ab712f5b        adminer                       "entrypoint.sh docke…"   2 hours ago         Up 2 hours              0.0.0.0:8080->8080/tcp                                                                                                                                                                       adminer
+23f85cfc9e57        postgres                      "docker-entrypoint.s…"   3 weeks ago         Up 3 weeks              0.0.0.0:5433->5432/tcp                                                                                                                                                                       postgis
+ffade29e8265        sharelatex/sharelatex         "/sbin/my_init"          5 weeks ago         Up 5 weeks              0.0.0.0:3000->80/tcp                                                                                                                                                                         sharelatex
+a519b3acd388        mongo                         "docker-entrypoint.s…"   5 weeks ago         Up 5 weeks              27017/tcp                                                                                                                                                                                    mongo
+d274a100230f        nextcloud                     "/entrypoint.sh apac…"   5 weeks ago         Up 5 weeks              0.0.0.0:8082->80/tcp                                                                                                                                                                         nextcloud_app_1
+426a43e2fc6a        mariadb                       "docker-entrypoint.s…"   5 weeks ago         Up 5 weeks              3306/tcp                                                                                                                                                                                     nextcloud_db_1
+83bee15da508        atmoz/sftp                    "/entrypoint"            5 weeks ago         Up 5 weeks              0.0.0.0:2222->22/tcp                                                                                                                                                                         sftp
+2661c8ecd4cd        sdad/plumber:0.1              "R -e 'pr <- plumber…"   7 weeks ago         Up 7 weeks              0.0.0.0:8000->8000/tcp                                                                                                                                                                       api1
+098c6cb5c4fc        rocker/geospatial             "/init"                  2 months ago        Up 2 months             0.0.0.0:38787->8787/tcp                                                                                                                                                                      rstudio_chend
+e38be69be7c8        rocker/geospatial             "/init"                  2 months ago        Up 2 months             0.0.0.0:28787->8787/tcp                                                                                                                                                                      rstudio_aschroed
+e68c72c81258        xwiki:postgres-tomcat         "docker-entrypoint.s…"   3 months ago        Up 3 months             0.0.0.0:8081->8080/tcp                                                                                                                                                                       xwiki-postgres-tomcat-web
+80288e447225        postgres:9.5                  "docker-entrypoint.s…"   3 months ago        Up 3 months             5432/tcp                                                                                                                                                                                     xwiki-postgres-db
+c0142bf447d3        plexinc/pms-docker            "/init"                  3 months ago        Up 3 months (healthy)   0.0.0.0:3005->3005/tcp, 0.0.0.0:8324->8324/tcp, 0.0.0.0:1900->1900/udp, 0.0.0.0:32410->32410/udp, 0.0.0.0:32400->32400/tcp, 0.0.0.0:32412-32414->32412-32414/udp, 0.0.0.0:32469->32469/tcp   plx
+dcca26723b4e        rocker/shiny-verse            "/usr/bin/shiny-serv…"   4 months ago        Up 3 months             0.0.0.0:3838->3838/tcp                                                                                                                                                                       shiny
+5dadbf5002f5        sdal/dpl7                     "docker-php-entrypoi…"   5 months ago        Up 3 months             0.0.0.0:8383->80/tcp                                                                                                                                                                         drupal7
+7422bd8fbf28        gitlab/gitlab-ce:9.1.0-ce.0   "/assets/wrapper"        6 months ago        Up 3 months (healthy)   80/tcp, 443/tcp, 0.0.0.0:30080->30080/tcp, 0.0.0.0:30022->22/tcp                                                                                                                             gitlab
+7ba7a7ae3b76        redis:3.0.7-alpine            "docker-entrypoint.s…"   6 months ago        Up 3 months             6379/tcp                                                                                                                                                                                     redis
+]0;/home/aschroed/git/docker_sdad]0;aschroed@docker-s-12vcpu-48gb-nyc1-01: ~/git/docker_sdad[01;32maschroed@docker-s-12vcpu-48gb-nyc1-01[00m:[01;34m~/git/docker_sdad[00m$ dok[Kcker volume ls
+DRIVER              VOLUME NAME
+local               0b52fac1623e6e8f935960122d8618c0fd062ad42251004d304c276bebd007bf
+local               0c202ae0dd1d47eb172e436da0f5c5714da84aab84de6dfd560b7b38c28ff8a2
+local               0edbd425b696e4560f1113646e075eb331df72a5e5b8f814f9c3b7a7906667cf
+local               1ad749ce4d2d659aee5bba1558045ead7264fd20301ac031edee560d577cd2ac
+local               1b61f1fd6b47ba6517cfe64e75bc52506ef78e609cd3531f2cfe156964e76d03
+local               1c396b67a2e0a7bb6eb58e5d41613e8a796156f0fef009f03c4c68802b3973f0
+local               2dc6c13084c51c187f0f786605f515f4d893c6da226672c188a3e15c0e57f4ec
+local               2f075434860b938fc6a0930185b9cee67a799eaf68a23995c2ba7b68704b7674
+local               3b46ddaee2a23f4872f10cd7856be25a95f627d6069933889c4f66f2e929fb11
+local               3bce2bdc240405fe0b307d0ae88e84bd1d25034aee14adb24f292f15741d93cd
+local               3c920088b823d5c2614d12b6473f861917969c92cd1b3c10968a3d9cf4c04921
+local               3dfed08eee2ecc70cc108f77d25308dc4b4ba80c2f5f71a2e08585cf8a33f992
+local               5f309828d7d4e0185e329e03df3396846ea3c371b1f5b41b1edb2d3d5ec18ae9
+local               6d150029659c71ad40b8d4b81f5c367cade154c98286927bb481df754dc91060
+local               6f1310412d29c990bd7d7a4652a0a7da9e2da34b88db8fc871ec19489a09ed5a
+local               7fb26885db0da2705048ea53c0d0a7216188b072d05b87111a9e374a9d814e24
+local               07f9760042a821ad4ff8c89595a7a5b8e48029503730f7e5b629dba29a3323eb
+local               8a91e7d1d0c68be923605d9ae863b39a53eb6a7e933be6f4eb7d4a084c4fb16a
+local               9d78cfe40c09065b664c87f071ecf01d46c13a305ec94cd8b751a99b8e34edf0
+local               11d0af4a198873744fdb8370cf367fb406fe5b5bdc25fb467b4a16c2544709b2
+local               18a8b52e6de404369efe52e4e58c3562931338627538dcdb96b7a14c2ab01f62
+local               30c9d2011441ebceafaec90e93fc578e0fd53bba5df4a88f1107f006d2afa6d7
+local               031cee2ba33831b884483c8794db86ad5504d7d20ba99dbfe77d6040fd6dec65
+local               37f66d8e5044aa3f1d072b6943001ff4501f51a6831281b747df366cb2f4ef1c
+local               045e220698cd2880e326a165cc26e4c629ccbfb0b1c66fa0f74e262c0f361bd1
+local               074a5a391a9629cc8ce2568e4ef920762cbb979599dd3cf806ed0c85cdbb6450
+local               98d2753ca665ea68e24c174f73a184d4881a79e374e2b04a1119ee90acbed1cf
+local               218a85f9a7438cd03e463ba2e765c81d7dc98eb8ed9176b0cb1bdb208f0c0936
+local               257d92cbe8bc156b0f2949b372c57e5646b27e72d3b0c1643e10e34adf0e1e37
+local               680d0c7af6135cb62e80f8fe1c7533b28ed410e29a2e9070879ec4c76a564877
+local               824fb1a24ea36415534bf6507a95cba9598be10f74a2d8c33b7e3e6d8f0f798e
+local               923a792cf571ec56976aaa2fc9183eed49e1678c1d74f2fa80f92f3d147bc77f
+local               1893e4be59203df9edaaf0f13da106663c8d083b7c4e5e8fd6945d48bf787cbc
+local               4151e44756ec39629cd2d67e231620ed1ece83611771dcc0b8fd7ab2ed1b4351
+local               4517befd2e9c14eef20449e7b99d0f463c7078c0dc6befc58423f2b3c96aff4b
+local               08023c0a888b98328d162ef9c26c6aa43dcb627d6705804dd4371ce526186696
+local               13371d62a043762c5b4f7e7972fa9a451c91b764ef4ffd2b4bceb78a69bc023f
+local               32340a4b9eeeabd3a17c3355fe39c723bc63158ce43a43c173b654d5ab2d2a96
+local               67261a0ccbbf8dda567f32bfe43d9cc2ac5236d221290a9e30318b47491ad8d7
+local               85635e18ec6f03cf7e8d15a8be75e195e88d7e85f839ab8ee9561a731be706cf
+local               90759d7f417580e8924cadd3af4fb3de107595fea276b6c03f874a32e9f661d6
+local               6973474a8e7c32f2d855c06e4e5adc1035cf31467ce35fe3e83d7324b5f2b462
+local               25234808ab5c47085b348f031fa7fedc62aaa8de60a70fbf13b2f453966d04cd
+local               89839123f8bb7d2072068a6df9b86963222fee28798144740dc0b13a21ef12c3
+local               a1f051cea60c72f9055691a19ded66e2e26a5c4c3c9e7dcaf58434979d46bfdb
+local               a2fd862e4ae055479de7bfec6de367a9f49110e6e3ce3bf55776ed4cbcbe6c56
+local               a4c360b70aabc9cb90562335bf624f8eb542f6c992355db0f04252689153c3ec
+local               a2619a78c690a83c61ef3d24225724e5a0c1e0f12a55f339b8e3a13f371473b8
+local               b1b06d5f169fb54b2b007174bf243df60ae0bee7bfe9bf793ebad87809ea8913
+local               b1f2a9608a47b8a26049e4bccf895d21edddaa409b6dc71a8dbe8ee308947949
+local               b4a66da2bb887909cb4b8b5baeab4ae3dff399877ecbc75cee9c9581ca5e9ca2
+local               b5aabbdf5f710ffaf63119306f954a234012df245770c236612f2fc1dd24af76
+local               b4311da73f922027f464fb5980eb9dfac05bdf1c269f8048850b018402f83cd6
+local               b8156bd3fae2612f5cecabd54e23623567ff874373e350753842ade24b51cd18
+local               bad9d9c6de1fc196fc9fb5d043e6252f5ca1d39cfed8c9e95e112caa0079bae9
+local               bcc54f049d1a651b21450222864c7631fa85bae1400f1eaabb2a44b276f5b6ad
+local               c90ba38aa72cf752eaf303aa8ec408525703152276cfa876f7052540aa4bddbf
+local               c633f15f9c1c87af588b9cbc50161759d3a1251923299f324f93b2a119f42b20
+local               c787e1e11c4ffa4bfce1ea92fda1fcd3ae0f8f48a27f4e087823b793096e9d89
+local               ca81323a9cdb912098171b21fd66a724b50f1ef417f072e40ec8321607db969f
+local               cd6481c10a5ca0fe35609210c28e84dcf35c5ea4220b0ca3b7926295e24ccc44
+local               d3b30931cf82d4a6b19439cb20d869c14ee82e1b97493a760b76449c149bb042
+local               d80b4168de43f4fad0a748859c92563017c5d24f673049702d5f96c5dd394441
+local               d5888e5a31fc3fae2172bd76640bd1f8ae1a99037041d30d07eb59ccc065a32a
+local               da64c58c1572712d85a64735b5d1c44f27e028b621b61d282648d0913772b2cd
+local               docker_sdad_dpl7_modules
+local               docker_sdad_dpl7_profiles
+local               docker_sdad_dpl7_sites
+local               docker_sdad_dpl7_themes
+local               docker_sdad_gitlab_config
+local               docker_sdad_gitlab_data
+local               docker_sdad_gitlab_logs
+local               docker_sdad_gitlab_pg_data
+local               docker_sdad_nginx
+local               docker_sdad_nginx-certs
+local               docker_sdad_pg_data
+local               docker_sdad_pgdata
+local               docker_sdad_sftp
+local               docker_sdad_shy_apps
+local               dpl7_modules
+local               dpl7_profiles
+local               dpl7_sites
+local               dpl7_themes
+local               e5cdc24f775e20c7f415db8b7a843da253fba84cc0ecd93f93cebd066da13ed5
+local               e7476cd87509d790f3c15142897e015224096bbcd51a52e66daa158792c95fdf
+local               ecac9ca0055ab6d5477364b884a436e7691810521e2533d343c17989e6dd8cad
+local               ee3f2b26b83951e8740a2c674e246da298e443a64464cc125247e23200845b95
+local               eec5274b1983545fc3dd5ef4ecd209077465992c2d8e89ccd10e80abb931d53f
+local               f34bb4b2fcc663767e522be8695fc0b95b4b3a52c39ed6ab8c2f2f05302b00dd
+local               f64a122a21fb916d33a20e179b86fc8a59267c7ec85c5fb5769a1b2b21b7c7bc
+local               fbdb6c6c28f880553f4b6ddf4fe64d33ee305607f1e9991164497789fa235c7e
+local               nextcloud_db
+local               nextcloud_nextcloud
+local               nginx-certs
+local               nginx_conf
+local               pg_data
+local               pgdata
+local               postgis_pgdata
+local               root_certs
+local               root_checkpoint
+local               root_dpl7_modules
+local               root_dpl7_profiles
+local               root_dpl7_sites
+local               root_dpl7_themes
+local               root_gitlab_config
+local               root_gitlab_data
+local               root_gitlab_logs
+local               root_gitlab_pg_data
+local               root_nginx
+local               root_nginx-certs
+local               root_pg_data
+local               root_pgdata
+local               root_rpkgs
+local               root_sftp
+local               root_shy_apps
+local               sftp_sftp
+local               shinystudio_influxdb_data
+local               shinystudio_pwsh_modules
+local               shinystudio_py_environment
+local               shinystudio_r_libraries
+local               xwiki_xwiki-data
+local               xwiki_xwiki-postgres-data
+]0;/home/aschroed/git/docker_sdad]0;aschroed@docker-s-12vcpu-48gb-nyc1-01: ~/git/docker_sdad[01;32maschroed@docker-s-12vcpu-48gb-nyc1-01[00m:[01;34m~/git/docker_sdad[00m$ [K]0;aschroed@docker-s-12vcpu-48gb-nyc1-01: ~/git/docker_sdad[01;32maschroed@docker-s-12vcpu-48gb-nyc1-01[00m:[01;34m~/git/docker_sdad[00m$ [K]0;aschroed@docker-s-12vcpu-48gb-nyc1-01: ~/git/docker_sdad[01;32maschroed@docker-s-12vcpu-48gb-nyc1-01[00m:[01;34m~/git/docker_sdad[00m$ docek[K[Kker rm -f gitlab
+gitlab
+]0;/home/aschroed/git/docker_sdad]0;aschroed@docker-s-12vcpu-48gb-nyc1-01: ~/git/docker_sdad[01;32maschroed@docker-s-12vcpu-48gb-nyc1-01[00m:[01;34m~/git/docker_sdad[00m$ docker rm -f gitlab[K[K[K[K[K[Kgitlab_pg
+gitlab_pg
+]0;/home/aschroed/git/docker_sdad]0;aschroed@docker-s-12vcpu-48gb-nyc1-01: ~/git/docker_sdad[01;32maschroed@docker-s-12vcpu-48gb-nyc1-01[00m:[01;34m~/git/docker_sdad[00m$ docker rm -f gitlab_pg[K[3Pvolume lsps[K-compose up -d gitlab_pg[K[K[K
+Creating gitlab_pg ... 
+Creating redis     ... 
+[1A[2KCreating redis     ... [31merror[0m[1B
+ERROR: for redis  Cannot create container for service redis: Conflict. The container name "/redis" is already in use by container "7ba7a7ae3b762fc8266a53456d4fbb228e05ce85475fe21d34c5dc2c93c9fbca". You have to remove (or rename) that container to be able to reuse that name.
+[2A[2KCreating gitlab_pg ... [32mdone[0m[2B
+ERROR: for redis  Cannot create container for service redis: Conflict. The container name "/redis" is already in use by container "7ba7a7ae3b762fc8266a53456d4fbb228e05ce85475fe21d34c5dc2c93c9fbca". You have to remove (or rename) that container to be able to reuse that name.
+[31mERROR[0m: Encountered errors while bringing up the project.
+]0;/home/aschroed/git/docker_sdad]0;aschroed@docker-s-12vcpu-48gb-nyc1-01: ~/git/docker_sdad[01;32maschroed@docker-s-12vcpu-48gb-nyc1-01[00m:[01;34m~/git/docker_sdad[00m$ docker ps
+CONTAINER ID        IMAGE                    COMMAND                  CREATED             STATUS                  PORTS                                                                                                                                                                                        NAMES
+4aa87e658330        postgres:9.6.2-alpine    "docker-entrypoint.s…"   16 seconds ago      Up 7 seconds            5432/tcp                                                                                                                                                                                     gitlab_pg
+941dfee9750c        shinystudio_shinyproxy   "/opt/shinyproxy/sta…"   19 minutes ago      Up 19 minutes           0.0.0.0:8084->8080/tcp                                                                                                                                                                       shinystudio_shinyproxy_run_1
+6ef61e4f61fb        shinystudio_influxdb     "/entrypoint.sh infl…"   19 minutes ago      Up 19 minutes           0.0.0.0:8886->8086/tcp                                                                                                                                                                       shinystudio_influxdb_1
+ff64ab712f5b        adminer                  "entrypoint.sh docke…"   2 hours ago         Up 2 hours              0.0.0.0:8080->8080/tcp                                                                                                                                                                       adminer
+23f85cfc9e57        postgres                 "docker-entrypoint.s…"   3 weeks ago         Up 3 weeks              0.0.0.0:5433->5432/tcp                                                                                                                                                                       postgis
+ffade29e8265        sharelatex/sharelatex    "/sbin/my_init"          5 weeks ago         Up 5 weeks              0.0.0.0:3000->80/tcp                                                                                                                                                                         sharelatex
+a519b3acd388        mongo                    "docker-entrypoint.s…"   5 weeks ago         Up 5 weeks              27017/tcp                                                                                                                                                                                    mongo
+d274a100230f        nextcloud                "/entrypoint.sh apac…"   5 weeks ago         Up 5 weeks              0.0.0.0:8082->80/tcp                                                                                                                                                                         nextcloud_app_1
+426a43e2fc6a        mariadb                  "docker-entrypoint.s…"   5 weeks ago         Up 5 weeks              3306/tcp                                                                                                                                                                                     nextcloud_db_1
+83bee15da508        atmoz/sftp               "/entrypoint"            5 weeks ago         Up 5 weeks              0.0.0.0:2222->22/tcp                                                                                                                                                                         sftp
+2661c8ecd4cd        sdad/plumber:0.1         "R -e 'pr <- plumber…"   7 weeks ago         Up 7 weeks              0.0.0.0:8000->8000/tcp                                                                                                                                                                       api1
+098c6cb5c4fc        rocker/geospatial        "/init"                  2 months ago        Up 2 months             0.0.0.0:38787->8787/tcp                                                                                                                                                                      rstudio_chend
+e38be69be7c8        rocker/geospatial        "/init"                  2 months ago        Up 2 months             0.0.0.0:28787->8787/tcp                                                                                                                                                                      rstudio_aschroed
+e68c72c81258        xwiki:postgres-tomcat    "docker-entrypoint.s…"   3 months ago        Up 3 months             0.0.0.0:8081->8080/tcp                                                                                                                                                                       xwiki-postgres-tomcat-web
+80288e447225        postgres:9.5             "docker-entrypoint.s…"   3 months ago        Up 3 months             5432/tcp                                                                                                                                                                                     xwiki-postgres-db
+c0142bf447d3        plexinc/pms-docker       "/init"                  3 months ago        Up 3 months (healthy)   0.0.0.0:3005->3005/tcp, 0.0.0.0:8324->8324/tcp, 0.0.0.0:1900->1900/udp, 0.0.0.0:32410->32410/udp, 0.0.0.0:32400->32400/tcp, 0.0.0.0:32412-32414->32412-32414/udp, 0.0.0.0:32469->32469/tcp   plx
+dcca26723b4e        rocker/shiny-verse       "/usr/bin/shiny-serv…"   4 months ago        Up 3 months             0.0.0.0:3838->3838/tcp                                                                                                                                                                       shiny
+5dadbf5002f5        sdal/dpl7                "docker-php-entrypoi…"   5 months ago        Up 3 months             0.0.0.0:8383->80/tcp                                                                                                                                                                         drupal7
+7ba7a7ae3b76        redis:3.0.7-alpine       "docker-entrypoint.s…"   6 months ago        Up 3 months             6379/tcp                                                                                                                                                                                     redis
+]0;/home/aschroed/git/docker_sdad]0;aschroed@docker-s-12vcpu-48gb-nyc1-01: ~/git/docker_sdad[01;32maschroed@docker-s-12vcpu-48gb-nyc1-01[00m:[01;34m~/git/docker_sdad[00m$ docker ps-compose up -d gitlab[5P rm -f gitlab_pg[K[K[K[K[K[K[K[K[Kredis
+redis
+]0;/home/aschroed/git/docker_sdad]0;aschroed@docker-s-12vcpu-48gb-nyc1-01: ~/git/docker_sdad[01;32maschroed@docker-s-12vcpu-48gb-nyc1-01[00m:[01;34m~/git/docker_sdad[00m$ docker rm -f redisps[K-compose up -d gitlab
+gitlab_pg is up-to-date
+Creating redis ... 
+[1A[2KCreating redis ... [32mdone[0m[1BCreating gitlab ... 
+[1A[2KCreating gitlab ... [32mdone[0m[1B]0;/home/aschroed/git/docker_sdad]0;aschroed@docker-s-12vcpu-48gb-nyc1-01: ~/git/docker_sdad[01;32maschroed@docker-s-12vcpu-48gb-nyc1-01[00m:[01;34m~/git/docker_sdad[00m$ docker ps
+CONTAINER ID        IMAGE                         COMMAND                  CREATED             STATUS                            PORTS                                                                                                                                                                                        NAMES
+caa435f3a22b        gitlab/gitlab-ce:9.1.0-ce.0   "/assets/wrapper"        5 seconds ago       Up 4 seconds (health: starting)   80/tcp, 443/tcp, 0.0.0.0:30080->30080/tcp, 0.0.0.0:30022->22/tcp                                                                                                                             gitlab
+d6013ffffc13        redis:3.0.7-alpine            "docker-entrypoint.s…"   7 seconds ago       Up 5 seconds                      6379/tcp                                                                                                                                                                                     redis
+4aa87e658330        postgres:9.6.2-alpine         "docker-entrypoint.s…"   46 seconds ago      Up 37 seconds                     5432/tcp                                                                                                                                                                                     gitlab_pg
+941dfee9750c        shinystudio_shinyproxy        "/opt/shinyproxy/sta…"   19 minutes ago      Up 19 minutes                     0.0.0.0:8084->8080/tcp                                                                                                                                                                       shinystudio_shinyproxy_run_1
+6ef61e4f61fb        shinystudio_influxdb          "/entrypoint.sh infl…"   19 minutes ago      Up 19 minutes                     0.0.0.0:8886->8086/tcp                                                                                                                                                                       shinystudio_influxdb_1
+ff64ab712f5b        adminer                       "entrypoint.sh docke…"   2 hours ago         Up 2 hours                        0.0.0.0:8080->8080/tcp                                                                                                                                                                       adminer
+23f85cfc9e57        postgres                      "docker-entrypoint.s…"   3 weeks ago         Up 3 weeks                        0.0.0.0:5433->5432/tcp                                                                                                                                                                       postgis
+ffade29e8265        sharelatex/sharelatex         "/sbin/my_init"          5 weeks ago         Up 5 weeks                        0.0.0.0:3000->80/tcp                                                                                                                                                                         sharelatex
+a519b3acd388        mongo                         "docker-entrypoint.s…"   5 weeks ago         Up 5 weeks                        27017/tcp                                                                                                                                                                                    mongo
+d274a100230f        nextcloud                     "/entrypoint.sh apac…"   5 weeks ago         Up 5 weeks                        0.0.0.0:8082->80/tcp                                                                                                                                                                         nextcloud_app_1
+426a43e2fc6a        mariadb                       "docker-entrypoint.s…"   5 weeks ago         Up 5 weeks                        3306/tcp                                                                                                                                                                                     nextcloud_db_1
+83bee15da508        atmoz/sftp                    "/entrypoint"            5 weeks ago         Up 5 weeks                        0.0.0.0:2222->22/tcp                                                                                                                                                                         sftp
+2661c8ecd4cd        sdad/plumber:0.1              "R -e 'pr <- plumber…"   7 weeks ago         Up 7 weeks                        0.0.0.0:8000->8000/tcp                                                                                                                                                                       api1
+098c6cb5c4fc        rocker/geospatial             "/init"                  2 months ago        Up 2 months                       0.0.0.0:38787->8787/tcp                                                                                                                                                                      rstudio_chend
+e38be69be7c8        rocker/geospatial             "/init"                  2 months ago        Up 2 months                       0.0.0.0:28787->8787/tcp                                                                                                                                                                      rstudio_aschroed
+e68c72c81258        xwiki:postgres-tomcat         "docker-entrypoint.s…"   3 months ago        Up 3 months                       0.0.0.0:8081->8080/tcp                                                                                                                                                                       xwiki-postgres-tomcat-web
+80288e447225        postgres:9.5                  "docker-entrypoint.s…"   3 months ago        Up 3 months                       5432/tcp                                                                                                                                                                                     xwiki-postgres-db
+c0142bf447d3        plexinc/pms-docker            "/init"                  3 months ago        Up 3 months (healthy)             0.0.0.0:3005->3005/tcp, 0.0.0.0:8324->8324/tcp, 0.0.0.0:1900->1900/udp, 0.0.0.0:32410->32410/udp, 0.0.0.0:32400->32400/tcp, 0.0.0.0:32412-32414->32412-32414/udp, 0.0.0.0:32469->32469/tcp   plx
+dcca26723b4e        rocker/shiny-verse            "/usr/bin/shiny-serv…"   4 months ago        Up 3 months                       0.0.0.0:3838->3838/tcp                                                                                                                                                                       shiny
+5dadbf5002f5        sdal/dpl7                     "docker-php-entrypoi…"   5 months ago        Up 3 months                       0.0.0.0:8383->80/tcp                                                                                                                                                                         drupal7
+]0;/home/aschroed/git/docker_sdad]0;aschroed@docker-s-12vcpu-48gb-nyc1-01: ~/git/docker_sdad[01;32maschroed@docker-s-12vcpu-48gb-nyc1-01[00m:[01;34m~/git/docker_sdad[00m$ docker ps-compose up -d gitlab[9P rm -f redis
+^C
+]0;/home/aschroed/git/docker_sdad]0;aschroed@docker-s-12vcpu-48gb-nyc1-01: ~/git/docker_sdad[01;32maschroed@docker-s-12vcpu-48gb-nyc1-01[00m:[01;34m~/git/docker_sdad[00m$ docker rm -f redisps[K-compose up -d gitlab[9P rm -f redisps[K-compose up -d gitlab[5P rm -f gitlab_pg[K[K[K
+gitlab
+]0;/home/aschroed/git/docker_sdad]0;aschroed@docker-s-12vcpu-48gb-nyc1-01: ~/git/docker_sdad[01;32maschroed@docker-s-12vcpu-48gb-nyc1-01[00m:[01;34m~/git/docker_sdad[00m$ docker rm -f gitlab_pg
+gitlab_pg
+]0;/home/aschroed/git/docker_sdad]0;aschroed@docker-s-12vcpu-48gb-nyc1-01: ~/git/docker_sdad[01;32maschroed@docker-s-12vcpu-48gb-nyc1-01[00m:[01;34m~/git/docker_sdad[00m$ docker rm -f gitlab_pg[K[K[K[K[K[K[K[K[Kredis
+Error: No such container: redis
+]0;/home/aschroed/git/docker_sdad]0;aschroed@docker-s-12vcpu-48gb-nyc1-01: ~/git/docker_sdad[01;32maschroed@docker-s-12vcpu-48gb-nyc1-01[00m:[01;34m~/git/docker_sdad[00m$ docker rm -f redisgitlab_pg[K[1Predisps[K-compose up -d gitlab[K]0;aschroed@docker-s-12vcpu-48gb-nyc1-01: ~/git/docker_sdad[01;32maschroed@docker-s-12vcpu-48gb-nyc1-01[00m:[01;34m~/git/docker_sdad[00m$ docker-compose up -d gitlab[K[K[K[K[K[K[K[Kd gitlab
+Creating gitlab_pg ... 
+Creating redis     ... 
+[2A[2KCreating gitlab_pg ... [32mdone[0m[2B[1A[2KCreating redis     ... [32mdone[0m[1BCreating gitlab    ... 
+[1A[2KCreating gitlab    ... [32mdone[0m[1B]0;/home/aschroed/git/docker_sdad]0;aschroed@docker-s-12vcpu-48gb-nyc1-01: ~/git/docker_sdad[01;32maschroed@docker-s-12vcpu-48gb-nyc1-01[00m:[01;34m~/git/docker_sdad[00m$ docker rm -f gitlab
+gitlab
+]0;/home/aschroed/git/docker_sdad]0;aschroed@docker-s-12vcpu-48gb-nyc1-01: ~/git/docker_sdad[01;32maschroed@docker-s-12vcpu-48gb-nyc1-01[00m:[01;34m~/git/docker_sdad[00m$ docker rm -f gitlab[8@-compose up -d[C[C[C[C[C[C[C[9P rm -f redis-compose up -d gitlab
+redis is up-to-date
+gitlab_pg is up-to-date
+Creating gitlab ... 
+[1A[2KCreating gitlab ... [32mdone[0m[1B]0;/home/aschroed/git/docker_sdad]0;aschroed@docker-s-12vcpu-48gb-nyc1-01: ~/git/docker_sdad[01;32maschroed@docker-s-12vcpu-48gb-nyc1-01[00m:[01;34m~/git/docker_sdad[00m$ [K]0;aschroed@docker-s-12vcpu-48gb-nyc1-01: ~/git/docker_sdad[01;32maschroed@docker-s-12vcpu-48gb-nyc1-01[00m:[01;34m~/git/docker_sdad[00m$ docker ps
+CONTAINER ID        IMAGE                         COMMAND                  CREATED             STATUS                            PORTS                                                                                                                                                                                        NAMES
+3e23d8021edd        gitlab/gitlab-ce:9.1.0-ce.0   "/assets/wrapper"        10 seconds ago      Up 9 seconds (health: starting)   80/tcp, 443/tcp, 0.0.0.0:30080->30080/tcp, 0.0.0.0:30022->22/tcp                                                                                                                             gitlab
+1660d19e4ff2        redis:3.0.7-alpine            "docker-entrypoint.s…"   5 minutes ago       Up 5 minutes                      6379/tcp                                                                                                                                                                                     redis
+ada74b641441        postgres:9.6.2-alpine         "docker-entrypoint.s…"   5 minutes ago       Up 5 minutes                      5432/tcp                                                                                                                                                                                     gitlab_pg
+ff64ab712f5b        adminer                       "entrypoint.sh docke…"   2 hours ago         Up 2 hours                        0.0.0.0:8080->8080/tcp                                                                                                                                                                       adminer
+23f85cfc9e57        postgres                      "docker-entrypoint.s…"   3 weeks ago         Up 3 weeks                        0.0.0.0:5433->5432/tcp                                                                                                                                                                       postgis
+ffade29e8265        sharelatex/sharelatex         "/sbin/my_init"          5 weeks ago         Up 5 weeks                        0.0.0.0:3000->80/tcp                                                                                                                                                                         sharelatex
+a519b3acd388        mongo                         "docker-entrypoint.s…"   5 weeks ago         Up 5 weeks                        27017/tcp                                                                                                                                                                                    mongo
+d274a100230f        nextcloud                     "/entrypoint.sh apac…"   5 weeks ago         Up 5 weeks                        0.0.0.0:8082->80/tcp                                                                                                                                                                         nextcloud_app_1
+426a43e2fc6a        mariadb                       "docker-entrypoint.s…"   5 weeks ago         Up 5 weeks                        3306/tcp                                                                                                                                                                                     nextcloud_db_1
+83bee15da508        atmoz/sftp                    "/entrypoint"            5 weeks ago         Up 5 weeks                        0.0.0.0:2222->22/tcp                                                                                                                                                                         sftp
+2661c8ecd4cd        sdad/plumber:0.1              "R -e 'pr <- plumber…"   7 weeks ago         Up 7 weeks                        0.0.0.0:8000->8000/tcp                                                                                                                                                                       api1
+098c6cb5c4fc        rocker/geospatial             "/init"                  2 months ago        Up 2 months                       0.0.0.0:38787->8787/tcp                                                                                                                                                                      rstudio_chend
+e38be69be7c8        rocker/geospatial             "/init"                  2 months ago        Up 2 months                       0.0.0.0:28787->8787/tcp                                                                                                                                                                      rstudio_aschroed
+e68c72c81258        xwiki:postgres-tomcat         "docker-entrypoint.s…"   3 months ago        Up 3 months                       0.0.0.0:8081->8080/tcp                                                                                                                                                                       xwiki-postgres-tomcat-web
+80288e447225        postgres:9.5                  "docker-entrypoint.s…"   3 months ago        Up 3 months                       5432/tcp                                                                                                                                                                                     xwiki-postgres-db
+c0142bf447d3        plexinc/pms-docker            "/init"                  3 months ago        Up 3 months (healthy)             0.0.0.0:3005->3005/tcp, 0.0.0.0:8324->8324/tcp, 0.0.0.0:1900->1900/udp, 0.0.0.0:32410->32410/udp, 0.0.0.0:32400->32400/tcp, 0.0.0.0:32412-32414->32412-32414/udp, 0.0.0.0:32469->32469/tcp   plx
+dcca26723b4e        rocker/shiny-verse            "/usr/bin/shiny-serv…"   4 months ago        Up 3 months                       0.0.0.0:3838->3838/tcp                                                                                                                                                                       shiny
+5dadbf5002f5        sdal/dpl7                     "docker-php-entrypoi…"   5 months ago        Up 3 months                       0.0.0.0:8383->80/tcp                                                                                                                                                                         drupal7
+]0;/home/aschroed/git/docker_sdad]0;aschroed@docker-s-12vcpu-48gb-nyc1-01: ~/git/docker_sdad[01;32maschroed@docker-s-12vcpu-48gb-nyc1-01[00m:[01;34m~/git/docker_sdad[00m$ [K]0;aschroed@docker-s-12vcpu-48gb-nyc1-01: ~/git/docker_sdad[01;32maschroed@docker-s-12vcpu-48gb-nyc1-01[00m:[01;34m~/git/docker_sdad[00m$ docker ps
+CONTAINER ID        IMAGE                         COMMAND                  CREATED             STATUS                     PORTS                                                                                                                                                                                        NAMES
+3e23d8021edd        gitlab/gitlab-ce:9.1.0-ce.0   "/assets/wrapper"        8 minutes ago       Up 8 minutes (unhealthy)   80/tcp, 443/tcp, 0.0.0.0:30080->30080/tcp, 0.0.0.0:30022->22/tcp                                                                                                                             gitlab
+1660d19e4ff2        redis:3.0.7-alpine            "docker-entrypoint.s…"   14 minutes ago      Up 14 minutes              6379/tcp                                                                                                                                                                                     redis
+ada74b641441        postgres:9.6.2-alpine         "docker-entrypoint.s…"   14 minutes ago      Up 14 minutes              5432/tcp                                                                                                                                                                                     gitlab_pg
+ff64ab712f5b        adminer                       "entrypoint.sh docke…"   2 hours ago         Up 2 hours                 0.0.0.0:8080->8080/tcp                                                                                                                                                                       adminer
+23f85cfc9e57        postgres                      "docker-entrypoint.s…"   3 weeks ago         Up 3 weeks                 0.0.0.0:5433->5432/tcp                                                                                                                                                                       postgis
+ffade29e8265        sharelatex/sharelatex         "/sbin/my_init"          5 weeks ago         Up 5 weeks                 0.0.0.0:3000->80/tcp                                                                                                                                                                         sharelatex
+a519b3acd388        mongo                         "docker-entrypoint.s…"   5 weeks ago         Up 5 weeks                 27017/tcp                                                                                                                                                                                    mongo
+d274a100230f        nextcloud                     "/entrypoint.sh apac…"   5 weeks ago         Up 5 weeks                 0.0.0.0:8082->80/tcp                                                                                                                                                                         nextcloud_app_1
+426a43e2fc6a        mariadb                       "docker-entrypoint.s…"   5 weeks ago         Up 5 weeks                 3306/tcp                                                                                                                                                                                     nextcloud_db_1
+83bee15da508        atmoz/sftp                    "/entrypoint"            5 weeks ago         Up 5 weeks                 0.0.0.0:2222->22/tcp                                                                                                                                                                         sftp
+2661c8ecd4cd        sdad/plumber:0.1              "R -e 'pr <- plumber…"   7 weeks ago         Up 7 weeks                 0.0.0.0:8000->8000/tcp                                                                                                                                                                       api1
+098c6cb5c4fc        rocker/geospatial             "/init"                  2 months ago        Up 2 months                0.0.0.0:38787->8787/tcp                                                                                                                                                                      rstudio_chend
+e38be69be7c8        rocker/geospatial             "/init"                  2 months ago        Up 2 months                0.0.0.0:28787->8787/tcp                                                                                                                                                                      rstudio_aschroed
+e68c72c81258        xwiki:postgres-tomcat         "docker-entrypoint.s…"   3 months ago        Up 3 months                0.0.0.0:8081->8080/tcp                                                                                                                                                                       xwiki-postgres-tomcat-web
+80288e447225        postgres:9.5                  "docker-entrypoint.s…"   3 months ago        Up 3 months                5432/tcp                                                                                                                                                                                     xwiki-postgres-db
+c0142bf447d3        plexinc/pms-docker            "/init"                  3 months ago        Up 3 months (healthy)      0.0.0.0:3005->3005/tcp, 0.0.0.0:8324->8324/tcp, 0.0.0.0:1900->1900/udp, 0.0.0.0:32410->32410/udp, 0.0.0.0:32400->32400/tcp, 0.0.0.0:32412-32414->32412-32414/udp, 0.0.0.0:32469->32469/tcp   plx
+dcca26723b4e        rocker/shiny-verse            "/usr/bin/shiny-serv…"   4 months ago        Up 3 months                0.0.0.0:3838->3838/tcp                                                                                                                                                                       shiny
+5dadbf5002f5        sdal/dpl7                     "docker-php-entrypoi…"   5 months ago        Up 3 months                0.0.0.0:8383->80/tcp                                                                                                                                                                         drupal7
+]0;/home/aschroed/git/docker_sdad]0;aschroed@docker-s-12vcpu-48gb-nyc1-01: ~/git/docker_sdad[01;32maschroed@docker-s-12vcpu-48gb-nyc1-01[00m:[01;34m~/git/docker_sdad[00m$ docker ps
+CONTAINER ID        IMAGE                         COMMAND                  CREATED             STATUS                     PORTS                                                                                                                                                                                        NAMES
+3e23d8021edd        gitlab/gitlab-ce:9.1.0-ce.0   "/assets/wrapper"        9 minutes ago       Up 9 minutes (unhealthy)   80/tcp, 443/tcp, 0.0.0.0:30080->30080/tcp, 0.0.0.0:30022->22/tcp                                                                                                                             gitlab
+1660d19e4ff2        redis:3.0.7-alpine            "docker-entrypoint.s…"   14 minutes ago      Up 14 minutes              6379/tcp                                                                                                                                                                                     redis
+ada74b641441        postgres:9.6.2-alpine         "docker-entrypoint.s…"   14 minutes ago      Up 14 minutes              5432/tcp                                                                                                                                                                                     gitlab_pg
+ff64ab712f5b        adminer                       "entrypoint.sh docke…"   2 hours ago         Up 2 hours                 0.0.0.0:8080->8080/tcp                                                                                                                                                                       adminer
+23f85cfc9e57        postgres                      "docker-entrypoint.s…"   3 weeks ago         Up 3 weeks                 0.0.0.0:5433->5432/tcp                                                                                                                                                                       postgis
+ffade29e8265        sharelatex/sharelatex         "/sbin/my_init"          5 weeks ago         Up 5 weeks                 0.0.0.0:3000->80/tcp                                                                                                                                                                         sharelatex
+a519b3acd388        mongo                         "docker-entrypoint.s…"   5 weeks ago         Up 5 weeks                 27017/tcp                                                                                                                                                                                    mongo
+d274a100230f        nextcloud                     "/entrypoint.sh apac…"   5 weeks ago         Up 5 weeks                 0.0.0.0:8082->80/tcp                                                                                                                                                                         nextcloud_app_1
+426a43e2fc6a        mariadb                       "docker-entrypoint.s…"   5 weeks ago         Up 5 weeks                 3306/tcp                                                                                                                                                                                     nextcloud_db_1
+83bee15da508        atmoz/sftp                    "/entrypoint"            5 weeks ago         Up 5 weeks                 0.0.0.0:2222->22/tcp                                                                                                                                                                         sftp
+2661c8ecd4cd        sdad/plumber:0.1              "R -e 'pr <- plumber…"   7 weeks ago         Up 7 weeks                 0.0.0.0:8000->8000/tcp                                                                                                                                                                       api1
+098c6cb5c4fc        rocker/geospatial             "/init"                  2 months ago        Up 2 months                0.0.0.0:38787->8787/tcp                                                                                                                                                                      rstudio_chend
+e38be69be7c8        rocker/geospatial             "/init"                  2 months ago        Up 2 months                0.0.0.0:28787->8787/tcp                                                                                                                                                                      rstudio_aschroed
+e68c72c81258        xwiki:postgres-tomcat         "docker-entrypoint.s…"   3 months ago        Up 3 months                0.0.0.0:8081->8080/tcp                                                                                                                                                                       xwiki-postgres-tomcat-web
+80288e447225        postgres:9.5                  "docker-entrypoint.s…"   3 months ago        Up 3 months                5432/tcp                                                                                                                                                                                     xwiki-postgres-db
+c0142bf447d3        plexinc/pms-docker            "/init"                  3 months ago        Up 3 months (healthy)      0.0.0.0:3005->3005/tcp, 0.0.0.0:8324->8324/tcp, 0.0.0.0:1900->1900/udp, 0.0.0.0:32410->32410/udp, 0.0.0.0:32400->32400/tcp, 0.0.0.0:32412-32414->32412-32414/udp, 0.0.0.0:32469->32469/tcp   plx
+dcca26723b4e        rocker/shiny-verse            "/usr/bin/shiny-serv…"   4 months ago        Up 3 months                0.0.0.0:3838->3838/tcp                                                                                                                                                                       shiny
+5dadbf5002f5        sdal/dpl7                     "docker-php-entrypoi…"   5 months ago        Up 3 months                0.0.0.0:8383->80/tcp                                                                                                                                                                         drupal7
+]0;/home/aschroed/git/docker_sdad]0;aschroed@docker-s-12vcpu-48gb-nyc1-01: ~/git/docker_sdad[01;32maschroed@docker-s-12vcpu-48gb-nyc1-01[00m:[01;34m~/git/docker_sdad[00m$ docker ps-compose up -d gitlab[8P rm -f[C[C[C[C[C[C[C[8@-compose up -d[C[C[C[C[C[C[C[9P rm -f redisgitlab_pg[K
+gitlab
+]0;/home/aschroed/git/docker_sdad]0;aschroed@docker-s-12vcpu-48gb-nyc1-01: ~/git/docker_sdad[01;32maschroed@docker-s-12vcpu-48gb-nyc1-01[00m:[01;34m~/git/docker_sdad[00m$ docker rm -f gitlab_pg
+gitlab_pg
+]0;/home/aschroed/git/docker_sdad]0;aschroed@docker-s-12vcpu-48gb-nyc1-01: ~/git/docker_sdad[01;32maschroed@docker-s-12vcpu-48gb-nyc1-01[00m:[01;34m~/git/docker_sdad[00m$ docker rm -f gitlab_pg[K[K[K[K[K[K[K[K[K[K redis
+redis
+cd
+]0;/home/aschroed]0;aschroed@docker-s-12vcpu-48gb-nyc1-01: ~[01;32maschroed@docker-s-12vcpu-48gb-nyc1-01[00m:[01;34m~[00m$ cd .ssh
+]0;/home/aschroed/.ssh]0;aschroed@docker-s-12vcpu-48gb-nyc1-01: ~/.ssh[01;32maschroed@docker-s-12vcpu-48gb-nyc1-01[00m:[01;34m~/.ssh[00m$ la -l
+total 16
+-rw------- 1 aschroed aschroed 2782 Apr 21 15:05 authorized_keys
+-rw------- 1 aschroed aschroed 1679 Nov 28 17:42 id_rsa
+-rw-r--r-- 1 aschroed aschroed  419 Nov 28 17:42 id_rsa.pub
+-rw-r--r-- 1 aschroed aschroed 2654 Mar  6 16:03 known_hosts
+]0;/home/aschroed/.ssh]0;aschroed@docker-s-12vcpu-48gb-nyc1-01: ~/.ssh[01;32maschroed@docker-s-12vcpu-48gb-nyc1-01[00m:[01;34m~/.ssh[00m$ ls -la
+total 24
+drwx------  2 aschroed aschroed 4096 Dec 17 19:12 [0m[01;34m.[0m
+drwxr-xr-x 20 aschroed aschroed 4096 May 13 18:58 [01;34m..[0m
+-rw-------  1 aschroed aschroed 2782 Apr 21 15:05 authorized_keys
+-rw-------  1 aschroed aschroed 1679 Nov 28 17:42 id_rsa
+-rw-r--r--  1 aschroed aschroed  419 Nov 28 17:42 id_rsa.pub
+-rw-r--r--  1 aschroed aschroed 2654 Mar  6 16:03 known_hosts
+]0;/home/aschroed/.ssh]0;aschroed@docker-s-12vcpu-48gb-nyc1-01: ~/.ssh[01;32maschroed@docker-s-12vcpu-48gb-nyc1-01[00m:[01;34m~/.ssh[00m$ ssh root@68.183.145.76
+The authenticity of host '68.183.145.76 (68.183.145.76)' can't be established.
+ECDSA key fingerprint is SHA256:qVaQ4z21d05oNpVV3evY5fteLKAzG27iGkrX/ib+odw.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added '68.183.145.76' (ECDSA) to the list of known hosts.
+root@68.183.145.76: Permission denied (publickey).
+]0;/home/aschroed/.ssh]0;aschroed@docker-s-12vcpu-48gb-nyc1-01: ~/.ssh[01;32maschroed@docker-s-12vcpu-48gb-nyc1-01[00m:[01;34m~/.ssh[00m$ ssh-copy-id aschroed@68.183.145.76
+/usr/bin/ssh-copy-id: INFO: Source of key(s) to be installed: "/home/aschroed/.ssh/id_rsa.pub"
+/usr/bin/ssh-copy-id: INFO: attempting to log in with the new key(s), to filter out any that are already installed
+/usr/bin/ssh-copy-id: INFO: 1 key(s) remain to be installed -- if you are prompted now it is to install the new keys
+aschroed@68.183.145.76's password: 
+
+Number of key(s) added: 1
+
+Now try logging into the machine, with:   "ssh 'aschroed@68.183.145.76'"
+and check to make sure that only the key(s) you wanted were added.
+
+]0;/home/aschroed/.ssh]0;aschroed@docker-s-12vcpu-48gb-nyc1-01: ~/.ssh[01;32maschroed@docker-s-12vcpu-48gb-nyc1-01[00m:[01;34m~/.ssh[00m$ ssh-copy-id aschroed@68.183.145.76[1P aschroed@68.183.145.76[1P aschroed@68.183.145.76[1P aschroed@68.183.145.76[1P aschroed@68.183.145.76[1P aschroed@68.183.145.76[1P aschroed@68.183.145.76[1P aschroed@68.183.145.76[1P aschroed@68.183.145.76
+Welcome to Ubuntu 18.04.2 LTS (GNU/Linux 4.15.0-50-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Wed May 15 21:34:17 UTC 2019
+
+  System load:  0.11              Processes:              96
+  Usage of /:   3.6% of 57.98GB   Users logged in:        0
+  Memory usage: 9%                IP address for eth0:    68.183.145.76
+  Swap usage:   0%                IP address for docker0: 172.17.0.1
+
+0 packages can be updated.
+0 updates are security updates.
+
+
+********************************************************************************
+
+Welcome to DigitalOcean's One-Click Docker Droplet. 
+To keep this Droplet secure, the UFW firewall is enabled. 
+All ports are BLOCKED except 22 (SSH), 2375 (Docker) and 2376 (Docker).
+
+* The Docker One-Click Quickstart guide is available at: 
+  https://do.co/docker1804#start
+
+* You can SSH to this Droplet in a terminal as root: ssh root@68.183.145.76
+
+* Docker is installed and configured per Docker's recommendations:
+  https://docs.docker.com/install/linux/docker-ce/ubuntu/
+
+* Docker Compose is installed and configured per Docker's recommendations:
+  https://docs.docker.com/compose/install/#install-compose
+
+For help and more information, visit http://do.co/docker1804
+
+********************************************************************************
+
+To delete this message of the day: rm -rf /etc/update-motd.d/99-one-click
+Last login: Wed May 15 21:33:28 2019 from 69.138.76.161
+To run a command as administrator (user "root"), use "sudo <command>".
+See "man sudo_root" for details.
+
+]0;aschroed@docker-dev-s-2vcpu-2gb-nyc3-01: ~[01;32maschroed@docker-dev-s-2vcpu-2gb-nyc3-01[00m:[01;34m~[00m$ logout
+Connection to 68.183.145.76 closed.
+]0;/home/aschroed/.ssh]0;aschroed@docker-s-12vcpu-48gb-nyc1-01: ~/.ssh[01;32maschroed@docker-s-12vcpu-48gb-nyc1-01[00m:[01;34m~/.ssh[00m$ ssh aschroed@68.183.145.76
+Welcome to Ubuntu 18.04.2 LTS (GNU/Linux 4.15.0-50-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Wed May 15 21:36:03 UTC 2019
+
+  System load:  0.08              Processes:              99
+  Usage of /:   3.6% of 57.98GB   Users logged in:        1
+  Memory usage: 9%                IP address for eth0:    68.183.145.76
+  Swap usage:   0%                IP address for docker0: 172.17.0.1
+
+0 packages can be updated.
+0 updates are security updates.
+
+
+********************************************************************************
+
+Welcome to DigitalOcean's One-Click Docker Droplet. 
+To keep this Droplet secure, the UFW firewall is enabled. 
+All ports are BLOCKED except 22 (SSH), 2375 (Docker) and 2376 (Docker).
+
+* The Docker One-Click Quickstart guide is available at: 
+  https://do.co/docker1804#start
+
+* You can SSH to this Droplet in a terminal as root: ssh root@68.183.145.76
+
+* Docker is installed and configured per Docker's recommendations:
+  https://docs.docker.com/install/linux/docker-ce/ubuntu/
+
+* Docker Compose is installed and configured per Docker's recommendations:
+  https://docs.docker.com/compose/install/#install-compose
+
+For help and more information, visit http://do.co/docker1804
+
+********************************************************************************
+
+To delete this message of the day: rm -rf /etc/update-motd.d/99-one-click
+Last login: Wed May 15 21:34:33 2019 from 69.138.76.161
+]0;aschroed@docker-dev-s-2vcpu-2gb-nyc3-01: ~[01;32maschroed@docker-dev-s-2vcpu-2gb-nyc3-01[00m:[01;34m~[00m$ logout
+Connection to 68.183.145.76 closed.
+]0;/home/aschroed/.ssh]0;aschroed@docker-s-12vcpu-48gb-nyc1-01: ~/.ssh[01;32maschroed@docker-s-12vcpu-48gb-nyc1-01[00m:[01;34m~/.ssh[00m$ cd ../git/docker_sdad/
+]0;/home/aschroed/git/docker_sdad]0;aschroed@docker-s-12vcpu-48gb-nyc1-01: ~/git/docker_sdad[01;32maschroed@docker-s-12vcpu-48gb-nyc1-01[00m:[01;34m~/git/docker_sdad[00m$ git clone https://github.com/dm3ll3n/ShinyStudio
+Cloning into 'ShinyStudio'...
+remote: Enumerating objects: 425, done.[K
+remote: Counting objects:   0% (1/425)   [Kremote: Counting objects:   1% (5/425)   [Kremote: Counting objects:   2% (9/425)   [Kremote: Counting objects:   3% (13/425)   [Kremote: Counting objects:   4% (17/425)   [Kremote: Counting objects:   5% (22/425)   [Kremote: Counting objects:   6% (26/425)   [Kremote: Counting objects:   7% (30/425)   [Kremote: Counting objects:   8% (34/425)   [Kremote: Counting objects:   9% (39/425)   [Kremote: Counting objects:  10% (43/425)   [Kremote: Counting objects:  11% (47/425)   [Kremote: Counting objects:  12% (51/425)   [Kremote: Counting objects:  13% (56/425)   [Kremote: Counting objects:  14% (60/425)   [Kremote: Counting objects:  15% (64/425)   [Kremote: Counting objects:  16% (68/425)   [Kremote: Counting objects:  17% (73/425)   remote: Counting objects:  18% (77/425)   [Kremote: Counting objects:  19% (81/425)   [Kremote: Counting objects:  20% (85/425)   [Kremote: Counting objects:  21% (90/425)   [Kremote: Counting objects:  22% (94/425)   [Kremote: Counting objects:  23% (98/425)   [Kremote: Counting objects:  24% (102/425)   [Kremote: Counting objects:  25% (107/425)   [Kremote: Counting objects:  26% (111/425)   [Kremote: Counting objects:  27% (115/425)   [Kremote: Counting objects:  28% (119/425)   [Kremote: Counting objects:  29% (124/425)   [Kremote: Counting objects:  30% (128/425)   [Kremote: Counting objects:  31% (132/425)   [Kremote: Counting objects:  32% (136/425)   [Kremote: Counting objects:  33% (141/425)   [Kremote: Counting objects:  34% (145/425)   [Kremote: Counting objects:  35% (149/425)   [Kremote: Counting objects:  36% (153/425)   [Kremote: Counting objects:  37% (158/425)   [Kremote: Counting objects:  38% (162/425)   [Kremote: Counting objects:  39% (166/425)   [Kremote: Counting objects:  40% (170/425)   [Kremote: Counting objects:  41% (175/425)   [Kremote: Counting objects:  42% (179/425)   [Kremote: Counting objects:  43% (183/425)   [Kremote: Counting objects:  44% (187/425)   [Kremote: Counting objects:  45% (192/425)   [Kremote: Counting objects:  46% (196/425)   [Kremote: Counting objects:  47% (200/425)   [Kremote: Counting objects:  48% (204/425)   [Kremote: Counting objects:  49% (209/425)   [Kremote: Counting objects:  50% (213/425)   [Kremote: Counting objects:  51% (217/425)   [Kremote: Counting objects:  52% (221/425)   [Kremote: Counting objects:  53% (226/425)   [Kremote: Counting objects:  54% (230/425)   [Kremote: Counting objects:  55% (234/425)   [Kremote: Counting objects:  56% (238/425)   [Kremote: Counting objects:  57% (243/425)   [Kremote: Counting objects:  58% (247/425)   [Kremote: Counting objects:  59% (251/425)   [Kremote: Counting objects:  60% (255/425)   [Kremote: Counting objects:  61% (260/425)   [Kremote: Counting objects:  62% (264/425)   [Kremote: Counting objects:  63% (268/425)   [Kremote: Counting objects:  64% (272/425)   [Kremote: Counting objects:  65% (277/425)   [Kremote: Counting objects:  66% (281/425)   [Kremote: Counting objects:  67% (285/425)   [Kremote: Counting objects:  68% (289/425)   [Kremote: Counting objects:  69% (294/425)   [Kremote: Counting objects:  70% (298/425)   [Kremote: Counting objects:  71% (302/425)   [Kremote: Counting objects:  72% (306/425)   [Kremote: Counting objects:  73% (311/425)   [Kremote: Counting objects:  74% (315/425)   [Kremote: Counting objects:  75% (319/425)   [Kremote: Counting objects:  76% (323/425)   [Kremote: Counting objects:  77% (328/425)   [Kremote: Counting objects:  78% (332/425)   [Kremote: Counting objects:  79% (336/425)   [Kremote: Counting objects:  80% (340/425)   [Kremote: Counting objects:  81% (345/425)   [Kremote: Counting objects:  82% (349/425)   [Kremote: Counting objects:  83% (353/425)   [Kremote: Counting objects:  84% (357/425)   [Kremote: Counting objects:  85% (362/425)   [Kremote: Counting objects:  86% (366/425)   [Kremote: Counting objects:  87% (370/425)   [Kremote: Counting objects:  88% (374/425)   [Kremote: Counting objects:  89% (379/425)   [Kremote: Counting objects:  90% (383/425)   [Kremote: Counting objects:  91% (387/425)   [Kremote: Counting objects:  92% (391/425)   [Kremote: Counting objects:  93% (396/425)   [Kremote: Counting objects:  94% (400/425)   [Kremote: Counting objects:  95% (404/425)   [Kremote: Counting objects:  96% (408/425)   [Kremote: Counting objects:  97% (413/425)   [Kremote: Counting objects:  98% (417/425)   [Kremote: Counting objects:  99% (421/425)   [Kremote: Counting objects: 100% (425/425)   [Kremote: Counting objects: 100% (425/425), done.[K
+remote: Compressing objects:   0% (1/278)   [Kremote: Compressing objects:   1% (3/278)   [Kremote: Compressing objects:   2% (6/278)   [Kremote: Compressing objects:   3% (9/278)   [Kremote: Compressing objects:   4% (12/278)   [Kremote: Compressing objects:   5% (14/278)   [Kremote: Compressing objects:   6% (17/278)   [Kremote: Compressing objects:   7% (20/278)   [Kremote: Compressing objects:   8% (23/278)   [Kremote: Compressing objects:   9% (26/278)   [Kremote: Compressing objects:  10% (28/278)   [Kremote: Compressing objects:  11% (31/278)   [Kremote: Compressing objects:  12% (34/278)   [Kremote: Compressing objects:  13% (37/278)   [Kremote: Compressing objects:  14% (39/278)   [Kremote: Compressing objects:  15% (42/278)   [Kremote: Compressing objects:  16% (45/278)   [Kremote: Compressing objects:  17% (48/278)   [Kremote: Compressing objects:  18% (51/278)   [Kremote: Compressing objects:  19% (53/278)   [Kremote: Compressing objects:  20% (56/278)   [Kremote: Compressing objects:  21% (59/278)   [Kremote: Compressing objects:  22% (62/278)   [Kremote: Compressing objects:  23% (64/278)   [Kremote: Compressing objects:  24% (67/278)   [Kremote: Compressing objects:  25% (70/278)   [Kremote: Compressing objects:  26% (73/278)   [Kremote: Compressing objects:  27% (76/278)   [Kremote: Compressing objects:  28% (78/278)   [Kremote: Compressing objects:  29% (81/278)   [Kremote: Compressing objects:  30% (84/278)   [Kremote: Compressing objects:  31% (87/278)   [Kremote: Compressing objects:  32% (89/278)   [Kremote: Compressing objects:  33% (92/278)   [Kremote: Compressing objects:  34% (95/278)   [Kremote: Compressing objects:  35% (98/278)   [Kremote: Compressing objects:  36% (101/278)   [Kremote: Compressing objects:  37% (103/278)   [Kremote: Compressing objects:  38% (106/278)   [Kremote: Compressing objects:  39% (109/278)   [Kremote: Compressing objects:  40% (112/278)   [Kremote: Compressing objects:  41% (114/278)   [Kremote: Compressing objects:  42% (117/278)   [Kremote: Compressing objects:  43% (120/278)   [Kremote: Compressing objects:  44% (123/278)   [Kremote: Compressing objects:  45% (126/278)   [Kremote: Compressing objects:  46% (128/278)   [Kremote: Compressing objects:  47% (131/278)   [Kremote: Compressing objects:  48% (134/278)   [Kremote: Compressing objects:  49% (137/278)   [Kremote: Compressing objects:  50% (139/278)   [Kremote: Compressing objects:  51% (142/278)   [Kremote: Compressing objects:  52% (145/278)   [Kremote: Compressing objects:  53% (148/278)   [Kremote: Compressing objects:  54% (151/278)   [Kremote: Compressing objects:  55% (153/278)   [Kremote: Compressing objects:  56% (156/278)   [Kremote: Compressing objects:  57% (159/278)   [Kremote: Compressing objects:  58% (162/278)   [Kremote: Compressing objects:  59% (165/278)   [Kremote: Compressing objects:  60% (167/278)   [Kremote: Compressing objects:  61% (170/278)   [Kremote: Compressing objects:  62% (173/278)   [Kremote: Compressing objects:  63% (176/278)   [Kremote: Compressing objects:  64% (178/278)   [Kremote: Compressing objects:  65% (181/278)   [Kremote: Compressing objects:  66% (184/278)   [Kremote: Compressing objects:  67% (187/278)   [Kremote: Compressing objects:  68% (190/278)   [Kremote: Compressing objects:  69% (192/278)   [Kremote: Compressing objects:  70% (195/278)   [Kremote: Compressing objects:  71% (198/278)   [Kremote: Compressing objects:  72% (201/278)   [Kremote: Compressing objects:  73% (203/278)   [Kremote: Compressing objects:  74% (206/278)   [Kremote: Compressing objects:  75% (209/278)   [Kremote: Compressing objects:  76% (212/278)   [Kremote: Compressing objects:  77% (215/278)   [Kremote: Compressing objects:  78% (217/278)   [Kremote: Compressing objects:  79% (220/278)   [Kremote: Compressing objects:  80% (223/278)   [Kremote: Compressing objects:  81% (226/278)   [Kremote: Compressing objects:  82% (228/278)   [Kremote: Compressing objects:  83% (231/278)   [Kremote: Compressing objects:  84% (234/278)   [Kremote: Compressing objects:  85% (237/278)   [Kremote: Compressing objects:  86% (240/278)   [Kremote: Compressing objects:  87% (242/278)   [Kremote: Compressing objects:  88% (245/278)   [Kremote: Compressing objects:  89% (248/278)   [Kremote: Compressing objects:  90% (251/278)   [Kremote: Compressing objects:  91% (253/278)   [Kremote: Compressing objects:  92% (256/278)   [Kremote: Compressing objects:  93% (259/278)   [Kremote: Compressing objects:  94% (262/278)   [Kremote: Compressing objects:  95% (265/278)   [Kremote: Compressing objects:  96% (267/278)   [Kremote: Compressing objects:  97% (270/278)   [Kremote: Compressing objects:  98% (273/278)   [Kremote: Compressing objects:  99% (276/278)   [Kremote: Compressing objects: 100% (278/278)   [Kremote: Compressing objects: 100% (278/278), done.[K
+Receiving objects:   0% (1/425)   Receiving objects:   1% (5/425)   Receiving objects:   2% (9/425)   Receiving objects:   3% (13/425)   Receiving objects:   4% (17/425)   Receiving objects:   5% (22/425)   Receiving objects:   6% (26/425)   Receiving objects:   7% (30/425)   Receiving objects:   8% (34/425)   Receiving objects:   9% (39/425)   Receiving objects:  10% (43/425)   Receiving objects:  11% (47/425)   Receiving objects:  12% (51/425)   Receiving objects:  13% (56/425)   Receiving objects:  14% (60/425)   Receiving objects:  15% (64/425)   Receiving objects:  16% (68/425)   Receiving objects:  17% (73/425)   Receiving objects:  18% (77/425)   Receiving objects:  19% (81/425)   Receiving objects:  20% (85/425)   Receiving objects:  21% (90/425)   Receiving objects:  22% (94/425)   Receiving objects:  23% (98/425)   Receiving objects:  24% (102/425)   Receiving objects:  25% (107/425)   Receiving objects:  26% (111/425)   Receiving objects:  27% (115/425)   Receiving objects:  28% (119/425)   Receiving objects:  29% (124/425)   Receiving objects:  30% (128/425)   Receiving objects:  31% (132/425)   Receiving objects:  32% (136/425)   Receiving objects:  33% (141/425)   Receiving objects:  34% (145/425)   Receiving objects:  35% (149/425)   Receiving objects:  36% (153/425)   Receiving objects:  37% (158/425)   Receiving objects:  38% (162/425)   Receiving objects:  39% (166/425)   Receiving objects:  40% (170/425)   Receiving objects:  41% (175/425)   Receiving objects:  42% (179/425)   Receiving objects:  43% (183/425)   Receiving objects:  44% (187/425)   Receiving objects:  45% (192/425)   Receiving objects:  46% (196/425)   Receiving objects:  47% (200/425)   Receiving objects:  48% (204/425)   Receiving objects:  49% (209/425)   Receiving objects:  50% (213/425)   Receiving objects:  51% (217/425)   Receiving objects:  52% (221/425)   Receiving objects:  53% (226/425)   Receiving objects:  54% (230/425)   Receiving objects:  55% (234/425)   Receiving objects:  56% (238/425)   Receiving objects:  57% (243/425)   Receiving objects:  58% (247/425)   Receiving objects:  59% (251/425)   Receiving objects:  60% (255/425)   Receiving objects:  61% (260/425)   Receiving objects:  62% (264/425)   Receiving objects:  63% (268/425)   Receiving objects:  64% (272/425)   Receiving objects:  65% (277/425)   Receiving objects:  66% (281/425)   Receiving objects:  67% (285/425)   Receiving objects:  68% (289/425)   Receiving objects:  69% (294/425)   Receiving objects:  70% (298/425)   Receiving objects:  71% (302/425)   Receiving objects:  72% (306/425)   Receiving objects:  73% (311/425)   Receiving objects:  74% (315/425)   Receiving objects:  75% (319/425)   Receiving objects:  76% (323/425)   Receiving objects:  77% (328/425)   Receiving objects:  78% (332/425)   Receiving objects:  79% (336/425)   Receiving objects:  80% (340/425)   Receiving objects:  81% (345/425)   Receiving objects:  82% (349/425)   Receiving objects:  83% (353/425)   Receiving objects:  84% (357/425)   Receiving objects:  85% (362/425)   Receiving objects:  86% (366/425)   Receiving objects:  87% (370/425)   Receiving objects:  88% (374/425)   Receiving objects:  89% (379/425)   Receiving objects:  90% (383/425)   Receiving objects:  91% (387/425)   remote: Total 425 (delta 154), reused 373 (delta 104), pack-reused 0
+Receiving objects:  92% (391/425)   Receiving objects:  93% (396/425)   Receiving objects:  94% (400/425)   Receiving objects:  95% (404/425)   Receiving objects:  96% (408/425)   Receiving objects:  97% (413/425)   Receiving objects:  98% (417/425)   Receiving objects:  99% (421/425)   Receiving objects: 100% (425/425)   Receiving objects: 100% (425/425), 9.58 MiB | 20.75 MiB/s, done.
+Resolving deltas:   0% (0/154)   Resolving deltas:   1% (3/154)   Resolving deltas:   2% (4/154)   Resolving deltas:   7% (11/154)   Resolving deltas:   9% (14/154)   Resolving deltas:  11% (18/154)   Resolving deltas:  12% (19/154)   Resolving deltas:  13% (21/154)   Resolving deltas:  14% (22/154)   Resolving deltas:  26% (41/154)   Resolving deltas:  27% (43/154)   Resolving deltas:  29% (46/154)   Resolving deltas:  30% (47/154)   Resolving deltas:  31% (49/154)   Resolving deltas:  32% (50/154)   Resolving deltas:  35% (54/154)   Resolving deltas:  36% (56/154)   Resolving deltas:  37% (58/154)   Resolving deltas:  38% (59/154)   Resolving deltas:  39% (61/154)   Resolving deltas:  42% (65/154)   Resolving deltas:  46% (71/154)   Resolving deltas:  48% (75/154)   Resolving deltas:  51% (79/154)   Resolving deltas:  58% (90/154)   Resolving deltas:  59% (92/154)   Resolving deltas:  61% (94/154)   Resolving deltas:  68% (105/154)   Resolving deltas:  72% (111/154)   Resolving deltas:  74% (115/154)   Resolving deltas:  75% (116/154)   Resolving deltas:  77% (119/154)   Resolving deltas:  85% (132/154)   Resolving deltas:  87% (134/154)   Resolving deltas:  88% (137/154)   Resolving deltas:  89% (138/154)   Resolving deltas:  90% (139/154)   Resolving deltas:  98% (151/154)   Resolving deltas: 100% (154/154)   Resolving deltas: 100% (154/154), done.
+id ap3xx
+id: ‘ap3xx’: no such user
+]0;/home/aschroed/git/docker_sdad]0;aschroed@e38be69be7c8: ~/git/docker_sdad[01;32maschroed@e38be69be7c8[00m:[01;34m~/git/docker_sdad[00m$ cd rstudio/
+]0;/home/aschroed/git/docker_sdad/rstudio]0;aschroed@e38be69be7c8: ~/git/docker_sdad/rstudio[01;32maschroed@e38be69be7c8[00m:[01;34m~/git/docker_sdad/rstudio[00m$ docker [K-compose
+bash: docker-compose: command not found
+docker-compose up -d rstudio_ap3xx
+[31mERROR[0m: In file './docker-compose.yml', volume must be a mapping, not a NoneType.
+]0;/home/aschroed/git/docker_sdad/rstudio]0;aschroed@docker-s-12vcpu-48gb-nyc1-01: ~/git/docker_sdad/rstudio[01;32maschroed@docker-s-12vcpu-48gb-nyc1-01[00m:[01;34m~/git/docker_sdad/rstudio[00m$ docker ps
+CONTAINER ID        IMAGE                        COMMAND                  CREATED             STATUS                             PORTS                                                                                                                                                                                        NAMES
+38f4849a87dd        selenium/standalone-chrome   "/opt/bin/entry_poin…"   12 days ago         Up 12 days                         0.0.0.0:4444->4444/tcp                                                                                                                                                                       selenium_chrome
+487acea8e410        gitlab/gitlab-ce:latest      "/assets/wrapper"        2 weeks ago         Up 22 seconds (health: starting)   80/tcp, 443/tcp, 0.0.0.0:8929->8929/tcp, 0.0.0.0:2224->22/tcp                                                                                                                                test_web_1
+ff64ab712f5b        adminer                      "entrypoint.sh docke…"   2 weeks ago         Up 2 weeks                         0.0.0.0:8080->8080/tcp                                                                                                                                                                       adminer
+23f85cfc9e57        postgres                     "docker-entrypoint.s…"   5 weeks ago         Up 5 weeks                         0.0.0.0:5433->5432/tcp                                                                                                                                                                       postgis
+83bee15da508        atmoz/sftp                   "/entrypoint"            7 weeks ago         Up 7 weeks                         0.0.0.0:2222->22/tcp                                                                                                                                                                         sftp
+2661c8ecd4cd        sdad/plumber:0.1             "R -e 'pr <- plumber…"   2 months ago        Up 2 months                        0.0.0.0:8000->8000/tcp                                                                                                                                                                       api1
+e38be69be7c8        rocker/geospatial            "/init"                  2 months ago        Up 2 months                        0.0.0.0:28787->8787/tcp                                                                                                                                                                      rstudio_aschroed
+e68c72c81258        xwiki:postgres-tomcat        "docker-entrypoint.s…"   3 months ago        Up 3 months                        0.0.0.0:8081->8080/tcp                                                                                                                                                                       xwiki-postgres-tomcat-web
+80288e447225        postgres:9.5                 "docker-entrypoint.s…"   3 months ago        Up 2 weeks                         5432/tcp                                                                                                                                                                                     xwiki-postgres-db
+c0142bf447d3        plexinc/pms-docker           "/init"                  4 months ago        Up 4 months (healthy)              0.0.0.0:3005->3005/tcp, 0.0.0.0:8324->8324/tcp, 0.0.0.0:1900->1900/udp, 0.0.0.0:32410->32410/udp, 0.0.0.0:32400->32400/tcp, 0.0.0.0:32412-32414->32412-32414/udp, 0.0.0.0:32469->32469/tcp   plx
+dcca26723b4e        rocker/shiny-verse           "/usr/bin/shiny-serv…"   4 months ago        Up 3 months                        0.0.0.0:3838->3838/tcp                                                                                                                                                                       shiny
+5dadbf5002f5        sdal/dpl7                    "docker-php-entrypoi…"   6 months ago        Up 3 months                        0.0.0.0:8383->80/tcp                                                                                                                                                                         drupal7
+]0;/home/aschroed/git/docker_sdad/rstudio]0;aschroed@docker-s-12vcpu-48gb-nyc1-01: ~/git/docker_sdad/rstudio[01;32maschroed@docker-s-12vcpu-48gb-nyc1-01[00m:[01;34m~/git/docker_sdad/rstudio[00m$ docker ps -a
+CONTAINER ID        IMAGE                        COMMAND                   CREATED             STATUS                             PORTS                                                                                                                                                                                        NAMES
+38f4849a87dd        selenium/standalone-chrome   "/opt/bin/entry_poin…"    12 days ago         Up 12 days                         0.0.0.0:4444->4444/tcp                                                                                                                                                                       selenium_chrome
+487acea8e410        gitlab/gitlab-ce:latest      "/assets/wrapper"         2 weeks ago         Up 28 seconds (health: starting)   80/tcp, 443/tcp, 0.0.0.0:8929->8929/tcp, 0.0.0.0:2224->22/tcp                                                                                                                                test_web_1
+ff64ab712f5b        adminer                      "entrypoint.sh docke…"    2 weeks ago         Up 2 weeks                         0.0.0.0:8080->8080/tcp                                                                                                                                                                       adminer
+23f85cfc9e57        postgres                     "docker-entrypoint.s…"    5 weeks ago         Up 5 weeks                         0.0.0.0:5433->5432/tcp                                                                                                                                                                       postgis
+83bee15da508        atmoz/sftp                   "/entrypoint"             7 weeks ago         Up 7 weeks                         0.0.0.0:2222->22/tcp                                                                                                                                                                         sftp
+2661c8ecd4cd        sdad/plumber:0.1             "R -e 'pr <- plumber…"    2 months ago        Up 2 months                        0.0.0.0:8000->8000/tcp                                                                                                                                                                       api1
+9328fb4a7d70        efebe2c911c8                 "/bin/sh -c 'R -e 'i…"    2 months ago        Exited (1) 2 months ago                                                                                                                                                                                                         wizardly_bhaskara
+72ee1aa5cbb6        efebe2c911c8                 "/bin/sh -c 'R -e \"i…"   2 months ago        Exited (1) 2 months ago                                                                                                                                                                                                         elated_robinson
+61805fee0634        1eede073efa6                 "/bin/sh -c 'R -e 'r…"    2 months ago        Exited (1) 2 months ago                                                                                                                                                                                                         clever_spence
+253463d408fa        adc00e72c063                 "/bin/sh -c 'R -e 'd…"    2 months ago        Exited (1) 2 months ago                                                                                                                                                                                                         xenodochial_agnesi
+e38be69be7c8        rocker/geospatial            "/init"                   2 months ago        Up 2 months                        0.0.0.0:28787->8787/tcp                                                                                                                                                                      rstudio_aschroed
+e68c72c81258        xwiki:postgres-tomcat        "docker-entrypoint.s…"    3 months ago        Up 3 months                        0.0.0.0:8081->8080/tcp                                                                                                                                                                       xwiki-postgres-tomcat-web
+80288e447225        postgres:9.5                 "docker-entrypoint.s…"    3 months ago        Up 2 weeks                         5432/tcp                                                                                                                                                                                     xwiki-postgres-db
+8126bc4a28d1        nginx                        "nginx -g 'daemon of…"    3 months ago        Exited (128) 3 months ago                                                                                                                                                                                                       nginx
+779e1431dd54        69989124ed12                 "/bin/sh -c 'service…"    4 months ago        Created                                                                                                                                                                                                                         vigilant_stonebraker
+c0142bf447d3        plexinc/pms-docker           "/init"                   4 months ago        Up 4 months (healthy)              0.0.0.0:3005->3005/tcp, 0.0.0.0:8324->8324/tcp, 0.0.0.0:1900->1900/udp, 0.0.0.0:32410->32410/udp, 0.0.0.0:32400->32400/tcp, 0.0.0.0:32412-32414->32412-32414/udp, 0.0.0.0:32469->32469/tcp   plx
+a432b238ef46        rocker/rstudio               "/init"                   4 months ago        Exited (1) 4 months ago                                                                                                                                                                                                         jolly_mahavira
+ccf51373fc21        rocker/rstudio               "/init"                   4 months ago        Exited (1) 4 months ago                                                                                                                                                                                                         silly_golick
+4a21d6f27e77        rocker/rstudio               "/init"                   4 months ago        Exited (1) 4 months ago                                                                                                                                                                                                         festive_murdock
+c97b8f38fc9e        8dfb4c0f0e31                 "/init"                   4 months ago        Exited (1) 4 months ago                                                                                                                                                                                                         objective_austin
+dcca26723b4e        rocker/shiny-verse           "/usr/bin/shiny-serv…"    4 months ago        Up 3 months                        0.0.0.0:3838->3838/tcp                                                                                                                                                                       shiny
+5dadbf5002f5        sdal/dpl7                    "docker-php-entrypoi…"    6 months ago        Up 3 months                        0.0.0.0:8383->80/tcp                                                                                                                                                                         drupal7
+]0;/home/aschroed/git/docker_sdad/rstudio]0;aschroed@docker-s-12vcpu-48gb-nyc1-01: ~/git/docker_sdad/rstudio[01;32maschroed@docker-s-12vcpu-48gb-nyc1-01[00m:[01;34m~/git/docker_sdad/rstudio[00m$ docker ps -a[K-compose up -d rstudio_ap3xx
+Creating rstudio_ap3xx ... 
+[1A[2KCreating rstudio_ap3xx ... [32mdone[0m[1B]0;/home/aschroed/git/docker_sdad/rstudio]0;aschroed@docker-s-12vcpu-48gb-nyc1-01: ~/git/docker_sdad/rstudio[01;32maschroed@docker-s-12vcpu-48gb-nyc1-01[00m:[01;34m~/git/docker_sdad/rstudio[00m$ docker ps
+CONTAINER ID        IMAGE                        COMMAND                  CREATED             STATUS                             PORTS                                                                                                                                                                                        NAMES
+0fe199264a70        rocker/geospatial            "/init"                  12 seconds ago      Up 3 seconds                       0.0.0.0:31013->8787/tcp                                                                                                                                                                      rstudio_ap3xx
+38f4849a87dd        selenium/standalone-chrome   "/opt/bin/entry_poin…"   12 days ago         Up 12 days                         0.0.0.0:4444->4444/tcp                                                                                                                                                                       selenium_chrome
+487acea8e410        gitlab/gitlab-ce:latest      "/assets/wrapper"        2 weeks ago         Up 50 seconds (health: starting)   80/tcp, 443/tcp, 0.0.0.0:8929->8929/tcp, 0.0.0.0:2224->22/tcp                                                                                                                                test_web_1
+ff64ab712f5b        adminer                      "entrypoint.sh docke…"   2 weeks ago         Up 2 weeks                         0.0.0.0:8080->8080/tcp                                                                                                                                                                       adminer
+23f85cfc9e57        postgres                     "docker-entrypoint.s…"   5 weeks ago         Up 5 weeks                         0.0.0.0:5433->5432/tcp                                                                                                                                                                       postgis
+83bee15da508        atmoz/sftp                   "/entrypoint"            7 weeks ago         Up 7 weeks                         0.0.0.0:2222->22/tcp                                                                                                                                                                         sftp
+2661c8ecd4cd        sdad/plumber:0.1             "R -e 'pr <- plumber…"   2 months ago        Up 2 months                        0.0.0.0:8000->8000/tcp                                                                                                                                                                       api1
+e38be69be7c8        rocker/geospatial            "/init"                  2 months ago        Up 2 months                        0.0.0.0:28787->8787/tcp                                                                                                                                                                      rstudio_aschroed
+e68c72c81258        xwiki:postgres-tomcat        "docker-entrypoint.s…"   3 months ago        Up 3 months                        0.0.0.0:8081->8080/tcp                                                                                                                                                                       xwiki-postgres-tomcat-web
+80288e447225        postgres:9.5                 "docker-entrypoint.s…"   3 months ago        Up 2 weeks                         5432/tcp                                                                                                                                                                                     xwiki-postgres-db
+c0142bf447d3        plexinc/pms-docker           "/init"                  4 months ago        Up 4 months (healthy)              0.0.0.0:3005->3005/tcp, 0.0.0.0:8324->8324/tcp, 0.0.0.0:1900->1900/udp, 0.0.0.0:32410->32410/udp, 0.0.0.0:32400->32400/tcp, 0.0.0.0:32412-32414->32412-32414/udp, 0.0.0.0:32469->32469/tcp   plx
+dcca26723b4e        rocker/shiny-verse           "/usr/bin/shiny-serv…"   4 months ago        Up 3 months                        0.0.0.0:3838->3838/tcp                                                                                                                                                                       shiny
+5dadbf5002f5        sdal/dpl7                    "docker-php-entrypoi…"   6 months ago        Up 3 months                        0.0.0.0:8383->80/tcp                                                                                                                                                                         drupal7
+]0;/home/aschroed/git/docker_sdad/rstudio]0;aschroed@docker-s-12vcpu-48gb-nyc1-01: ~/git/docker_sdad/rstudio[01;32maschroed@docker-s-12vcpu-48gb-nyc1-01[00m:[01;34m~/git/docker_sdad/rstudio[00m$ docker rm -f rstudio_ap3xx
+rstudio_ap3xx
+]0;/home/aschroed/git/docker_sdad/rstudio]0;aschroed@docker-s-12vcpu-48gb-nyc1-01: ~/git/docker_sdad/rstudio[01;32maschroed@docker-s-12vcpu-48gb-nyc1-01[00m:[01;34m~/git/docker_sdad/rstudio[00m$ docker rm -f rstudio_ap3xxps[K-compose up -d rstudio_ap3xx
+Creating rstudio_ap3xx ... 
+docker ps
+CONTAINER ID        IMAGE                        COMMAND                  CREATED             STATUS                             PORTS                                                                                                                                                                                        NAMES
+5677ee451d8f        rocker/geospatial            "/init"                  2 hours ago         Up 2 hours                         0.0.0.0:31013->8787/tcp                                                                                                                                                                      rstudio_ap3xx
+38f4849a87dd        selenium/standalone-chrome   "/opt/bin/entry_poin…"   12 days ago         Up 12 days                         0.0.0.0:4444->4444/tcp                                                                                                                                                                       selenium_chrome
+487acea8e410        gitlab/gitlab-ce:latest      "/assets/wrapper"        2 weeks ago         Up 18 seconds (health: starting)   80/tcp, 443/tcp, 0.0.0.0:8929->8929/tcp, 0.0.0.0:2224->22/tcp                                                                                                                                test_web_1
+ff64ab712f5b        adminer                      "entrypoint.sh docke…"   2 weeks ago         Up 2 weeks                         0.0.0.0:8080->8080/tcp                                                                                                                                                                       adminer
+23f85cfc9e57        postgres                     "docker-entrypoint.s…"   5 weeks ago         Up 5 weeks                         0.0.0.0:5433->5432/tcp                                                                                                                                                                       postgis
+83bee15da508        atmoz/sftp                   "/entrypoint"            7 weeks ago         Up 7 weeks                         0.0.0.0:2222->22/tcp                                                                                                                                                                         sftp
+2661c8ecd4cd        sdad/plumber:0.1             "R -e 'pr <- plumber…"   2 months ago        Up 2 months                        0.0.0.0:8000->8000/tcp                                                                                                                                                                       api1
+e38be69be7c8        rocker/geospatial            "/init"                  2 months ago        Up 2 months                        0.0.0.0:28787->8787/tcp                                                                                                                                                                      rstudio_aschroed
+e68c72c81258        xwiki:postgres-tomcat        "docker-entrypoint.s…"   3 months ago        Up 3 months                        0.0.0.0:8081->8080/tcp                                                                                                                                                                       xwiki-postgres-tomcat-web
+80288e447225        postgres:9.5                 "docker-entrypoint.s…"   3 months ago        Up 2 weeks                         5432/tcp                                                                                                                                                                                     xwiki-postgres-db
+c0142bf447d3        plexinc/pms-docker           "/init"                  4 months ago        Up 4 months (healthy)              0.0.0.0:3005->3005/tcp, 0.0.0.0:8324->8324/tcp, 0.0.0.0:1900->1900/udp, 0.0.0.0:32410->32410/udp, 0.0.0.0:32400->32400/tcp, 0.0.0.0:32412-32414->32412-32414/udp, 0.0.0.0:32469->32469/tcp   plx
+dcca26723b4e        rocker/shiny-verse           "/usr/bin/shiny-serv…"   4 months ago        Up 4 months                        0.0.0.0:3838->3838/tcp                                                                                                                                                                       shiny
+5dadbf5002f5        sdal/dpl7                    "docker-php-entrypoi…"   6 months ago        Up 4 months                        0.0.0.0:8383->80/tcp                                                                                                                                                                         drupal7
+]0;/home/aschroed/git/docker_sdad/rstudio]0;aschroed@docker-s-12vcpu-48gb-nyc1-01: ~/git/docker_sdad/rstudio[01;32maschroed@docker-s-12vcpu-48gb-nyc1-01[00m:[01;34m~/git/docker_sdad/rstudio[00m$ docker rm -f rstudio ap3xx
+Error: No such container: rstudio
+Error: No such container: ap3xx
+]0;/home/aschroed/git/docker_sdad/rstudio]0;aschroed@docker-s-12vcpu-48gb-nyc1-01: ~/git/docker_sdad/rstudio[01;32maschroed@docker-s-12vcpu-48gb-nyc1-01[00m:[01;34m~/git/docker_sdad/rstudio[00m$ docker rm -f rstudio ap3xx[C[1Pap3xx_ap3xx
+rstudio_ap3xx
+]0;/home/aschroed/git/docker_sdad/rstudio]0;aschroed@docker-s-12vcpu-48gb-nyc1-01: ~/git/docker_sdad/rstudio[01;32maschroed@docker-s-12vcpu-48gb-nyc1-01[00m:[01;34m~/git/docker_sdad/rstudio[00m$ docker rm -f rstudio_ap3xx[K[K[K[K[Kaschroed
+rstudio_aschroed
+]0;/home/aschroed/git/docker_sdad/rstudio]0;aschroed@docker-s-12vcpu-48gb-nyc1-01: ~/git/docker_sdad/rstudio[01;32maschroed@docker-s-12vcpu-48gb-nyc1-01[00m:[01;34m~/git/docker_sdad/rstudio[00m$ docker-compose up -d
+Creating rstudio_ks6pn ... 
+Creating rstudio_af5ug ... 
+Creating rstudio_ap3xx ... 
+Creating rstudio_aschroed ... 
+Creating rstudio_sak9tr   ... 
+Creating rstudio_sss5sc   ... 
+Creating rstudio_cc2cm    ... 
+Creating rstudio_qn6au    ... 
+cd rstudio/
+]0;/home/aschroed/git/docker_sdad/rstudio]0;aschroed@docker-s-12vcpu-48gb-nyc1-01: ~/git/docker_sdad/rstudio[01;32maschroed@docker-s-12vcpu-48gb-nyc1-01[00m:[01;34m~/git/docker_sdad/rstudio[00m$ rstudio-c[K[K[K[K[K[K[K[K[Kdocker-compose down
+Stopping rstudio_qn6au    ... 
+Stopping rstudio_cc2cm    ... 
+Stopping rstudio_sss5sc   ... 
+Stopping rstudio_aschroed ... 
+Stopping rstudio_sak9tr   ... 
+Stopping rstudio_ap3xx    ... 
+Stopping rstudio_af5ug    ... 
+Stopping rstudio_ks6pn    ... 
+[1A[2KStopping rstudio_ks6pn    ... [32mdone[0m[1B[3A[2KStopping rstudio_ap3xx    ... [32mdone[0m[3B[4A[2KStopping rstudio_sak9tr   ... [32mdone[0m[4B[6A[2KStopping rstudio_sss5sc   ... [32mdone[0m[6B[2A[2KStopping rstudio_af5ug    ... [32mdone[0m[2B[5A[2KStopping rstudio_aschroed ... [32mdone[0m[5B[7A[2KStopping rstudio_cc2cm    ... [32mdone[0m[7B[8A[2KStopping rstudio_qn6au    ... [32mdone[0m[8BRemoving rstudio_qn6au    ... 
+Removing rstudio_cc2cm    ... 
+Removing rstudio_sss5sc   ... 
+Removing rstudio_aschroed ... 
+Removing rstudio_sak9tr   ... 
+Removing rstudio_ap3xx    ... 
+Removing rstudio_af5ug    ... 
+Removing rstudio_ks6pn    ... 
+[3A[2KRemoving rstudio_ap3xx    ... [32mdone[0m[3B[1A[2KRemoving rstudio_ks6pn    ... [32mdone[0m[1B[2A[2KRemoving rstudio_af5ug    ... [32mdone[0m[2B[7A[2KRemoving rstudio_cc2cm    ... [32mdone[0m[7B[4A[2KRemoving rstudio_sak9tr   ... [32mdone[0m[4B[8A[2KRemoving rstudio_qn6au    ... [32mdone[0m[8B[5A[2KRemoving rstudio_aschroed ... [32mdone[0m[5B[6A[2KRemoving rstudio_sss5sc   ... [32mdone[0m[6BNetwork root_default is external, skipping
+]0;/home/aschroed/git/docker_sdad/rstudio]0;aschroed@docker-s-12vcpu-48gb-nyc1-01: ~/git/docker_sdad/rstudio[01;32maschroed@docker-s-12vcpu-48gb-nyc1-01[00m:[01;34m~/git/docker_sdad/rstudio[00m$ docker ps -a
+CONTAINER ID        IMAGE                        COMMAND                   CREATED             STATUS                             PORTS                                                                                                                                                                                        NAMES
+38f4849a87dd        selenium/standalone-chrome   "/opt/bin/entry_poin…"    12 days ago         Up 12 days                         0.0.0.0:4444->4444/tcp                                                                                                                                                                       selenium_chrome
+487acea8e410        gitlab/gitlab-ce:latest      "/assets/wrapper"         2 weeks ago         Up 16 seconds (health: starting)   80/tcp, 443/tcp, 0.0.0.0:8929->8929/tcp, 0.0.0.0:2224->22/tcp                                                                                                                                test_web_1
+ff64ab712f5b        adminer                      "entrypoint.sh docke…"    2 weeks ago         Up 2 weeks                         0.0.0.0:8080->8080/tcp                                                                                                                                                                       adminer
+23f85cfc9e57        postgres                     "docker-entrypoint.s…"    5 weeks ago         Up 5 weeks                         0.0.0.0:5433->5432/tcp                                                                                                                                                                       postgis
+83bee15da508        atmoz/sftp                   "/entrypoint"             8 weeks ago         Up 8 weeks                         0.0.0.0:2222->22/tcp                                                                                                                                                                         sftp
+2661c8ecd4cd        sdad/plumber:0.1             "R -e 'pr <- plumber…"    2 months ago        Up 2 months                        0.0.0.0:8000->8000/tcp                                                                                                                                                                       api1
+9328fb4a7d70        efebe2c911c8                 "/bin/sh -c 'R -e 'i…"    2 months ago        Exited (1) 2 months ago                                                                                                                                                                                                         wizardly_bhaskara
+72ee1aa5cbb6        efebe2c911c8                 "/bin/sh -c 'R -e \"i…"   2 months ago        Exited (1) 2 months ago                                                                                                                                                                                                         elated_robinson
+61805fee0634        1eede073efa6                 "/bin/sh -c 'R -e 'r…"    2 months ago        Exited (1) 2 months ago                                                                                                                                                                                                         clever_spence
+253463d408fa        adc00e72c063                 "/bin/sh -c 'R -e 'd…"    2 months ago        Exited (1) 2 months ago                                                                                                                                                                                                         xenodochial_agnesi
+e68c72c81258        xwiki:postgres-tomcat        "docker-entrypoint.s…"    3 months ago        Up 3 months                        0.0.0.0:8081->8080/tcp                                                                                                                                                                       xwiki-postgres-tomcat-web
+80288e447225        postgres:9.5                 "docker-entrypoint.s…"    3 months ago        Up 2 weeks                         5432/tcp                                                                                                                                                                                     xwiki-postgres-db
+8126bc4a28d1        nginx                        "nginx -g 'daemon of…"    3 months ago        Exited (128) 3 months ago                                                                                                                                                                                                       nginx
+779e1431dd54        69989124ed12                 "/bin/sh -c 'service…"    4 months ago        Created                                                                                                                                                                                                                         vigilant_stonebraker
+c0142bf447d3        plexinc/pms-docker           "/init"                   4 months ago        Up 4 months (healthy)              0.0.0.0:3005->3005/tcp, 0.0.0.0:8324->8324/tcp, 0.0.0.0:1900->1900/udp, 0.0.0.0:32410->32410/udp, 0.0.0.0:32400->32400/tcp, 0.0.0.0:32412-32414->32412-32414/udp, 0.0.0.0:32469->32469/tcp   plx
+a432b238ef46        rocker/rstudio               "/init"                   4 months ago        Exited (1) 4 months ago                                                                                                                                                                                                         jolly_mahavira
+ccf51373fc21        rocker/rstudio               "/init"                   4 months ago        Exited (1) 4 months ago                                                                                                                                                                                                         silly_golick
+4a21d6f27e77        rocker/rstudio               "/init"                   4 months ago        Exited (1) 4 months ago                                                                                                                                                                                                         festive_murdock
+c97b8f38fc9e        8dfb4c0f0e31                 "/init"                   4 months ago        Exited (1) 4 months ago                                                                                                                                                                                                         objective_austin
+dcca26723b4e        rocker/shiny-verse           "/usr/bin/shiny-serv…"    4 months ago        Up 4 months                        0.0.0.0:3838->3838/tcp                                                                                                                                                                       shiny
+5dadbf5002f5        sdal/dpl7                    "docker-php-entrypoi…"    6 months ago        Up 4 months                        0.0.0.0:8383->80/tcp                                                                                                                                                                         drupal7
+]0;/home/aschroed/git/docker_sdad/rstudio]0;aschroed@docker-s-12vcpu-48gb-nyc1-01: ~/git/docker_sdad/rstudio[01;32maschroed@docker-s-12vcpu-48gb-nyc1-01[00m:[01;34m~/git/docker_sdad/rstudio[00m$ [K]0;aschroed@docker-s-12vcpu-48gb-nyc1-01: ~/git/docker_sdad/rstudio[01;32maschroed@docker-s-12vcpu-48gb-nyc1-01[00m:[01;34m~/git/docker_sdad/rstudio[00m$ [K]0;aschroed@docker-s-12vcpu-48gb-nyc1-01: ~/git/docker_sdad/rstudio[01;32maschroed@docker-s-12vcpu-48gb-nyc1-01[00m:[01;34m~/git/docker_sdad/rstudio[00m$ docker ps -a-compose down[K[K[K[Kup
+Creating rstudio_af5ug ... 
+Creating rstudio_aschroed ... 
+Creating rstudio_sss5sc   ... 
+Creating rstudio_qn6au    ... 
+Creating rstudio_ks6pn    ... 
+Creating rstudio_ap3xx    ... 
+Creating rstudio_sak9tr   ... 
+Creating rstudio_cc2cm    ... 
+[5A[2KCreating rstudio_qn6au    ... [32mdone[0m[5B[3A[2KCreating rstudio_ap3xx    ... [32mdone[0m[3B[7A[2KCreating rstudio_aschroed ... [32mdone[0m[7B[1A[2KCreating rstudio_cc2cm    ... [32mdone[0m[1B[8A[2KCreating rstudio_af5ug    ... [32mdone[0m[8B[6A[2KCreating rstudio_sss5sc   ... [32mdone[0m[6B[4A[2KCreating rstudio_ks6pn    ... [32mdone[0m[4B[2A[2KCreating rstudio_sak9tr   ... [32mdone[0m[2BAttaching to rstudio_qn6au, rstudio_ap3xx, rstudio_aschroed, rstudio_cc2cm, rstudio_af5ug, rstudio_sss5sc, rstudio_ks6pn, rstudio_sak9tr
+[36mrstudio_qn6au       |[0m [s6-init] making user provided files available at /var/run/s6/etc...exited 0.
+[36mrstudio_qn6au       |[0m [s6-init] ensuring user provided files have correct perms...exited 0.
+[36mrstudio_qn6au       |[0m [fix-attrs.d] applying ownership & permissions fixes...
+[35mrstudio_cc2cm       |[0m [s6-init] making user provided files available at /var/run/s6/etc...exited 0.
+[33mrstudio_ap3xx       |[0m [s6-init] making user provided files available at /var/run/s6/etc...exited 0.
+[36mrstudio_qn6au       |[0m [fix-attrs.d] done.
+[35mrstudio_cc2cm       |[0m [s6-init] ensuring user provided files have correct perms...exited 0.
+[36mrstudio_qn6au       |[0m [cont-init.d] executing container initialization scripts...
+[36mrstudio_qn6au       |[0m [cont-init.d] 01-userconf: executing... 
+[36mrstudio_qn6au       |[0m deleting user rstudio
+[36mrstudio_qn6au       |[0m userdel: user 'rstudio' does not exist
+[35mrstudio_cc2cm       |[0m [fix-attrs.d] applying ownership & permissions fixes...
+[32mrstudio_aschroed    |[0m [s6-init] making user provided files available at /var/run/s6/etc...exited 0.
+[36mrstudio_qn6au       |[0m creating new qn6au with UID 1016
+[32mrstudio_aschroed    |[0m [s6-init] ensuring user provided files have correct perms...exited 0.
+[31mrstudio_af5ug       |[0m [s6-init] making user provided files available at /var/run/s6/etc...exited 0.
+[35mrstudio_cc2cm       |[0m [fix-attrs.d] done.
+[36mrstudio_qn6au       |[0m useradd: user 'qn6au' already exists
+[35mrstudio_cc2cm       |[0m [cont-init.d] executing container initialization scripts...
+[36mrstudio_qn6au       |[0m mkdir: cannot create directory ‘/home/qn6au’: File exists
+[34mrstudio_sss5sc      |[0m [s6-init] making user provided files available at /var/run/s6/etc...exited 0.
+[31mrstudio_af5ug       |[0m [s6-init] ensuring user provided files have correct perms...exited 0.
+[35mrstudio_cc2cm       |[0m [cont-init.d] 01-userconf: executing... 
+[31mrstudio_af5ug       |[0m [fix-attrs.d] applying ownership & permissions fixes...
+[32mrstudio_aschroed    |[0m [fix-attrs.d] applying ownership & permissions fixes...
+[33mrstudio_ap3xx       |[0m [s6-init] ensuring user provided files have correct perms...exited 0.
+[36mrstudio_qn6au       |[0m usermod: cannot open /etc/passwd
+[35mrstudio_cc2cm       |[0m deleting user rstudio
+[31mrstudio_af5ug       |[0m [fix-attrs.d] done.
+[32mrstudio_aschroed    |[0m [fix-attrs.d] done.
+[36mrstudio_qn6au       |[0m chpasswd: (user qn6au) pam_chauthtok() failed, error:
+[36mrstudio_qn6au       |[0m Authentication token manipulation error
+[36mrstudio_qn6au       |[0m chpasswd: (line 1, user qn6au) password not changed
+[35mrstudio_cc2cm       |[0m userdel: user 'rstudio' does not exist
+[32mrstudio_aschroed    |[0m [cont-init.d] executing container initialization scripts...
+[33mrstudio_ap3xx       |[0m [fix-attrs.d] applying ownership & permissions fixes...
+[36mrstudio_qn6au       |[0m [cont-init.d] 01-userconf: exited 0.
+[32mrstudio_aschroed    |[0m [cont-init.d] 01-userconf: executing... 
+[31mrstudio_af5ug       |[0m [cont-init.d] executing container initialization scripts...
+[31mrstudio_af5ug       |[0m [cont-init.d] 01-userconf: executing... 
+[36mrstudio_qn6au       |[0m [cont-init.d] add: executing... 
+[35mrstudio_cc2cm       |[0m creating new cc2cm with UID 1017
+[32mrstudio_aschroed    |[0m usermod: user 'rstudio' does not exist
+[31mrstudio_af5ug       |[0m deleting user rstudio
+[32mrstudio_aschroed    |[0m groupmod: group 'rstudio' does not exist
+[33mrstudio_ap3xx       |[0m [fix-attrs.d] done.
+[31mrstudio_af5ug       |[0m userdel: user 'rstudio' does not exist
+[35mrstudio_cc2cm       |[0m useradd: user 'cc2cm' already exists
+[36mrstudio_qn6au       |[0m Nothing additional to add
+[33mrstudio_ap3xx       |[0m [cont-init.d] executing container initialization scripts...
+[34mrstudio_sss5sc      |[0m [s6-init] ensuring user provided files have correct perms...exited 0.
+[36mrstudio_qn6au       |[0m [cont-init.d] add: exited 0.
+[36mrstudio_qn6au       |[0m [cont-init.d] done.
+[36;1mrstudio_ks6pn       |[0m [s6-init] making user provided files available at /var/run/s6/etc...exited 0.
+[34mrstudio_sss5sc      |[0m [fix-attrs.d] applying ownership & permissions fixes...
+[35mrstudio_cc2cm       |[0m mkdir: cannot create directory ‘/home/cc2cm’: File exists
+[31mrstudio_af5ug       |[0m creating new af5ug with UID 1014
+[32mrstudio_aschroed    |[0m usermod: cannot open /etc/passwd
+[31mrstudio_af5ug       |[0m useradd: user 'af5ug' already exists
+[36mrstudio_qn6au       |[0m [services.d] starting services
+[32mrstudio_aschroed    |[0m USER is now aschroed
+[33mrstudio_ap3xx       |[0m [cont-init.d] 01-userconf: executing... 
+[35mrstudio_cc2cm       |[0m usermod: cannot open /etc/passwd
+[32mrstudio_aschroed    |[0m chpasswd: (user aschroed) pam_chauthtok() failed, error:
+[32mrstudio_aschroed    |[0m Authentication token manipulation error
+[32mrstudio_aschroed    |[0m chpasswd: (line 1, user aschroed) password not changed
+[36mrstudio_qn6au       |[0m [services.d] done.
+[33mrstudio_ap3xx       |[0m deleting user rstudio
+[36;1mrstudio_ks6pn       |[0m [s6-init] ensuring user provided files have correct perms...exited 0.
+[36;1mrstudio_ks6pn       |[0m [fix-attrs.d] applying ownership & permissions fixes...
+[34mrstudio_sss5sc      |[0m [fix-attrs.d] done.
+[32mrstudio_aschroed    |[0m [cont-init.d] 01-userconf: exited 0.
+[33mrstudio_ap3xx       |[0m userdel: user 'rstudio' does not exist
+[35mrstudio_cc2cm       |[0m chpasswd: (user cc2cm) pam_chauthtok() failed, error:
+[35mrstudio_cc2cm       |[0m Authentication token manipulation error
+[35mrstudio_cc2cm       |[0m chpasswd: (line 1, user cc2cm) password not changed
+[32mrstudio_aschroed    |[0m [cont-init.d] add: executing... 
+[35mrstudio_cc2cm       |[0m [cont-init.d] 01-userconf: exited 0.
+[33mrstudio_ap3xx       |[0m creating new ap3xx with UID 1013
+[33mrstudio_ap3xx       |[0m useradd: user 'ap3xx' already exists
+[33mrstudio_ap3xx       |[0m mkdir: cannot create directory ‘/home/ap3xx’: File exists
+[33mrstudio_ap3xx       |[0m usermod: cannot open /etc/passwd
+[33mrstudio_ap3xx       |[0m chpasswd: (user ap3xx) pam_chauthtok() failed, error:
+[33mrstudio_ap3xx       |[0m Authentication token manipulation error
+[33mrstudio_ap3xx       |[0m chpasswd: (line 1, user ap3xx) password not changed
+[31mrstudio_af5ug       |[0m mkdir: cannot create directory ‘/home/af5ug’: File exists
+[33mrstudio_ap3xx       |[0m [cont-init.d] 01-userconf: exited 0.
+[33mrstudio_ap3xx       |[0m [cont-init.d] add: executing... 
+[32mrstudio_aschroed    |[0m Nothing additional to add
+[31mrstudio_af5ug       |[0m usermod: cannot open /etc/passwd
+[33mrstudio_ap3xx       |[0m Nothing additional to add
+[36;1mrstudio_ks6pn       |[0m [fix-attrs.d] done.
+[31mrstudio_af5ug       |[0m chpasswd: (user af5ug) pam_chauthtok() failed, error:
+[31mrstudio_af5ug       |[0m Authentication token manipulation error
+[31mrstudio_af5ug       |[0m chpasswd: (line 1, user af5ug) password not changed
+[33;1mrstudio_sak9tr      |[0m [s6-init] making user provided files available at /var/run/s6/etc...exited 0.
+[34mrstudio_sss5sc      |[0m [cont-init.d] executing container initialization scripts...
+[32mrstudio_aschroed    |[0m [cont-init.d] add: exited 0.
+[36;1mrstudio_ks6pn       |[0m [cont-init.d] executing container initialization scripts...
+[36;1mrstudio_ks6pn       |[0m [cont-init.d] 01-userconf: executing... 
+[31mrstudio_af5ug       |[0m [cont-init.d] 01-userconf: exited 0.
+[34mrstudio_sss5sc      |[0m [cont-init.d] 01-userconf: executing... 
+[36;1mrstudio_ks6pn       |[0m deleting user rstudio
+[33mrstudio_ap3xx       |[0m [cont-init.d] add: exited 0.
+[31mrstudio_af5ug       |[0m [cont-init.d] add: executing... 
+[33mrstudio_ap3xx       |[0m [cont-init.d] done.
+[35mrstudio_cc2cm       |[0m [cont-init.d] add: executing... 
+[33mrstudio_ap3xx       |[0m [services.d] starting services
+[34mrstudio_sss5sc      |[0m deleting user rstudio
+[32mrstudio_aschroed    |[0m [cont-init.d] done.
+[31mrstudio_af5ug       |[0m Nothing additional to add
+[31mrstudio_af5ug       |[0m [cont-init.d] add: exited 0.
+[33mrstudio_ap3xx       |[0m [services.d] done.
+[36;1mrstudio_ks6pn       |[0m userdel: user 'rstudio' does not exist
+[31mrstudio_af5ug       |[0m [cont-init.d] done.
+[35mrstudio_cc2cm       |[0m Nothing additional to add
+[32mrstudio_aschroed    |[0m [services.d] starting services
+[31mrstudio_af5ug       |[0m [services.d] starting services
+[34mrstudio_sss5sc      |[0m userdel: user 'rstudio' does not exist
+[35mrstudio_cc2cm       |[0m [cont-init.d] add: exited 0.
+[36;1mrstudio_ks6pn       |[0m creating new ks6pn with UID 1015
+[31mrstudio_af5ug       |[0m [services.d] done.
+[36;1mrstudio_ks6pn       |[0m useradd: user 'ks6pn' already exists
+[34mrstudio_sss5sc      |[0m creating new sss5sc with UID 1019
+[34mrstudio_sss5sc      |[0m useradd: user 'sss5sc' already exists
+[36;1mrstudio_ks6pn       |[0m mkdir: cannot create directory ‘/home/ks6pn’: File exists
+[32mrstudio_aschroed    |[0m [services.d] done.
+[35mrstudio_cc2cm       |[0m [cont-init.d] done.
+[35mrstudio_cc2cm       |[0m [services.d] starting services
+[35mrstudio_cc2cm       |[0m [services.d] done.
+[34mrstudio_sss5sc      |[0m mkdir: cannot create directory ‘/home/sss5sc’: File exists
+[34mrstudio_sss5sc      |[0m usermod: cannot open /etc/passwd
+[34mrstudio_sss5sc      |[0m chpasswd: (user sss5sc) pam_chauthtok() failed, error:
+[34mrstudio_sss5sc      |[0m Authentication token manipulation error
+[34mrstudio_sss5sc      |[0m chpasswd: (line 1, user sss5sc) password not changed
+[34mrstudio_sss5sc      |[0m [cont-init.d] 01-userconf: exited 0.
+[34mrstudio_sss5sc      |[0m [cont-init.d] add: executing... 
+[34mrstudio_sss5sc      |[0m Nothing additional to add
+[34mrstudio_sss5sc      |[0m [cont-init.d] add: exited 0.
+[34mrstudio_sss5sc      |[0m [cont-init.d] done.
+[34mrstudio_sss5sc      |[0m [services.d] starting services
+[36;1mrstudio_ks6pn       |[0m usermod: cannot open /etc/passwd
+[34mrstudio_sss5sc      |[0m [services.d] done.
+[33;1mrstudio_sak9tr      |[0m [s6-init] ensuring user provided files have correct perms...exited 0.
+[33;1mrstudio_sak9tr      |[0m [fix-attrs.d] applying ownership & permissions fixes...
+[33;1mrstudio_sak9tr      |[0m [fix-attrs.d] done.
+[33;1mrstudio_sak9tr      |[0m [cont-init.d] executing container initialization scripts...
+[33;1mrstudio_sak9tr      |[0m [cont-init.d] 01-userconf: executing... 
+[36;1mrstudio_ks6pn       |[0m chpasswd: (user ks6pn) pam_chauthtok() failed, error:
+[36;1mrstudio_ks6pn       |[0m Authentication token manipulation error
+[36;1mrstudio_ks6pn       |[0m chpasswd: (line 1, user ks6pn) password not changed
+[36;1mrstudio_ks6pn       |[0m [cont-init.d] 01-userconf: exited 0.
+[36;1mrstudio_ks6pn       |[0m [cont-init.d] add: executing... 
+[36;1mrstudio_ks6pn       |[0m Nothing additional to add
+[36;1mrstudio_ks6pn       |[0m [cont-init.d] add: exited 0.
+[36;1mrstudio_ks6pn       |[0m [cont-init.d] done.
+[36;1mrstudio_ks6pn       |[0m [services.d] starting services
+[36;1mrstudio_ks6pn       |[0m [services.d] done.
+[33;1mrstudio_sak9tr      |[0m deleting user rstudio
+[33;1mrstudio_sak9tr      |[0m userdel: user 'rstudio' does not exist
+[33;1mrstudio_sak9tr      |[0m creating new sak9tr with UID 1018
+[33;1mrstudio_sak9tr      |[0m useradd: user 'sak9tr' already exists
+[33;1mrstudio_sak9tr      |[0m mkdir: cannot create directory ‘/home/sak9tr’: File exists
+[33;1mrstudio_sak9tr      |[0m usermod: cannot open /etc/passwd
+[33;1mrstudio_sak9tr      |[0m chpasswd: (user sak9tr) pam_chauthtok() failed, error:
+[33;1mrstudio_sak9tr      |[0m Authentication token manipulation error
+[33;1mrstudio_sak9tr      |[0m chpasswd: (line 1, user sak9tr) password not changed
+[33;1mrstudio_sak9tr      |[0m [cont-init.d] 01-userconf: exited 0.
+[33;1mrstudio_sak9tr      |[0m [cont-init.d] add: executing... 
+[33;1mrstudio_sak9tr      |[0m Nothing additional to add
+[33;1mrstudio_sak9tr      |[0m [cont-init.d] add: exited 0.
+[33;1mrstudio_sak9tr      |[0m [cont-init.d] done.
+[33;1mrstudio_sak9tr      |[0m [services.d] starting services
+[33;1mrstudio_sak9tr      |[0m [services.d] done.
+
+^CGracefully stopping... (press Ctrl+C again to force)
+Stopping rstudio_ks6pn    ... 
+Stopping rstudio_sak9tr   ... 
+Stopping rstudio_sss5sc   ... 
+Stopping rstudio_cc2cm    ... 
+Stopping rstudio_qn6au    ... 
+Stopping rstudio_ap3xx    ... 
+Stopping rstudio_aschroed ... 
+Stopping rstudio_af5ug    ... 
+^CKilling rstudio_ks6pn     ... 
+Killing rstudio_sak9tr    ... 
+Killing rstudio_sss5sc    ... 
+Killing rstudio_cc2cm     ... 
+Killing rstudio_qn6au     ... 
+Killing rstudio_ap3xx     ... 
+Killing rstudio_aschroed  ... 
+Killing rstudio_af5ug     ... 
+[3A[2KKilling rstudio_ap3xx     ... [31merror[0m[3B[8A[2KKilling rstudio_ks6pn     ... [31merror[0m[8B[5A[2KKilling rstudio_cc2cm     ... [31merror[0m[5B[2A[2KKilling rstudio_aschroed  ... [31merror[0m[2B[1A[2KKilling rstudio_af5ug     ... [31merror[0m[1B[6A[2KKilling rstudio_sss5sc    ... [31merror[0m[6B[4A[2KKilling rstudio_qn6au     ... [31merror[0m[4B[7A[2KKilling rstudio_sak9tr    ... [31merror[0m[7B
+ERROR: for rstudio_ap3xx  Cannot kill container: 81ab00d97e9a4c93384e6bf95e8267d0277c97d9a8390ffc82173bc62f61aa2b: Container 81ab00d97e9a4c93384e6bf95e8267d0277c97d9a8390ffc82173bc62f61aa2b is not running
+
+ERROR: for rstudio_ks6pn  Cannot kill container: a1686d72e249e5e0084ec954bd1b0c5af603972afe0af8e8a4895d795a3f58e3: Container a1686d72e249e5e0084ec954bd1b0c5af603972afe0af8e8a4895d795a3f58e3 is not running
+
+ERROR: for rstudio_cc2cm  Cannot kill container: d673f24e6b18d22e7a9b1bf0292c6e57f668b7b04376f25d2001bb1d8665ab49: Container d673f24e6b18d22e7a9b1bf0292c6e57f668b7b04376f25d2001bb1d8665ab49 is not running
+
+ERROR: for rstudio_aschroed  Cannot kill container: f2e2cab04f2d021e07b007d9db182dff32937632824062475c621c1204958d9f: Container f2e2cab04f2d021e07b007d9db182dff32937632824062475c621c1204958d9f is not running
+
+ERROR: for rstudio_af5ug  Cannot kill container: 583ea276e849373e80bd66a02a742f98ed9c889dd5300dc65d99cf2ec998b9bd: Container 583ea276e849373e80bd66a02a742f98ed9c889dd5300dc65d99cf2ec998b9bd is not running
+
+ERROR: for rstudio_sss5sc  Cannot kill container: 4f0d539a3a02750d6d01ba4344d3b925abac66e9869c8473dd89679d303eee68: Container 4f0d539a3a02750d6d01ba4344d3b925abac66e9869c8473dd89679d303eee68 is not running
+
+ERROR: for rstudio_qn6au  Cannot kill container: 81661901041e9a7fb5bf72b38295a9a10468537244a715edb38efd887eab02df: Container 81661901041e9a7fb5bf72b38295a9a10468537244a715edb38efd887eab02df is not running
+
+ERROR: for rstudio_sak9tr  Cannot kill container: 38634f54b7893c40b68cd1514a70eed3b52bcc0969c085da1ff88e20e8ac2a6e: Container 38634f54b7893c40b68cd1514a70eed3b52bcc0969c085da1ff88e20e8ac2a6e is not running
+]0;/home/aschroed/git/docker_sdad/rstudio]0;aschroed@docker-s-12vcpu-48gb-nyc1-01: ~/git/docker_sdad/rstudio[01;32maschroed@docker-s-12vcpu-48gb-nyc1-01[00m:[01;34m~/git/docker_sdad/rstudio[00m$ rm -[K[K[K[Kdocker rm -f rstudio_aschroed
+rstudio_aschroed
+]0;/home/aschroed/git/docker_sdad/rstudio]0;aschroed@docker-s-12vcpu-48gb-nyc1-01: ~/git/docker_sdad/rstudio[01;32maschroed@docker-s-12vcpu-48gb-nyc1-01[00m:[01;34m~/git/docker_sdad/rstudio[00m$ docker rm -f rstudio_aschroed[K[K[K[K[K[K[K[Kqn6au
+rstudio_qn6au
+]0;/home/aschroed/git/docker_sdad/rstudio]0;aschroed@docker-s-12vcpu-48gb-nyc1-01: ~/git/docker_sdad/rstudio[01;32maschroed@docker-s-12vcpu-48gb-nyc1-01[00m:[01;34m~/git/docker_sdad/rstudio[00m$ docker rm -f rstudio_qn6au[K[K[K[K[Ksss5sc
+rstudio_sss5sc
+]0;/home/aschroed/git/docker_sdad/rstudio]0;aschroed@docker-s-12vcpu-48gb-nyc1-01: ~/git/docker_sdad/rstudio[01;32maschroed@docker-s-12vcpu-48gb-nyc1-01[00m:[01;34m~/git/docker_sdad/rstudio[00m$ docker rm -f rstudio_sss5sc[K[K[K[K[K[Kaf5ug
+rstudio_af5ug
+]0;/home/aschroed/git/docker_sdad/rstudio]0;aschroed@docker-s-12vcpu-48gb-nyc1-01: ~/git/docker_sdad/rstudio[01;32maschroed@docker-s-12vcpu-48gb-nyc1-01[00m:[01;34m~/git/docker_sdad/rstudio[00m$ docker rm -f rstudio_af5ugsss5sc[K[K[K[K[K[Kcc2cm
+rstudio_cc2cm
+]0;/home/aschroed/git/docker_sdad/rstudio]0;aschroed@docker-s-12vcpu-48gb-nyc1-01: ~/git/docker_sdad/rstudio[01;32maschroed@docker-s-12vcpu-48gb-nyc1-01[00m:[01;34m~/git/docker_sdad/rstudio[00m$ docker rm -f rstudio_cc2cm[K[K[K[K[Kks6np
+Error: No such container: rstudio_ks6np
+]0;/home/aschroed/git/docker_sdad/rstudio]0;aschroed@docker-s-12vcpu-48gb-nyc1-01: ~/git/docker_sdad/rstudio[01;32maschroed@docker-s-12vcpu-48gb-nyc1-01[00m:[01;34m~/git/docker_sdad/rstudio[00m$ docker rm -f rstudio_ks6np[K[K[K[K[Ksak9tr
+rstudio_sak9tr
+]0;/home/aschroed/git/docker_sdad/rstudio]0;aschroed@docker-s-12vcpu-48gb-nyc1-01: ~/git/docker_sdad/rstudio[01;32maschroed@docker-s-12vcpu-48gb-nyc1-01[00m:[01;34m~/git/docker_sdad/rstudio[00m$ docker rm -f rstudio_sak9tr[1Pks6npcc2cmaf5ugsss5sc[1Pqn6auaschroed[12P-compose up -d
+Starting rstudio_ks6pn ... 
+Starting rstudio_ap3xx ... 
+Creating rstudio_cc2cm ... 
+Creating rstudio_sak9tr ... 
+Creating rstudio_af5ug  ... 
+Creating rstudio_aschroed ... 
+Creating rstudio_sss5sc   ... 
+Creating rstudio_qn6au    ... 
+[8A[2KStarting rstudio_ks6pn    ... [32mdone[0m[8B[7A[2KStarting rstudio_ap3xx    ... [32mdone[0m[7B[6A[2KCreating rstudio_cc2cm    ... [32mdone[0m[6B[4A[2KCreating rstudio_af5ug    ... [32mdone[0m[4B[3A[2KCreating rstudio_aschroed ... [32mdone[0m[3B[2A[2KCreating rstudio_sss5sc   ... [32mdone[0m[2B[1A[2KCreating rstudio_qn6au    ... [32mdone[0m[1B[5A[2KCreating rstudio_sak9tr   ... [32mdone[0m[5B]0;/home/aschroed/git/docker_sdad/rstudio]0;aschroed@docker-s-12vcpu-48gb-nyc1-01: ~/git/docker_sdad/rstudio[01;32maschroed@docker-s-12vcpu-48gb-nyc1-01[00m:[01;34m~/git/docker_sdad/rstudio[00m$ docker ps
+CONTAINER ID        IMAGE                        COMMAND                  CREATED             STATUS                             PORTS                                                                                                                                                                                        NAMES
+0623e1ac95f5        rocker/geospatial            "/init"                  23 seconds ago      Up 8 seconds                       0.0.0.0:31016->8787/tcp                                                                                                                                                                      rstudio_qn6au
+1c3d837f0382        rocker/geospatial            "/init"                  23 seconds ago      Up 11 seconds                      0.0.0.0:31014->8787/tcp                                                                                                                                                                      rstudio_af5ug
+0fbd3dca1801        rocker/geospatial            "/init"                  23 seconds ago      Up 9 seconds                       0.0.0.0:31019->8787/tcp                                                                                                                                                                      rstudio_sss5sc
+3c07fa38368f        rocker/geospatial            "/init"                  23 seconds ago      Up 10 seconds                      0.0.0.0:31000->8787/tcp                                                                                                                                                                      rstudio_aschroed
+21796c0152f5        rocker/geospatial            "/init"                  23 seconds ago      Up 7 seconds                       0.0.0.0:31018->8787/tcp                                                                                                                                                                      rstudio_sak9tr
+89d0c224e78a        rocker/geospatial            "/init"                  23 seconds ago      Up 13 seconds                      0.0.0.0:31017->8787/tcp                                                                                                                                                                      rstudio_cc2cm
+a1686d72e249        rocker/geospatial            "/init"                  3 minutes ago       Up 21 seconds                      0.0.0.0:31015->8787/tcp                                                                                                                                                                      rstudio_ks6pn
+81ab00d97e9a        rocker/geospatial            "/init"                  3 minutes ago       Up 20 seconds                      0.0.0.0:31013->8787/tcp                                                                                                                                                                      rstudio_ap3xx
+38f4849a87dd        selenium/standalone-chrome   "/opt/bin/entry_poin…"   12 days ago         Up 12 days                         0.0.0.0:4444->4444/tcp                                                                                                                                                                       selenium_chrome
+487acea8e410        gitlab/gitlab-ce:latest      "/assets/wrapper"        2 weeks ago         Up 12 seconds (health: starting)   80/tcp, 443/tcp, 0.0.0.0:8929->8929/tcp, 0.0.0.0:2224->22/tcp                                                                                                                                test_web_1
+ff64ab712f5b        adminer                      "entrypoint.sh docke…"   2 weeks ago         Up 2 weeks                         0.0.0.0:8080->8080/tcp                                                                                                                                                                       adminer
+23f85cfc9e57        postgres                     "docker-entrypoint.s…"   5 weeks ago         Up 5 weeks                         0.0.0.0:5433->5432/tcp                                                                                                                                                                       postgis
+83bee15da508        atmoz/sftp                   "/entrypoint"            8 weeks ago         Up 8 weeks                         0.0.0.0:2222->22/tcp                                                                                                                                                                         sftp
+2661c8ecd4cd        sdad/plumber:0.1             "R -e 'pr <- plumber…"   2 months ago        Up 2 months                        0.0.0.0:8000->8000/tcp                                                                                                                                                                       api1
+e68c72c81258        xwiki:postgres-tomcat        "docker-entrypoint.s…"   3 months ago        Up 3 months                        0.0.0.0:8081->8080/tcp                                                                                                                                                                       xwiki-postgres-tomcat-web
+80288e447225        postgres:9.5                 "docker-entrypoint.s…"   3 months ago        Up 2 weeks                         5432/tcp                                                                                                                                                                                     xwiki-postgres-db
+c0142bf447d3        plexinc/pms-docker           "/init"                  4 months ago        Up 4 months (healthy)              0.0.0.0:3005->3005/tcp, 0.0.0.0:8324->8324/tcp, 0.0.0.0:1900->1900/udp, 0.0.0.0:32410->32410/udp, 0.0.0.0:32400->32400/tcp, 0.0.0.0:32412-32414->32412-32414/udp, 0.0.0.0:32469->32469/tcp   plx
+dcca26723b4e        rocker/shiny-verse           "/usr/bin/shiny-serv…"   4 months ago        Up 4 months                        0.0.0.0:3838->3838/tcp                                                                                                                                                                       shiny
+5dadbf5002f5        sdal/dpl7                    "docker-php-entrypoi…"   6 months ago        Up 4 months                        0.0.0.0:8383->80/tcp                                                                                                                                                                         drupal7
+cd ../../../business_innovation/
+]0;/home/aschroed/business_innovation]0;aschroed@3c07fa38368f: ~/business_innovation[01;32maschroed@3c07fa38368f[00m:[01;34m~/business_innovation[00m$ ls -l
+total 32
+lrwxrwxrwx  1 aschroed aschroed   80 May 31 17:01 [0m[40;31;01mEdgar filings[0m -> [40;31;01m/home/sdal/projects/nsf/business_innovation/original/edgar_filings/Edgar filings[0m
+drwxrwxr-x  2 aschroed aschroed 4096 May 31 17:01 [01;34mMaster Index[0m
+drwxrwxr-x  2 aschroed aschroed 4096 May 31 17:01 [01;34mR[0m
+-rw-rw-r--  1 aschroed aschroed   21 May 31 17:01 README.md
+-rw-rw-r--  1 aschroed aschroed  257 May 31 17:01 business_innovation.Rproj
+lrwxrwxrwx  1 aschroed aschroed   47 May 31 17:13 [40;31;01mdata[0m -> [40;31;01m/home/sdad/project_data/nsf/business_innovation[0m
+drwxrwxr-x  2 aschroed aschroed 4096 May 31 17:01 [01;34mfunctions[0m
+drwxrwxr-x  4 aschroed aschroed 4096 May 31 17:01 [01;34moutput[0m
+drwxrwxr-x 19 aschroed aschroed 4096 May 31 17:01 [01;34msrc[0m
+]0;/home/aschroed/business_innovation]0;aschroed@3c07fa38368f: ~/business_innovation[01;32maschroed@3c07fa38368f[00m:[01;34m~/business_innovation[00m$ cd Da[K[Kdata
+bash: cd: data: No such file or directory
+]0;/home/aschroed/business_innovation]0;aschroed@3c07fa38368f: ~/business_innovation[01;32maschroed@3c07fa38368f[00m:[01;34m~/business_innovation[00m$ cd ../acpd/
+]0;/home/aschroed/acpd]0;aschroed@3c07fa38368f: ~/acpd[01;32maschroed@3c07fa38368f[00m:[01;34m~/acpd[00m$ ls -l
+total 96
+drwxrwxr-x 2 aschroed aschroed  4096 May 31 17:05 [0m[01;34mR[0m
+-rw-rw-r-- 1 aschroed aschroed  1278 May 31 17:05 README.md
+-rw-rw-r-- 1 aschroed aschroed   205 May 31 17:05 acpd.Rproj
+-rw-rw-r-- 1 aschroed aschroed 57081 May 31 17:05 [01;35mcount_crimes_time.png[0m
+drwxrwxr-x 2 aschroed aschroed  4096 May 31 17:05 [01;34mdashboard_tutorial[0m
+drwxrwxr-x 2 aschroed aschroed  4096 May 31 17:05 [01;34mdata[0m
+drwxrwxr-x 2 aschroed aschroed  4096 May 31 17:05 [01;34mfigures[0m
+drwxrwxr-x 2 aschroed aschroed  4096 May 31 17:05 [01;34moutput[0m
+drwxrwxr-x 3 aschroed aschroed  4096 May 31 17:05 [01;34msrc[0m
+drwxrwxr-x 2 aschroed aschroed  4096 May 31 17:05 [01;34mtestdir[0m
+drwxrwxr-x 2 aschroed aschroed  4096 May 31 17:05 [01;34mtests[0m
+]0;/home/aschroed/acpd]0;aschroed@3c07fa38368f: ~/acpd[01;32maschroed@3c07fa38368f[00m:[01;34m~/acpd[00m$ cd data
+]0;/home/aschroed/acpd/data]0;aschroed@3c07fa38368f: ~/acpd/data[01;32maschroed@3c07fa38368f[00m:[01;34m~/acpd/data[00m$ ls -l
+total 4
+-rw-rw-r-- 1 aschroed aschroed 24 May 31 17:05 README.md
+lrwxrwxrwx 1 aschroed aschroed 32 May 31 17:05 [0m[01;36macpd[0m -> [34;42m/home/sdad/project_data/arl/acpd[0m
+]0;/home/aschroed/acpd/data]0;aschroed@3c07fa38368f: ~/acpd/data[01;32maschroed@3c07fa38368f[00m:[01;34m~/acpd/data[00m$ cd acpd
+]0;/home/aschroed/acpd/data/acpd]0;aschroed@3c07fa38368f: ~/acpd/data/acpd[01;32maschroed@3c07fa38368f[00m:[01;34m~/acpd/data/acpd[00m$ cd /home/sdad/
+]0;/home/sdad]0;aschroed@3c07fa38368f: /home/sdad[01;32maschroed@3c07fa38368f[00m:[01;34m/home/sdad[00m$ ls
+[0m[34;42mproject_data[0m  [01;32mrsync_rotating_backup.R[0m  [34;42mtest_rsync[0m
+]0;/home/sdad]0;aschroed@3c07fa38368f: /home/sdad[01;32maschroed@3c07fa38368f[00m:[01;34m/home/sdad[00m$ cd project_data/
+]0;/home/sdad/project_data]0;aschroed@3c07fa38368f: /home/sdad/project_data[01;32maschroed@3c07fa38368f[00m:[01;34m/home/sdad/project_data[00m$ ls -l
+total 352
+drwxrwxrwx  3 aschroed aschroed   4096 Sep 15  2017 [0m[34;42malx[0m
+drwxrwxrwx  3 root     root       4096 Jan 15 16:04 [34;42mari[0m
+drwxrwxrwx 11 root     root       4096 Mar 18 18:15 [34;42marl[0m
+lrwxrwxrwx  1 root     root         42 Jan 15 15:01 [01;36marlington_qecw[0m -> [34;42m/home/sdad/project_data/arl/arlington_qecw[0m
+drwxrwxrwx  3 root     root       4096 Mar 12 20:02 [34;42mcensus[0m
+lrwxrwxrwx  1 root     root         42 Jan 15 15:02 [01;36mcomm_arlington[0m -> [34;42m/home/sdad/project_data/arl/comm_arlington[0m
+drwxrwxrwx  4 root     root       4096 May 20 15:30 [34;42mdspg[0m
+drwxrwxrwx  5 aschroed aschroed   4096 Jan 15 15:50 [34;42mffx[0m
+lrwxrwxrwx  1 root     root         25 Feb 27 15:56 [40;31;01miarpa[0m -> [40;31;01m/mnt/volume_nyc1_01/iarpa[0m
+drwxrwxrwx  3 aschroed aschroed   4096 Apr 24 15:48 [34;42mminerva[0m
+drwxrwxrwx  4 root     root       4096 Feb  6 20:14 [34;42mmitre[0m
+drwxrwxrwx  4 root     root     286720 Mar 18 12:55 [34;42mnsf[0m
+drwxrwxrwx  4 aschroed aschroed   4096 Jun 15  2018 [34;42mroa[0m
+drwxrwxrwx  6 aschroed aschroed   4096 May 18  2018 [34;42mschev[0m
+drwxrwxrwx  4 root     root       4096 Dec  5 18:53 [34;42msdad[0m
+drwxrwxrwx  6 aschroed aschroed   4096 Jun 22  2018 [34;42mumfs[0m
+drwxrwxrwx  3 aschroed aschroed   4096 Nov 16  2018 [34;42musda[0m
+drwxrwxrwx  4 aschroed aschroed   4096 Jun 19  2018 [34;42mvce[0m
+drwxrwsrwx  3 aschroed aschroed   4096 Nov  2  2018 [34;42mvecf[0m
+drwxrwxrwx  3 aschroed aschroed   4096 Jun 29  2018 [34;42mvt[0m
+drwxrwxrwx  3 aschroed aschroed   4096 Sep 15  2017 [34;42mwmata[0m
+]0;/home/sdad/project_data]0;aschroed@3c07fa38368f: /home/sdad/project_data[01;32maschroed@3c07fa38368f[00m:[01;34m/home/sdad/project_data[00m$ cd nsf
+]0;/home/sdad/project_data/nsf]0;aschroed@3c07fa38368f: /home/sdad/project_data/nsf[01;32maschroed@3c07fa38368f[00m:[01;34m/home/sdad/project_data/nsf[00m$ ls
+[0m[34;42mNSF_NCS[0m  [40;31;01mbusiness_innovation[0m  [34;42moss[0m  [40;31;01moss2[0m  [40;31;01mstem_edu[0m
+]0;/home/sdad/project_data/nsf]0;aschroed@3c07fa38368f: /home/sdad/project_data/nsf[01;32maschroed@3c07fa38368f[00m:[01;34m/home/sdad/project_data/nsf[00m$ ls -l
+total 8
+drwxrwxrwx 7 aschroed aschroed 4096 Sep 15  2017 [0m[34;42mNSF_NCS[0m
+lrwxrwxrwx 1 root     root       39 Mar 18 12:36 [40;31;01mbusiness_innovation[0m -> [40;31;01m/mnt/volume_nyc1_01/business_innovation[0m
+drwxrwxrwx 6 aschroed aschroed 4096 Feb 12 20:42 [34;42moss[0m
+lrwxrwxrwx 1 root     root       24 Mar 18 12:52 [40;31;01moss2[0m -> [40;31;01m/mnt/volume_nyc1_01/oss2[0m
+lrwxrwxrwx 1 root     root       28 Feb 27 16:39 [40;31;01mstem_edu[0m -> [40;31;01m/mnt/volume_nyc1_01/stem_edu[0m
+docker p[Kps
+CONTAINER ID        IMAGE                        COMMAND                  CREATED             STATUS                            PORTS                                                                                                                                                                                        NAMES
+3362652f2f9b        rocker/geospatial            "/init"                  19 minutes ago      Up 19 minutes                     0.0.0.0:31016->8787/tcp                                                                                                                                                                      rstudio_qn6au
+042511b8b210        rocker/geospatial            "/init"                  21 minutes ago      Up 21 minutes                     0.0.0.0:31000->8787/tcp                                                                                                                                                                      rstudio_aschroed
+1c3d837f0382        rocker/geospatial            "/init"                  2 days ago          Up 2 days                         0.0.0.0:31014->8787/tcp                                                                                                                                                                      rstudio_af5ug
+0fbd3dca1801        rocker/geospatial            "/init"                  2 days ago          Up 2 days                         0.0.0.0:31019->8787/tcp                                                                                                                                                                      rstudio_sss5sc
+21796c0152f5        rocker/geospatial            "/init"                  2 days ago          Up 2 days                         0.0.0.0:31018->8787/tcp                                                                                                                                                                      rstudio_sak9tr
+89d0c224e78a        rocker/geospatial            "/init"                  2 days ago          Up 2 days                         0.0.0.0:31017->8787/tcp                                                                                                                                                                      rstudio_cc2cm
+a1686d72e249        rocker/geospatial            "/init"                  2 days ago          Up 2 days                         0.0.0.0:31015->8787/tcp                                                                                                                                                                      rstudio_ks6pn
+81ab00d97e9a        rocker/geospatial            "/init"                  2 days ago          Up 2 days                         0.0.0.0:31013->8787/tcp                                                                                                                                                                      rstudio_ap3xx
+38f4849a87dd        selenium/standalone-chrome   "/opt/bin/entry_poin…"   2 weeks ago         Up 2 weeks                        0.0.0.0:4444->4444/tcp                                                                                                                                                                       selenium_chrome
+487acea8e410        gitlab/gitlab-ce:latest      "/assets/wrapper"        2 weeks ago         Up 3 seconds (health: starting)   80/tcp, 443/tcp, 0.0.0.0:8929->8929/tcp, 0.0.0.0:2224->22/tcp                                                                                                                                test_web_1
+ff64ab712f5b        adminer                      "entrypoint.sh docke…"   2 weeks ago         Up 2 weeks                        0.0.0.0:8080->8080/tcp                                                                                                                                                                       adminer
+23f85cfc9e57        postgres                     "docker-entrypoint.s…"   6 weeks ago         Up 6 weeks                        0.0.0.0:5433->5432/tcp                                                                                                                                                                       postgis
+83bee15da508        atmoz/sftp                   "/entrypoint"            8 weeks ago         Up 8 weeks                        0.0.0.0:2222->22/tcp                                                                                                                                                                         sftp
+2661c8ecd4cd        sdad/plumber:0.1             "R -e 'pr <- plumber…"   2 months ago        Up 2 months                       0.0.0.0:8000->8000/tcp                                                                                                                                                                       api1
+e68c72c81258        xwiki:postgres-tomcat        "docker-entrypoint.s…"   4 months ago        Up 4 months                       0.0.0.0:8081->8080/tcp                                                                                                                                                                       xwiki-postgres-tomcat-web
+80288e447225        postgres:9.5                 "docker-entrypoint.s…"   4 months ago        Up 2 weeks                        5432/tcp                                                                                                                                                                                     xwiki-postgres-db
+c0142bf447d3        plexinc/pms-docker           "/init"                  4 months ago        Up 4 months (healthy)             0.0.0.0:3005->3005/tcp, 0.0.0.0:8324->8324/tcp, 0.0.0.0:1900->1900/udp, 0.0.0.0:32410->32410/udp, 0.0.0.0:32400->32400/tcp, 0.0.0.0:32412-32414->32412-32414/udp, 0.0.0.0:32469->32469/tcp   plx
+dcca26723b4e        rocker/shiny-verse           "/usr/bin/shiny-serv…"   4 months ago        Up 4 months                       0.0.0.0:3838->3838/tcp                                                                                                                                                                       shiny
+5dadbf5002f5        sdal/dpl7                    "docker-php-entrypoi…"   6 months ago        Up 4 months                       0.0.0.0:8383->80/tcp                                                                                                                                                                         drupal7
+]0;/home/sdad/project_data/nsf]0;aschroed@042511b8b210: /home/sdad/project_data/nsf[01;32maschroed@042511b8b210[00m:[01;34m/home/sdad/project_data/nsf[00m$ docker ps
+CONTAINER ID        IMAGE                        COMMAND                  CREATED             STATUS                             PORTS                                                                                                                                                                                        NAMES
+3362652f2f9b        rocker/geospatial            "/init"                  36 minutes ago      Up 36 minutes                      0.0.0.0:31016->8787/tcp                                                                                                                                                                      rstudio_qn6au
+042511b8b210        rocker/geospatial            "/init"                  38 minutes ago      Up 38 minutes                      0.0.0.0:31000->8787/tcp                                                                                                                                                                      rstudio_aschroed
+1c3d837f0382        rocker/geospatial            "/init"                  2 days ago          Up 2 days                          0.0.0.0:31014->8787/tcp                                                                                                                                                                      rstudio_af5ug
+0fbd3dca1801        rocker/geospatial            "/init"                  2 days ago          Up 2 days                          0.0.0.0:31019->8787/tcp                                                                                                                                                                      rstudio_sss5sc
+21796c0152f5        rocker/geospatial            "/init"                  2 days ago          Up 2 days                          0.0.0.0:31018->8787/tcp                                                                                                                                                                      rstudio_sak9tr
+89d0c224e78a        rocker/geospatial            "/init"                  2 days ago          Up 2 days                          0.0.0.0:31017->8787/tcp                                                                                                                                                                      rstudio_cc2cm
+a1686d72e249        rocker/geospatial            "/init"                  2 days ago          Up 2 days                          0.0.0.0:31015->8787/tcp                                                                                                                                                                      rstudio_ks6pn
+81ab00d97e9a        rocker/geospatial            "/init"                  2 days ago          Up 2 days                          0.0.0.0:31013->8787/tcp                                                                                                                                                                      rstudio_ap3xx
+38f4849a87dd        selenium/standalone-chrome   "/opt/bin/entry_poin…"   2 weeks ago         Up 2 weeks                         0.0.0.0:4444->4444/tcp                                                                                                                                                                       selenium_chrome
+487acea8e410        gitlab/gitlab-ce:latest      "/assets/wrapper"        2 weeks ago         Up 40 seconds (health: starting)   80/tcp, 443/tcp, 0.0.0.0:8929->8929/tcp, 0.0.0.0:2224->22/tcp                                                                                                                                test_web_1
+ff64ab712f5b        adminer                      "entrypoint.sh docke…"   2 weeks ago         Up 2 weeks                         0.0.0.0:8080->8080/tcp                                                                                                                                                                       adminer
+23f85cfc9e57        postgres                     "docker-entrypoint.s…"   6 weeks ago         Up 6 weeks                         0.0.0.0:5433->5432/tcp                                                                                                                                                                       postgis
+83bee15da508        atmoz/sftp                   "/entrypoint"            8 weeks ago         Up 8 weeks                         0.0.0.0:2222->22/tcp                                                                                                                                                                         sftp
+2661c8ecd4cd        sdad/plumber:0.1             "R -e 'pr <- plumber…"   2 months ago        Up 2 months                        0.0.0.0:8000->8000/tcp                                                                                                                                                                       api1
+e68c72c81258        xwiki:postgres-tomcat        "docker-entrypoint.s…"   4 months ago        Up 4 months                        0.0.0.0:8081->8080/tcp                                                                                                                                                                       xwiki-postgres-tomcat-web
+80288e447225        postgres:9.5                 "docker-entrypoint.s…"   4 months ago        Up 2 weeks                         5432/tcp                                                                                                                                                                                     xwiki-postgres-db
+c0142bf447d3        plexinc/pms-docker           "/init"                  4 months ago        Up 4 months (healthy)              0.0.0.0:3005->3005/tcp, 0.0.0.0:8324->8324/tcp, 0.0.0.0:1900->1900/udp, 0.0.0.0:32410->32410/udp, 0.0.0.0:32400->32400/tcp, 0.0.0.0:32412-32414->32412-32414/udp, 0.0.0.0:32469->32469/tcp   plx
+dcca26723b4e        rocker/shiny-verse           "/usr/bin/shiny-serv…"   4 months ago        Up 4 months                        0.0.0.0:3838->3838/tcp                                                                                                                                                                       shiny
+5dadbf5002f5        sdal/dpl7                    "docker-php-entrypoi…"   6 months ago        Up 4 months                        0.0.0.0:8383->80/tcp                                                                                                                                                                         drupal7
+]0;/home/sdad/project_data/nsf]0;aschroed@042511b8b210: /home/sdad/project_data/nsf[01;32maschroed@042511b8b210[00m:[01;34m/home/sdad/project_data/nsf[00m$ [K]0;aschroed@042511b8b210: /home/sdad/project_data/nsf[01;32maschroed@042511b8b210[00m:[01;34m/home/sdad/project_data/nsf[00m$ [K]0;aschroed@042511b8b210: /home/sdad/project_data/nsf[01;32maschroed@042511b8b210[00m:[01;34m/home/sdad/project_data/nsf[00m$ [K]0;aschroed@042511b8b210: /home/sdad/project_data/nsf[01;32maschroed@042511b8b210[00m:[01;34m/home/sdad/project_data/nsf[00m$ [K]0;aschroed@042511b8b210: /home/sdad/project_data/nsf[01;32maschroed@042511b8b210[00m:[01;34m/home/sdad/project_data/nsf[00m$ [K]0;aschroed@042511b8b210: /home/sdad/project_data/nsf[01;32maschroed@042511b8b210[00m:[01;34m/home/sdad/project_data/nsf[00m$ [K]0;aschroed@042511b8b210: /home/sdad/project_data/nsf[01;32maschroed@042511b8b210[00m:[01;34m/home/sdad/project_data/nsf[00m$ [K]0;aschroed@042511b8b210: /home/sdad/project_data/nsf[01;32maschroed@042511b8b210[00m:[01;34m/home/sdad/project_data/nsf[00m$ [K]0;aschroed@042511b8b210: /home/sdad/project_data/nsf[01;32maschroed@042511b8b210[00m:[01;34m/home/sdad/project_data/nsf[00m$ [K]0;aschroed@042511b8b210: /home/sdad/project_data/nsf[01;32maschroed@042511b8b210[00m:[01;34m/home/sdad/project_data/nsf[00m$ [K]0;aschroed@042511b8b210: /home/sdad/project_data/nsf[01;32maschroed@042511b8b210[00m:[01;34m/home/sdad/project_data/nsf[00m$ [K]0;aschroed@042511b8b210: /home/sdad/project_data/nsf[01;32maschroed@042511b8b210[00m:[01;34m/home/sdad/project_data/nsf[00m$ [K]0;aschroed@042511b8b210: /home/sdad/project_data/nsf[01;32maschroed@042511b8b210[00m:[01;34m/home/sdad/project_data/nsf[00m$ [K]0;aschroed@042511b8b210: /home/sdad/project_data/nsf[01;32maschroed@042511b8b210[00m:[01;34m/home/sdad/project_data/nsf[00m$ [K]0;aschroed@042511b8b210: /home/sdad/project_data/nsf[01;32maschroed@042511b8b210[00m:[01;34m/home/sdad/project_data/nsf[00m$ [K]0;aschroed@042511b8b210: /home/sdad/project_data/nsf[01;32maschroed@042511b8b210[00m:[01;34m/home/sdad/project_data/nsf[00m$ [K]0;aschroed@042511b8b210: /home/sdad/project_data/nsf[01;32maschroed@042511b8b210[00m:[01;34m/home/sdad/project_data/nsf[00m$ cd ..
+]0;/home/sdad/project_data]0;aschroed@042511b8b210: /home/sdad/project_data[01;32maschroed@042511b8b210[00m:[01;34m/home/sdad/project_data[00m$ cd
+]0;/home/aschroed]0;aschroed@042511b8b210: ~[01;32maschroed@042511b8b210[00m:[01;34m~[00m$ cd git
+]0;/home/aschroed/git]0;aschroed@042511b8b210: ~/git[01;32maschroed@042511b8b210[00m:[01;34m~/git[00m$ ls
+[0m[01;34mAPIs[0m                       [01;34maaronspkgs[0m                  [01;34mdashboard[0m                  [01;34mdockerimages[0m          [01;31mleafletacpd_0.1.0.tar.gz[0m      [01;34mpurrr[0m             [01;34msdalr.api[0m               [01;34mtraining[0m
+[01;34mButtonsInDataTable[0m         [01;34mabq_iteam[0m                   [01;34mdashboard_tutorial[0m         [01;34mds-puzzles[0m            manifest.json                 [01;34mrepurposing_data[0m  [01;34msdalr.util[0m              trim_profiling.R
+[01;34mCLD3ProcessesPlatforms[0m     [01;34macpd[0m                        [01;34mdata-management[0m            [01;34mdspg19broadband[0m       [01;34mminerva[0m                       [01;34mrmdshower[0m         [01;34msdalrUtil[0m               [01;34mutils[0m
+[01;34mChildCareLicensingScraper[0m  [01;34macpd_a[0m                      [01;34mdata_table_tutorial[0m        [01;34mdspg19fairfax[0m         [01;34mminerva_old[0m                   [01;34mroa_metrics[0m       [01;31msdalrUtil_0.1.0.tar.gz[0m  [01;34mvcedash[0m
+[01;34mOSS-Universe[0m               [01;34mannamaria[0m                   [01;34mdataplumbr[0m                 [01;34mdspg2019[0m              [01;34mminerva_sdad[0m                  [01;34mrpart[0m             [01;34msec_codes[0m               [01;34mvecf_counts[0m
+[01;34mQA_for_Admin_Data[0m          [01;34marmy_survey_coding[0m          [01;34mdataset_metadata[0m           [01;34mdtpkg[0m                 [01;34mneh_army_survey_parsing[0m       [01;34mrural_broadband[0m   [01;34mshiny_studio_postgis[0m    [01;34mvecf_counts_old[0m
+[01;34mR6oop[0m                      [01;34mbball[0m                       [01;34mdaves_stuff[0m                [01;34mexamples[0m              [01;34mnsf_edgar[0m                     [01;34mrwiki[0m             [01;34mshiny_studio_postgres[0m   [01;34mvirginia_towns[0m
+[01;34mSAFRLink-Crypto[0m            [01;34mbianica_schev[0m               [01;34mdbmanagr[0m                   [01;34mffx_obesity[0m           [01;34mopencpu_service_ci_tutorial[0m   [01;34msafr[0m              [01;34mspatial_data[0m            [01;34mvlds_dq[0m
+[01;34mSAFRLink-DataAdapter[0m       [01;34mbloggy[0m                      dbtemp.R                   [01;34mffx_obesity_old[0m       [01;34moss[0m                           [01;34mscratchpad[0m        [01;34mspatial_sf_intro[0m        [01;34mvt_metrics[0m
+[01;34mSAFRLink-Identity[0m          [01;34mbusiness_innovation[0m         [01;34mdelivery_point_validation[0m  [01;34mgetGoogle[0m             [01;34moss2[0m                          [01;34msdad-data[0m         [01;34msql_r_introduction[0m      [01;34mvue_js[0m
+[01;34mSAFR_Link[0m                  [01;34mbusiness_innovation_old[0m     [01;34mdhs_link_char[0m              [01;34mgridR[0m                 [01;34mplotly_test[0m                   [01;34msdad-servers[0m      [01;34mstem_edu[0m                [01;34mwebsite[0m
+[01;34mSQLServerFunctions[0m         [01;34mcensus[0m                      [01;34mdhs_link_char_bak[0m          [01;34miarpa_embers[0m          [01;34mplumber[0m                       [01;34msdad_lexicon[0m      [01;34msubcon_loc_afford_idx[0m   [01;34mwmata_fare_eva[0m
+[01;34mSecureJaroWinkler[0m          [01;34mcongressional-trump-scores[0m  [01;34mdocker_bk[0m                  [01;34miris_dt[0m               [01;34mpresentation_template_LaTeX[0m   [01;34msdad_website[0m      [01;34msuper-simple-sampler[0m
+[01;34mShinyStudio[0m                [01;34mcoordination-game[0m           [01;34mdocker_images[0m              [01;34misu_data_integration[0m  [01;34mprobabilistic_record_linkage[0m  [01;34msdal_data[0m         [01;34msystem-utils[0m
+[01;34mVLDS_Data_Quality[0m          [01;34mdads2busy.github.io[0m         [01;34mdocker_sdad[0m                [01;34mleafletacpd[0m           [01;34mpsql[0m                          [01;34msdalr[0m             tmp.R
+]0;/home/aschroed/git]0;aschroed@042511b8b210: ~/git[01;32maschroed@042511b8b210[00m:[01;34m~/git[00m$ cp -R docker_sdad/[K infrastructure

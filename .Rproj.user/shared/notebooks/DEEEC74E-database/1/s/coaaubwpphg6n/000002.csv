@@ -1,0 +1,6 @@
+"0","```r
+lexicon_select(\"metadata_dataset\", dataitems = \"\", 0)
+
+```"
+"1","RS-DBI driver warning: (unrecognized PostgreSQL field type json (id:114) in column 5)RS-DBI driver warning: (unrecognized PostgreSQL field type json (id:114) in column 6)RS-DBI driver warning: (unrecognized PostgreSQL field type json (id:114) in column 7)RS-DBI driver warning: (unrecognized PostgreSQL field type json (id:114) in column 9)RS-DBI driver warning: (unrecognized PostgreSQL field type json (id:114) in column 11)RS-DBI driver warning: (unrecognized PostgreSQL field type json (id:114) in column 12)
+"

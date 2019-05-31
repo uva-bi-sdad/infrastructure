@@ -1,0 +1,13 @@
+{
+    "path" : "~/git/docker_sdad",
+    "sortOrder" : [
+        {
+            "ascending" : false,
+            "columnIndex" : 4
+        },
+        {
+            "ascending" : true,
+            "columnIndex" : 2
+        }
+    ]
+}
