@@ -165,4 +165,144 @@ services:
       - USER=cc2cm
       - USERID=1017
       #- DISABLE_AUTH=true
+      
+  rstudio_jk9ra:
+    image: rocker/geospatial
+    container_name: rstudio_jk9ra
+    volumes:
+        - /home/cc2cm:/home/jk9ra
+        - /home/sdad:/home/sdad
+        - /mnt/volume_nyc1_01:/mnt/volume_nyc1_01
+        - /etc/passwd:/etc/passwd:ro
+        - /etc/group:/etc/group:ro
+        - /etc/shadow:/etc/shadow:ro
+        - /var/run/docker.sock:/var/run/docker.sock
+        - /usr/bin/docker:/usr/bin/docker
+    ports:
+        - "31020:8787"
+    environment:
+      - PASSWORD=password
+      - USER=jk9ra
+      - USERID=1020
+      #- DISABLE_AUTH=true
+      
+  rstudio_ci3uz:
+    image: rocker/geospatial
+    container_name: rstudio_ci3uz
+    volumes:
+        - /home/cc2cm:/home/ci3uz
+        - /home/sdad:/home/sdad
+        - /mnt/volume_nyc1_01:/mnt/volume_nyc1_01
+        - /etc/passwd:/etc/passwd:ro
+        - /etc/group:/etc/group:ro
+        - /etc/shadow:/etc/shadow:ro
+        - /var/run/docker.sock:/var/run/docker.sock
+        - /usr/bin/docker:/usr/bin/docker
+    ports:
+        - "31021:8787"
+    environment:
+      - PASSWORD=password
+      - USER=ci3uz
+      - USERID=1021
+      #- DISABLE_AUTH=true
+      
+  rstudio_rs7te:
+    image: rocker/geospatial
+    container_name: rstudio_rs7te
+    volumes:
+        - /home/cc2cm:/home/rs7te
+        - /home/sdad:/home/sdad
+        - /mnt/volume_nyc1_01:/mnt/volume_nyc1_01
+        - /etc/passwd:/etc/passwd:ro
+        - /etc/group:/etc/group:ro
+        - /etc/shadow:/etc/shadow:ro
+        - /var/run/docker.sock:/var/run/docker.sock
+        - /usr/bin/docker:/usr/bin/docker
+    ports:
+        - "31022:8787"
+    environment:
+      - PASSWORD=password
+      - USER=rs7te
+      - USERID=1022
+      #- DISABLE_AUTH=true
+      
+  rstudio_sm9dv:
+    image: rocker/geospatial
+    container_name: rstudio_sm9dv
+    volumes:
+        - /home/cc2cm:/home/sm9dv
+        - /home/sdad:/home/sdad
+        - /mnt/volume_nyc1_01:/mnt/volume_nyc1_01
+        - /etc/passwd:/etc/passwd:ro
+        - /etc/group:/etc/group:ro
+        - /etc/shadow:/etc/shadow:ro
+        - /var/run/docker.sock:/var/run/docker.sock
+        - /usr/bin/docker:/usr/bin/docker
+    ports:
+        - "31023:8787"
+    environment:
+      - PASSWORD=password
+      - USER=sm9dv
+      - USERID=1023
+      #- DISABLE_AUTH=true
+      
+  rstudio_sp3sd:
+    image: rocker/geospatial
+    container_name: rstudio_sp3sd
+    volumes:
+        - /home/cc2cm:/home/sp3sd
+        - /home/sdad:/home/sdad
+        - /mnt/volume_nyc1_01:/mnt/volume_nyc1_01
+        - /etc/passwd:/etc/passwd:ro
+        - /etc/group:/etc/group:ro
+        - /etc/shadow:/etc/shadow:ro
+        - /var/run/docker.sock:/var/run/docker.sock
+        - /usr/bin/docker:/usr/bin/docker
+    ports:
+        - "31024:8787"
+    environment:
+      - PASSWORD=password
+      - USER=sp3sd
+      - USERID=1024
+      #- DISABLE_AUTH=true
+      
+  rstudio_vh5dg:
+    image: rocker/geospatial
+    container_name: rstudio_vh5dg
+    volumes:
+        - /home/cc2cm:/home/vh5dg
+        - /home/sdad:/home/sdad
+        - /mnt/volume_nyc1_01:/mnt/volume_nyc1_01
+        - /etc/passwd:/etc/passwd:ro
+        - /etc/group:/etc/group:ro
+        - /etc/shadow:/etc/shadow:ro
+        - /var/run/docker.sock:/var/run/docker.sock
+        - /usr/bin/docker:/usr/bin/docker
+    ports:
+        - "31025:8787"
+    environment:
+      - PASSWORD=password
+      - USER=vh5dg
+      - USERID=1025
+      #- DISABLE_AUTH=true
+      
+  rstudio_ent4pn:
+    image: rocker/geospatial
+    container_name: rstudio_ent4pn
+    volumes:
+        - /home/cc2cm:/home/ent4pn
+        - /home/sdad:/home/sdad
+        - /mnt/volume_nyc1_01:/mnt/volume_nyc1_01
+        - /etc/passwd:/etc/passwd:ro
+        - /etc/group:/etc/group:ro
+        - /etc/shadow:/etc/shadow:ro
+        - /var/run/docker.sock:/var/run/docker.sock
+        - /usr/bin/docker:/usr/bin/docker
+    ports:
+        - "31026:8787"
+    environment:
+      - PASSWORD=password
+      - USER=ent4pn
+      - USERID=1026
+      #- DISABLE_AUTH=true
 
