@@ -31,6 +31,7 @@ services:
     container_name: rstudio_sak9tr
     volumes:
         - /home/sak9tr:/home/sak9tr
+        - /home/aschroed/git/infrastructure/dev/.Rprofile:/home/sak9tr/.Rprofile
         - /home/sdad:/home/sdad
         - /mnt/volume_nyc1_01:/mnt/volume_nyc1_01
         - /etc/passwd:/etc/passwd:ro
@@ -51,6 +52,7 @@ services:
     container_name: rstudio_sss5sc
     volumes:
         - /home/sss5sc:/home/sss5sc
+        - /home/aschroed/git/infrastructure/dev/.Rprofile:/home/sss5sc/.Rprofile
         - /home/sdad:/home/sdad
         - /mnt/volume_nyc1_01:/mnt/volume_nyc1_01
         - /etc/passwd:/etc/passwd:ro
@@ -170,7 +172,7 @@ services:
     image: rocker/geospatial
     container_name: rstudio_jk9ra
     volumes:
-        - /home/cc2cm:/home/jk9ra
+        - /home/jk9ra:/home/jk9ra
         - /home/sdad:/home/sdad
         - /mnt/volume_nyc1_01:/mnt/volume_nyc1_01
         - /etc/passwd:/etc/passwd:ro
@@ -190,7 +192,7 @@ services:
     image: rocker/geospatial
     container_name: rstudio_ci3uz
     volumes:
-        - /home/cc2cm:/home/ci3uz
+        - /home/ci3uz:/home/ci3uz
         - /home/sdad:/home/sdad
         - /mnt/volume_nyc1_01:/mnt/volume_nyc1_01
         - /etc/passwd:/etc/passwd:ro
@@ -210,7 +212,7 @@ services:
     image: rocker/geospatial
     container_name: rstudio_rs7te
     volumes:
-        - /home/cc2cm:/home/rs7te
+        - /home/rs7te:/home/rs7te
         - /home/sdad:/home/sdad
         - /mnt/volume_nyc1_01:/mnt/volume_nyc1_01
         - /etc/passwd:/etc/passwd:ro
@@ -230,7 +232,7 @@ services:
     image: rocker/geospatial
     container_name: rstudio_sm9dv
     volumes:
-        - /home/cc2cm:/home/sm9dv
+        - /home/sm9dv:/home/sm9dv
         - /home/sdad:/home/sdad
         - /mnt/volume_nyc1_01:/mnt/volume_nyc1_01
         - /etc/passwd:/etc/passwd:ro
@@ -250,7 +252,7 @@ services:
     image: rocker/geospatial
     container_name: rstudio_sp3sd
     volumes:
-        - /home/cc2cm:/home/sp3sd
+        - /home/sp3sd:/home/sp3sd
         - /home/sdad:/home/sdad
         - /mnt/volume_nyc1_01:/mnt/volume_nyc1_01
         - /etc/passwd:/etc/passwd:ro
@@ -270,7 +272,7 @@ services:
     image: rocker/geospatial
     container_name: rstudio_vh5dg
     volumes:
-        - /home/cc2cm:/home/vh5dg
+        - /home/vh5dg:/home/vh5dg
         - /home/sdad:/home/sdad
         - /mnt/volume_nyc1_01:/mnt/volume_nyc1_01
         - /etc/passwd:/etc/passwd:ro
@@ -290,7 +292,7 @@ services:
     image: rocker/geospatial
     container_name: rstudio_ent4pn
     volumes:
-        - /home/cc2cm:/home/ent4pn
+        - /home/ent4pn:/home/ent4pn
         - /home/sdad:/home/sdad
         - /mnt/volume_nyc1_01:/mnt/volume_nyc1_01
         - /etc/passwd:/etc/passwd:ro
@@ -304,5 +306,5 @@ services:
       - PASSWORD=password
       - USER=ent4pn
       - USERID=1026
-      #- DISABLE_AUTH=true
+      #- DISABLE_AUTH=true 
 

@@ -1,8 +1,0 @@
-
-# create users
-for (pid in db_users_dt$pid) {
-  create_user("ads7fg", pid)
-}
-
-# grant user all permissionsp
-grant_perms("burning_glass", "gk8yj")
