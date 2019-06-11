@@ -1,8 +1,9 @@
-for v in c("3.4", "3.5") {
-  if (!dir.exists(paths = file.path("~", "R", "x86_64-pc-linux-gnu-library", v))) {
-    dir.create(path = file.path("~", "R", "x86_64-pc-linux-gnu-library", v),
-               recursive = TRUE)
-    }
-  .libPaths(new = c(file.path("~", "R", "x86_64-pc-linux-gnu-library", v),
-                    .libPaths()))
+path <- file.path("~", "R", "x86_64-pc-linux-gnu-library",
+                  paste(version$major,
+                        substr(x = version$minor, start = 1L, stop = 1L),
+                        sep = "."))
+if (!dir.exists(paths = path)) {
+  dir.create(path = path, recursive = TRUE)
   }
+.libPaths(new = c(path, .libPaths()))
+rm(list = c("path"))
