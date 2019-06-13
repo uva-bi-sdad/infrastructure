@@ -1,8 +1,8 @@
-create_db_user <- function(database, new_username, db_user = Sys.getenv("db_userid"), db_pass = Sys.getenv("db_pwd")) {
+create_db_user <- function(new_username, db_user = Sys.getenv("db_userid"), db_pass = Sys.getenv("db_pwd"), db_host = "postgis_1", db_port = "5432", db_user_database = Sys.getenv("db_userid")) {
   con <- DBI::dbConnect(drv = RPostgreSQL::PostgreSQL(),
-                        dbname = database,
-                        host = "sdad.policy-analytics.net",
-                        port = "5433",
+                        dbname = db_user_database,
+                        host = db_host,
+                        port = db_port,
                         user = db_user,
                         password = db_pass)
 
@@ -27,8 +27,8 @@ create_db_user <- function(database, new_username, db_user = Sys.getenv("db_user
 
   con2 <- DBI::dbConnect(drv = RPostgreSQL::PostgreSQL(),
                          dbname = new_username,
-                         host = "sdad.policy-analytics.net",
-                         port = "5433",
+                         host = db_host,
+                         port = db_port,
                          user = db_user,
                          password = db_pass)
 

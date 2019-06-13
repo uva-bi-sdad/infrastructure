@@ -11,6 +11,7 @@ services:
     container_name: rstudio_aschroed
     volumes:
         - /home/aschroed:/home/aschroed
+        - /home/aschroed/git/infrastructure/dev/.Rprofile:/home/aschroed/.Rprofile
         - /home/sdad:/home/sdad
         - /mnt/volume_nyc1_01:/mnt/volume_nyc1_01
         - /etc/passwd:/etc/passwd:ro
@@ -73,6 +74,7 @@ services:
     container_name: rstudio_ap3xx
     volumes:
         - /home/ap3xx:/home/ap3xx
+        - /home/aschroed/git/infrastructure/dev/.Rprofile:/home/ap3xx/.Rprofile
         - /home/sdad:/home/sdad
         - /mnt/volume_nyc1_01:/mnt/volume_nyc1_01
         - /etc/passwd:/etc/passwd:ro
@@ -93,6 +95,7 @@ services:
     container_name: rstudio_af5ug
     volumes:
         - /home/af5ug:/home/af5ug
+        - /home/aschroed/git/infrastructure/dev/.Rprofile:/home/af5ug/.Rprofile
         - /home/sdad:/home/sdad
         - /mnt/volume_nyc1_01:/mnt/volume_nyc1_01
         - /etc/passwd:/etc/passwd:ro
@@ -113,6 +116,7 @@ services:
     container_name: rstudio_ks6pn
     volumes:
         - /home/ks6pn:/home/ks6pn
+        - /home/aschroed/git/infrastructure/dev/.Rprofile:/home/ks6pn/.Rprofile
         - /home/sdad:/home/sdad
         - /mnt/volume_nyc1_01:/mnt/volume_nyc1_01
         - /etc/passwd:/etc/passwd:ro
@@ -133,6 +137,7 @@ services:
     container_name: rstudio_qn6au
     volumes:
         - /home/qn6au:/home/qn6au
+        - /home/aschroed/git/infrastructure/dev/.Rprofile:/home/qn6au/.Rprofile
         - /home/sdad:/home/sdad
         - /mnt/volume_nyc1_01:/mnt/volume_nyc1_01
         - /etc/passwd:/etc/passwd:ro
@@ -153,6 +158,7 @@ services:
     container_name: rstudio_cc2cm
     volumes:
         - /home/cc2cm:/home/cc2cm
+        - /home/aschroed/git/infrastructure/dev/.Rprofile:/home/cc2cm/.Rprofile
         - /home/sdad:/home/sdad
         - /mnt/volume_nyc1_01:/mnt/volume_nyc1_01
         - /etc/passwd:/etc/passwd:ro
@@ -173,6 +179,7 @@ services:
     container_name: rstudio_jk9ra
     volumes:
         - /home/jk9ra:/home/jk9ra
+        - /home/aschroed/git/infrastructure/dev/.Rprofile:/home/jk9ra/.Rprofile
         - /home/sdad:/home/sdad
         - /mnt/volume_nyc1_01:/mnt/volume_nyc1_01
         - /etc/passwd:/etc/passwd:ro
@@ -193,6 +200,7 @@ services:
     container_name: rstudio_ci3uz
     volumes:
         - /home/ci3uz:/home/ci3uz
+        - /home/aschroed/git/infrastructure/dev/.Rprofile:/home/ci3uz/.Rprofile
         - /home/sdad:/home/sdad
         - /mnt/volume_nyc1_01:/mnt/volume_nyc1_01
         - /etc/passwd:/etc/passwd:ro
@@ -213,6 +221,7 @@ services:
     container_name: rstudio_rs7te
     volumes:
         - /home/rs7te:/home/rs7te
+        - /home/aschroed/git/infrastructure/dev/.Rprofile:/home/rs7te/.Rprofile
         - /home/sdad:/home/sdad
         - /mnt/volume_nyc1_01:/mnt/volume_nyc1_01
         - /etc/passwd:/etc/passwd:ro
@@ -233,6 +242,7 @@ services:
     container_name: rstudio_sm9dv
     volumes:
         - /home/sm9dv:/home/sm9dv
+        - /home/aschroed/git/infrastructure/dev/.Rprofile:/home/sm9dv/.Rprofile
         - /home/sdad:/home/sdad
         - /mnt/volume_nyc1_01:/mnt/volume_nyc1_01
         - /etc/passwd:/etc/passwd:ro
@@ -253,6 +263,7 @@ services:
     container_name: rstudio_sp3sd
     volumes:
         - /home/sp3sd:/home/sp3sd
+        - /home/aschroed/git/infrastructure/dev/.Rprofile:/home/sp3sd/.Rprofile
         - /home/sdad:/home/sdad
         - /mnt/volume_nyc1_01:/mnt/volume_nyc1_01
         - /etc/passwd:/etc/passwd:ro
@@ -273,6 +284,7 @@ services:
     container_name: rstudio_vh5dg
     volumes:
         - /home/vh5dg:/home/vh5dg
+        - /home/aschroed/git/infrastructure/dev/.Rprofile:/home/vh5dg/.Rprofile
         - /home/sdad:/home/sdad
         - /mnt/volume_nyc1_01:/mnt/volume_nyc1_01
         - /etc/passwd:/etc/passwd:ro
@@ -293,6 +305,7 @@ services:
     container_name: rstudio_ent4pn
     volumes:
         - /home/ent4pn:/home/ent4pn
+        - /home/aschroed/git/infrastructure/dev/.Rprofile:/home/ent4pn/.Rprofile
         - /home/sdad:/home/sdad
         - /mnt/volume_nyc1_01:/mnt/volume_nyc1_01
         - /etc/passwd:/etc/passwd:ro
@@ -307,4 +320,69 @@ services:
       - USER=ent4pn
       - USERID=1026
       #- DISABLE_AUTH=true 
+      
+  rstudio_jbs3hp:
+    image: rocker/geospatial
+    container_name: rstudio_jbs3hp
+    volumes:
+        - /home/jbs3hp:/home/jbs3hp
+        - /home/aschroed/git/infrastructure/dev/.Rprofile:/home/jbs3hp/.Rprofile
+        - /home/sdad:/home/sdad
+        - /mnt/volume_nyc1_01:/mnt/volume_nyc1_01
+        - /etc/passwd:/etc/passwd:ro
+        - /etc/group:/etc/group:ro
+        - /etc/shadow:/etc/shadow:ro
+        - /var/run/docker.sock:/var/run/docker.sock
+        - /usr/bin/docker:/usr/bin/docker
+    ports:
+        - "31027:8787"
+    environment:
+      - PASSWORD=password
+      - USER=jbs3hp
+      - USERID=1027
+      #- DISABLE_AUTH=true
+      
+  rstudio_jt9sz:
+    image: rocker/geospatial
+    container_name: rstudio_jt9sz
+    volumes:
+        - /home/jt9sz:/home/jt9sz
+        - /home/aschroed/git/infrastructure/dev/.Rprofile:/home/jt9sz/.Rprofile
+        - /home/sdad:/home/sdad
+        - /mnt/volume_nyc1_01:/mnt/volume_nyc1_01
+        - /etc/passwd:/etc/passwd:ro
+        - /etc/group:/etc/group:ro
+        - /etc/shadow:/etc/shadow:ro
+        - /var/run/docker.sock:/var/run/docker.sock
+        - /usr/bin/docker:/usr/bin/docker
+    ports:
+        - "31028:8787"
+    environment:
+      - PASSWORD=password
+      - USER=jt9sz
+      - USERID=1028
+      #- DISABLE_AUTH=true
+      
+  rstudio_gk8yj:
+    image: rocker/geospatial
+    container_name: rstudio_gk8yj
+    volumes:
+        - /home/gk8yj:/home/gk8yj
+        - /home/aschroed/git/infrastructure/dev/.Rprofile:/home/gk8yj/.Rprofile
+        - /home/sdad:/home/sdad
+        - /mnt/volume_nyc1_01:/mnt/volume_nyc1_01
+        - /etc/passwd:/etc/passwd:ro
+        - /etc/group:/etc/group:ro
+        - /etc/shadow:/etc/shadow:ro
+        - /var/run/docker.sock:/var/run/docker.sock
+        - /usr/bin/docker:/usr/bin/docker
+    ports:
+        - "31029:8787"
+    environment:
+      - PASSWORD=password
+      - USER=gk8yj
+      - USERID=1029
+      #- DISABLE_AUTH=true
+      
+      
 
