@@ -21,3 +21,7 @@ for (dbu in db_users) {
 
 # Grant all permissions on grant_database to grant_user
 grant_db_permissions(grant_username = "", grant_database = "")
+
+
+# BACKUP DB ----
+

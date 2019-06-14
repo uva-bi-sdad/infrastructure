@@ -1,7 +1,0 @@
-"0","```r
-datasource_record <- data.frame(datasource_name = \"data source 2\", 
-                                datasource_abrv = \"ds2\",
-                                datasource_last_updated = as.Date(\"2011-11-30\"),
-                                stringsAsFactors = F)
-DBI::dbWriteTable(con, \"metadata_datasource\", datasource_record, append = TRUE, row.names = FALSE)
-```"

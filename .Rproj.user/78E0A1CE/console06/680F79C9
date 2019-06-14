@@ -1,87 +1,4 @@
 
- create mode 100644 skins/flamingo/print.min.css
- create mode 100644 skins/flamingo/style.css
- create mode 100644 skins/flamingo/style.min.css
- create mode 100644 ssx/AnnotationCode/Settings/ssx6638591884467815729.css
- create mode 100644 ssx/AnnotationCode/Style/ssx398583666801689745.css
- create mode 100644 ssx/Help/SupportPanel/WebHome/ssx6012141004330439571.css
- create mode 100644 ssx/IconThemes/FontAwesome/ssx5050655356492516163.css
- create mode 100644 ssx/Panels/Applications/ssx3099011808360158401.css
- create mode 100644 ssx/Tour/HomepageTour/WebHome/ssx397153202345710241.css
- create mode 100644 ssx/XWiki/Notifications/Code/NotificationsDisplayerUIX/ssx2105219377591969882.css
- create mode 100644 ssx/XWiki/Notifications/Code/NotificationsMacro/ssx5587641833793281285.css
- create mode 100644 ssx/XWiki/Ratings/ssx3288243699786369983.css
- create mode 100644 ssx/XWiki/SharePage/ssx5233330530565954453.css
- create mode 100644 webjars/Keypress/2.1.5/keypress.min.js
- create mode 100644 webjars/bootstrap-switch/3.3.2/css/bootstrap3/bootstrap-switch.min.css
- create mode 100644 webjars/bootstrap-switch/3.3.2/js/bootstrap-switch.min.js
- create mode 100644 webjars/bootstrap-tour/0.11.0/css/bootstrap-tour.min.css
- create mode 100644 webjars/bootstrap-tour/0.11.0/js/bootstrap-tour.min.js
- create mode 100644 webjars/bootstrap/3.3.7-1/fonts/glyphicons-halflings-regular.eot
- create mode 100644 webjars/bootstrap/3.3.7-1/fonts/glyphicons-halflings-regular.svg
- create mode 100644 webjars/bootstrap/3.3.7-1/fonts/glyphicons-halflings-regular.ttf
- create mode 100644 webjars/bootstrap/3.3.7-1/fonts/glyphicons-halflings-regular.woff
- create mode 100644 webjars/bootstrap/3.3.7-1/fonts/glyphicons-halflings-regular.woff2
- create mode 100644 webjars/bootstrap/3.3.7-1/js/bootstrap.min.js
- create mode 100644 webjars/bootstrap/3.3.7-1/js/bootstrap.min.js.gz
- create mode 100644 webjars/drawer/2.4.0/css/drawer.min.css
- create mode 100644 webjars/drawer/2.4.0/js/jquery.drawer.min.js
- create mode 100644 webjars/font-awesome/4.7.0/css/font-awesome.min.css
- create mode 100644 webjars/font-awesome/4.7.0/fonts/fontawesome-webfont.eot
- create mode 100644 webjars/font-awesome/4.7.0/fonts/fontawesome-webfont.svg
- create mode 100644 webjars/font-awesome/4.7.0/fonts/fontawesome-webfont.ttf
- create mode 100644 webjars/font-awesome/4.7.0/fonts/fontawesome-webfont.woff
- create mode 100644 webjars/font-awesome/4.7.0/fonts/fontawesome-webfont.woff2
- create mode 100644 webjars/html5shiv/3.7.2/html5shiv.min.js
- create mode 100644 webjars/iscroll/5.1.3/build/iscroll-lite.js
- create mode 100644 webjars/jquery/2.2.2/jquery.min.js
- create mode 100644 webjars/requirejs/2.2.0/require.min.js
- create mode 100644 webjars/respond/1.4.2/dest/respond.min.js
- create mode 100644 webjars/xwiki-platform-tree-webjar/9.11.8/require-config.min.js
- create mode 100644 webjars/xwiki-platform-tree-webjar/9.11.8/tree.min.css
-]0;/home/aschroed/git/uva-bi-sdad.github.io]0;aschroed@042511b8b210: ~/git/uva-bi-sdad.github.io[01;32maschroed@042511b8b210[00m:[01;34m~/git/uva-bi-sdad.github.io[00m$ git commit -m "Initial commit"[17Padd --allpush -u origin master
-Counting objects: 334, done.
-Delta compression using up to 12 threads.
-Compressing objects:   0% (1/279)   Compressing objects:   1% (3/279)   Compressing objects:   2% (6/279)   Compressing objects:   3% (9/279)   Compressing objects:   4% (12/279)   Compressing objects:   5% (14/279)   Compressing objects:   6% (17/279)   Compressing objects:   7% (20/279)   Compressing objects:   8% (23/279)   Compressing objects:   9% (26/279)   Compressing objects:  10% (28/279)   Compressing objects:  11% (31/279)   Compressing objects:  12% (34/279)   Compressing objects:  13% (37/279)   Compressing objects:  14% (40/279)   Compressing objects:  15% (42/279)   Compressing objects:  16% (45/279)   Compressing objects:  17% (48/279)   Compressing objects:  18% (51/279)   Compressing objects:  19% (54/279)   Compressing objects:  20% (56/279)   Compressing objects:  21% (59/279)   Compressing objects:  22% (62/279)   Compressing objects:  23% (65/279)   Compressing objects:  24% (67/279)   Compressing objects:  25% (70/279)   Compressing objects:  26% (73/279)   Compressing objects:  27% (76/279)   Compressing objects:  28% (79/279)   Compressing objects:  29% (81/279)   Compressing objects:  30% (84/279)   Compressing objects:  31% (87/279)   Compressing objects:  32% (90/279)   Compressing objects:  33% (93/279)   Compressing objects:  34% (95/279)   Compressing objects:  35% (98/279)   Compressing objects:  36% (101/279)   Compressing objects:  37% (104/279)   Compressing objects:  38% (107/279)   Compressing objects:  39% (109/279)   Compressing objects:  40% (112/279)   Compressing objects:  41% (115/279)   Compressing objects:  42% (118/279)   Compressing objects:  43% (120/279)   Compressing objects:  44% (123/279)   Compressing objects:  45% (126/279)   Compressing objects:  46% (129/279)   Compressing objects:  47% (132/279)   Compressing objects:  48% (134/279)   Compressing objects:  49% (137/279)   Compressing objects:  50% (140/279)   Compressing objects:  51% (143/279)   Compressing objects:  52% (146/279)   Compressing objects:  53% (148/279)   Compressing objects:  54% (151/279)   Compressing objects:  55% (154/279)   Compressing objects:  56% (157/279)   Compressing objects:  57% (160/279)   Compressing objects:  58% (162/279)   Compressing objects:  59% (165/279)   Compressing objects:  60% (168/279)   Compressing objects:  61% (171/279)   Compressing objects:  62% (173/279)   Compressing objects:  63% (176/279)   Compressing objects:  64% (179/279)   Compressing objects:  65% (182/279)   Compressing objects:  66% (185/279)   Compressing objects:  67% (187/279)   Compressing objects:  68% (190/279)   Compressing objects:  69% (193/279)   Compressing objects:  70% (196/279)   Compressing objects:  71% (199/279)   Compressing objects:  72% (201/279)   Compressing objects:  73% (204/279)   Compressing objects:  74% (207/279)   Compressing objects:  75% (210/279)   Compressing objects:  76% (213/279)   Compressing objects:  77% (215/279)   Compressing objects:  78% (218/279)   Compressing objects:  79% (221/279)   Compressing objects:  80% (224/279)   Compressing objects:  81% (226/279)   Compressing objects:  82% (229/279)   Compressing objects:  83% (232/279)   Compressing objects:  84% (235/279)   Compressing objects:  85% (238/279)   Compressing objects:  86% (240/279)   Compressing objects:  87% (243/279)   Compressing objects:  88% (246/279)   Compressing objects:  89% (249/279)   Compressing objects:  90% (252/279)   Compressing objects:  91% (254/279)   Compressing objects:  92% (257/279)   Compressing objects:  93% (260/279)   Compressing objects:  94% (263/279)   Compressing objects:  95% (266/279)   Compressing objects:  96% (268/279)   Compressing objects:  97% (271/279)   Compressing objects:  98% (274/279)   Compressing objects:  99% (277/279)   Compressing objects: 100% (279/279)   Compressing objects: 100% (279/279), done.
-Writing objects:   0% (1/334)   Writing objects:   1% (4/334)   Writing objects:   2% (7/334)   Writing objects:   3% (11/334)   Writing objects:   4% (14/334)   Writing objects:   5% (17/334)   Writing objects:   6% (21/334)   Writing objects:   7% (24/334)   Writing objects:   8% (27/334)   Writing objects:   9% (31/334)   Writing objects:  10% (34/334)   Writing objects:  11% (37/334)   Writing objects:  12% (41/334)   Writing objects:  13% (44/334)   Writing objects:  14% (47/334)   Writing objects:  15% (51/334)   Writing objects:  16% (54/334)   Writing objects:  17% (57/334)   Writing objects:  18% (61/334)   Writing objects:  19% (64/334)   Writing objects:  20% (67/334)   Writing objects:  21% (71/334)   Writing objects:  22% (74/334)   Writing objects:  23% (77/334)   Writing objects:  24% (81/334)   Writing objects:  25% (84/334)   Writing objects:  26% (87/334)   Writing objects:  27% (91/334)   Writing objects:  28% (94/334)   Writing objects:  29% (97/334)   Writing objects:  30% (101/334)   Writing objects:  31% (104/334)   Writing objects:  32% (107/334)   Writing objects:  33% (112/334)   Writing objects:  34% (114/334)   Writing objects:  35% (117/334)   Writing objects:  36% (121/334)   Writing objects:  37% (124/334)   Writing objects:  38% (127/334)   Writing objects:  39% (131/334)   Writing objects:  40% (134/334)   Writing objects:  41% (137/334)   Writing objects:  42% (141/334)   Writing objects:  43% (144/334)   Writing objects:  44% (147/334)   Writing objects:  45% (151/334)   Writing objects:  46% (154/334)   Writing objects:  47% (157/334)   Writing objects:  48% (161/334)   Writing objects:  49% (164/334)   Writing objects:  50% (167/334)   Writing objects:  51% (171/334)   Writing objects:  52% (174/334)   Writing objects:  53% (178/334)   Writing objects:  54% (181/334)   Writing objects:  55% (184/334)   Writing objects:  56% (188/334)   Writing objects:  57% (191/334)   Writing objects:  58% (194/334)   Writing objects:  59% (198/334)   Writing objects:  60% (201/334)   Writing objects:  61% (204/334)   Writing objects:  62% (208/334)   Writing objects:  63% (211/334)   Writing objects:  64% (214/334)   Writing objects:  65% (218/334)   Writing objects:  66% (221/334)   Writing objects:  67% (224/334)   Writing objects:  68% (228/334)   Writing objects:  69% (231/334)   Writing objects:  70% (234/334)   Writing objects:  71% (238/334)   Writing objects:  72% (241/334)   Writing objects:  73% (244/334)   Writing objects:  74% (248/334)   Writing objects:  75% (251/334)   Writing objects:  76% (254/334)   Writing objects:  77% (258/334)   Writing objects:  78% (261/334)   Writing objects:  79% (264/334)   Writing objects:  80% (268/334)   Writing objects:  81% (271/334)   Writing objects:  82% (274/334)   Writing objects:  83% (278/334)   Writing objects:  84% (281/334)   Writing objects:  85% (284/334)   Writing objects:  86% (288/334)   Writing objects:  87% (291/334)   Writing objects:  88% (294/334)   Writing objects:  89% (298/334)   Writing objects:  90% (301/334)   Writing objects:  91% (304/334)   Writing objects:  92% (308/334)   Writing objects:  93% (311/334)   Writing objects:  94% (314/334)   Writing objects:  95% (318/334)   Writing objects:  96% (321/334)   Writing objects:  97% (324/334)   Writing objects:  98% (328/334)   Writing objects:  99% (331/334)   Writing objects: 100% (334/334)   Writing objects: 100% (334/334), 1.02 MiB | 0 bytes/s, done.
-Total 334 (delta 11), reused 0 (delta 0)
-remote: Resolving deltas:   0% (0/11)   [Kremote: Resolving deltas:  63% (7/11)   [Kremote: Resolving deltas:  90% (10/11)   [Kremote: Resolving deltas: 100% (11/11)   [Kremote: Resolving deltas: 100% (11/11), done.[K
-To https://github.com/uva-bi-sdad/uva-bi-sdad.github.io.git
-   c1d3b78..6323cbd  master -> master
-Branch master set up to track remote branch master from origin.
-]0;/home/aschroed/git/uva-bi-sdad.github.io]0;aschroed@042511b8b210: ~/git/uva-bi-sdad.github.io[01;32maschroed@042511b8b210[00m:[01;34m~/git/uva-bi-sdad.github.io[00m$ [K]0;aschroed@042511b8b210: ~/git/uva-bi-sdad.github.io[01;32maschroed@042511b8b210[00m:[01;34m~/git/uva-bi-sdad.github.io[00m$ [K]0;aschroed@042511b8b210: ~/git/uva-bi-sdad.github.io[01;32maschroed@042511b8b210[00m:[01;34m~/git/uva-bi-sdad.github.io[00m$ git push -u origin mastercommit -m "Initial commit"[17Padd --all
-]0;/home/aschroed/git/uva-bi-sdad.github.io]0;aschroed@042511b8b210: ~/git/uva-bi-sdad.github.io[01;32maschroed@042511b8b210[00m:[01;34m~/git/uva-bi-sdad.github.io[00m$ git status
-On branch master
-Your branch is up-to-date with 'origin/master'.
-Changes to be committed:
-  (use "git reset HEAD <file>..." to unstage)
-
-	[32mnew file:   DSPG-Program-Schedule.pdf[m
-	[32mnew file:   Keller-Lancaster-Shipp-Building-Capacity-for-Data-Driven-Governance-Creating-a-New-Foundation-for-Democracy.pdf[m
-	[32mnew file:   SDAD-Data-Science-Framework.pdf[m
-	[32mnew file:   SDAD-Generic-Ethics-Checklist.pdf[m
-	[32mdeleted:    attachment/xwiki/AnnotationCode/Style/notesmall.png[m
-	[32mdeleted:    attachment/xwiki/AnnotationCode/Style/notesmallorange.png[m
-	[32mdeleted:    attachment/xwiki/AnnotationCode/Style/notesmallred.png[m
-	[32mdeleted:    attachment/xwiki/FlamingoThemes/Cerulean/sdad4.png[m
-	[32mmodified:   index.html[m
-	[32mdeleted:    jsx/AnnotationCode/Script/jsx262219617141021127.js[m
-	[32mdeleted:    jsx/AnnotationCode/Settings/jsx6904010761369582931.js[m
-	[32mdeleted:    jsx/IconThemes/FontAwesome/jsx6955419360562796623.js[m
-	[32mdeleted:    jsx/Panels/Applications/jsx2550532495310586879.js[m
-	[32mdeleted:    jsx/TaskManager/TaskManagerSheet/jsx7651550553020731059.js[m
-	[32mdeleted:    jsx/TourCode/TourJS/jsx7772782000305247591.js[m
-	[32mdeleted:    jsx/XWiki/Notifications/Code/NotificationsDisplayerUIX/jsx2726717328110338910.js[m
-	[32mdeleted:    jsx/XWiki/Notifications/Code/NotificationsMacro/jsx6939490678566213849.js[m
-	[32mdeleted:    jsx/XWiki/QuickSearchUIX/jsx6847226341155620486.js[m
-	[32mdeleted:    jsx/XWiki/Ratings/jsx7967875690521863637.js[m
-	[32mdeleted:    jsx/XWiki/SharePage/jsx5485618021894336241.js[m
-	[32mdeleted:    pages/xwiki/DSPG/Schedule/WebHome.html[m
-	[32mdeleted:    resources/css/xwiki-min.css[m
-	[32mdeleted:    resources/icons/datamodel/groups.png[m
-	[32mdeleted:    resources/icons/datamodel/users.png[m
-	[32mdeleted:    resources/icons/silk/add.png[m
-	[32mdeleted:    resources/icons/silk/attach.png[m
 	[32mdeleted:    resources/icons/silk/bullet_add.png[m
 	[32mdeleted:    resources/icons/silk/bullet_toggle_minus.png[m
 	[32mdeleted:    resources/icons/silk/bullet_toggle_plus.png[m
@@ -1000,3 +917,90 @@ gkorkmaz joshg22 tpristavec val20003 sak9tr sss5sc dnair1 nr3xe jbs3hp neilalex5
 ]0;ads7fg@docker-s-12vcpu-48gb-nyc1-01: ~[01;32mads7fg@docker-s-12vcpu-48gb-nyc1-01[00m:[01;34m~[00m$ members sdad[K[K[K[Kdspg2019
 ap3xx af5ug ks6pn qn6au cc2cm gkorkmaz ads7fg jk9ra vh5dg ci3uz rs7te sm9dv sp3sd ent4pn
 git add --all
+]0;/home/aschroed/git/infrastructure]0;aschroed@7271d894627b: ~/git/infrastructure[01;32maschroed@7271d894627b[00m:[01;34m~/git/infrastructure[00m$ git commit -m "databse[K[Kase user creeate[K[K[K[Kate and grant script"
+[master 375d7be] database user create and grant script
+ 20 files changed, 1319 insertions(+), 1111 deletions(-)
+ rewrite .Rproj.user/78E0A1CE/console06/680F79C9 (99%)
+ rewrite .Rproj.user/78E0A1CE/console06/INDEX001 (85%)
+ delete mode 100644 .Rproj.user/78E0A1CE/sources/s-f9af8274/3959D6-contents
+ delete mode 100644 .Rproj.user/78E0A1CE/sources/s-f9af8274/CF4583A8-contents
+ create mode 100644 db/src/manage_db.R
+ create mode 100644 db/src/users_dspg2019.csv
+ create mode 100644 db/src/users_sdad.csv
+]0;/home/aschroed/git/infrastructure]0;aschroed@7271d894627b: ~/git/infrastructure[01;32maschroed@7271d894627b[00m:[01;34m~/git/infrastructure[00m$ git push
+To https://github.com/uva-bi-sdad/infrastructure.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/uva-bi-sdad/infrastructure.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+]0;/home/aschroed/git/infrastructure]0;aschroed@7271d894627b: ~/git/infrastructure[01;32maschroed@7271d894627b[00m:[01;34m~/git/infrastructure[00m$ git pull
+remote: Enumerating objects: 4, done.[K
+remote: Counting objects:  25% (1/4)   [Kremote: Counting objects:  50% (2/4)   [Kremote: Counting objects:  75% (3/4)   [Kremote: Counting objects: 100% (4/4)   [Kremote: Counting objects: 100% (4/4), done.[K
+remote: Compressing objects:  33% (1/3)   [Kremote: Compressing objects:  66% (2/3)   [Kremote: Compressing objects: 100% (3/3)   [Kremote: Compressing objects: 100% (3/3), done.[K
+remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0[K
+Unpacking objects:  33% (1/3)   Unpacking objects:  66% (2/3)   Unpacking objects: 100% (3/3)   Unpacking objects: 100% (3/3), done.
+From https://github.com/uva-bi-sdad/infrastructure
+   1f3909b..efd69ea  master     -> origin/master
+[?1000hMerge made by the 'recursive' strategy.
+ .whitesource | 8 [32m++++++++[m
+ 1 file changed, 8 insertions(+)
+ create mode 100644 .whitesource
+]0;/home/aschroed/git/infrastructure]0;aschroed@7271d894627b: ~/git/infrastructure[01;32maschroed@7271d894627b[00m:[01;34m~/git/infrastructure[00m$ git pullshcommit -m "database user create and grant script"add --all[Kcommit -m "database user create and grant script"push[K
+Counting objects: 34, done.
+Delta compression using up to 12 threads.
+Compressing objects:   3% (1/31)   Compressing objects:   6% (2/31)   Compressing objects:   9% (3/31)   Compressing objects:  12% (4/31)   Compressing objects:  16% (5/31)   Compressing objects:  19% (6/31)   Compressing objects:  22% (7/31)   Compressing objects:  25% (8/31)   Compressing objects:  29% (9/31)   Compressing objects:  32% (10/31)   Compressing objects:  35% (11/31)   Compressing objects:  38% (12/31)   Compressing objects:  41% (13/31)   Compressing objects:  45% (14/31)   Compressing objects:  48% (15/31)   Compressing objects:  51% (16/31)   Compressing objects:  54% (17/31)   Compressing objects:  58% (18/31)   Compressing objects:  61% (19/31)   Compressing objects:  64% (20/31)   Compressing objects:  67% (21/31)   Compressing objects:  70% (22/31)   Compressing objects:  74% (23/31)   Compressing objects:  77% (24/31)   Compressing objects:  80% (25/31)   Compressing objects:  83% (26/31)   Compressing objects:  87% (27/31)   Compressing objects:  90% (28/31)   Compressing objects:  93% (29/31)   Compressing objects:  96% (30/31)   Compressing objects: 100% (31/31)   Compressing objects: 100% (31/31), done.
+Writing objects:   2% (1/34)   Writing objects:   5% (2/34)   Writing objects:   8% (3/34)   Writing objects:  11% (4/34)   Writing objects:  14% (5/34)   Writing objects:  17% (6/34)   Writing objects:  20% (7/34)   Writing objects:  23% (8/34)   Writing objects:  26% (9/34)   Writing objects:  29% (10/34)   Writing objects:  32% (11/34)   Writing objects:  35% (12/34)   Writing objects:  38% (13/34)   Writing objects:  41% (14/34)   Writing objects:  44% (15/34)   Writing objects:  47% (16/34)   Writing objects:  50% (17/34)   Writing objects:  52% (18/34)   Writing objects:  55% (19/34)   Writing objects:  58% (20/34)   Writing objects:  61% (21/34)   Writing objects:  64% (22/34)   Writing objects:  67% (23/34)   Writing objects:  70% (24/34)   Writing objects:  73% (25/34)   Writing objects:  76% (26/34)   Writing objects:  79% (27/34)   Writing objects:  82% (28/34)   Writing objects:  85% (29/34)   Writing objects:  88% (30/34)   Writing objects:  91% (31/34)   Writing objects:  94% (32/34)   Writing objects:  97% (33/34)   Writing objects: 100% (34/34)   Writing objects: 100% (34/34), 16.56 KiB | 0 bytes/s, done.
+Total 34 (delta 17), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/17)   [Kremote: Resolving deltas:  11% (2/17)   [Kremote: Resolving deltas:  17% (3/17)   [Kremote: Resolving deltas:  23% (4/17)   [Kremote: Resolving deltas:  29% (5/17)   [Kremote: Resolving deltas:  35% (6/17)   [Kremote: Resolving deltas:  41% (7/17)   [Kremote: Resolving deltas:  47% (8/17)   [Kremote: Resolving deltas:  52% (9/17)   [Kremote: Resolving deltas:  58% (10/17)   [Kremote: Resolving deltas:  64% (11/17)   [Kremote: Resolving deltas:  70% (12/17)   [Kremote: Resolving deltas:  76% (13/17)   [Kremote: Resolving deltas:  82% (14/17)   [Kremote: Resolving deltas:  88% (15/17)   [Kremote: Resolving deltas:  94% (16/17)   [Kremote: Resolving deltas: 100% (17/17)   [Kremote: Resolving deltas: 100% (17/17), completed with 16 local objects.[K
+To https://github.com/uva-bi-sdad/infrastructure.git
+   efd69ea..c53d89c  master -> master
+]0;/home/aschroed/git/infrastructure]0;aschroed@7271d894627b: ~/git/infrastructure[01;32maschroed@7271d894627b[00m:[01;34m~/git/infrastructure[00m$ docker exec -it [K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Ksudo apt[K[K[K[K[K[K[K[Kapt install libssh-dev
+E: Could not open lock file /var/lib/dpkg/lock - open (13: Permission denied)
+E: Unable to lock the administration directory (/var/lib/dpkg/), are you root?
+]0;/home/aschroed/git/infrastructure]0;aschroed@7271d894627b: ~/git/infrastructure[01;32maschroed@7271d894627b[00m:[01;34m~/git/infrastructure[00m$ apt install libssh-dev[1@s[1@u[1@d[1@o[1@ 
+[sudo] password for aschroed: 
+Sorry, try again.
+[sudo] password for aschroed: 
+Sorry, try again.
+[sudo] password for aschroed: 
+sudo: 2 incorrect password attempts
+]0;/home/aschroed/git/infrastructure]0;aschroed@7271d894627b: ~/git/infrastructure[01;32maschroed@7271d894627b[00m:[01;34m~/git/infrastructure[00m$ [K]0;aschroed@7271d894627b: ~/git/infrastructure[01;32maschroed@7271d894627b[00m:[01;34m~/git/infrastructure[00m$ docke [Kr ps
+CONTAINER ID        IMAGE                     COMMAND                  CREATED             STATUS                                     PORTS                                                           NAMES
+85b7f9195d0a        rocker/geospatial         "/init"                  2 days ago          Up 2 days                                  0.0.0.0:31021->8787/tcp                                         rstudio_ci3uz
+76933d867469        rocker/geospatial         "/init"                  2 days ago          Up 2 days                                  0.0.0.0:31016->8787/tcp                                         rstudio_qn6au
+7ab09300ddb1        shinystudio_shinyproxy    "/opt/shinyproxy/sta…"   2 days ago          Up 2 days                                  0.0.0.0:8084->8080/tcp                                          shinystudio_shinyproxy_run_1
+0bc0df2f89b3        shinystudio_influxdb      "/entrypoint.sh infl…"   2 days ago          Up 2 days                                  0.0.0.0:8886->8086/tcp                                          shinystudio_influxdb_1
+f4f073a3b0f7        kartoza/postgis:latest    "/bin/sh -c /docker-…"   3 days ago          Up 3 days                                  0.0.0.0:5434->5432/tcp                                          postgis_1
+d994efff468b        rocker/geospatial         "/init"                  3 days ago          Up 3 days                                  0.0.0.0:31029->8787/tcp                                         rstudio_gk8yj
+8be066cce27e        rocker/geospatial         "/init"                  3 days ago          Up 3 days                                  0.0.0.0:31024->8787/tcp                                         rstudio_sp3sd
+d0575eebd052        rocker/geospatial         "/init"                  3 days ago          Up 3 days                                  0.0.0.0:31020->8787/tcp                                         rstudio_jk9ra
+98fc312abe49        rocker/geospatial         "/init"                  3 days ago          Up 3 days                                  0.0.0.0:31022->8787/tcp                                         rstudio_rs7te
+e526320d00e2        rocker/geospatial         "/init"                  3 days ago          Up 3 days                                  0.0.0.0:31028->8787/tcp                                         rstudio_jt9sz
+c3fb6879d7b5        rocker/geospatial         "/init"                  3 days ago          Up 3 days                                  0.0.0.0:31013->8787/tcp                                         rstudio_ap3xx
+7cc91a3e6e32        rocker/geospatial         "/init"                  3 days ago          Up 3 days                                  0.0.0.0:31019->8787/tcp                                         rstudio_sss5sc
+03e247af4e43        rocker/geospatial         "/init"                  3 days ago          Up 3 days                                  0.0.0.0:31027->8787/tcp                                         rstudio_jbs3hp
+21e3f2136a33        rocker/geospatial         "/init"                  3 days ago          Up 3 days                                  0.0.0.0:31018->8787/tcp                                         rstudio_sak9tr
+514f9f9d71a9        rocker/geospatial         "/init"                  3 days ago          Up 3 days                                  0.0.0.0:31026->8787/tcp                                         rstudio_ent4pn
+7271d894627b        rocker/geospatial         "/init"                  3 days ago          Up 3 days                                  0.0.0.0:31000->8787/tcp                                         rstudio_aschroed
+8cc9252e3164        rocker/geospatial         "/init"                  3 days ago          Up 3 days                                  0.0.0.0:31015->8787/tcp                                         rstudio_ks6pn
+15fe30d32acb        rocker/geospatial         "/init"                  3 days ago          Up 3 days                                  0.0.0.0:31017->8787/tcp                                         rstudio_cc2cm
+dc0fd2249519        rocker/geospatial         "/init"                  3 days ago          Up 3 days                                  0.0.0.0:31025->8787/tcp                                         rstudio_vh5dg
+0e98452c9c43        rocker/geospatial         "/init"                  3 days ago          Up 3 days                                  0.0.0.0:31023->8787/tcp                                         rstudio_sm9dv
+bebb1a53006e        rocker/geospatial         "/init"                  3 days ago          Up 3 days                                  0.0.0.0:31014->8787/tcp                                         rstudio_af5ug
+dd211af31c2c        adminer                   "entrypoint.sh docke…"   3 days ago          Up 3 days                                  0.0.0.0:8080->8080/tcp                                          adminer
+487acea8e410        gitlab/gitlab-ce:latest   "/assets/wrapper"        4 weeks ago         Up Less than a second (health: starting)   80/tcp, 443/tcp, 0.0.0.0:8929->8929/tcp, 0.0.0.0:2224->22/tcp   test_web_1
+23f85cfc9e57        postgres                  "docker-entrypoint.s…"   8 weeks ago         Up 3 days                                  0.0.0.0:5433->5432/tcp                                          postgis
+e68c72c81258        xwiki:postgres-tomcat     "docker-entrypoint.s…"   4 months ago        Up 2 days                                  0.0.0.0:8081->8080/tcp                                          xwiki-postgres-tomcat-web
+80288e447225        postgres:9.5              "docker-entrypoint.s…"   4 months ago        Up 2 days                                  5432/tcp                                                        xwiki-postgres-db
+]0;/home/aschroed/git/infrastructure]0;aschroed@7271d894627b: ~/git/infrastructure[01;32maschroed@7271d894627b[00m:[01;34m~/git/infrastructure[00m$ docker rm -f rstudio_aschroed
+To run a command as administrator (user "root"), use "sudo <command>".
+See "man sudo_root" for details.
+
+docker-compose -f dev/
+.Rprofile            rstudio-compose.yml  
+ads7fg@docker-s-12vcpu-48gb-nyc1-01:/home/ads7fg/git/infrastructure$ docker-compose -f dev/rstudio-compose.yml up -d rstudiop[K_ads7fg
+Creating rstudio_ads7fg ... 
+[1A[2KCreating rstudio_ads7fg ... [32mdone[0m[1B]0;/home/ads7fg/git/infrastructureads7fg@docker-s-12vcpu-48gb-nyc1-01:/home/ads7fg/git/infrastructure$  s3#s3at1at1at1at1at1at1at1at1at1at1at1at1at1as1as1as1as1as1as1as1as1as1as1as1as1as1as1as1as1at1at1at1at1at1at1at1at1at1[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kgit add --all

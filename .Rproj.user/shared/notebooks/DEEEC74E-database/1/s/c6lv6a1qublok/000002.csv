@@ -1,5 +1,0 @@
-"0","```sql
-  select \"datasource_id\" \"DID\", \"datasource_name\"
-  from metadata_datasource
-  where datasource_id = 1
-```"

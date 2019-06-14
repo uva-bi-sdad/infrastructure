@@ -6,12 +6,12 @@ networks:
       name: root_default
 
 services:
-  rstudio_aschroed:
+  rstudio_ads7fg:
     image: rocker/geospatial
-    container_name: rstudio_aschroed
+    container_name: rstudio_ads7fg
     volumes:
-        - /home/aschroed:/home/aschroed
-        - /home/aschroed/git/infrastructure/dev/.Rprofile:/home/aschroed/.Rprofile
+        - /home/ads7fg:/home/ads7fg
+        - /home/ads7fg/git/infrastructure/dev/.Rprofile:/home/ads7fg/.Rprofile
         - /home/sdad:/home/sdad
         - /mnt/volume_nyc1_01:/mnt/volume_nyc1_01
         - /etc/passwd:/etc/passwd:ro
@@ -23,7 +23,7 @@ services:
         - "31000:8787"
     environment:
       - PASSWORD=password
-      - USER=aschroed
+      - USER=ads7fg
       - USERID=1000
       #- DISABLE_AUTH=true
       
@@ -32,7 +32,7 @@ services:
     container_name: rstudio_sak9tr
     volumes:
         - /home/sak9tr:/home/sak9tr
-        - /home/aschroed/git/infrastructure/dev/.Rprofile:/home/sak9tr/.Rprofile
+        - /home/ads7fg/git/infrastructure/dev/.Rprofile:/home/sak9tr/.Rprofile
         - /home/sdad:/home/sdad
         - /mnt/volume_nyc1_01:/mnt/volume_nyc1_01
         - /etc/passwd:/etc/passwd:ro
@@ -53,7 +53,7 @@ services:
     container_name: rstudio_sss5sc
     volumes:
         - /home/sss5sc:/home/sss5sc
-        - /home/aschroed/git/infrastructure/dev/.Rprofile:/home/sss5sc/.Rprofile
+        - /home/ads7fg/git/infrastructure/dev/.Rprofile:/home/sss5sc/.Rprofile
         - /home/sdad:/home/sdad
         - /mnt/volume_nyc1_01:/mnt/volume_nyc1_01
         - /etc/passwd:/etc/passwd:ro
@@ -74,7 +74,7 @@ services:
     container_name: rstudio_ap3xx
     volumes:
         - /home/ap3xx:/home/ap3xx
-        - /home/aschroed/git/infrastructure/dev/.Rprofile:/home/ap3xx/.Rprofile
+        - /home/ads7fg/git/infrastructure/dev/.Rprofile:/home/ap3xx/.Rprofile
         - /home/sdad:/home/sdad
         - /mnt/volume_nyc1_01:/mnt/volume_nyc1_01
         - /etc/passwd:/etc/passwd:ro
@@ -95,7 +95,7 @@ services:
     container_name: rstudio_af5ug
     volumes:
         - /home/af5ug:/home/af5ug
-        - /home/aschroed/git/infrastructure/dev/.Rprofile:/home/af5ug/.Rprofile
+        - /home/ads7fg/git/infrastructure/dev/.Rprofile:/home/af5ug/.Rprofile
         - /home/sdad:/home/sdad
         - /mnt/volume_nyc1_01:/mnt/volume_nyc1_01
         - /etc/passwd:/etc/passwd:ro
@@ -116,7 +116,7 @@ services:
     container_name: rstudio_ks6pn
     volumes:
         - /home/ks6pn:/home/ks6pn
-        - /home/aschroed/git/infrastructure/dev/.Rprofile:/home/ks6pn/.Rprofile
+        - /home/ads7fg/git/infrastructure/dev/.Rprofile:/home/ks6pn/.Rprofile
         - /home/sdad:/home/sdad
         - /mnt/volume_nyc1_01:/mnt/volume_nyc1_01
         - /etc/passwd:/etc/passwd:ro
@@ -137,7 +137,7 @@ services:
     container_name: rstudio_qn6au
     volumes:
         - /home/qn6au:/home/qn6au
-        - /home/aschroed/git/infrastructure/dev/.Rprofile:/home/qn6au/.Rprofile
+        - /home/ads7fg/git/infrastructure/dev/.Rprofile:/home/qn6au/.Rprofile
         - /home/sdad:/home/sdad
         - /mnt/volume_nyc1_01:/mnt/volume_nyc1_01
         - /etc/passwd:/etc/passwd:ro
@@ -158,7 +158,7 @@ services:
     container_name: rstudio_cc2cm
     volumes:
         - /home/cc2cm:/home/cc2cm
-        - /home/aschroed/git/infrastructure/dev/.Rprofile:/home/cc2cm/.Rprofile
+        - /home/ads7fg/git/infrastructure/dev/.Rprofile:/home/cc2cm/.Rprofile
         - /home/sdad:/home/sdad
         - /mnt/volume_nyc1_01:/mnt/volume_nyc1_01
         - /etc/passwd:/etc/passwd:ro
@@ -179,7 +179,7 @@ services:
     container_name: rstudio_jk9ra
     volumes:
         - /home/jk9ra:/home/jk9ra
-        - /home/aschroed/git/infrastructure/dev/.Rprofile:/home/jk9ra/.Rprofile
+        - /home/ads7fg/git/infrastructure/dev/.Rprofile:/home/jk9ra/.Rprofile
         - /home/sdad:/home/sdad
         - /mnt/volume_nyc1_01:/mnt/volume_nyc1_01
         - /etc/passwd:/etc/passwd:ro
@@ -200,7 +200,7 @@ services:
     container_name: rstudio_ci3uz
     volumes:
         - /home/ci3uz:/home/ci3uz
-        - /home/aschroed/git/infrastructure/dev/.Rprofile:/home/ci3uz/.Rprofile
+        - /home/ads7fg/git/infrastructure/dev/.Rprofile:/home/ci3uz/.Rprofile
         - /home/sdad:/home/sdad
         - /mnt/volume_nyc1_01:/mnt/volume_nyc1_01
         - /etc/passwd:/etc/passwd:ro
@@ -221,7 +221,7 @@ services:
     container_name: rstudio_rs7te
     volumes:
         - /home/rs7te:/home/rs7te
-        - /home/aschroed/git/infrastructure/dev/.Rprofile:/home/rs7te/.Rprofile
+        - /home/ads7fg/git/infrastructure/dev/.Rprofile:/home/rs7te/.Rprofile
         - /home/sdad:/home/sdad
         - /mnt/volume_nyc1_01:/mnt/volume_nyc1_01
         - /etc/passwd:/etc/passwd:ro
@@ -242,7 +242,7 @@ services:
     container_name: rstudio_sm9dv
     volumes:
         - /home/sm9dv:/home/sm9dv
-        - /home/aschroed/git/infrastructure/dev/.Rprofile:/home/sm9dv/.Rprofile
+        - /home/ads7fg/git/infrastructure/dev/.Rprofile:/home/sm9dv/.Rprofile
         - /home/sdad:/home/sdad
         - /mnt/volume_nyc1_01:/mnt/volume_nyc1_01
         - /etc/passwd:/etc/passwd:ro
@@ -263,7 +263,7 @@ services:
     container_name: rstudio_sp3sd
     volumes:
         - /home/sp3sd:/home/sp3sd
-        - /home/aschroed/git/infrastructure/dev/.Rprofile:/home/sp3sd/.Rprofile
+        - /home/ads7fg/git/infrastructure/dev/.Rprofile:/home/sp3sd/.Rprofile
         - /home/sdad:/home/sdad
         - /mnt/volume_nyc1_01:/mnt/volume_nyc1_01
         - /etc/passwd:/etc/passwd:ro
@@ -284,7 +284,7 @@ services:
     container_name: rstudio_vh5dg
     volumes:
         - /home/vh5dg:/home/vh5dg
-        - /home/aschroed/git/infrastructure/dev/.Rprofile:/home/vh5dg/.Rprofile
+        - /home/ads7fg/git/infrastructure/dev/.Rprofile:/home/vh5dg/.Rprofile
         - /home/sdad:/home/sdad
         - /mnt/volume_nyc1_01:/mnt/volume_nyc1_01
         - /etc/passwd:/etc/passwd:ro
@@ -305,7 +305,7 @@ services:
     container_name: rstudio_ent4pn
     volumes:
         - /home/ent4pn:/home/ent4pn
-        - /home/aschroed/git/infrastructure/dev/.Rprofile:/home/ent4pn/.Rprofile
+        - /home/ads7fg/git/infrastructure/dev/.Rprofile:/home/ent4pn/.Rprofile
         - /home/sdad:/home/sdad
         - /mnt/volume_nyc1_01:/mnt/volume_nyc1_01
         - /etc/passwd:/etc/passwd:ro
@@ -326,7 +326,7 @@ services:
     container_name: rstudio_jbs3hp
     volumes:
         - /home/jbs3hp:/home/jbs3hp
-        - /home/aschroed/git/infrastructure/dev/.Rprofile:/home/jbs3hp/.Rprofile
+        - /home/ads7fg/git/infrastructure/dev/.Rprofile:/home/jbs3hp/.Rprofile
         - /home/sdad:/home/sdad
         - /mnt/volume_nyc1_01:/mnt/volume_nyc1_01
         - /etc/passwd:/etc/passwd:ro
@@ -347,7 +347,7 @@ services:
     container_name: rstudio_jt9sz
     volumes:
         - /home/jt9sz:/home/jt9sz
-        - /home/aschroed/git/infrastructure/dev/.Rprofile:/home/jt9sz/.Rprofile
+        - /home/ads7fg/git/infrastructure/dev/.Rprofile:/home/jt9sz/.Rprofile
         - /home/sdad:/home/sdad
         - /mnt/volume_nyc1_01:/mnt/volume_nyc1_01
         - /etc/passwd:/etc/passwd:ro
@@ -368,7 +368,7 @@ services:
     container_name: rstudio_gk8yj
     volumes:
         - /home/gk8yj:/home/gk8yj
-        - /home/aschroed/git/infrastructure/dev/.Rprofile:/home/gk8yj/.Rprofile
+        - /home/ads7fg/git/infrastructure/dev/.Rprofile:/home/gk8yj/.Rprofile
         - /home/sdad:/home/sdad
         - /mnt/volume_nyc1_01:/mnt/volume_nyc1_01
         - /etc/passwd:/etc/passwd:ro
