@@ -1,0 +1,19 @@
+version: '3'
+
+networks:
+  default:
+    external:
+      name: root_default
+
+services:
+  py37web:
+    image: rackspacedot/python37
+    container_name: py37web
+    volumes:
+        - /home/neilalex525:/var/www
+    ports:
+        - "8000:8000"
+    working_dir: /var/www
+    command: python3 -m http.server
+        
+# docker run --name p37 -v /home/neilalex525:/var/www -p 8000:8000 -d rackspacedot/python37 /bin/bash -c "cd /var/www; python3 -m http.server"

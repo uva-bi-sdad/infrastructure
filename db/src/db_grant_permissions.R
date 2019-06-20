@@ -6,8 +6,8 @@ grant_db_permissions <- function(grant_database, grant_username, schema = "publi
                         user = db_user,
                         password = db_pass)
   
-  DBI::dbExecute(con, paste0("GRANT ALL ON DATABASE ", database," TO ", grant_username))
-  print(paste0("GRANT ALL ON DATABASE ", database," TO ", grant_username))
+  DBI::dbExecute(con, paste0("GRANT ALL ON DATABASE ", grant_database," TO ", grant_username))
+  print(paste0("GRANT ALL ON DATABASE ", grant_database," TO ", grant_username))
   
   DBI::dbExecute(con, paste0("GRANT ALL ON SCHEMA ", schema," TO ", grant_username))
   print(paste0("GRANT ALL ON SCHEMA ", schema," TO ", grant_username))
@@ -20,4 +20,6 @@ grant_db_permissions <- function(grant_database, grant_username, schema = "publi
   
   DBI::dbExecute(con, paste0("ALTER DEFAULT PRIVILEGES IN SCHEMA ", schema," GRANT ALL ON SEQUENCES TO ", grant_username))
   print(paste0("ALTER DEFAULT PRIVILEGES IN SCHEMA ", schema," GRANT ALL ON SEQUENCES TO ", grant_username))
+  
+  DBI::dbDisconnect(con)
 }

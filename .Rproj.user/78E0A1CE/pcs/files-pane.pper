@@ -1,5 +1,5 @@
 {
-    "path" : "~/git/infrastructure",
+    "path" : "~/git/infrastructure/db/docker",
     "sortOrder" : [
         {
             "ascending" : false,

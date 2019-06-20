@@ -1,1006 +1,0 @@
-
-	[32mdeleted:    resources/icons/silk/bullet_add.png[m
-	[32mdeleted:    resources/icons/silk/bullet_toggle_minus.png[m
-	[32mdeleted:    resources/icons/silk/bullet_toggle_plus.png[m
-	[32mdeleted:    resources/icons/silk/cancel.png[m
-	[32mdeleted:    resources/icons/silk/chart_organisation.png[m
-	[32mdeleted:    resources/icons/silk/comment.png[m
-	[32mdeleted:    resources/icons/silk/comments_add.png[m
-	[32mdeleted:    resources/icons/silk/cross.png[m
-	[32mdeleted:    resources/icons/silk/delete.png[m
-	[32mdeleted:    resources/icons/silk/email.png[m
-	[32mdeleted:    resources/icons/silk/eye.png[m
-	[32mdeleted:    resources/icons/silk/folder.png[m
-	[32mdeleted:    resources/icons/silk/group.png[m
-	[32mdeleted:    resources/icons/silk/help.png[m
-	[32mdeleted:    resources/icons/silk/link.png[m
-	[32mdeleted:    resources/icons/silk/note.png[m
-	[32mdeleted:    resources/icons/silk/note_add.png[m
-	[32mdeleted:    resources/icons/silk/page_white_text.png[m
-	[32mdeleted:    resources/icons/silk/pencil.png[m
-	[32mdeleted:    resources/icons/silk/tag_yellow.png[m
-	[32mdeleted:    resources/icons/silk/textfield_add.png[m
-	[32mdeleted:    resources/icons/silk/tick.png[m
-	[32mdeleted:    resources/icons/silk/user.png[m
-	[32mdeleted:    resources/icons/silk/world.png[m
-	[32mdeleted:    resources/icons/silk/world_delete.png[m
-	[32mdeleted:    resources/icons/xwiki/accordion.png[m
-	[32mdeleted:    resources/icons/xwiki/ajax-loader-large.gif[m
-	[32mdeleted:    resources/icons/xwiki/external-link.png[m
-	[32mdeleted:    resources/icons/xwiki/favicon.ico[m
-	[32mdeleted:    resources/icons/xwiki/favicon.svg[m
-	[32mdeleted:    resources/icons/xwiki/favicon144.png[m
-	[32mdeleted:    resources/icons/xwiki/favicon16.png[m
-	[32mdeleted:    resources/icons/xwiki/noavatar.png[m
-	[32mdeleted:    resources/icons/xwiki/pagination-controls.png[m
-	[32mdeleted:    resources/icons/xwiki/parent_edit.gif[m
-	[32mdeleted:    resources/icons/xwiki/spinner-white.gif[m
-	[32mdeleted:    resources/icons/xwiki/spinner.gif[m
-	[32mdeleted:    resources/js/prototype/prototype.js[m
-	[32mdeleted:    resources/js/scriptaculous/effects.js[m
-	[32mdeleted:    resources/js/xwiki/compatibility.js[m
-	[32mdeleted:    resources/js/xwiki/create.js[m
-	[32mdeleted:    resources/js/xwiki/eventsBridge.js[m
-	[32mdeleted:    resources/js/xwiki/markerScript.js[m
-	[32mdeleted:    resources/js/xwiki/meta.js[m
-	[32mdeleted:    resources/js/xwiki/viewers/attachments.css[m
-	[32mdeleted:    resources/js/xwiki/viewers/attachments.js[m
-	[32mdeleted:    resources/js/xwiki/xwiki-min.js[m
-	[32mdeleted:    resources/uicomponents/exporter/exporter.js[m
-	[32mdeleted:    resources/uicomponents/hierarchy/hierarchy.js[m
-	[32mdeleted:    resources/uicomponents/pagination/pagination.css[m
-	[32mdeleted:    resources/uicomponents/rating/rating.css[m
-	[32mdeleted:    resources/uicomponents/require/deferred.js[m
-	[32mdeleted:    resources/uicomponents/search/searchSuggest.css[m
-	[32mdeleted:    resources/uicomponents/search/searchSuggest.js[m
-	[32mdeleted:    resources/uicomponents/suggest/suggestPicker.css[m
-	[32mdeleted:    resources/uicomponents/suggest/suggestPicker.js[m
-	[32mdeleted:    resources/uicomponents/viewers/comments.css[m
-	[32mdeleted:    resources/uicomponents/viewers/comments.js[m
-	[32mdeleted:    resources/uicomponents/viewers/tags.css[m
-	[32mdeleted:    resources/uicomponents/viewers/tags.js[m
-	[32mdeleted:    resources/uicomponents/widgets/select/select.css[m
-	[32mdeleted:    resources/uicomponents/widgets/select/select.js[m
-	[32mdeleted:    resources/uicomponents/widgets/tree.min.js[m
-	[32mdeleted:    resources/uicomponents/widgets/upload.css[m
-	[32mdeleted:    resources/uicomponents/widgets/upload.js[m
-	[32mdeleted:    resources/uicomponents/widgets/userpicker/userPicker.css[m
-	[32mdeleted:    resources/uicomponents/widgets/userpicker/userPicker.js[m
-	[32mdeleted:    skins/flamingo/META-INF/LICENSE[m
-	[32mdeleted:    skins/flamingo/META-INF/NOTICE[m
-	[32mdeleted:    skins/flamingo/delete.js[m
-	[32mdeleted:    skins/flamingo/delete.min.js[m
-	[32mdeleted:    skins/flamingo/flamingo.js[m
-	[32mdeleted:    skins/flamingo/flamingo.min.js[m
-	[32mdeleted:    skins/flamingo/ie-all.css[m
-	[32mdeleted:    skins/flamingo/ie-all.min.css[m
-	[32mdeleted:    skins/flamingo/less/bootstrap/.csscomb.json[m
-	[32mdeleted:    skins/flamingo/less/bootstrap/.csslintrc[m
-	[32mdeleted:    skins/flamingo/less/bootstrap/LICENSE[m
-	[32mdeleted:    skins/flamingo/less/bootstrap/alerts.less.gz[m
-	[32mdeleted:    skins/flamingo/less/bootstrap/badges.less.gz[m
-	[32mdeleted:    skins/flamingo/less/bootstrap/bootstrap.less.gz[m
-	[32mdeleted:    skins/flamingo/less/bootstrap/breadcrumbs.less.gz[m
-	[32mdeleted:    skins/flamingo/less/bootstrap/button-groups.less.gz[m
-	[32mdeleted:    skins/flamingo/less/bootstrap/buttons.less.gz[m
-	[32mdeleted:    skins/flamingo/less/bootstrap/carousel.less.gz[m
-	[32mdeleted:    skins/flamingo/less/bootstrap/close.less.gz[m
-	[32mdeleted:    skins/flamingo/less/bootstrap/code.less.gz[m
-	[32mdeleted:    skins/flamingo/less/bootstrap/component-animations.less.gz[m
-	[32mdeleted:    skins/flamingo/less/bootstrap/dropdowns.less.gz[m
-	[32mdeleted:    skins/flamingo/less/bootstrap/forms.less.gz[m
-	[32mdeleted:    skins/flamingo/less/bootstrap/glyphicons.less.gz[m
-	[32mdeleted:    skins/flamingo/less/bootstrap/grid.less.gz[m
-	[32mdeleted:    skins/flamingo/less/bootstrap/input-groups.less.gz[m
-	[32mdeleted:    skins/flamingo/less/bootstrap/jumbotron.less.gz[m
-	[32mdeleted:    skins/flamingo/less/bootstrap/labels.less.gz[m
-	[32mdeleted:    skins/flamingo/less/bootstrap/list-group.less.gz[m
-	[32mdeleted:    skins/flamingo/less/bootstrap/media.less.gz[m
-	[32mdeleted:    skins/flamingo/less/bootstrap/mixins.less.gz[m
-	[32mdeleted:    skins/flamingo/less/bootstrap/mixins/alerts.less.gz[m
-	[32mdeleted:    skins/flamingo/less/bootstrap/mixins/background-variant.less.gz[m
-	[32mdeleted:    skins/flamingo/less/bootstrap/mixins/border-radius.less.gz[m
-	[32mdeleted:    skins/flamingo/less/bootstrap/mixins/buttons.less.gz[m
-	[32mdeleted:    skins/flamingo/less/bootstrap/mixins/center-block.less.gz[m
-	[32mdeleted:    skins/flamingo/less/bootstrap/mixins/clearfix.less.gz[m
-	[32mdeleted:    skins/flamingo/less/bootstrap/mixins/forms.less.gz[m
-	[32mdeleted:    skins/flamingo/less/bootstrap/mixins/gradients.less.gz[m
-	[32mdeleted:    skins/flamingo/less/bootstrap/mixins/grid-framework.less.gz[m
-	[32mdeleted:    skins/flamingo/less/bootstrap/mixins/grid.less.gz[m
-	[32mdeleted:    skins/flamingo/less/bootstrap/mixins/hide-text.less.gz[m
-	[32mdeleted:    skins/flamingo/less/bootstrap/mixins/image.less.gz[m
-	[32mdeleted:    skins/flamingo/less/bootstrap/mixins/labels.less.gz[m
-	[32mdeleted:    skins/flamingo/less/bootstrap/mixins/list-group.less.gz[m
-	[32mdeleted:    skins/flamingo/less/bootstrap/mixins/nav-divider.less.gz[m
-	[32mdeleted:    skins/flamingo/less/bootstrap/mixins/nav-vertical-align.less.gz[m
-	[32mdeleted:    skins/flamingo/less/bootstrap/mixins/opacity.less.gz[m
-	[32mdeleted:    skins/flamingo/less/bootstrap/mixins/pagination.less.gz[m
-	[32mdeleted:    skins/flamingo/less/bootstrap/mixins/panels.less.gz[m
-	[32mdeleted:    skins/flamingo/less/bootstrap/mixins/progress-bar.less.gz[m
-	[32mdeleted:    skins/flamingo/less/bootstrap/mixins/reset-filter.less.gz[m
-	[32mdeleted:    skins/flamingo/less/bootstrap/mixins/reset-text.less.gz[m
-	[32mdeleted:    skins/flamingo/less/bootstrap/mixins/resize.less.gz[m
-	[32mdeleted:    skins/flamingo/less/bootstrap/mixins/responsive-visibility.less.gz[m
-	[32mdeleted:    skins/flamingo/less/bootstrap/mixins/size.less.gz[m
-	[32mdeleted:    skins/flamingo/less/bootstrap/mixins/tab-focus.less.gz[m
-	[32mdeleted:    skins/flamingo/less/bootstrap/mixins/table-row.less.gz[m
-	[32mdeleted:    skins/flamingo/less/bootstrap/mixins/text-emphasis.less.gz[m
-	[32mdeleted:    skins/flamingo/less/bootstrap/mixins/text-overflow.less.gz[m
-	[32mdeleted:    skins/flamingo/less/bootstrap/mixins/vendor-prefixes.less.gz[m
-	[32mdeleted:    skins/flamingo/less/bootstrap/modals.less.gz[m
-	[32mdeleted:    skins/flamingo/less/bootstrap/navbar.less.gz[m
-	[32mdeleted:    skins/flamingo/less/bootstrap/navs.less.gz[m
-	[32mdeleted:    skins/flamingo/less/bootstrap/normalize.less.gz[m
-	[32mdeleted:    skins/flamingo/less/bootstrap/pager.less.gz[m
-	[32mdeleted:    skins/flamingo/less/bootstrap/pagination.less.gz[m
-	[32mdeleted:    skins/flamingo/less/bootstrap/panels.less.gz[m
-	[32mdeleted:    skins/flamingo/less/bootstrap/popovers.less.gz[m
-	[32mdeleted:    skins/flamingo/less/bootstrap/print.less.gz[m
-	[32mdeleted:    skins/flamingo/less/bootstrap/progress-bars.less.gz[m
-	[32mdeleted:    skins/flamingo/less/bootstrap/responsive-embed.less.gz[m
-	[32mdeleted:    skins/flamingo/less/bootstrap/responsive-utilities.less.gz[m
-	[32mdeleted:    skins/flamingo/less/bootstrap/scaffolding.less.gz[m
-	[32mdeleted:    skins/flamingo/less/bootstrap/tables.less.gz[m
-	[32mdeleted:    skins/flamingo/less/bootstrap/theme.less.gz[m
-	[32mdeleted:    skins/flamingo/less/bootstrap/thumbnails.less.gz[m
-	[32mdeleted:    skins/flamingo/less/bootstrap/tooltip.less.gz[m
-	[32mdeleted:    skins/flamingo/less/bootstrap/type.less.gz[m
-	[32mdeleted:    skins/flamingo/less/bootstrap/utilities.less.gz[m
-	[32mdeleted:    skins/flamingo/less/bootstrap/variables.less.gz[m
-	[32mdeleted:    skins/flamingo/less/bootstrap/wells.less.gz[m
-	[32mdeleted:    skins/flamingo/logo.png[m
-	[32mdeleted:    skins/flamingo/logo.svg[m
-	[32mdeleted:    skins/flamingo/print.css[m
-	[32mdeleted:    skins/flamingo/print.min.css[m
-	[32mdeleted:    skins/flamingo/style.css[m
-	[32mdeleted:    skins/flamingo/style.min.css[m
-	[32mdeleted:    ssx/AnnotationCode/Settings/ssx6638591884467815729.css[m
-	[32mdeleted:    ssx/AnnotationCode/Style/ssx398583666801689745.css[m
-	[32mdeleted:    ssx/Help/SupportPanel/WebHome/ssx6012141004330439571.css[m
-	[32mdeleted:    ssx/IconThemes/FontAwesome/ssx5050655356492516163.css[m
-	[32mdeleted:    ssx/Panels/Applications/ssx3099011808360158401.css[m
-	[32mdeleted:    ssx/Tour/HomepageTour/WebHome/ssx397153202345710241.css[m
-	[32mdeleted:    ssx/XWiki/Notifications/Code/NotificationsDisplayerUIX/ssx2105219377591969882.css[m
-	[32mdeleted:    ssx/XWiki/Notifications/Code/NotificationsMacro/ssx5587641833793281285.css[m
-	[32mdeleted:    ssx/XWiki/Ratings/ssx3288243699786369983.css[m
-	[32mdeleted:    ssx/XWiki/SharePage/ssx5233330530565954453.css[m
-	[32mdeleted:    webjars/Keypress/2.1.5/keypress.min.js[m
-	[32mdeleted:    webjars/bootstrap-switch/3.3.2/css/bootstrap3/bootstrap-switch.min.css[m
-	[32mdeleted:    webjars/bootstrap-switch/3.3.2/js/bootstrap-switch.min.js[m
-	[32mdeleted:    webjars/bootstrap-tour/0.11.0/css/bootstrap-tour.min.css[m
-	[32mdeleted:    webjars/bootstrap-tour/0.11.0/js/bootstrap-tour.min.js[m
-	[32mdeleted:    webjars/bootstrap/3.3.7-1/fonts/glyphicons-halflings-regular.eot[m
-	[32mdeleted:    webjars/bootstrap/3.3.7-1/fonts/glyphicons-halflings-regular.svg[m
-	[32mdeleted:    webjars/bootstrap/3.3.7-1/fonts/glyphicons-halflings-regular.ttf[m
-	[32mdeleted:    webjars/bootstrap/3.3.7-1/fonts/glyphicons-halflings-regular.woff[m
-	[32mdeleted:    webjars/bootstrap/3.3.7-1/fonts/glyphicons-halflings-regular.woff2[m
-	[32mdeleted:    webjars/bootstrap/3.3.7-1/js/bootstrap.min.js[m
-	[32mdeleted:    webjars/bootstrap/3.3.7-1/js/bootstrap.min.js.gz[m
-	[32mdeleted:    webjars/drawer/2.4.0/css/drawer.min.css[m
-	[32mdeleted:    webjars/drawer/2.4.0/js/jquery.drawer.min.js[m
-	[32mdeleted:    webjars/font-awesome/4.7.0/css/font-awesome.min.css[m
-	[32mdeleted:    webjars/font-awesome/4.7.0/fonts/fontawesome-webfont.eot[m
-	[32mdeleted:    webjars/font-awesome/4.7.0/fonts/fontawesome-webfont.svg[m
-	[32mdeleted:    webjars/font-awesome/4.7.0/fonts/fontawesome-webfont.ttf[m
-	[32mdeleted:    webjars/font-awesome/4.7.0/fonts/fontawesome-webfont.woff[m
-	[32mdeleted:    webjars/font-awesome/4.7.0/fonts/fontawesome-webfont.woff2[m
-	[32mdeleted:    webjars/html5shiv/3.7.2/html5shiv.min.js[m
-	[32mdeleted:    webjars/iscroll/5.1.3/build/iscroll-lite.js[m
-	[32mdeleted:    webjars/jquery/2.2.2/jquery.min.js[m
-	[32mdeleted:    webjars/requirejs/2.2.0/require.min.js[m
-	[32mdeleted:    webjars/respond/1.4.2/dest/respond.min.js[m
-	[32mdeleted:    webjars/xwiki-platform-tree-webjar/9.11.8/require-config.min.js[m
-	[32mdeleted:    webjars/xwiki-platform-tree-webjar/9.11.8/tree.min.css[m
-
-]0;/home/aschroed/git/uva-bi-sdad.github.io]0;aschroed@042511b8b210: ~/git/uva-bi-sdad.github.io[01;32maschroed@042511b8b210[00m:[01;34m~/git/uva-bi-sdad.github.io[00m$ git statusadd --allpush -u origin mastercommit -m "Initial commit"[5Ppush -u origin master
-Branch master set up to track remote branch master from origin.
-Everything up-to-date
-]0;/home/aschroed/git/uva-bi-sdad.github.io]0;aschroed@042511b8b210: ~/git/uva-bi-sdad.github.io[01;32maschroed@042511b8b210[00m:[01;34m~/git/uva-bi-sdad.github.io[00m$ git push -u origin masterstatus[Kadd --allpush -u origin mastercommit -m "Initial commit"
-[master cac5503] Initial commit
- 218 files changed, 7 insertions(+), 12712 deletions(-)
- create mode 100644 DSPG-Program-Schedule.pdf
- create mode 100644 Keller-Lancaster-Shipp-Building-Capacity-for-Data-Driven-Governance-Creating-a-New-Foundation-for-Democracy.pdf
- create mode 100644 SDAD-Data-Science-Framework.pdf
- create mode 100644 SDAD-Generic-Ethics-Checklist.pdf
- delete mode 100644 attachment/xwiki/AnnotationCode/Style/notesmall.png
- delete mode 100644 attachment/xwiki/AnnotationCode/Style/notesmallorange.png
- delete mode 100644 attachment/xwiki/AnnotationCode/Style/notesmallred.png
- delete mode 100644 attachment/xwiki/FlamingoThemes/Cerulean/sdad4.png
- delete mode 100644 jsx/AnnotationCode/Script/jsx262219617141021127.js
- delete mode 100644 jsx/AnnotationCode/Settings/jsx6904010761369582931.js
- delete mode 100644 jsx/IconThemes/FontAwesome/jsx6955419360562796623.js
- delete mode 100644 jsx/Panels/Applications/jsx2550532495310586879.js
- delete mode 100644 jsx/TaskManager/TaskManagerSheet/jsx7651550553020731059.js
- delete mode 100644 jsx/TourCode/TourJS/jsx7772782000305247591.js
- delete mode 100644 jsx/XWiki/Notifications/Code/NotificationsDisplayerUIX/jsx2726717328110338910.js
- delete mode 100644 jsx/XWiki/Notifications/Code/NotificationsMacro/jsx6939490678566213849.js
- delete mode 100644 jsx/XWiki/QuickSearchUIX/jsx6847226341155620486.js
- delete mode 100644 jsx/XWiki/Ratings/jsx7967875690521863637.js
- delete mode 100644 jsx/XWiki/SharePage/jsx5485618021894336241.js
- delete mode 100644 pages/xwiki/DSPG/Schedule/WebHome.html
- delete mode 100644 resources/css/xwiki-min.css
- delete mode 100644 resources/icons/datamodel/groups.png
- delete mode 100644 resources/icons/datamodel/users.png
- delete mode 100644 resources/icons/silk/add.png
- delete mode 100644 resources/icons/silk/attach.png
- delete mode 100644 resources/icons/silk/bullet_add.png
- delete mode 100644 resources/icons/silk/bullet_toggle_minus.png
- delete mode 100644 resources/icons/silk/bullet_toggle_plus.png
- delete mode 100644 resources/icons/silk/cancel.png
- delete mode 100644 resources/icons/silk/chart_organisation.png
- delete mode 100644 resources/icons/silk/comment.png
- delete mode 100644 resources/icons/silk/comments_add.png
- delete mode 100644 resources/icons/silk/cross.png
- delete mode 100644 resources/icons/silk/delete.png
- delete mode 100644 resources/icons/silk/email.png
- delete mode 100644 resources/icons/silk/eye.png
- delete mode 100644 resources/icons/silk/folder.png
- delete mode 100644 resources/icons/silk/group.png
- delete mode 100644 resources/icons/silk/help.png
- delete mode 100644 resources/icons/silk/link.png
- delete mode 100644 resources/icons/silk/note.png
- delete mode 100644 resources/icons/silk/note_add.png
- delete mode 100644 resources/icons/silk/page_white_text.png
- delete mode 100644 resources/icons/silk/pencil.png
- delete mode 100644 resources/icons/silk/tag_yellow.png
- delete mode 100644 resources/icons/silk/textfield_add.png
- delete mode 100644 resources/icons/silk/tick.png
- delete mode 100644 resources/icons/silk/user.png
- delete mode 100644 resources/icons/silk/world.png
- delete mode 100644 resources/icons/silk/world_delete.png
- delete mode 100644 resources/icons/xwiki/accordion.png
- delete mode 100644 resources/icons/xwiki/ajax-loader-large.gif
- delete mode 100644 resources/icons/xwiki/external-link.png
- delete mode 100644 resources/icons/xwiki/favicon.ico
- delete mode 100644 resources/icons/xwiki/favicon.svg
- delete mode 100644 resources/icons/xwiki/favicon144.png
- delete mode 100644 resources/icons/xwiki/favicon16.png
- delete mode 100644 resources/icons/xwiki/noavatar.png
- delete mode 100644 resources/icons/xwiki/pagination-controls.png
- delete mode 100644 resources/icons/xwiki/parent_edit.gif
- delete mode 100644 resources/icons/xwiki/spinner-white.gif
- delete mode 100644 resources/icons/xwiki/spinner.gif
- delete mode 100644 resources/js/prototype/prototype.js
- delete mode 100644 resources/js/scriptaculous/effects.js
- delete mode 100644 resources/js/xwiki/compatibility.js
- delete mode 100644 resources/js/xwiki/create.js
- delete mode 100644 resources/js/xwiki/eventsBridge.js
- delete mode 100644 resources/js/xwiki/markerScript.js
- delete mode 100644 resources/js/xwiki/meta.js
- delete mode 100644 resources/js/xwiki/viewers/attachments.css
- delete mode 100644 resources/js/xwiki/viewers/attachments.js
- delete mode 100644 resources/js/xwiki/xwiki-min.js
- delete mode 100644 resources/uicomponents/exporter/exporter.js
- delete mode 100644 resources/uicomponents/hierarchy/hierarchy.js
- delete mode 100644 resources/uicomponents/pagination/pagination.css
- delete mode 100644 resources/uicomponents/rating/rating.css
- delete mode 100644 resources/uicomponents/require/deferred.js
- delete mode 100644 resources/uicomponents/search/searchSuggest.css
- delete mode 100644 resources/uicomponents/search/searchSuggest.js
- delete mode 100644 resources/uicomponents/suggest/suggestPicker.css
- delete mode 100644 resources/uicomponents/suggest/suggestPicker.js
- delete mode 100644 resources/uicomponents/viewers/comments.css
- delete mode 100644 resources/uicomponents/viewers/comments.js
- delete mode 100644 resources/uicomponents/viewers/tags.css
- delete mode 100644 resources/uicomponents/viewers/tags.js
- delete mode 100644 resources/uicomponents/widgets/select/select.css
- delete mode 100644 resources/uicomponents/widgets/select/select.js
- delete mode 100644 resources/uicomponents/widgets/tree.min.js
- delete mode 100644 resources/uicomponents/widgets/upload.css
- delete mode 100644 resources/uicomponents/widgets/upload.js
- delete mode 100644 resources/uicomponents/widgets/userpicker/userPicker.css
- delete mode 100644 resources/uicomponents/widgets/userpicker/userPicker.js
- delete mode 100644 skins/flamingo/META-INF/LICENSE
- delete mode 100644 skins/flamingo/META-INF/NOTICE
- delete mode 100644 skins/flamingo/delete.js
- delete mode 100644 skins/flamingo/delete.min.js
- delete mode 100644 skins/flamingo/flamingo.js
- delete mode 100644 skins/flamingo/flamingo.min.js
- delete mode 100644 skins/flamingo/ie-all.css
- delete mode 100644 skins/flamingo/ie-all.min.css
- delete mode 100644 skins/flamingo/less/bootstrap/.csscomb.json
- delete mode 100644 skins/flamingo/less/bootstrap/.csslintrc
- delete mode 100644 skins/flamingo/less/bootstrap/LICENSE
- delete mode 100644 skins/flamingo/less/bootstrap/alerts.less.gz
- delete mode 100644 skins/flamingo/less/bootstrap/badges.less.gz
- delete mode 100644 skins/flamingo/less/bootstrap/bootstrap.less.gz
- delete mode 100644 skins/flamingo/less/bootstrap/breadcrumbs.less.gz
- delete mode 100644 skins/flamingo/less/bootstrap/button-groups.less.gz
- delete mode 100644 skins/flamingo/less/bootstrap/buttons.less.gz
- delete mode 100644 skins/flamingo/less/bootstrap/carousel.less.gz
- delete mode 100644 skins/flamingo/less/bootstrap/close.less.gz
- delete mode 100644 skins/flamingo/less/bootstrap/code.less.gz
- delete mode 100644 skins/flamingo/less/bootstrap/component-animations.less.gz
- delete mode 100644 skins/flamingo/less/bootstrap/dropdowns.less.gz
- delete mode 100644 skins/flamingo/less/bootstrap/forms.less.gz
- delete mode 100644 skins/flamingo/less/bootstrap/glyphicons.less.gz
- delete mode 100644 skins/flamingo/less/bootstrap/grid.less.gz
- delete mode 100644 skins/flamingo/less/bootstrap/input-groups.less.gz
- delete mode 100644 skins/flamingo/less/bootstrap/jumbotron.less.gz
- delete mode 100644 skins/flamingo/less/bootstrap/labels.less.gz
- delete mode 100644 skins/flamingo/less/bootstrap/list-group.less.gz
- delete mode 100644 skins/flamingo/less/bootstrap/media.less.gz
- delete mode 100644 skins/flamingo/less/bootstrap/mixins.less.gz
- delete mode 100644 skins/flamingo/less/bootstrap/mixins/alerts.less.gz
- delete mode 100644 skins/flamingo/less/bootstrap/mixins/background-variant.less.gz
- delete mode 100644 skins/flamingo/less/bootstrap/mixins/border-radius.less.gz
- delete mode 100644 skins/flamingo/less/bootstrap/mixins/buttons.less.gz
- delete mode 100644 skins/flamingo/less/bootstrap/mixins/center-block.less.gz
- delete mode 100644 skins/flamingo/less/bootstrap/mixins/clearfix.less.gz
- delete mode 100644 skins/flamingo/less/bootstrap/mixins/forms.less.gz
- delete mode 100644 skins/flamingo/less/bootstrap/mixins/gradients.less.gz
- delete mode 100644 skins/flamingo/less/bootstrap/mixins/grid-framework.less.gz
- delete mode 100644 skins/flamingo/less/bootstrap/mixins/grid.less.gz
- delete mode 100644 skins/flamingo/less/bootstrap/mixins/hide-text.less.gz
- delete mode 100644 skins/flamingo/less/bootstrap/mixins/image.less.gz
- delete mode 100644 skins/flamingo/less/bootstrap/mixins/labels.less.gz
- delete mode 100644 skins/flamingo/less/bootstrap/mixins/list-group.less.gz
- delete mode 100644 skins/flamingo/less/bootstrap/mixins/nav-divider.less.gz
- delete mode 100644 skins/flamingo/less/bootstrap/mixins/nav-vertical-align.less.gz
- delete mode 100644 skins/flamingo/less/bootstrap/mixins/opacity.less.gz
- delete mode 100644 skins/flamingo/less/bootstrap/mixins/pagination.less.gz
- delete mode 100644 skins/flamingo/less/bootstrap/mixins/panels.less.gz
- delete mode 100644 skins/flamingo/less/bootstrap/mixins/progress-bar.less.gz
- delete mode 100644 skins/flamingo/less/bootstrap/mixins/reset-filter.less.gz
- delete mode 100644 skins/flamingo/less/bootstrap/mixins/reset-text.less.gz
- delete mode 100644 skins/flamingo/less/bootstrap/mixins/resize.less.gz
- delete mode 100644 skins/flamingo/less/bootstrap/mixins/responsive-visibility.less.gz
- delete mode 100644 skins/flamingo/less/bootstrap/mixins/size.less.gz
- delete mode 100644 skins/flamingo/less/bootstrap/mixins/tab-focus.less.gz
- delete mode 100644 skins/flamingo/less/bootstrap/mixins/table-row.less.gz
- delete mode 100644 skins/flamingo/less/bootstrap/mixins/text-emphasis.less.gz
- delete mode 100644 skins/flamingo/less/bootstrap/mixins/text-overflow.less.gz
- delete mode 100644 skins/flamingo/less/bootstrap/mixins/vendor-prefixes.less.gz
- delete mode 100644 skins/flamingo/less/bootstrap/modals.less.gz
- delete mode 100644 skins/flamingo/less/bootstrap/navbar.less.gz
- delete mode 100644 skins/flamingo/less/bootstrap/navs.less.gz
- delete mode 100644 skins/flamingo/less/bootstrap/normalize.less.gz
- delete mode 100644 skins/flamingo/less/bootstrap/pager.less.gz
- delete mode 100644 skins/flamingo/less/bootstrap/pagination.less.gz
- delete mode 100644 skins/flamingo/less/bootstrap/panels.less.gz
- delete mode 100644 skins/flamingo/less/bootstrap/popovers.less.gz
- delete mode 100644 skins/flamingo/less/bootstrap/print.less.gz
- delete mode 100644 skins/flamingo/less/bootstrap/progress-bars.less.gz
- delete mode 100644 skins/flamingo/less/bootstrap/responsive-embed.less.gz
- delete mode 100644 skins/flamingo/less/bootstrap/responsive-utilities.less.gz
- delete mode 100644 skins/flamingo/less/bootstrap/scaffolding.less.gz
- delete mode 100644 skins/flamingo/less/bootstrap/tables.less.gz
- delete mode 100644 skins/flamingo/less/bootstrap/theme.less.gz
- delete mode 100644 skins/flamingo/less/bootstrap/thumbnails.less.gz
- delete mode 100644 skins/flamingo/less/bootstrap/tooltip.less.gz
- delete mode 100644 skins/flamingo/less/bootstrap/type.less.gz
- delete mode 100644 skins/flamingo/less/bootstrap/utilities.less.gz
- delete mode 100644 skins/flamingo/less/bootstrap/variables.less.gz
- delete mode 100644 skins/flamingo/less/bootstrap/wells.less.gz
- delete mode 100644 skins/flamingo/logo.png
- delete mode 100644 skins/flamingo/logo.svg
- delete mode 100644 skins/flamingo/print.css
- delete mode 100644 skins/flamingo/print.min.css
- delete mode 100644 skins/flamingo/style.css
- delete mode 100644 skins/flamingo/style.min.css
- delete mode 100644 ssx/AnnotationCode/Settings/ssx6638591884467815729.css
- delete mode 100644 ssx/AnnotationCode/Style/ssx398583666801689745.css
- delete mode 100644 ssx/Help/SupportPanel/WebHome/ssx6012141004330439571.css
- delete mode 100644 ssx/IconThemes/FontAwesome/ssx5050655356492516163.css
- delete mode 100644 ssx/Panels/Applications/ssx3099011808360158401.css
- delete mode 100644 ssx/Tour/HomepageTour/WebHome/ssx397153202345710241.css
- delete mode 100644 ssx/XWiki/Notifications/Code/NotificationsDisplayerUIX/ssx2105219377591969882.css
- delete mode 100644 ssx/XWiki/Notifications/Code/NotificationsMacro/ssx5587641833793281285.css
- delete mode 100644 ssx/XWiki/Ratings/ssx3288243699786369983.css
- delete mode 100644 ssx/XWiki/SharePage/ssx5233330530565954453.css
- delete mode 100644 webjars/Keypress/2.1.5/keypress.min.js
- delete mode 100644 webjars/bootstrap-switch/3.3.2/css/bootstrap3/bootstrap-switch.min.css
- delete mode 100644 webjars/bootstrap-switch/3.3.2/js/bootstrap-switch.min.js
- delete mode 100644 webjars/bootstrap-tour/0.11.0/css/bootstrap-tour.min.css
- delete mode 100644 webjars/bootstrap-tour/0.11.0/js/bootstrap-tour.min.js
- delete mode 100644 webjars/bootstrap/3.3.7-1/fonts/glyphicons-halflings-regular.eot
- delete mode 100644 webjars/bootstrap/3.3.7-1/fonts/glyphicons-halflings-regular.svg
- delete mode 100644 webjars/bootstrap/3.3.7-1/fonts/glyphicons-halflings-regular.ttf
- delete mode 100644 webjars/bootstrap/3.3.7-1/fonts/glyphicons-halflings-regular.woff
- delete mode 100644 webjars/bootstrap/3.3.7-1/fonts/glyphicons-halflings-regular.woff2
- delete mode 100644 webjars/bootstrap/3.3.7-1/js/bootstrap.min.js
- delete mode 100644 webjars/bootstrap/3.3.7-1/js/bootstrap.min.js.gz
- delete mode 100644 webjars/drawer/2.4.0/css/drawer.min.css
- delete mode 100644 webjars/drawer/2.4.0/js/jquery.drawer.min.js
- delete mode 100644 webjars/font-awesome/4.7.0/css/font-awesome.min.css
- delete mode 100644 webjars/font-awesome/4.7.0/fonts/fontawesome-webfont.eot
- delete mode 100644 webjars/font-awesome/4.7.0/fonts/fontawesome-webfont.svg
- delete mode 100644 webjars/font-awesome/4.7.0/fonts/fontawesome-webfont.ttf
- delete mode 100644 webjars/font-awesome/4.7.0/fonts/fontawesome-webfont.woff
- delete mode 100644 webjars/font-awesome/4.7.0/fonts/fontawesome-webfont.woff2
- delete mode 100644 webjars/html5shiv/3.7.2/html5shiv.min.js
- delete mode 100644 webjars/iscroll/5.1.3/build/iscroll-lite.js
- delete mode 100644 webjars/jquery/2.2.2/jquery.min.js
- delete mode 100644 webjars/requirejs/2.2.0/require.min.js
- delete mode 100644 webjars/respond/1.4.2/dest/respond.min.js
- delete mode 100644 webjars/xwiki-platform-tree-webjar/9.11.8/require-config.min.js
- delete mode 100644 webjars/xwiki-platform-tree-webjar/9.11.8/tree.min.css
-]0;/home/aschroed/git/uva-bi-sdad.github.io]0;aschroed@042511b8b210: ~/git/uva-bi-sdad.github.io[01;32maschroed@042511b8b210[00m:[01;34m~/git/uva-bi-sdad.github.io[00m$ git commit -m "Initial commit"[5Ppush -u origin masterstatus[Kpush -u origin master
-Counting objects: 7, done.
-Delta compression using up to 12 threads.
-Compressing objects:  14% (1/7)   Compressing objects:  28% (2/7)   Compressing objects:  42% (3/7)   Compressing objects:  57% (4/7)   Compressing objects:  71% (5/7)   Compressing objects:  85% (6/7)   Compressing objects: 100% (7/7)   Compressing objects: 100% (7/7), done.
-Writing objects:  14% (1/7)   Writing objects:  28% (2/7)   Writing objects:  42% (3/7)   Writing objects:  57% (4/7)   Writing objects:  71% (5/7)   Writing objects:  85% (6/7)   Writing objects: 100% (7/7)   Writing objects: 100% (7/7), 1.58 MiB | 0 bytes/s, done.
-Total 7 (delta 0), reused 0 (delta 0)
-To https://github.com/uva-bi-sdad/uva-bi-sdad.github.io.git
-   6323cbd..cac5503  master -> master
-Branch master set up to track remote branch master from origin.
-]0;/home/aschroed/git/uva-bi-sdad.github.io]0;aschroed@042511b8b210: ~/git/uva-bi-sdad.github.io[01;32maschroed@042511b8b210[00m:[01;34m~/git/uva-bi-sdad.github.io[00m$ git push -u origin mastercommit -m "Initial commit"[5Ppush -u origin masterstatus[Kadd --all
-]0;/home/aschroed/git/uva-bi-sdad.github.io]0;aschroed@042511b8b210: ~/git/uva-bi-sdad.github.io[01;32maschroed@042511b8b210[00m:[01;34m~/git/uva-bi-sdad.github.io[00m$ git add --allpush -u origin mastercommit -m "Initial commit"
-[master 66bad18] Initial commit
- 1 file changed, 17 insertions(+)
- create mode 100644 dspg2019.html
-]0;/home/aschroed/git/uva-bi-sdad.github.io]0;aschroed@042511b8b210: ~/git/uva-bi-sdad.github.io[01;32maschroed@042511b8b210[00m:[01;34m~/git/uva-bi-sdad.github.io[00m$ git commit -m "Initial commit"[17Padd --allpush -u origin master
-Counting objects: 2, done.
-Delta compression using up to 12 threads.
-Compressing objects:  50% (1/2)   Compressing objects: 100% (2/2)   Compressing objects: 100% (2/2), done.
-Writing objects:  50% (1/2)   Writing objects: 100% (2/2)   Writing objects: 100% (2/2), 269 bytes | 0 bytes/s, done.
-Total 2 (delta 1), reused 0 (delta 0)
-remote: Resolving deltas:   0% (0/1)   [Kremote: Resolving deltas: 100% (1/1)   [Kremote: Resolving deltas: 100% (1/1), completed with 1 local object.[K
-To https://github.com/uva-bi-sdad/uva-bi-sdad.github.io.git
-   cac5503..66bad18  master -> master
-Branch master set up to track remote branch master from origin.
-]0;/home/aschroed/git/uva-bi-sdad.github.io]0;aschroed@042511b8b210: ~/git/uva-bi-sdad.github.io[01;32maschroed@042511b8b210[00m:[01;34m~/git/uva-bi-sdad.github.io[00m$ git push -u origin mastercommit -m "Initial commit"[17Padd --all
-]0;/home/aschroed/git/uva-bi-sdad.github.io]0;aschroed@042511b8b210: ~/git/uva-bi-sdad.github.io[01;32maschroed@042511b8b210[00m:[01;34m~/git/uva-bi-sdad.github.io[00m$ git add --allpush -u origin mastercommit -m "Initial commit"
-[master e6296c1] Initial commit
- 1 file changed, 10 insertions(+), 17 deletions(-)
- rewrite dspg2019.html (84%)
-]0;/home/aschroed/git/uva-bi-sdad.github.io]0;aschroed@042511b8b210: ~/git/uva-bi-sdad.github.io[01;32maschroed@042511b8b210[00m:[01;34m~/git/uva-bi-sdad.github.io[00m$ git commit -m "Initial commit"[17Padd --allpush -u origin master
-Counting objects: 3, done.
-Delta compression using up to 12 threads.
-Compressing objects:  33% (1/3)   Compressing objects:  66% (2/3)   Compressing objects: 100% (3/3)   Compressing objects: 100% (3/3), done.
-Writing objects:  33% (1/3)   Writing objects:  66% (2/3)   Writing objects: 100% (3/3)   Writing objects: 100% (3/3), 406 bytes | 0 bytes/s, done.
-Total 3 (delta 1), reused 0 (delta 0)
-remote: Resolving deltas:   0% (0/1)   [Kremote: Resolving deltas: 100% (1/1)   [Kremote: Resolving deltas: 100% (1/1), completed with 1 local object.[K
-To https://github.com/uva-bi-sdad/uva-bi-sdad.github.io.git
-   66bad18..e6296c1  master -> master
-Branch master set up to track remote branch master from origin.
-]0;/home/aschroed/git/uva-bi-sdad.github.io]0;aschroed@042511b8b210: ~/git/uva-bi-sdad.github.io[01;32maschroed@042511b8b210[00m:[01;34m~/git/uva-bi-sdad.github.io[00m$ git push -u origin mastercommit -m "Initial commit"[17Padd --all
-]0;/home/aschroed/git/uva-bi-sdad.github.io]0;aschroed@042511b8b210: ~/git/uva-bi-sdad.github.io[01;32maschroed@042511b8b210[00m:[01;34m~/git/uva-bi-sdad.github.io[00m$ git add --allpush -u origin mastercommit -m "Initial commit"[17Padd --allcommit -m "Initial commit"
-[master 18f74ff] Initial commit
- 2 files changed, 11 insertions(+), 18 deletions(-)
- copy index.html => dspg2019.html (98%)
- rewrite index.html (84%)
-]0;/home/aschroed/git/uva-bi-sdad.github.io]0;aschroed@042511b8b210: ~/git/uva-bi-sdad.github.io[01;32maschroed@042511b8b210[00m:[01;34m~/git/uva-bi-sdad.github.io[00m$ git commit -m "Initial commit"[17Padd --allpush -u origin master
-Counting objects: 3, done.
-Delta compression using up to 12 threads.
-Compressing objects:  33% (1/3)   Compressing objects:  66% (2/3)   Compressing objects: 100% (3/3)   Compressing objects: 100% (3/3), done.
-Writing objects:  33% (1/3)   Writing objects:  66% (2/3)   Writing objects: 100% (3/3)   Writing objects: 100% (3/3), 667 bytes | 0 bytes/s, done.
-Total 3 (delta 1), reused 0 (delta 0)
-remote: Resolving deltas:   0% (0/1)   [Kremote: Resolving deltas: 100% (1/1)   [Kremote: Resolving deltas: 100% (1/1), completed with 1 local object.[K
-To https://github.com/uva-bi-sdad/uva-bi-sdad.github.io.git
-   e6296c1..18f74ff  master -> master
-Branch master set up to track remote branch master from origin.
-]0;/home/aschroed/git/uva-bi-sdad.github.io]0;aschroed@042511b8b210: ~/git/uva-bi-sdad.github.io[01;32maschroed@042511b8b210[00m:[01;34m~/git/uva-bi-sdad.github.io[00m$ [K]0;aschroed@042511b8b210: ~/git/uva-bi-sdad.github.io[01;32maschroed@042511b8b210[00m:[01;34m~/git/uva-bi-sdad.github.io[00m$ [K]0;aschroed@042511b8b210: ~/git/uva-bi-sdad.github.io[01;32maschroed@042511b8b210[00m:[01;34m~/git/uva-bi-sdad.github.io[00m$ [K]0;aschroed@042511b8b210: ~/git/uva-bi-sdad.github.io[01;32maschroed@042511b8b210[00m:[01;34m~/git/uva-bi-sdad.github.io[00m$ git push -u origin mastercommit -m "Initial commit"[17Padd --all
-]0;/home/aschroed/git/uva-bi-sdad.github.io]0;aschroed@042511b8b210: ~/git/uva-bi-sdad.github.io[01;32maschroed@042511b8b210[00m:[01;34m~/git/uva-bi-sdad.github.io[00m$ git add --allpush -u origin mastercommit -m "Initial commit"
-[master fbb34ea] Initial commit
- 3 files changed, 1 insertion(+)
- create mode 100644 img/SDAD_header.png
- create mode 100644 img/uva_header.png
-]0;/home/aschroed/git/uva-bi-sdad.github.io]0;aschroed@042511b8b210: ~/git/uva-bi-sdad.github.io[01;32maschroed@042511b8b210[00m:[01;34m~/git/uva-bi-sdad.github.io[00m$ git commit -m "Initial commit"[17Padd --allpush -u origin master
-To https://github.com/uva-bi-sdad/uva-bi-sdad.github.io.git
- ! [rejected]        master -> master (fetch first)
-error: failed to push some refs to 'https://github.com/uva-bi-sdad/uva-bi-sdad.github.io.git'
-hint: Updates were rejected because the remote contains work that you do
-hint: not have locally. This is usually caused by another repository pushing
-hint: to the same ref. You may want to first integrate the remote changes
-hint: (e.g., 'git pull ...') before pushing again.
-hint: See the 'Note about fast-forwards' in 'git push --help' for details.
-]0;/home/aschroed/git/uva-bi-sdad.github.io]0;aschroed@042511b8b210: ~/git/uva-bi-sdad.github.io[01;32maschroed@042511b8b210[00m:[01;34m~/git/uva-bi-sdad.github.io[00m$ git pull
-remote: Enumerating objects: 4, done.[K
-remote: Counting objects:  25% (1/4)   [Kremote: Counting objects:  50% (2/4)   [Kremote: Counting objects:  75% (3/4)   [Kremote: Counting objects: 100% (4/4)   [Kremote: Counting objects: 100% (4/4), done.[K
-remote: Compressing objects:  33% (1/3)   [Kremote: Compressing objects:  66% (2/3)   [Kremote: Compressing objects: 100% (3/3)   [Kremote: Compressing objects: 100% (3/3), done.[K
-remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0[K
-Unpacking objects:  33% (1/3)   Unpacking objects:  66% (2/3)   Unpacking objects: 100% (3/3)   Unpacking objects: 100% (3/3), done.
-From https://github.com/uva-bi-sdad/uva-bi-sdad.github.io
-   18f74ff..c32fcc3  master     -> origin/master
-[?1000hMerge made by the 'recursive' strategy.
- .whitesource | 8 [32m++++++++[m
- 1 file changed, 8 insertions(+)
- create mode 100644 .whitesource
-]0;/home/aschroed/git/uva-bi-sdad.github.io]0;aschroed@042511b8b210: ~/git/uva-bi-sdad.github.io[01;32maschroed@042511b8b210[00m:[01;34m~/git/uva-bi-sdad.github.io[00m$ git pullsh -u origin mastercommit -m "Initial commit"[17Padd --all
-]0;/home/aschroed/git/uva-bi-sdad.github.io]0;aschroed@042511b8b210: ~/git/uva-bi-sdad.github.io[01;32maschroed@042511b8b210[00m:[01;34m~/git/uva-bi-sdad.github.io[00m$ git add --all[5Ppullsh -u origin mastercommit -m "Initial commit"
-On branch master
-Your branch is ahead of 'origin/master' by 2 commits.
-  (use "git push" to publish your local commits)
-nothing to commit, working tree clean
-]0;/home/aschroed/git/uva-bi-sdad.github.io]0;aschroed@042511b8b210: ~/git/uva-bi-sdad.github.io[01;32maschroed@042511b8b210[00m:[01;34m~/git/uva-bi-sdad.github.io[00m$ git commit -m "Initial commit"[17Padd --all[5Ppullsh -u origin master
-Counting objects: 8, done.
-Delta compression using up to 12 threads.
-Compressing objects:  12% (1/8)   Compressing objects:  25% (2/8)   Compressing objects:  37% (3/8)   Compressing objects:  50% (4/8)   Compressing objects:  62% (5/8)   Compressing objects:  75% (6/8)   Compressing objects:  87% (7/8)   Compressing objects: 100% (8/8)   Compressing objects: 100% (8/8), done.
-Writing objects:  12% (1/8)   Writing objects:  25% (2/8)   Writing objects:  37% (3/8)   Writing objects:  50% (4/8)   Writing objects:  62% (5/8)   Writing objects:  75% (6/8)   Writing objects:  87% (7/8)   Writing objects: 100% (8/8)   Writing objects: 100% (8/8), 35.95 KiB | 0 bytes/s, done.
-Total 8 (delta 3), reused 0 (delta 0)
-remote: Resolving deltas:   0% (0/3)   [Kremote: Resolving deltas:  66% (2/3)   [Kremote: Resolving deltas: 100% (3/3)   [Kremote: Resolving deltas: 100% (3/3), completed with 2 local objects.[K
-To https://github.com/uva-bi-sdad/uva-bi-sdad.github.io.git
-   c32fcc3..2c46a11  master -> master
-Branch master set up to track remote branch master from origin.
-]0;/home/aschroed/git/uva-bi-sdad.github.io]0;aschroed@042511b8b210: ~/git/uva-bi-sdad.github.io[01;32maschroed@042511b8b210[00m:[01;34m~/git/uva-bi-sdad.github.io[00m$ git push -u origin mastercommit -m "Initial commit"[17Padd --all
-]0;/home/aschroed/git/uva-bi-sdad.github.io]0;aschroed@042511b8b210: ~/git/uva-bi-sdad.github.io[01;32maschroed@042511b8b210[00m:[01;34m~/git/uva-bi-sdad.github.io[00m$ git add --allpush -u origin mastercommit -m "Initial commit"
-[master 5d0fe56] Initial commit
- 1 file changed, 1 insertion(+), 1 deletion(-)
-]0;/home/aschroed/git/uva-bi-sdad.github.io]0;aschroed@042511b8b210: ~/git/uva-bi-sdad.github.io[01;32maschroed@042511b8b210[00m:[01;34m~/git/uva-bi-sdad.github.io[00m$ git commit -m "Initial commit"[17Padd --allpush -u origin master
-Counting objects: 3, done.
-Delta compression using up to 12 threads.
-Compressing objects:  33% (1/3)   Compressing objects:  66% (2/3)   Compressing objects: 100% (3/3)   Compressing objects: 100% (3/3), done.
-Writing objects:  33% (1/3)   Writing objects:  66% (2/3)   Writing objects: 100% (3/3)   Writing objects: 100% (3/3), 310 bytes | 0 bytes/s, done.
-Total 3 (delta 2), reused 0 (delta 0)
-remote: Resolving deltas:   0% (0/2)   [Kremote: Resolving deltas:  50% (1/2)   [Kremote: Resolving deltas: 100% (2/2)   [Kremote: Resolving deltas: 100% (2/2), completed with 2 local objects.[K
-To https://github.com/uva-bi-sdad/uva-bi-sdad.github.io.git
-   2c46a11..5d0fe56  master -> master
-Branch master set up to track remote branch master from origin.
- x*#x*git statrus
-x*#x*git: command not found
-]0;/home/aschroed/git/uva-bi-sdad.github.io]0;aschroed@docker-s-12vcpu-48gb-nyc1-01: ~/git/uva-bi-sdad.github.io[01;32maschroed@docker-s-12vcpu-48gb-nyc1-01[00m:[01;34m~/git/uva-bi-sdad.github.io[00m$ git status
-On branch master
-Your branch is up to date with 'origin/master'.
-
-nothing to commit, working tree clean
-cd ../dspg_b[K[K[K[K[K[K[K[K[K..
-]0;/home/aschroed/git]0;aschroed@46326b20cea4: ~/git[01;32maschroed@46326b20cea4[00m:[01;34m~/git[00m$ cd dspg
-dspg19broadband/ dspg19fairfax/   dspg2019/        
-]0;aschroed@46326b20cea4: ~/git[01;32maschroed@46326b20cea4[00m:[01;34m~/git[00m$ cd dspg19broadband/
-]0;/home/aschroed/git/dspg19broadband]0;aschroed@46326b20cea4: ~/git/dspg19broadband[01;32maschroed@46326b20cea4[00m:[01;34m~/git/dspg19broadband[00m$ 
-]0;/home/aschroed/git/dspg19broadband]0;aschroed@46326b20cea4: ~/git/dspg19broadband[01;32maschroed@46326b20cea4[00m:[01;34m~/git/dspg19broadband[00m$ ls
-[0m[01;36mdata[0m
-]0;/home/aschroed/git/dspg19broadband]0;aschroed@46326b20cea4: ~/git/dspg19broadband[01;32maschroed@46326b20cea4[00m:[01;34m~/git/dspg19broadband[00m$ git pull
-remote: Enumerating objects: 29, done.[K
-remote: Counting objects:   3% (1/29)   [Kremote: Counting objects:   6% (2/29)   [Kremote: Counting objects:  10% (3/29)   [Kremote: Counting objects:  13% (4/29)   [Kremote: Counting objects:  17% (5/29)   [Kremote: Counting objects:  20% (6/29)   [Kremote: Counting objects:  24% (7/29)   [Kremote: Counting objects:  27% (8/29)   [Kremote: Counting objects:  31% (9/29)   [Kremote: Counting objects:  34% (10/29)   [Kremote: Counting objects:  37% (11/29)   [Kremote: Counting objects:  41% (12/29)   [Kremote: Counting objects:  44% (13/29)   [Kremote: Counting objects:  48% (14/29)   [Kremote: Counting objects:  51% (15/29)   [Kremote: Counting objects:  55% (16/29)   [Kremote: Counting objects:  58% (17/29)   [Kremote: Counting objects:  62% (18/29)   [Kremote: Counting objects:  65% (19/29)   [Kremote: Counting objects:  68% (20/29)   [Kremote: Counting objects:  72% (21/29)   [Kremote: Counting objects:  75% (22/29)   [Kremote: Counting objects:  79% (23/29)   [Kremote: Counting objects:  82% (24/29)   [Kremote: Counting objects:  86% (25/29)   [Kremote: Counting objects:  89% (26/29)   [Kremote: Counting objects:  93% (27/29)   [Kremote: Counting objects:  96% (28/29)   [Kremote: Counting objects: 100% (29/29)   [Kremote: Counting objects: 100% (29/29), done.[K
-remote: Compressing objects:   5% (1/19)   [Kremote: Compressing objects:  10% (2/19)   [Kremote: Compressing objects:  15% (3/19)   [Kremote: Compressing objects:  21% (4/19)   [Kremote: Compressing objects:  26% (5/19)   [Kremote: Compressing objects:  31% (6/19)   [Kremote: Compressing objects:  36% (7/19)   [Kremote: Compressing objects:  42% (8/19)   [Kremote: Compressing objects:  47% (9/19)   [Kremote: Compressing objects:  52% (10/19)   [Kremote: Compressing objects:  57% (11/19)   [Kremote: Compressing objects:  63% (12/19)   [Kremote: Compressing objects:  68% (13/19)   [Kremote: Compressing objects:  73% (14/19)   [Kremote: Compressing objects:  78% (15/19)   [Kremote: Compressing objects:  84% (16/19)   [Kremote: Compressing objects:  89% (17/19)   [Kremote: Compressing objects:  94% (18/19)   [Kremote: Compressing objects: 100% (19/19)   [Kremote: Compressing objects: 100% (19/19), done.[K
-remote: Total 28 (delta 11), reused 20 (delta 6), pack-reused 0[K
-Unpacking objects:   3% (1/28)   Unpacking objects:   7% (2/28)   Unpacking objects:  10% (3/28)   Unpacking objects:  14% (4/28)   Unpacking objects:  17% (5/28)   Unpacking objects:  21% (6/28)   Unpacking objects:  25% (7/28)   Unpacking objects:  28% (8/28)   Unpacking objects:  32% (9/28)   Unpacking objects:  35% (10/28)   Unpacking objects:  39% (11/28)   Unpacking objects:  42% (12/28)   Unpacking objects:  46% (13/28)   Unpacking objects:  50% (14/28)   Unpacking objects:  53% (15/28)   Unpacking objects:  57% (16/28)   Unpacking objects:  60% (17/28)   Unpacking objects:  64% (18/28)   Unpacking objects:  67% (19/28)   Unpacking objects:  71% (20/28)   Unpacking objects:  75% (21/28)   Unpacking objects:  78% (22/28)   Unpacking objects:  82% (23/28)   Unpacking objects:  85% (24/28)   Unpacking objects:  89% (25/28)   Unpacking objects:  92% (26/28)   Unpacking objects:  96% (27/28)   Unpacking objects: 100% (28/28)   Unpacking objects: 100% (28/28), done.
-From https://github.com/uva-bi-sdad/dspg19broadband
-   deed7e1..8762060  master     -> origin/master
-Updating deed7e1..8762060
-Fast-forward
- .gitignore            |  4 [32m++++[m
- .whitesource          |  8 [32m++++++++[m
- README.md             | 21 [32m+++++++++++++++++++++[m
- data                  |  1 [31m-[m
- doc/1-report.Rmd      | 32 [32m++++++++++++++++++++++++++++++++[m
- dspg19broadband.Rproj | 13 [32m+++++++++++++[m
- 6 files changed, 78 insertions(+), 1 deletion(-)
- create mode 100644 .gitignore
- create mode 100644 .whitesource
- create mode 100644 README.md
- delete mode 120000 data
- create mode 100644 doc/1-report.Rmd
- create mode 100644 dspg19broadband.Rproj
-]0;/home/aschroed/git/dspg19broadband]0;aschroed@46326b20cea4: ~/git/dspg19broadband[01;32maschroed@46326b20cea4[00m:[01;34m~/git/dspg19broadband[00m$ ls -l
-total 12
--rw-r--r-- 1 aschroed aschroed  641 Jun 10 17:17 README.md
-drwxr-xr-x 2 aschroed aschroed 4096 Jun 10 17:17 [0m[01;34mdoc[0m
--rw-r--r-- 1 aschroed aschroed  205 Jun 10 17:17 dspg19broadband.Rproj
-]0;/home/aschroed/git/dspg19broadband]0;aschroed@46326b20cea4: ~/git/dspg19broadband[01;32maschroed@46326b20cea4[00m:[01;34m~/git/dspg19broadband[00m$ cd ../dspg19fairfax/
-]0;/home/aschroed/git/dspg19fairfax]0;aschroed@46326b20cea4: ~/git/dspg19fairfax[01;32maschroed@46326b20cea4[00m:[01;34m~/git/dspg19fairfax[00m$ git pull
-remote: Enumerating objects: 13, done.[K
-remote: Counting objects:   7% (1/13)   [Kremote: Counting objects:  15% (2/13)   [Kremote: Counting objects:  23% (3/13)   [Kremote: Counting objects:  30% (4/13)   [Kremote: Counting objects:  38% (5/13)   [Kremote: Counting objects:  46% (6/13)   [Kremote: Counting objects:  53% (7/13)   [Kremote: Counting objects:  61% (8/13)   [Kremote: Counting objects:  69% (9/13)   [Kremote: Counting objects:  76% (10/13)   [Kremote: Counting objects:  84% (11/13)   [Kremote: Counting objects:  92% (12/13)   [Kremote: Counting objects: 100% (13/13)   [Kremote: Counting objects: 100% (13/13), done.[K
-remote: Compressing objects:  11% (1/9)   [Kremote: Compressing objects:  22% (2/9)   [Kremote: Compressing objects:  33% (3/9)   [Kremote: Compressing objects:  44% (4/9)   [Kremote: Compressing objects:  55% (5/9)   [Kremote: Compressing objects:  66% (6/9)   [Kremote: Compressing objects:  77% (7/9)   [Kremote: Compressing objects:  88% (8/9)   [Kremote: Compressing objects: 100% (9/9)   [Kremote: Compressing objects: 100% (9/9), done.[K
-remote: Total 12 (delta 3), reused 9 (delta 2), pack-reused 0[K
-Unpacking objects:   8% (1/12)   Unpacking objects:  16% (2/12)   Unpacking objects:  25% (3/12)   Unpacking objects:  33% (4/12)   Unpacking objects:  41% (5/12)   Unpacking objects:  50% (6/12)   Unpacking objects:  58% (7/12)   Unpacking objects:  66% (8/12)   Unpacking objects:  75% (9/12)   Unpacking objects:  83% (10/12)   Unpacking objects:  91% (11/12)   Unpacking objects: 100% (12/12)   Unpacking objects: 100% (12/12), done.
-From https://github.com/uva-bi-sdad/dspg19fairfax
-   bec214f..ec24966  master     -> origin/master
-Updating bec214f..ec24966
-Fast-forward
- .gitignore          |  4 [32m++++[m
- .whitesource        |  8 [32m++++++++[m
- README.md           | 14 [32m++++++++++++++[m
- data                |  1 [31m-[m
- dspg19fairfax.Rproj | 13 [32m+++++++++++++[m
- 5 files changed, 39 insertions(+), 1 deletion(-)
- create mode 100644 .gitignore
- create mode 100644 .whitesource
- create mode 100644 README.md
- delete mode 120000 data
- create mode 100644 dspg19fairfax.Rproj
-]0;/home/aschroed/git/dspg19fairfax]0;aschroed@46326b20cea4: ~/git/dspg19fairfax[01;32maschroed@46326b20cea4[00m:[01;34m~/git/dspg19fairfax[00m$  T+#T+ T+#T+[K[K[K[K[K[K[K[K[K[K[K[Kcd ../dspg19broadband/
-groups jt9sz
-jt9sz : jt9sz
-]0;/home/aschroed/git/infrastructure]0;aschroed@7271d894627b: ~/git/infrastructure[01;32maschroed@7271d894627b[00m:[01;34m~/git/infrastructure[00m$ 
-]0;/home/aschroed/git/infrastructure]0;aschroed@7271d894627b: ~/git/infrastructure[01;32maschroed@7271d894627b[00m:[01;34m~/git/infrastructure[00m$ groups jt9sz[K[K[K[K[Kks6pn
-ks6pn : ks6pn dspg2019
-]0;/home/aschroed/git/infrastructure]0;aschroed@7271d894627b: ~/git/infrastructure[01;32maschroed@7271d894627b[00m:[01;34m~/git/infrastructure[00m$ gpasswd -a jt9sz sdad
-gpasswd: Permission denied.
-]0;/home/aschroed/git/infrastructure]0;aschroed@7271d894627b: ~/git/infrastructure[01;32maschroed@7271d894627b[00m:[01;34m~/git/infrastructure[00m$ gpasswd -a jt9sz sdad[1@s[1@u[1@d[1@o[1@ 
-
-We trust you have received the usual lecture from the local System
-Administrator. It usually boils down to these three things:
-
-    #1) Respect the privacy of others.
-    #2) Think before you type.
-    #3) With great power comes great responsibility.
-
-[sudo] password for aschroed: 
-Adding user jt9sz to group sdad
-gpasswd: cannot open /etc/group
-]0;/home/aschroed/git/infrastructure]0;aschroed@7271d894627b: ~/git/infrastructure[01;32maschroed@7271d894627b[00m:[01;34m~/git/infrastructure[00m$ sudo gpasswd -a jt9sz sdad M,#M,[K]0;aschroed@7271d894627b: ~/git/infrastructure[01;32maschroed@7271d894627b[00m:[01;34m~/git/infrastructure[00m$ sudo gpasswd -a jt9sz sdad M,#M, m9#m9[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kssh ads7fg@sdad.policy-analytics.net
-The authenticity of host 'sdad.policy-analytics.net (104.248.112.16)' can't be established.
-ECDSA key fingerprint is SHA256:UMYgnzdHku9wXVSznTBHu8uX2HNFcDoBVH8qmsH7tLI.
-Are you sure you want to continue connecting (yes/no)? ye
-Please type 'yes' or 'no': yes
-Warning: Permanently added 'sdad.policy-analytics.net,104.248.112.16' (ECDSA) to the list of known hosts.
-ads7fg@sdad.policy-analytics.net's password: 
-Welcome to Ubuntu 18.04.2 LTS (GNU/Linux 4.15.0-36-generic x86_64)
-
- * Documentation:  https://help.ubuntu.com
- * Management:     https://landscape.canonical.com
- * Support:        https://ubuntu.com/advantage
-
-  System information as of Wed Jun 12 20:25:56 UTC 2019
-
-  System load:                    0.83
-  Usage of /:                     74.7% of 930.23GB
-  Memory usage:                   22%
-  Swap usage:                     0%
-  Processes:                      426
-  Users logged in:                1
-  IP address for eth0:            104.248.112.16
-  IP address for docker0:         172.17.0.1
-  IP address for br-9056793ce02b: 172.22.0.1
-  IP address for br-45f5e557cbb1: 172.18.0.1
-  IP address for br-f71d27bc0501: 172.19.0.1
-  IP address for br-3bdf9a2b726c: 172.20.0.1
-  IP address for br-d2d87933a140: 172.21.0.1
-  IP address for br-a7b6f70ff688: 172.23.0.1
-  IP address for br-c259c75ef21d: 172.24.0.1
-  IP address for br-3256fcf44d56: 172.27.0.1
-  IP address for br-9a986a5268a6: 172.25.0.1
-
-  => /mnt/volume_nyc1_01 is using 91.5% of 991.99GB
-  => There is 1 zombie process.
-
-  Get cloud support with Ubuntu Advantage Cloud Guest:
-    http://www.ubuntu.com/business/services/cloud
-
- * Canonical Livepatch is available for installation.
-   - Reduce system reboots and improve kernel security. Activate at:
-     https://ubuntu.com/livepatch
-
-8 packages can be updated.
-0 updates are security updates.
-
-
-*** System restart required ***
-********************************************************************************
-
-Welcome to DigitalOcean's One-Click Docker Droplet. 
-To keep this Droplet secure, the UFW firewall is enabled. 
-All ports are BLOCKED except 22 (SSH), 2375 (Docker) and 2376 (Docker).
-
-* The Docker One-Click Quickstart guide is available at: 
-  https://do.co/docker1804#start
-
-* You can SSH to this Droplet in a terminal as root: ssh root@104.248.112.16
-
-* Docker is installed and configured per Docker's recommendations:
-  https://docs.docker.com/install/linux/docker-ce/ubuntu/
-
-* Docker Compose is installed and configured per Docker's recommendations:
-  https://docs.docker.com/compose/install/#install-compose
-
-For help and more information, visit http://do.co/docker1804
-
-********************************************************************************
-
-To delete this message of the day: rm -rf /etc/update-motd.d/99-one-click
-Last login: Wed Jun 12 20:22:14 2019 from 69.138.76.161
-]0;ads7fg@docker-s-12vcpu-48gb-nyc1-01: ~[01;32mads7fg@docker-s-12vcpu-48gb-nyc1-01[00m:[01;34m~[00m$ [K]0;ads7fg@docker-s-12vcpu-48gb-nyc1-01: ~[01;32mads7fg@docker-s-12vcpu-48gb-nyc1-01[00m:[01;34m~[00m$  [K<#[K<[K[KaW)aW)aW)aW(aW(aW(aW(aW(aW(aW(aW(aW(aW(aW(aW(aW(aW(aW(aW(aW(aW(aW(aW(aW(aW(aW(`W(`W(`W(`W(`W(`W(`W(`W(`W(`W(`W(`W(`W(`W(`W(`W(`W(`W(`W(`W(`W(`W(`W(`W(`W(`W(`W(`W(`W(`W(`W(`W(`W(`W(`W(`W(`W(`W(`W(`W(`W(`W(`W(`W(`W(`WW(`W(`W(`W(`W(`W(aW(`W(`W( O4#O4 [K5#[K5^C
-]0;ads7fg@docker-s-12vcpu-48gb-nyc1-01: ~[01;32mads7fg@docker-s-12vcpu-48gb-nyc1-01[00m:[01;34m~[00m$  L##L#^C
-]0;ads7fg@docker-s-12vcpu-48gb-nyc1-01: ~[01;32mads7fg@docker-s-12vcpu-48gb-nyc1-01[00m:[01;34m~[00m$ cut -d -f1- /etc/group
-cut: the delimiter must be a single character
-Try 'cut --help' for more information.
-]0;ads7fg@docker-s-12vcpu-48gb-nyc1-01: ~[01;32mads7fg@docker-s-12vcpu-48gb-nyc1-01[00m:[01;34m~[00m$ cut -d -f1- /etc/group[1@,
-root:x:0:
-daemon:x:1:
-bin:x:2:
-sys:x:3:
-adm:x:4:syslog
-tty:x:5:
-disk:x:6:
-lp:x:7:
-mail:x:8:
-news:x:9:
-uucp:x:10:
-man:x:12:
-proxy:x:13:
-kmem:x:15:
-dialout:x:20:
-fax:x:21:
-voice:x:22:
-cdrom:x:24:
-floppy:x:25:
-tape:x:26:
-sudo:x:27:neilalex525,dnair1,ads7fg
-audio:x:29:
-dip:x:30:
-www-data:x:33:
-backup:x:34:
-operator:x:37:
-list:x:38:
-irc:x:39:
-src:x:40:
-gnats:x:41:
-shadow:x:42:
-utmp:x:43:
-video:x:44:
-sasl:x:45:
-plugdev:x:46:
-staff:x:50:
-games:x:60:
-users:x:100:
-nogroup:x:65534:
-systemd-journal:x:101:
-systemd-network:x:102:
-systemd-resolve:x:103:
-input:x:104:
-crontab:x:105:
-syslog:x:106:
-messagebus:x:107:
-lxd:x:108:neilalex525,ads7fg
-mlocate:x:109:
-uuidd:x:110:
-ssh:x:111:
-landscape:x:112:
-admin:x:113:
-netdev:x:114:
-docker:x:999:gkorkmaz,neilalex525,jbs3hp,ads7fg
-aschroed:x:1000:
-gkorkmaz:x:1001:
-rstudio-server:x:998:
-joshg22:x:1002:
-ssl-cert:x:115:postgres
-postgres:x:116:
-tpristavec:x:1003:
-val20003:x:1004:
-sallie41:x:1005:
-steph19:x:1006:
-chend:x:1007:
-eiriki:x:1008:
-dnair1:x:1009:
-oss:x:1010:
-ckelling:x:1011:
-debian-transmission:x:117:
-nr3xe:x:1012:
-jbs3hp:x:1013:
-ap3xx:x:1014:
-af5ug:x:1015:
-ks6pn:x:1016:
-qn6au:x:1017:
-cc2cm:x:1018:
-sak9tr:x:1019:
-sss5sc:x:1020:
-dspg2019:x:1021:ap3xx,af5ug,ks6pn,qn6au,cc2cm,gkorkmaz,ads7fg
-sdad:x:1022:gkorkmaz,joshg22,tpristavec,val20003,sak9tr,sss5sc,dnair1,nr3xe,jbs3hp,neilalex525,jt9sz
-neilalex525:x:1023:
-jk9ra:x:1024:
-ci3uz:x:1025:
-rs7te:x:1026:
-sm9dv:x:1027:
-sp3sd:x:1028:
-vh5dg:x:1029:
-ent4pn:x:1030:
-jt9sz:x:1031:
-nsf_bi:x:1032:neilalex525,gkorkmaz,dnair1,qn6au,rs7te,ads7fg
-ads7fg:x:1033:
-]0;ads7fg@docker-s-12vcpu-48gb-nyc1-01: ~[01;32mads7fg@docker-s-12vcpu-48gb-nyc1-01[00m:[01;34m~[00m$ a3/`3/`3/`3/`3/`3/`3/`3/ c=#c=[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Ksudo gpasswd -a jk9ra dspg2019
-[sudo] password for ads7fg: 
-Adding user jk9ra to group dspg2019
-]0;ads7fg@docker-s-12vcpu-48gb-nyc1-01: ~[01;32mads7fg@docker-s-12vcpu-48gb-nyc1-01[00m:[01;34m~[00m$ sudo gpasswd -a jk9ra dspg2019[1P dspg2019[1P dspg2019[1P dspg2019[1P dspg2019[1P dspg2019v dspg2019h dspg20195 dspg2019d dspg2019g dspg2019
-Adding user vh5dg to group dspg2019
-]0;ads7fg@docker-s-12vcpu-48gb-nyc1-01: ~[01;32mads7fg@docker-s-12vcpu-48gb-nyc1-01[00m:[01;34m~[00m$ sudo gpasswd -a vh5dg dspg2019[1P dspg2019[1P dspg2019[1P dspg2019[1P dspg2019[1P dspg2019c dspg2019i dspg20193 dspg2019u dspg2019z dspg2019
-Adding user ci3uz to group dspg2019
-]0;ads7fg@docker-s-12vcpu-48gb-nyc1-01: ~[01;32mads7fg@docker-s-12vcpu-48gb-nyc1-01[00m:[01;34m~[00m$ sudo gpasswd -a ci3uz dspg2019[C[1P dspg2019[1P dspg2019[1P dspg2019[1P dspg2019[1P dspg2019r dspg2019s dspg20197 dspg2019t dspg2019e dspg2019
-Adding user rs7te to group dspg2019
-]0;ads7fg@docker-s-12vcpu-48gb-nyc1-01: ~[01;32mads7fg@docker-s-12vcpu-48gb-nyc1-01[00m:[01;34m~[00m$ sudo gpasswd -a rs7te dspg2019[1P dspg2019[1P dspg2019[1P dspg2019[1P dspg2019[1P dspg2019s dspg2019m dspg20199 dspg2019d dspg2019v dspg2019
-Adding user sm9dv to group dspg2019
-]0;ads7fg@docker-s-12vcpu-48gb-nyc1-01: ~[01;32mads7fg@docker-s-12vcpu-48gb-nyc1-01[00m:[01;34m~[00m$ sudo gpasswd -a sm9dv dspg2019[C[1P dspg2019[1P dspg2019[1P dspg2019[1P dspg2019[1P dspg2019s dspg2019p dspg20193 dspg2019s dspg2019d dspg2019
-Adding user sp3sd to group dspg2019
-^[[A]0;ads7fg@docker-s-12vcpu-48gb-nyc1-01: ~[01;32mads7fg@docker-s-12vcpu-48gb-nyc1-01[00m:[01;34m~[00m$ sudo gpasswd -a sp3sd dspg2019[1Pdspg2019[1Pspg2019[1Pdspg2019[1Pdspg2019[1Pdspg2019[1Pdspg2019edspg2019ndspg2019tdspg20194dspg2019pdspg2019ndspg2019 dspg2019
-Adding user ent4pn to group dspg2019
-]0;ads7fg@docker-s-12vcpu-48gb-nyc1-01: ~[01;32mads7fg@docker-s-12vcpu-48gb-nyc1-01[00m:[01;34m~[00m$ cat /etc/gr
-groff/  group   group-  grub.d/ 
-]0;ads7fg@docker-s-12vcpu-48gb-nyc1-01: ~[01;32mads7fg@docker-s-12vcpu-48gb-nyc1-01[00m:[01;34m~[00m$ cat /etc/group
-root:x:0:
-daemon:x:1:
-bin:x:2:
-sys:x:3:
-adm:x:4:syslog
-tty:x:5:
-disk:x:6:
-lp:x:7:
-mail:x:8:
-news:x:9:
-uucp:x:10:
-man:x:12:
-proxy:x:13:
-kmem:x:15:
-dialout:x:20:
-fax:x:21:
-voice:x:22:
-cdrom:x:24:
-floppy:x:25:
-tape:x:26:
-sudo:x:27:neilalex525,dnair1,ads7fg
-audio:x:29:
-dip:x:30:
-www-data:x:33:
-backup:x:34:
-operator:x:37:
-list:x:38:
-irc:x:39:
-src:x:40:
-gnats:x:41:
-shadow:x:42:
-utmp:x:43:
-video:x:44:
-sasl:x:45:
-plugdev:x:46:
-staff:x:50:
-games:x:60:
-users:x:100:
-nogroup:x:65534:
-systemd-journal:x:101:
-systemd-network:x:102:
-systemd-resolve:x:103:
-input:x:104:
-crontab:x:105:
-syslog:x:106:
-messagebus:x:107:
-lxd:x:108:neilalex525,ads7fg
-mlocate:x:109:
-uuidd:x:110:
-ssh:x:111:
-landscape:x:112:
-admin:x:113:
-netdev:x:114:
-docker:x:999:gkorkmaz,neilalex525,jbs3hp,ads7fg
-aschroed:x:1000:
-gkorkmaz:x:1001:
-rstudio-server:x:998:
-joshg22:x:1002:
-ssl-cert:x:115:postgres
-postgres:x:116:
-tpristavec:x:1003:
-val20003:x:1004:
-sallie41:x:1005:
-steph19:x:1006:
-chend:x:1007:
-eiriki:x:1008:
-dnair1:x:1009:
-oss:x:1010:
-ckelling:x:1011:
-debian-transmission:x:117:
-nr3xe:x:1012:
-jbs3hp:x:1013:
-ap3xx:x:1014:
-af5ug:x:1015:
-ks6pn:x:1016:
-qn6au:x:1017:
-cc2cm:x:1018:
-sak9tr:x:1019:
-sss5sc:x:1020:
-dspg2019:x:1021:ap3xx,af5ug,ks6pn,qn6au,cc2cm,gkorkmaz,ads7fg,jk9ra,vh5dg,ci3uz,rs7te,sm9dv,sp3sd,ent4pn
-sdad:x:1022:gkorkmaz,joshg22,tpristavec,val20003,sak9tr,sss5sc,dnair1,nr3xe,jbs3hp,neilalex525,jt9sz
-neilalex525:x:1023:
-jk9ra:x:1024:
-ci3uz:x:1025:
-rs7te:x:1026:
-sm9dv:x:1027:
-sp3sd:x:1028:
-vh5dg:x:1029:
-ent4pn:x:1030:
-jt9sz:x:1031:
-nsf_bi:x:1032:neilalex525,gkorkmaz,dnair1,qn6au,rs7te,ads7fg
-ads7fg:x:1033:
-]0;ads7fg@docker-s-12vcpu-48gb-nyc1-01: ~[01;32mads7fg@docker-s-12vcpu-48gb-nyc1-01[00m:[01;34m~[00m$ ak<ak<ak<cat /etc/groupsudo gpasswd -a ent4pn dspg2019[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kads7fg sdad
-Adding user ads7fg to group sdad
-]0;ads7fg@docker-s-12vcpu-48gb-nyc1-01: ~[01;32mads7fg@docker-s-12vcpu-48gb-nyc1-01[00m:[01;34m~[00m$ `L5`L5`L5`L5aL5`L5`L5`L5`L5`L5aE.aE.aE.aE.aE.aE.aE.aE.aE.aE.aE.aE.aE.aE.aE.aE.aE.aE.aE.aE.aE.aE.aE.aE.aE.aE.aE.aE.aE.aE.aE.aE.aE.`E.`E.`E.`E.`E.`E.`E.`E.`E.`E.`E.`E.`E.`E.`E.`E.`E.`E.`E.`E.`E.`E.`E.`E.`E.`E.`E.`E.`EE.`E.`E.`E.`E.`E.`E.`E.`E.`E.`E.`E.`E.`E.`E.`E.aE.aE.aE.aE.aE.aE.aE.aE.aE.aE.aE.aE.aE.aE.aE.aE.aE.aE.aE.`E.aE.aE.aE.aE.aE.aE.aE.aE.aE.aE.aE.aE.aE.aE.aE.aE.aE.aE.aE.aD.aD.aD.aD.aD.aD.aD.aD.aD.aD.aD.aD.aE.aE.aE.aE.aE.aE.aE.aE.aE.aE.aE.aE.aE.aE.aE.aE.aE.aE..aE.aE.aE.aE.aE.aE.aE.aE.aE.aE.aE.aE.aE.aE.aE.aE.aE.aE.aE.aE.aE.aE.aE.aE.aE.aE.aE.aE.aE.aE.aE.`E.`E.`E.`E.`E.`E.`E.`E.`E.`E.`E.`E.`E.`E.`E.`E.`E.`E.`E.`E.`E.`E.`E. E.#E.`E.`E.`E.`E.^C
-]0;ads7fg@docker-s-12vcpu-48gb-nyc1-01: ~[01;32mads7fg@docker-s-12vcpu-48gb-nyc1-01[00m:[01;34m~[00m$  T'#T'[K[K[K[K[K[Kvim
-[?2004h[23;0;0t]0;ads7fg@docker-s-12vcpu-48gb-nyc1-01: ~[01;32mads7fg@docker-s-12vcpu-48gb-nyc1-01[00m:[01;34m~[00m$ group sdad
-
-Command 'group' not found, did you mean:
-
-  command 'grop' from deb grop
-  command 'groups' from deb coreutils
-
-Try: sudo apt install <deb name>
-
-]0;ads7fg@docker-s-12vcpu-48gb-nyc1-01: ~[01;32mads7fg@docker-s-12vcpu-48gb-nyc1-01[00m:[01;34m~[00m$ members sdad
-
-Command 'members' not found, but can be installed with:
-
-sudo apt install members
-
-]0;ads7fg@docker-s-12vcpu-48gb-nyc1-01: ~[01;32mads7fg@docker-s-12vcpu-48gb-nyc1-01[00m:[01;34m~[00m$ members
-
-Usage: members  [ -apst --all --primary --secondary --two-lines ] <group>
-]0;ads7fg@docker-s-12vcpu-48gb-nyc1-01: ~[01;32mads7fg@docker-s-12vcpu-48gb-nyc1-01[00m:[01;34m~[00m$ members sdad
-gkorkmaz joshg22 tpristavec val20003 sak9tr sss5sc dnair1 nr3xe jbs3hp neilalex525 jt9sz ads7fg
-]0;ads7fg@docker-s-12vcpu-48gb-nyc1-01: ~[01;32mads7fg@docker-s-12vcpu-48gb-nyc1-01[00m:[01;34m~[00m$ members sdad[K[K[K[Kdspg2019
-ap3xx af5ug ks6pn qn6au cc2cm gkorkmaz ads7fg jk9ra vh5dg ci3uz rs7te sm9dv sp3sd ent4pn
-git add --all
-]0;/home/aschroed/git/infrastructure]0;aschroed@7271d894627b: ~/git/infrastructure[01;32maschroed@7271d894627b[00m:[01;34m~/git/infrastructure[00m$ git commit -m "databse[K[Kase user creeate[K[K[K[Kate and grant script"
-[master 375d7be] database user create and grant script
- 20 files changed, 1319 insertions(+), 1111 deletions(-)
- rewrite .Rproj.user/78E0A1CE/console06/680F79C9 (99%)
- rewrite .Rproj.user/78E0A1CE/console06/INDEX001 (85%)
- delete mode 100644 .Rproj.user/78E0A1CE/sources/s-f9af8274/3959D6-contents
- delete mode 100644 .Rproj.user/78E0A1CE/sources/s-f9af8274/CF4583A8-contents
- create mode 100644 db/src/manage_db.R
- create mode 100644 db/src/users_dspg2019.csv
- create mode 100644 db/src/users_sdad.csv
-]0;/home/aschroed/git/infrastructure]0;aschroed@7271d894627b: ~/git/infrastructure[01;32maschroed@7271d894627b[00m:[01;34m~/git/infrastructure[00m$ git push
-To https://github.com/uva-bi-sdad/infrastructure.git
- ! [rejected]        master -> master (fetch first)
-error: failed to push some refs to 'https://github.com/uva-bi-sdad/infrastructure.git'
-hint: Updates were rejected because the remote contains work that you do
-hint: not have locally. This is usually caused by another repository pushing
-hint: to the same ref. You may want to first integrate the remote changes
-hint: (e.g., 'git pull ...') before pushing again.
-hint: See the 'Note about fast-forwards' in 'git push --help' for details.
-]0;/home/aschroed/git/infrastructure]0;aschroed@7271d894627b: ~/git/infrastructure[01;32maschroed@7271d894627b[00m:[01;34m~/git/infrastructure[00m$ git pull
-remote: Enumerating objects: 4, done.[K
-remote: Counting objects:  25% (1/4)   [Kremote: Counting objects:  50% (2/4)   [Kremote: Counting objects:  75% (3/4)   [Kremote: Counting objects: 100% (4/4)   [Kremote: Counting objects: 100% (4/4), done.[K
-remote: Compressing objects:  33% (1/3)   [Kremote: Compressing objects:  66% (2/3)   [Kremote: Compressing objects: 100% (3/3)   [Kremote: Compressing objects: 100% (3/3), done.[K
-remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0[K
-Unpacking objects:  33% (1/3)   Unpacking objects:  66% (2/3)   Unpacking objects: 100% (3/3)   Unpacking objects: 100% (3/3), done.
-From https://github.com/uva-bi-sdad/infrastructure
-   1f3909b..efd69ea  master     -> origin/master
-[?1000hMerge made by the 'recursive' strategy.
- .whitesource | 8 [32m++++++++[m
- 1 file changed, 8 insertions(+)
- create mode 100644 .whitesource
-]0;/home/aschroed/git/infrastructure]0;aschroed@7271d894627b: ~/git/infrastructure[01;32maschroed@7271d894627b[00m:[01;34m~/git/infrastructure[00m$ git pullshcommit -m "database user create and grant script"add --all[Kcommit -m "database user create and grant script"push[K
-Counting objects: 34, done.
-Delta compression using up to 12 threads.
-Compressing objects:   3% (1/31)   Compressing objects:   6% (2/31)   Compressing objects:   9% (3/31)   Compressing objects:  12% (4/31)   Compressing objects:  16% (5/31)   Compressing objects:  19% (6/31)   Compressing objects:  22% (7/31)   Compressing objects:  25% (8/31)   Compressing objects:  29% (9/31)   Compressing objects:  32% (10/31)   Compressing objects:  35% (11/31)   Compressing objects:  38% (12/31)   Compressing objects:  41% (13/31)   Compressing objects:  45% (14/31)   Compressing objects:  48% (15/31)   Compressing objects:  51% (16/31)   Compressing objects:  54% (17/31)   Compressing objects:  58% (18/31)   Compressing objects:  61% (19/31)   Compressing objects:  64% (20/31)   Compressing objects:  67% (21/31)   Compressing objects:  70% (22/31)   Compressing objects:  74% (23/31)   Compressing objects:  77% (24/31)   Compressing objects:  80% (25/31)   Compressing objects:  83% (26/31)   Compressing objects:  87% (27/31)   Compressing objects:  90% (28/31)   Compressing objects:  93% (29/31)   Compressing objects:  96% (30/31)   Compressing objects: 100% (31/31)   Compressing objects: 100% (31/31), done.
-Writing objects:   2% (1/34)   Writing objects:   5% (2/34)   Writing objects:   8% (3/34)   Writing objects:  11% (4/34)   Writing objects:  14% (5/34)   Writing objects:  17% (6/34)   Writing objects:  20% (7/34)   Writing objects:  23% (8/34)   Writing objects:  26% (9/34)   Writing objects:  29% (10/34)   Writing objects:  32% (11/34)   Writing objects:  35% (12/34)   Writing objects:  38% (13/34)   Writing objects:  41% (14/34)   Writing objects:  44% (15/34)   Writing objects:  47% (16/34)   Writing objects:  50% (17/34)   Writing objects:  52% (18/34)   Writing objects:  55% (19/34)   Writing objects:  58% (20/34)   Writing objects:  61% (21/34)   Writing objects:  64% (22/34)   Writing objects:  67% (23/34)   Writing objects:  70% (24/34)   Writing objects:  73% (25/34)   Writing objects:  76% (26/34)   Writing objects:  79% (27/34)   Writing objects:  82% (28/34)   Writing objects:  85% (29/34)   Writing objects:  88% (30/34)   Writing objects:  91% (31/34)   Writing objects:  94% (32/34)   Writing objects:  97% (33/34)   Writing objects: 100% (34/34)   Writing objects: 100% (34/34), 16.56 KiB | 0 bytes/s, done.
-Total 34 (delta 17), reused 0 (delta 0)
-remote: Resolving deltas:   0% (0/17)   [Kremote: Resolving deltas:  11% (2/17)   [Kremote: Resolving deltas:  17% (3/17)   [Kremote: Resolving deltas:  23% (4/17)   [Kremote: Resolving deltas:  29% (5/17)   [Kremote: Resolving deltas:  35% (6/17)   [Kremote: Resolving deltas:  41% (7/17)   [Kremote: Resolving deltas:  47% (8/17)   [Kremote: Resolving deltas:  52% (9/17)   [Kremote: Resolving deltas:  58% (10/17)   [Kremote: Resolving deltas:  64% (11/17)   [Kremote: Resolving deltas:  70% (12/17)   [Kremote: Resolving deltas:  76% (13/17)   [Kremote: Resolving deltas:  82% (14/17)   [Kremote: Resolving deltas:  88% (15/17)   [Kremote: Resolving deltas:  94% (16/17)   [Kremote: Resolving deltas: 100% (17/17)   [Kremote: Resolving deltas: 100% (17/17), completed with 16 local objects.[K
-To https://github.com/uva-bi-sdad/infrastructure.git
-   efd69ea..c53d89c  master -> master
-]0;/home/aschroed/git/infrastructure]0;aschroed@7271d894627b: ~/git/infrastructure[01;32maschroed@7271d894627b[00m:[01;34m~/git/infrastructure[00m$ docker exec -it [K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Ksudo apt[K[K[K[K[K[K[K[Kapt install libssh-dev
-E: Could not open lock file /var/lib/dpkg/lock - open (13: Permission denied)
-E: Unable to lock the administration directory (/var/lib/dpkg/), are you root?
-]0;/home/aschroed/git/infrastructure]0;aschroed@7271d894627b: ~/git/infrastructure[01;32maschroed@7271d894627b[00m:[01;34m~/git/infrastructure[00m$ apt install libssh-dev[1@s[1@u[1@d[1@o[1@ 
-[sudo] password for aschroed: 
-Sorry, try again.
-[sudo] password for aschroed: 
-Sorry, try again.
-[sudo] password for aschroed: 
-sudo: 2 incorrect password attempts
-]0;/home/aschroed/git/infrastructure]0;aschroed@7271d894627b: ~/git/infrastructure[01;32maschroed@7271d894627b[00m:[01;34m~/git/infrastructure[00m$ [K]0;aschroed@7271d894627b: ~/git/infrastructure[01;32maschroed@7271d894627b[00m:[01;34m~/git/infrastructure[00m$ docke [Kr ps
-CONTAINER ID        IMAGE                     COMMAND                  CREATED             STATUS                                     PORTS                                                           NAMES
-85b7f9195d0a        rocker/geospatial         "/init"                  2 days ago          Up 2 days                                  0.0.0.0:31021->8787/tcp                                         rstudio_ci3uz
-76933d867469        rocker/geospatial         "/init"                  2 days ago          Up 2 days                                  0.0.0.0:31016->8787/tcp                                         rstudio_qn6au
-7ab09300ddb1        shinystudio_shinyproxy    "/opt/shinyproxy/sta…"   2 days ago          Up 2 days                                  0.0.0.0:8084->8080/tcp                                          shinystudio_shinyproxy_run_1
-0bc0df2f89b3        shinystudio_influxdb      "/entrypoint.sh infl…"   2 days ago          Up 2 days                                  0.0.0.0:8886->8086/tcp                                          shinystudio_influxdb_1
-f4f073a3b0f7        kartoza/postgis:latest    "/bin/sh -c /docker-…"   3 days ago          Up 3 days                                  0.0.0.0:5434->5432/tcp                                          postgis_1
-d994efff468b        rocker/geospatial         "/init"                  3 days ago          Up 3 days                                  0.0.0.0:31029->8787/tcp                                         rstudio_gk8yj
-8be066cce27e        rocker/geospatial         "/init"                  3 days ago          Up 3 days                                  0.0.0.0:31024->8787/tcp                                         rstudio_sp3sd
-d0575eebd052        rocker/geospatial         "/init"                  3 days ago          Up 3 days                                  0.0.0.0:31020->8787/tcp                                         rstudio_jk9ra
-98fc312abe49        rocker/geospatial         "/init"                  3 days ago          Up 3 days                                  0.0.0.0:31022->8787/tcp                                         rstudio_rs7te
-e526320d00e2        rocker/geospatial         "/init"                  3 days ago          Up 3 days                                  0.0.0.0:31028->8787/tcp                                         rstudio_jt9sz
-c3fb6879d7b5        rocker/geospatial         "/init"                  3 days ago          Up 3 days                                  0.0.0.0:31013->8787/tcp                                         rstudio_ap3xx
-7cc91a3e6e32        rocker/geospatial         "/init"                  3 days ago          Up 3 days                                  0.0.0.0:31019->8787/tcp                                         rstudio_sss5sc
-03e247af4e43        rocker/geospatial         "/init"                  3 days ago          Up 3 days                                  0.0.0.0:31027->8787/tcp                                         rstudio_jbs3hp
-21e3f2136a33        rocker/geospatial         "/init"                  3 days ago          Up 3 days                                  0.0.0.0:31018->8787/tcp                                         rstudio_sak9tr
-514f9f9d71a9        rocker/geospatial         "/init"                  3 days ago          Up 3 days                                  0.0.0.0:31026->8787/tcp                                         rstudio_ent4pn
-7271d894627b        rocker/geospatial         "/init"                  3 days ago          Up 3 days                                  0.0.0.0:31000->8787/tcp                                         rstudio_aschroed
-8cc9252e3164        rocker/geospatial         "/init"                  3 days ago          Up 3 days                                  0.0.0.0:31015->8787/tcp                                         rstudio_ks6pn
-15fe30d32acb        rocker/geospatial         "/init"                  3 days ago          Up 3 days                                  0.0.0.0:31017->8787/tcp                                         rstudio_cc2cm
-dc0fd2249519        rocker/geospatial         "/init"                  3 days ago          Up 3 days                                  0.0.0.0:31025->8787/tcp                                         rstudio_vh5dg
-0e98452c9c43        rocker/geospatial         "/init"                  3 days ago          Up 3 days                                  0.0.0.0:31023->8787/tcp                                         rstudio_sm9dv
-bebb1a53006e        rocker/geospatial         "/init"                  3 days ago          Up 3 days                                  0.0.0.0:31014->8787/tcp                                         rstudio_af5ug
-dd211af31c2c        adminer                   "entrypoint.sh docke…"   3 days ago          Up 3 days                                  0.0.0.0:8080->8080/tcp                                          adminer
-487acea8e410        gitlab/gitlab-ce:latest   "/assets/wrapper"        4 weeks ago         Up Less than a second (health: starting)   80/tcp, 443/tcp, 0.0.0.0:8929->8929/tcp, 0.0.0.0:2224->22/tcp   test_web_1
-23f85cfc9e57        postgres                  "docker-entrypoint.s…"   8 weeks ago         Up 3 days                                  0.0.0.0:5433->5432/tcp                                          postgis
-e68c72c81258        xwiki:postgres-tomcat     "docker-entrypoint.s…"   4 months ago        Up 2 days                                  0.0.0.0:8081->8080/tcp                                          xwiki-postgres-tomcat-web
-80288e447225        postgres:9.5              "docker-entrypoint.s…"   4 months ago        Up 2 days                                  5432/tcp                                                        xwiki-postgres-db
-]0;/home/aschroed/git/infrastructure]0;aschroed@7271d894627b: ~/git/infrastructure[01;32maschroed@7271d894627b[00m:[01;34m~/git/infrastructure[00m$ docker rm -f rstudio_aschroed
-To run a command as administrator (user "root"), use "sudo <command>".
-See "man sudo_root" for details.
-
-docker-compose -f dev/
-.Rprofile            rstudio-compose.yml  
-ads7fg@docker-s-12vcpu-48gb-nyc1-01:/home/ads7fg/git/infrastructure$ docker-compose -f dev/rstudio-compose.yml up -d rstudiop[K_ads7fg
-Creating rstudio_ads7fg ... 
-[1A[2KCreating rstudio_ads7fg ... [32mdone[0m[1B]0;/home/ads7fg/git/infrastructureads7fg@docker-s-12vcpu-48gb-nyc1-01:/home/ads7fg/git/infrastructure$  s3#s3at1at1at1at1at1at1at1at1at1at1at1at1at1as1as1as1as1as1as1as1as1as1as1as1as1as1as1as1as1at1at1at1at1at1at1at1at1at1[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kgit add --all
