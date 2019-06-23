@@ -377,11 +377,53 @@ services:
         - /var/run/docker.sock:/var/run/docker.sock
         - /usr/bin/docker:/usr/bin/docker
     ports:
-        - "31029:8787"
+        - "31001:8787"
     environment:
       - PASSWORD=password
       - USER=gk8yj
+      - USERID=1001
+      #- DISABLE_AUTH=true
+      
+  rstudio_acabezas:
+    image: rocker/geospatial
+    container_name: rstudio_acabezas
+    volumes:
+        - /home/acabezas:/home/acabezas
+        - /home/ads7fg/git/infrastructure/dev/.Rprofile:/home/acabezas/.Rprofile
+        - /home/sdad:/home/sdad
+        - /mnt/volume_nyc1_01:/mnt/volume_nyc1_01
+        - /etc/passwd:/etc/passwd:ro
+        - /etc/group:/etc/group:ro
+        - /etc/shadow:/etc/shadow:ro
+        - /var/run/docker.sock:/var/run/docker.sock
+        - /usr/bin/docker:/usr/bin/docker
+    ports:
+        - "31029:8787"
+    environment:
+      - PASSWORD=password
+      - USER=acabezas
       - USERID=1029
+      #- DISABLE_AUTH=true
+      
+  rstudio_nmesker:
+    image: rocker/geospatial
+    container_name: rstudio_nmesker
+    volumes:
+        - /home/nmesker:/home/nmesker
+        - /home/ads7fg/git/infrastructure/dev/.Rprofile:/home/nmesker/.Rprofile
+        - /home/sdad:/home/sdad
+        - /mnt/volume_nyc1_01:/mnt/volume_nyc1_01
+        - /etc/passwd:/etc/passwd:ro
+        - /etc/group:/etc/group:ro
+        - /etc/shadow:/etc/shadow:ro
+        - /var/run/docker.sock:/var/run/docker.sock
+        - /usr/bin/docker:/usr/bin/docker
+    ports:
+        - "31030:8787"
+    environment:
+      - PASSWORD=password
+      - USER=nmesker
+      - USERID=1030
       #- DISABLE_AUTH=true
       
       

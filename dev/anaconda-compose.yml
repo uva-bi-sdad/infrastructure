@@ -1,0 +1,27 @@
+version: '3'
+
+networks:
+  default:
+    external:
+      name: root_default
+
+services:
+  anaconda3_acabezas:
+    image: jupyter/datascience-notebook
+    container_name: anaconda3_acabezas
+    volumes:
+        - /home/acabezas:/home/acabezas
+        - /home/sdad/project_data/iarpa:/home/sdad/project_data/iarpa
+        - /mnt/volume_nyc1_01/iarpa:/mnt/volume_nyc1_01/iarpa
+    ports:
+        - "31029:8888"
+    #command: "start-notebook.sh"
+    user: root
+    environment:
+      - NB_USER=acabezas
+      - NB_UID=1029
+      
+#docker run -p 31029:8888 --user root --name anaconda3_acabezas -v /home/sdad/project_data/iarpa:/home/sdad/project_data/iarpa -v /mnt/volume_nyc1_01:/mnt/volume_nyc1_01 -v /home/acabezas:/home/acabezas -e NB_USER=acabezas -e NB_UID=1029 -d jupyter/datascience-notebook start-notebook.sh --NotebookApp.password='sha1:5f7fc587b3fd:3ac25ceb838c1b49072155839b64ddf5ada90b58'
+      
+#docker run -p 31030:8888 --user root --name anaconda3_nmesker -v /home/sdad/project_data/iarpa:/home/sdad/project_data/iarpa -v /mnt/volume_nyc1_01:/mnt/volume_nyc1_01 -v /home/nmesker:/home/nmesker -e NB_USER=nmesker -e NB_UID=1030 -d jupyter/datascience-notebook start-notebook.sh --NotebookApp.password='sha1:e22b9393896e:a6c10ef7b131f069fe89d522d7fbd6ea00296384'
+
