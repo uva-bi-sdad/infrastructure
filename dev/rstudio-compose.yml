@@ -19,6 +19,7 @@ services:
         - /etc/shadow:/etc/shadow:ro
         - /var/run/docker.sock:/var/run/docker.sock
         - /usr/bin/docker:/usr/bin/docker
+        - /usr/local/bin/docker-compose:/usr/local/bin/docker-compose
     ports:
         - "31000:8787"
     environment:
@@ -334,6 +335,7 @@ services:
         - /etc/shadow:/etc/shadow:ro
         - /var/run/docker.sock:/var/run/docker.sock
         - /usr/bin/docker:/usr/bin/docker
+        - /usr/local/bin/docker-compose:/usr/local/bin/docker-compose
     ports:
         - "31027:8787"
     environment:
@@ -425,6 +427,67 @@ services:
       - USER=nmesker
       - USERID=1030
       #- DISABLE_AUTH=true
+  
+  rstudio_kb7hp:
+    image: rocker/geospatial
+    container_name: rstudio_kb7hp
+    volumes:
+        - /home/kb7hp:/home/kb7hp
+        - /home/ads7fg/git/infrastructure/dev/.Rprofile:/home/kb7hp/.Rprofile
+        - /home/sdad:/home/sdad
+        - /mnt/volume_nyc1_01:/mnt/volume_nyc1_01
+        - /etc/passwd:/etc/passwd:ro
+        - /etc/group:/etc/group:ro
+        - /etc/shadow:/etc/shadow:ro
+        - /var/run/docker.sock:/var/run/docker.sock
+        - /usr/bin/docker:/usr/bin/docker
+    ports:
+        - "31032:8787"
+    environment:
+      - PASSWORD=password
+      - USER=kb7hp
+      - USERID=1032
+  
+  rstudio_jrg3bs:
+    image: rocker/geospatial
+    container_name: rstudio_jrg3bs
+    volumes:
+        - /home/jrg3bs:/home/jrg3bs
+        - /home/ads7fg/git/infrastructure/dev/.Rprofile:/home/jrg3bs/.Rprofile
+        - /home/sdad:/home/sdad
+        - /mnt/volume_nyc1_01:/mnt/volume_nyc1_01
+        - /etc/passwd:/etc/passwd:ro
+        - /etc/group:/etc/group:ro
+        - /etc/shadow:/etc/shadow:ro
+        - /var/run/docker.sock:/var/run/docker.sock
+        - /usr/bin/docker:/usr/bin/docker
+    ports:
+        - "31033:8787"
+    environment:
+      - PASSWORD=password
+      - USER=jrg3bs
+      - USERID=1033
+      
+  rstudio_nak3t:
+    image: rocker/geospatial
+    container_name: rstudio_nak3t
+    volumes:
+        - /home/nak3t:/home/nak3t
+        - /home/ads7fg/git/infrastructure/dev/.Rprofile:/home/nak3t/.Rprofile
+        - /home/sdad:/home/sdad
+        - /mnt/volume_nyc1_01:/mnt/volume_nyc1_01
+        - /etc/passwd:/etc/passwd:ro
+        - /etc/group:/etc/group:ro
+        - /etc/shadow:/etc/shadow:ro
+        - /var/run/docker.sock:/var/run/docker.sock
+        - /usr/bin/docker:/usr/bin/docker
+        - /usr/local/bin/docker-compose:/usr/local/bin/docker-compose
+    ports:
+        - "31034:8787"
+    environment:
+      - PASSWORD=password
+      - USER=nak3t
+      - USERID=1034
       
       
 
