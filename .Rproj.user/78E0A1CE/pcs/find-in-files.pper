@@ -20,7 +20,7 @@
             "*.cpp"
         ],
         "path" : "~/git",
-        "query" : "# base",
+        "query" : "TRUNCATE ",
         "regex" : false
     }
 }
