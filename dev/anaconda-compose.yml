@@ -77,3 +77,20 @@ services:
     environment:
       - NB_USER=nmesker
       - NB_UID=1030
+  anaconda3_qn6au:
+    image: jupyter/datascience-notebook
+    container_name: anaconda3_qn6au
+    volumes:
+        - /home/qn6au:/home/qn6au
+        - /home/sdad/project_data:/home/sdad/project_data
+        - /mnt/volume_nyc1_01:/mnt/volume_nyc1_01
+    ports:
+        - "31113:8888"
+    command: "start-notebook.sh \
+      --NotebookApp.password='sha1:a383bea24099:df85bb2b24e32e6623a5e90824635c80bf3ff75e'"
+    user: root
+    cpus: 2.5
+    mem_limit: 10000000000
+    environment:
+      - NB_USER=qn6au
+      - USERID=1016
