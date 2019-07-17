@@ -1,4 +1,4 @@
-version: '2.4'
+version: '3'
 
 networks:
   default:
@@ -22,8 +22,6 @@ services:
         - /usr/local/bin/docker-compose:/usr/local/bin/docker-compose
     ports:
         - "31000:8787"
-    cpus: 5
-    mem_limit: 20000000000
     environment:
       - PASSWORD=password
       - USER=ads7fg
@@ -45,8 +43,6 @@ services:
         - /usr/bin/docker:/usr/bin/docker
     ports:
         - "31018:8787"
-    cpus: 5
-    mem_limit: 10000000000
     environment:
       - PASSWORD=password
       - USER=sak9tr
@@ -68,8 +64,6 @@ services:
         - /usr/bin/docker:/usr/bin/docker
     ports:
         - "31019:8787"
-    cpus: 5
-    mem_limit: 10000000000
     environment:
       - PASSWORD=password
       - USER=sss5sc
@@ -91,8 +85,6 @@ services:
         - /usr/bin/docker:/usr/bin/docker
     ports:
         - "31013:8787"
-    cpus: 5
-    mem_limit: 10000000000
     environment:
       - PASSWORD=password
       - USER=ap3xx
@@ -114,8 +106,6 @@ services:
         - /usr/bin/docker:/usr/bin/docker
     ports:
         - "31014:8787"
-    cpus: 5
-    mem_limit: 10000000000
     environment:
       - PASSWORD=password
       - USER=af5ug
@@ -137,8 +127,6 @@ services:
         - /usr/bin/docker:/usr/bin/docker
     ports:
         - "31015:8787"
-    cpus: 5
-    mem_limit: 10000000000
     environment:
       - PASSWORD=password
       - USER=ks6pn
@@ -160,8 +148,6 @@ services:
         - /usr/bin/docker:/usr/bin/docker
     ports:
         - "31016:8787"
-    cpus: 5
-    mem_limit: 10000000000
     environment:
       - PASSWORD=password
       - USER=qn6au
@@ -183,8 +169,6 @@ services:
         - /usr/bin/docker:/usr/bin/docker
     ports:
         - "31017:8787"
-    cpus: 5
-    mem_limit: 10000000000
     environment:
       - PASSWORD=password
       - USER=cc2cm
@@ -206,8 +190,6 @@ services:
         - /usr/bin/docker:/usr/bin/docker
     ports:
         - "31020:8787"
-    cpus: 5
-    mem_limit: 10000000000
     environment:
       - PASSWORD=password
       - USER=jk9ra
@@ -229,8 +211,6 @@ services:
         - /usr/bin/docker:/usr/bin/docker
     ports:
         - "31021:8787"
-    cpus: 5
-    mem_limit: 10000000000
     environment:
       - PASSWORD=password
       - USER=ci3uz
@@ -252,8 +232,6 @@ services:
         - /usr/bin/docker:/usr/bin/docker
     ports:
         - "31022:8787"
-    cpus: 5
-    mem_limit: 10000000000
     environment:
       - PASSWORD=password
       - USER=rs7te
@@ -275,8 +253,6 @@ services:
         - /usr/bin/docker:/usr/bin/docker
     ports:
         - "31023:8787"
-    cpus: 5
-    mem_limit: 10000000000
     environment:
       - PASSWORD=password
       - USER=sm9dv
@@ -298,8 +274,6 @@ services:
         - /usr/bin/docker:/usr/bin/docker
     ports:
         - "31024:8787"
-    cpus: 5
-    mem_limit: 10000000000
     environment:
       - PASSWORD=password
       - USER=sp3sd
@@ -321,8 +295,6 @@ services:
         - /usr/bin/docker:/usr/bin/docker
     ports:
         - "31025:8787"
-    cpus: 5
-    mem_limit: 10000000000
     environment:
       - PASSWORD=password
       - USER=vh5dg
@@ -344,8 +316,6 @@ services:
         - /usr/bin/docker:/usr/bin/docker
     ports:
         - "31026:8787"
-    cpus: 5
-    mem_limit: 10000000000
     environment:
       - PASSWORD=password
       - USER=ent4pn
@@ -368,8 +338,6 @@ services:
         - /usr/local/bin/docker-compose:/usr/local/bin/docker-compose
     ports:
         - "31027:8787"
-    cpus: 5
-    mem_limit: 10000000000
     environment:
       - PASSWORD=password
       - USER=jbs3hp
@@ -391,8 +359,6 @@ services:
         - /usr/bin/docker:/usr/bin/docker
     ports:
         - "31028:8787"
-    cpus: 5
-    mem_limit: 10000000000
     environment:
       - PASSWORD=password
       - USER=jt9sz
@@ -414,12 +380,52 @@ services:
         - /usr/bin/docker:/usr/bin/docker
     ports:
         - "31001:8787"
-    cpus: 5
-    mem_limit: 10000000000
     environment:
       - PASSWORD=password
       - USER=gk8yj
       - USERID=1001
+      #- DISABLE_AUTH=true
+      
+  rstudio_acabezas:
+    image: rocker/geospatial
+    container_name: rstudio_acabezas
+    volumes:
+        - /home/acabezas:/home/acabezas
+        - /home/ads7fg/git/infrastructure/dev/.Rprofile:/home/acabezas/.Rprofile
+        - /home/sdad:/home/sdad
+        - /mnt/volume_nyc1_01:/mnt/volume_nyc1_01
+        - /etc/passwd:/etc/passwd:ro
+        - /etc/group:/etc/group:ro
+        - /etc/shadow:/etc/shadow:ro
+        - /var/run/docker.sock:/var/run/docker.sock
+        - /usr/bin/docker:/usr/bin/docker
+    ports:
+        - "31029:8787"
+    environment:
+      - PASSWORD=password
+      - USER=acabezas
+      - USERID=1029
+      #- DISABLE_AUTH=true
+      
+  rstudio_nmesker:
+    image: rocker/geospatial
+    container_name: rstudio_nmesker
+    volumes:
+        - /home/nmesker:/home/nmesker
+        - /home/ads7fg/git/infrastructure/dev/.Rprofile:/home/nmesker/.Rprofile
+        - /home/sdad:/home/sdad
+        - /mnt/volume_nyc1_01:/mnt/volume_nyc1_01
+        - /etc/passwd:/etc/passwd:ro
+        - /etc/group:/etc/group:ro
+        - /etc/shadow:/etc/shadow:ro
+        - /var/run/docker.sock:/var/run/docker.sock
+        - /usr/bin/docker:/usr/bin/docker
+    ports:
+        - "31030:8787"
+    environment:
+      - PASSWORD=password
+      - USER=nmesker
+      - USERID=1030
       #- DISABLE_AUTH=true
   
   rstudio_kb7hp:
@@ -437,8 +443,6 @@ services:
         - /usr/bin/docker:/usr/bin/docker
     ports:
         - "31032:8787"
-    cpus: 5
-    mem_limit: 10000000000
     environment:
       - PASSWORD=password
       - USER=kb7hp
@@ -459,8 +463,6 @@ services:
         - /usr/bin/docker:/usr/bin/docker
     ports:
         - "31033:8787"
-    cpus: 5
-    mem_limit: 10000000000
     environment:
       - PASSWORD=password
       - USER=jrg3bs
@@ -482,8 +484,6 @@ services:
         - /usr/local/bin/docker-compose:/usr/local/bin/docker-compose
     ports:
         - "31034:8787"
-    cpus: 5
-    mem_limit: 10000000000
     environment:
       - PASSWORD=password
       - USER=nak3t
