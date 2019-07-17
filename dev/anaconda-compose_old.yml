@@ -1,4 +1,4 @@
-version: '2.4'
+version: '3'
 
 networks:
   default:
@@ -18,12 +18,10 @@ services:
     command: "start-notebook.sh \
       --NotebookApp.password='sha1:2f4db8ea2a94:3ce70216a4befac198295d330a034c4d387db025'"
     user: root
-    cpus: 2.5
-    mem_limit: 10000000000
     environment:
       - NB_USER=ads7fg
       - NB_UID=1000
-
+      
   anaconda3_nak3t:
     image: jupyter/datascience-notebook
     container_name: anaconda3_nak3t
@@ -36,11 +34,10 @@ services:
     command: "start-notebook.sh \
       --NotebookApp.password='sha1:6706108f3cbb:cf6edefd6db3bdcda04ada3fe35060e911a52d09'"
     user: root
-    cpus: 2.5
-    mem_limit: 10000000000
     environment:
       - NB_USER=neilalex525
       - NB_UID=1020
+
 
   anaconda3_acabezas:
     image: jupyter/datascience-notebook
@@ -54,8 +51,6 @@ services:
     command: "start-notebook.sh \
       --NotebookApp.password='sha1:5f7fc587b3fd:3ac25ceb838c1b49072155839b64ddf5ada90b58'"
     user: root
-    cpus: 2.5
-    mem_limit: 10000000000
     environment:
       - NB_USER=acabezas
       - NB_UID=1029
@@ -72,8 +67,13 @@ services:
     command: "start-notebook.sh \
       --NotebookApp.password='sha1:e22b9393896e:a6c10ef7b131f069fe89d522d7fbd6ea00296384'"
     user: root
-    cpus: 2.5
-    mem_limit: 10000000000
     environment:
       - NB_USER=nmesker
       - NB_UID=1030
+  
+#'sha1:2f4db8ea2a94:3ce70216a4befac198295d330a034c4d387db025'
+      
+#docker run -p 31029:8888 --user root --name anaconda3_acabezas -v /home/sdad/project_data/iarpa:/home/sdad/project_data/iarpa -v /mnt/volume_nyc1_01:/mnt/volume_nyc1_01 -v /home/acabezas:/home/acabezas -e NB_USER=acabezas -e NB_UID=1029 -d jupyter/datascience-notebook start-notebook.sh --NotebookApp.password='sha1:5f7fc587b3fd:3ac25ceb838c1b49072155839b64ddf5ada90b58'
+      
+#docker run -p 31030:8888 --user root --name anaconda3_nmesker -v /home/sdad/project_data/iarpa:/home/sdad/project_data/iarpa -v /mnt/volume_nyc1_01:/mnt/volume_nyc1_01 -v /home/nmesker:/home/nmesker -e NB_USER=nmesker -e NB_UID=1030 -d jupyter/datascience-notebook start-notebook.sh --NotebookApp.password='sha1:e22b9393896e:a6c10ef7b131f069fe89d522d7fbd6ea00296384'
+
