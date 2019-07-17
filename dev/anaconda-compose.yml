@@ -87,7 +87,7 @@ services:
     ports:
         - "31113:8888"
     command: "start-notebook.sh \
-      --NotebookApp.password='sha1:a383bea24099:df85bb2b24e32e6623a5e90824635c80bf3ff75e'"
+      --NotebookApp.password='sha1:a6c683d4a6a8:f4e25e72a3d526442567779ad753dfa1b3bfb402'"
     user: root
     cpus: 2.5
     mem_limit: 10000000000
