@@ -77,6 +77,7 @@ services:
     environment:
       - NB_USER=nmesker
       - NB_UID=1030
+      
   anaconda3_qn6au:
     image: jupyter/datascience-notebook
     container_name: anaconda3_qn6au
@@ -94,3 +95,39 @@ services:
     environment:
       - NB_USER=qn6au
       - USERID=1016
+      
+  anaconda3_ci3uz:
+    image: jupyter/datascience-notebook
+    container_name: anaconda3_ci3uz
+    volumes:
+        - /home/ci3uz:/home/ci3uz
+        - /home/sdad/project_data:/home/sdad/project_data
+        - /mnt/volume_nyc1_01:/mnt/volume_nyc1_01
+    ports:
+        - "31115:8888"
+    command: "start-notebook.sh \
+      --NotebookApp.password='sha1:834bcf44a4fa:2b284ade1b80060f0a5faf6337fc9827db7ad083'"
+    user: root
+    cpus: 2.5
+    mem_limit: 10000000000
+    environment:
+      - NB_USER=ci3uz
+      - USERID=1021
+      
+  anaconda3_ent4pn:
+    image: jupyter/datascience-notebook
+    container_name: anaconda3_ent4pn
+    volumes:
+        - /home/ent4pn:/home/ent4pn
+        - /home/sdad/project_data:/home/sdad/project_data
+        - /mnt/volume_nyc1_01:/mnt/volume_nyc1_01
+    ports:
+        - "31116:8888"
+    command: "start-notebook.sh \
+      --NotebookApp.password='sha1:bb88d578e67c:4e73a66b7119f9702b6309b4d018d3dd8de71997'"
+    user: root
+    cpus: 2.5
+    mem_limit: 10000000000
+    environment:
+      - NB_USER=ent4pn
+      - USERID=1026       
