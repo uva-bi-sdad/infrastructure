@@ -24,3 +24,20 @@ services:
       ALLOW_IP_RANGE: 0.0.0.0/0
     ports:
       - 5434:5432
+  
+  postgis_2:
+    image: kartoza/postgis:latest
+    #image: postgres
+    container_name: postgis_2
+    restart: always
+    volumes:
+      - /mnt/volume_nyc1_02:/mnt/volume_nyc1_02
+      - /mnt/volume_nyc1_02/pg_massive:/var/lib/postgresql/11/main
+    environment:
+      POSTGRES_USER: gisuser
+      POSTGRES_DBNAME: gis
+      POSTGRES_PASSWORD: example
+      ALLOW_IP_RANGE: 0.0.0.0/0
+    ports:
+      - 5436:5432
+    shm_size: 1g

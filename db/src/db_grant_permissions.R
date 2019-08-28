@@ -1,3 +1,5 @@
+#!/usr/bin/env Rscript
+
 grant_db_permissions <- function(grant_database, grant_username, schema = "public", db_user = Sys.getenv("db_userid"), db_pass = Sys.getenv("db_pwd"), db_host = "postgis_1", db_port = "5432") {
   con <- DBI::dbConnect(drv = RPostgreSQL::PostgreSQL(),
                         dbname = grant_database,

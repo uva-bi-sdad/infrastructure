@@ -1,0 +1,21 @@
+version: '3'
+
+networks:
+  default:
+    external:
+      name: root_default
+
+services:
+  omnidb:
+    image: taivokasper/omnidb
+    container_name: omnidb
+    restart: always
+    volumes:
+    - config-omnidb:/etc/omnidb
+    
+    ports:
+      - 8082:8080
+      - 25482:25482
+
+volumes: 
+  config-omnidb:

@@ -10,7 +10,9 @@ services:
     image: adminer
     container_name: adminer
     restart: always
-    links:
-      - postgis
+    environment:
+      - ADMINER_DESIGN=lucas-sandery
+    #links:
+    #  - postgis_1
     ports:
       - 8080:8080

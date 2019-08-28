@@ -26,6 +26,7 @@ services:
     # Use an already built XWiki image from DockerHub.
     image: "xwiki:postgres-tomcat"
     container_name: xwiki-postgres-tomcat-web
+    restart: always
     depends_on:
       - db
     ports:
@@ -46,6 +47,7 @@ services:
   db:
     image: "postgres:9.5"
     container_name: xwiki-postgres-db
+    restart: always
     volumes:
       - xwiki-postgres-data:/var/lib/postgresql/data
     environment:
