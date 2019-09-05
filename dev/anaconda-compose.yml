@@ -31,6 +31,7 @@ services:
         - /home/neilalex525:/home/neilalex525
         - /home/sdad/project_data:/home/sdad/project_data
         - /mnt/volume_nyc1_01:/mnt/volume_nyc1_01
+        - /mnt/volume_nyc1_02:/mnt/volume_nyc1_02
     ports:
         - "31112:8888"
     command: "start-notebook.sh \
