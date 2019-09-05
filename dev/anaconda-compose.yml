@@ -103,6 +103,7 @@ services:
         - /home/jbs3hp:/home/jbs3hp
         - /home/sdad/project_data:/home/sdad/project_data
         - /mnt/volume_nyc1_01:/mnt/volume_nyc1_01
+        - /mnt/volume_nyc1_02:/mnt/volume_nyc1_02
     ports:
         - "31114:8888"
     command: "start-notebook.sh \
