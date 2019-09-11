@@ -7,7 +7,7 @@ networks:
 
 services:
   rstudio_ads7fg:
-    image: rocker/geospatial:3.5.1
+    image: rocker/geospatial
     container_name: rstudio_ads7fg
     restart: always
     volumes:
@@ -22,6 +22,7 @@ services:
         - /var/run/docker.sock:/var/run/docker.sock
         - /usr/bin/docker:/usr/bin/docker
         - /usr/local/bin/docker-compose:/usr/local/bin/docker-compose
+        - /home/linuxbrew:/home/linuxbrew
     ports:
         - "31000:8787"
     cpus: 5
@@ -391,6 +392,30 @@ services:
       - PASSWORD=password
       - USER=gk8yj
       - USERID=1036
+
+  rstudio_nr3xe:
+    image: rocker/geospatial:3.5.1
+    container_name: rstudio_nr3xe
+    volumes:
+        - /home/gk8yj:/home/nr3xe
+        - /home/ads7fg/git/infrastructure/dev/.Rprofile:/home/nr3xe/.Rprofile
+        - /home/sdad:/home/sdad
+        - /mnt/volume_nyc1_01:/mnt/volume_nyc1_01         
+        - /mnt/volume_nyc1_02:/mnt/volume_nyc1_02
+        - /etc/passwd:/etc/passwd:ro
+        - /etc/group:/etc/group:ro
+        - /etc/shadow:/etc/shadow:ro
+        - /var/run/docker.sock:/var/run/docker.sock
+        - /usr/bin/docker:/usr/bin/docker
+        - /usr/local/bin/docker-compose:/usr/local/bin/docker-compose
+    ports:
+        - "31011:8787"
+    cpus: 5
+    mem_limit: 10000000000
+    environment:
+      - PASSWORD=password
+      - USER=nr3xe
+      - USERID=1011
       
       
 

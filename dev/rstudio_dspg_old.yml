@@ -1,0 +1,168 @@
+rstudio_ap3xx:
+    image: rocker/geospatial
+    container_name: rstudio_ap3xx
+    volumes:
+        - /home/ap3xx:/home/ap3xx
+        - /home/ads7fg/git/infrastructure/dev/.Rprofile:/home/ap3xx/.Rprofile
+        - /home/sdad:/home/sdad
+        - /mnt/volume_nyc1_01:/mnt/volume_nyc1_01         
+        - /mnt/volume_nyc1_02:/mnt/volume_nyc1_02
+        - /etc/passwd:/etc/passwd:ro
+        - /etc/group:/etc/group:ro
+        - /etc/shadow:/etc/shadow:ro
+        - /var/run/docker.sock:/var/run/docker.sock
+        - /usr/bin/docker:/usr/bin/docker
+    ports:
+        - "31013:8787"
+    cpus: 5
+    mem_limit: 10000000000
+    environment:
+      - PASSWORD=password
+      - USER=ap3xx
+      - USERID=1013
+      #- DISABLE_AUTH=true
+      
+  rstudio_af5ug:
+    image: rocker/geospatial
+    container_name: rstudio_af5ug
+    volumes:
+        - /home/af5ug:/home/af5ug
+        - /home/ads7fg/git/infrastructure/dev/.Rprofile:/home/af5ug/.Rprofile
+        - /home/sdad:/home/sdad
+        - /mnt/volume_nyc1_01:/mnt/volume_nyc1_01         
+        - /mnt/volume_nyc1_02:/mnt/volume_nyc1_02
+        - /etc/passwd:/etc/passwd:ro
+        - /etc/group:/etc/group:ro
+        - /etc/shadow:/etc/shadow:ro
+        - /var/run/docker.sock:/var/run/docker.sock
+        - /usr/bin/docker:/usr/bin/docker
+    ports:
+        - "31014:8787"
+    cpus: 5
+    mem_limit: 10000000000
+    environment:
+      - PASSWORD=password
+      - USER=af5ug
+      - USERID=1014
+      #- DISABLE_AUTH=true
+      
+  rstudio_ks6pn:
+    image: rocker/geospatial
+    container_name: rstudio_ks6pn
+    volumes:
+        - /home/ks6pn:/home/ks6pn
+        - /home/ads7fg/git/infrastructure/dev/.Rprofile:/home/ks6pn/.Rprofile
+        - /home/sdad:/home/sdad
+        - /mnt/volume_nyc1_01:/mnt/volume_nyc1_01         
+        - /mnt/volume_nyc1_02:/mnt/volume_nyc1_02
+        - /etc/passwd:/etc/passwd:ro
+        - /etc/group:/etc/group:ro
+        - /etc/shadow:/etc/shadow:ro
+        - /var/run/docker.sock:/var/run/docker.sock
+        - /usr/bin/docker:/usr/bin/docker
+    ports:
+        - "31015:8787"
+    cpus: 5
+    mem_limit: 10000000000
+    environment:
+      - PASSWORD=password
+      - USER=ks6pn
+      - USERID=1015
+      #- DISABLE_AUTH=true
+
+  rstudio_qn6au:
+    image: rocker/geospatial
+    container_name: rstudio_qn6au
+    volumes:
+        - /home/qn6au:/home/qn6au
+        - /home/ads7fg/git/infrastructure/dev/.Rprofile:/home/qn6au/.Rprofile
+        - /home/sdad:/home/sdad
+        - /mnt/volume_nyc1_01:/mnt/volume_nyc1_01         
+        - /mnt/volume_nyc1_02:/mnt/volume_nyc1_02
+        - /etc/passwd:/etc/passwd:ro
+        - /etc/group:/etc/group:ro
+        - /etc/shadow:/etc/shadow:ro
+        - /var/run/docker.sock:/var/run/docker.sock
+        - /usr/bin/docker:/usr/bin/docker
+    ports:
+        - "31016:8787"
+    cpus: 5
+    mem_limit: 10000000000
+    environment:
+      - PASSWORD=password
+      - USER=qn6au
+      - USERID=1016
+      #- DISABLE_AUTH=true
+      
+  rstudio_cc2cm:
+    image: rocker/geospatial
+    container_name: rstudio_cc2cm
+    volumes:
+        - /home/cc2cm:/home/cc2cm
+        - /home/ads7fg/git/infrastructure/dev/.Rprofile:/home/cc2cm/.Rprofile
+        - /home/sdad:/home/sdad
+        - /mnt/volume_nyc1_01:/mnt/volume_nyc1_01         
+        - /mnt/volume_nyc1_02:/mnt/volume_nyc1_02
+        - /etc/passwd:/etc/passwd:ro
+        - /etc/group:/etc/group:ro
+        - /etc/shadow:/etc/shadow:ro
+        - /var/run/docker.sock:/var/run/docker.sock
+        - /usr/bin/docker:/usr/bin/docker
+    ports:
+        - "31017:8787"
+    cpus: 5
+    mem_limit: 10000000000
+    environment:
+      - PASSWORD=password
+      - USER=cc2cm
+      - USERID=1017
+      #- DISABLE_AUTH=true
+      
+  rstudio_jk9ra:
+    image: rocker/geospatial
+    container_name: rstudio_jk9ra
+    volumes:
+        - /home/jk9ra:/home/jk9ra
+        - /home/ads7fg/git/infrastructure/dev/.Rprofile:/home/jk9ra/.Rprofile
+        - /home/sdad:/home/sdad
+        - /mnt/volume_nyc1_01:/mnt/volume_nyc1_01         
+        - /mnt/volume_nyc1_02:/mnt/volume_nyc1_02
+        - /etc/passwd:/etc/passwd:ro
+        - /etc/group:/etc/group:ro
+        - /etc/shadow:/etc/shadow:ro
+        - /var/run/docker.sock:/var/run/docker.sock
+        - /usr/bin/docker:/usr/bin/docker
+    ports:
+        - "31020:8787"
+    cpus: 5
+    mem_limit: 10000000000
+    environment:
+      - PASSWORD=password
+      - USER=jk9ra
+      - USERID=1020
+      #- DISABLE_AUTH=true
+      
+  rstudio_vh5dg:
+    image: rocker/geospatial
+    container_name: rstudio_vh5dg
+    volumes:
+        - /home/vh5dg:/home/vh5dg
+        - /home/ads7fg/git/infrastructure/dev/.Rprofile:/home/vh5dg/.Rprofile
+        - /home/sdad:/home/sdad
+        - /mnt/volume_nyc1_01:/mnt/volume_nyc1_01         
+        - /mnt/volume_nyc1_02:/mnt/volume_nyc1_02
+        - /etc/passwd:/etc/passwd:ro
+        - /etc/group:/etc/group:ro
+        - /etc/shadow:/etc/shadow:ro
+        - /var/run/docker.sock:/var/run/docker.sock
+        - /usr/bin/docker:/usr/bin/docker
+    ports:
+        - "31025:8787"
+    cpus: 5
+    mem_limit: 10000000000
+    environment:
+      - PASSWORD=password
+      - USER=vh5dg
+      - USERID=1025
+      #- DISABLE_AUTH=true
+      
