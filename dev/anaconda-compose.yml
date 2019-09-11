@@ -36,8 +36,6 @@ services:
     command: "start-notebook.sh \
       --NotebookApp.password='sha1:6706108f3cbb:cf6edefd6db3bdcda04ada3fe35060e911a52d09'"
     user: root
-    cpus: 2.5
-    mem_limit: 10000000000
     environment:
       - NB_USER=neilalex525
       - NB_UID=1020
@@ -49,6 +47,7 @@ services:
         - /home/acabezas:/home/acabezas
         - /home/sdad/project_data/iarpa:/home/sdad/project_data/iarpa
         - /mnt/volume_nyc1_01:/mnt/volume_nyc1_01
+        - /mnt/volume_nyc1_02:/mnt/volume_nyc1_02
     ports:
         - "31029:8888"
     command: "start-notebook.sh \
@@ -103,13 +102,12 @@ services:
         - /home/jbs3hp:/home/jbs3hp
         - /home/sdad/project_data:/home/sdad/project_data
         - /mnt/volume_nyc1_01:/mnt/volume_nyc1_01
+        - /mnt/volume_nyc1_02:/mnt/volume_nyc1_02
     ports:
         - "31114:8888"
     command: "start-notebook.sh \
       --NotebookApp.password='sha1:6c78a2377a26:f3c00d5c859245309c6ee5a6c3fa78fd0851d7ad'"
     user: root
-    cpus: 2.5
-    mem_limit: 10000000000
     environment:
       - NB_USER=jbs3hp
       - USERID=1027

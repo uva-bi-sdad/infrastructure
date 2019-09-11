@@ -14,7 +14,7 @@ db_users <- c(db_users_dspg2019, db_users_sdad)
 # Create users
 source("db/src/db_create_user.R")
 for (dbu in db_users) {
-  create_db_user(dbu)
+  create_db_user(dbu, db_host = "postgis_2")
 }
 
 
@@ -23,7 +23,7 @@ for (dbu in db_users) {
 # Grant all permissions on grant_database to grant_user
 source("db/src/db_grant_permissions.R")
 for (dbu in db_users) {
-  grant_db_permissions(grant_username = dbu, grant_database = "gis", schema = "census_cb")
+  grant_db_permissions(grant_username = dbu, grant_database = "corelogic", schema = "public", db_host = "postgis_2")
 }
 
 
