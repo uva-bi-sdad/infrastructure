@@ -417,5 +417,71 @@ services:
       - USER=nr3xe
       - USERID=1011
       
+  rstudio_camb98:
+    image: rocker/geospatial:3.5.1
+    container_name: rstudio_camb98
+    volumes:
+        - /home/camb98:/home/camb98
+        - /home/ads7fg/git/infrastructure/dev/.Rprofile:/home/camb98/.Rprofile
+        - /home/sdad:/home/sdad
+        - /mnt/volume_nyc1_01:/mnt/volume_nyc1_01         
+        - /mnt/volume_nyc1_02:/mnt/volume_nyc1_02
+        - /etc/passwd:/etc/passwd:ro
+        - /etc/group:/etc/group:ro
+        - /etc/shadow:/etc/shadow:ro
+        - /var/run/docker.sock:/var/run/docker.sock
+        - /usr/bin/docker:/usr/bin/docker
+    ports:
+        - "31038:8787"
+    cpus: 5
+    mem_limit: 10000000000
+    environment:
+      - PASSWORD=password
+      - USER=camb98
+      - USERID=1038
       
-
+  rstudio_xiang97:
+    image: rocker/geospatial:3.5.1
+    container_name: rstudio_xiang97
+    volumes:
+        - /home/xiang97:/home/xiang97
+        - /home/ads7fg/git/infrastructure/dev/.Rprofile:/home/xiang97/.Rprofile
+        - /home/sdad:/home/sdad
+        - /mnt/volume_nyc1_01:/mnt/volume_nyc1_01         
+        - /mnt/volume_nyc1_02:/mnt/volume_nyc1_02
+        - /etc/passwd:/etc/passwd:ro
+        - /etc/group:/etc/group:ro
+        - /etc/shadow:/etc/shadow:ro
+        - /var/run/docker.sock:/var/run/docker.sock
+        - /usr/bin/docker:/usr/bin/docker
+    ports:
+        - "31039:8787"
+    cpus: 5
+    mem_limit: 10000000000
+    environment:
+      - PASSWORD=password
+      - USER=xiang97
+      - USERID=1039
+      
+  rstudio_ieuan97:
+    image: rocker/geospatial:3.5.1
+    container_name: rstudio_ieuan97
+    volumes:
+        - /home/ieuan97:/home/ieuan97
+        - /home/ads7fg/git/infrastructure/dev/.Rprofile:/home/ieuan97/.Rprofile
+        - /home/sdad:/home/sdad
+        - /mnt/volume_nyc1_01:/mnt/volume_nyc1_01         
+        - /mnt/volume_nyc1_02:/mnt/volume_nyc1_02
+        - /etc/passwd:/etc/passwd:ro
+        - /etc/group:/etc/group:ro
+        - /etc/shadow:/etc/shadow:ro
+        - /var/run/docker.sock:/var/run/docker.sock
+        - /usr/bin/docker:/usr/bin/docker
+    ports:
+        - "31040:8787"
+    cpus: 5
+    mem_limit: 10000000000
+    environment:
+      - PASSWORD=password
+      - USER=ieuan97
+      - USERID=1040
