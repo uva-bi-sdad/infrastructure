@@ -1,0 +1,17 @@
+version: "3.2"
+networks:
+  default:
+    external:
+      name: root_default
+services:
+
+  sql1:
+    container_name: sql1
+    image: mcr.microsoft.com/mssql/server:2017-latest
+    volumes:
+        - /mnt/volume_nyc1_01:/mnt/volume_nyc1_01
+    ports:
+      - "1433:1433"
+    environment:
+      SA_PASSWORD: "YourStrong@Passw0rd"
+      ACCEPT_EULA: "Y"
