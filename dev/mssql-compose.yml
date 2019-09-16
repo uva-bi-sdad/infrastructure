@@ -9,7 +9,7 @@ services:
     container_name: sql1
     image: mcr.microsoft.com/mssql/server:2017-latest
     volumes:
-        - /mnt/volume_nyc1_03:/mnt/volume_nyc1_03
+        - /mnt/volume_nyc1_03:/var/opt/mssql/data
     ports:
       - "1433:1433"
     environment:
