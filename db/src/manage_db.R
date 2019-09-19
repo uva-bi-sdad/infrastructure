@@ -1,32 +1,43 @@
-# DB Functions
-source("db/src/db_create_user.R")
-source("db/src/db_grant_permissions.R")
+
 
 # CREATE DB ACCOUNTS ----
 
 # SDAD Staff
 db_users_sdad <- data.table::fread("db/src/users_sdad.csv")[, uid]
+# EXTERNAL Staff
+db_users_external <- data.table::fread("db/src/users_external.csv")[, uid]
 # DSPG Students
 db_users_dspg2019 <- data.table::fread("db/src/users_dspg2019.csv")[, uid]
 # All Users
-db_users <- c(db_users_dspg2019, db_users_sdad)
+db_users <- c(db_users_sdad, db_users_external, db_users_dspg2019)
 
-# Create users
+# Create database user accounts
 source("db/src/db_create_user.R")
 for (dbu in db_users) {
-  create_db_user(dbu, db_host = "postgis_2")
+  create_db_user(
+    dbu,
+    db_host = "postgis_2")
 }
-
 
 # GRANT DB PERMISSIONS ----
-
-# Grant all permissions on grant_database to grant_user
+# Grant permissions to all users
 source("db/src/db_grant_permissions.R")
+# Grant permission to single user
+grant_db_permissions(
+  grant_username = "dtn2ep",
+  grant_database = "gis",
+  schema = "census_tl",
+  db_host = "postgis_1"
+)
+
 for (dbu in db_users) {
-  grant_db_permissions(grant_username = dbu, grant_database = "corelogic", schema = "public", db_host = "postgis_2")
+  grant_db_permissions(
+    grant_username = dbu,
+    grant_database = "corelogic",
+    schema = "public",
+    db_host = "postgis_2"
+  )
 }
-
-
 
 # BACKUP DB ----
 
