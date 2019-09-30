@@ -456,8 +456,8 @@ services:
         - /usr/bin/docker:/usr/bin/docker
     ports:
         - "31039:8787"
-    cpus: 5
-    mem_limit: 10000000000
+    cpus: 8
+    #mem_limit: 100000000000
     environment:
       - PASSWORD=password
       - USER=xiang97
