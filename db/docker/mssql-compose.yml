@@ -10,7 +10,7 @@ services:
     image: mcr.microsoft.com/mssql/server:2017-latest
     volumes:
         - /mnt/volume_nyc1_03:/var/opt/mssql/data/Corelogic
-        - /mnt/volume_nyc1_02/mssql_massive:/var/opt/mssql
+        - /mnt/volume_nyc1_03/mssql_massive:/var/opt/mssql
     ports:
       - "1433:1433"
     environment:
