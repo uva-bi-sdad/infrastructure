@@ -1,5 +1,6 @@
 /home/ads7fg/.Rprofile="9D41CD9E"
 /home/ads7fg/git/OSS-Universe/src/insert_commits.R="46E93A37"
+/home/ads7fg/git/ShinyStudio/docker-compose.yml="16E2AFD0"
 /home/ads7fg/git/acpd/src/03_dashboard/db_connection.R="AD44759C"
 /home/ads7fg/git/acpd/src/03_dashboard/leaflet.R="5A48C4A5"
 /home/ads7fg/git/ari_base_dash/README.md="4853E518"
@@ -52,4 +53,9 @@
 /home/ads7fg/git/oss/src/01-data_collection/scrape/Github/contributors_and_commits.R="E11BF0B7"
 /home/ads7fg/git/oss/src/02-data_processing/code_gov/03-get_github_slug_info.R="4B3BAFCE"
 /home/ads7fg/git/oss/src/count_repo_add_deletes.R="AFD80BD0"
-/home/ads7fg/git/oss/src/dspg17/ckelling/anal
+/home/ads7fg/git/oss/src/dspg17/ckelling/analysis/sourceforge/02_sf_analysis.Rmd="40A81094"
+/home/ads7fg/git/oss2/R/github_repo_stats.R="A53553ED"
+/home/ads7fg/git/oss2/src/gkorkmaz/r_repos_inserts_deletes.R="6DA09594"
+/home/ads7fg/git/sdad-data/functions/recreate_db.R="2A047090"
+/home/ads7fg/git/sdad-data/sources/HIFLD.R="9E97DDEB"
+/home/ads7fg/git/sdad_lexicon/R/lexicon_tables.R="DAD695BA"
