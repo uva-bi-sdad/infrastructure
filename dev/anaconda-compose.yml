@@ -28,7 +28,7 @@ services:
     image: jupyter/datascience-notebook
     container_name: anaconda3_nak3t
     volumes:
-        - /home/neilalex525:/home/neilalex525
+        - /home/nak3t:/home/nak3t
         - /home/sdad/project_data:/home/sdad/project_data
         - /mnt/volume_nyc1_01:/mnt/volume_nyc1_01
         - /mnt/volume_nyc1_02:/mnt/volume_nyc1_02
