@@ -39,7 +39,7 @@ services:
       --NotebookApp.password='sha1:6706108f3cbb:cf6edefd6db3bdcda04ada3fe35060e911a52d09'"
     user: root
     environment:
-      - NB_USER=neilalex525
+      - NB_USER=nak3t
       - NB_UID=1020
 
   anaconda3_acabezas:
