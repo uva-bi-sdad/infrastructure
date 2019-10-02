@@ -363,7 +363,7 @@ services:
     ports:
         - "31035:8787"
     cpus: 5
-    mem_limit: 10000000000
+    mem_limit: 40000000000
     environment:
       - PASSWORD=password
       - USER=dtn2ep
