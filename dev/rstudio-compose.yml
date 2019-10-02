@@ -457,7 +457,7 @@ services:
     ports:
         - "31039:8787"
     cpus: 8
-    mem_limit: 20000000000
+    #mem_limit: 20000000000
     environment:
       - PASSWORD=password
       - USER=xiang97
