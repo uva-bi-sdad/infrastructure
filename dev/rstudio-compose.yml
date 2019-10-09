@@ -32,7 +32,7 @@ services:
       - USER=ads7fg
       - USERID=1000
       #- DISABLE_AUTH=true
-      
+
   rstudio_sak9tr:
     image: rocker/geospatial:3.5.1
     container_name: rstudio_sak9tr
@@ -40,7 +40,7 @@ services:
         - /home/sak9tr:/home/sak9tr
         - /home/ads7fg/git/infrastructure/dev/.Rprofile:/home/sak9tr/.Rprofile
         - /home/sdad:/home/sdad
-        - /mnt/volume_nyc1_01:/mnt/volume_nyc1_01         
+        - /mnt/volume_nyc1_01:/mnt/volume_nyc1_01
         - /mnt/volume_nyc1_02:/mnt/volume_nyc1_02
         - /etc/passwd:/etc/passwd:ro
         - /etc/group:/etc/group:ro
@@ -56,7 +56,7 @@ services:
       - USER=sak9tr
       - USERID=1018
       #- DISABLE_AUTH=true
-      
+
   rstudio_sss5sc:
     image: rocker/geospatial:3.5.1
     container_name: rstudio_sss5sc
@@ -64,7 +64,7 @@ services:
         - /home/sss5sc:/home/sss5sc
         - /home/ads7fg/git/infrastructure/dev/.Rprofile:/home/sss5sc/.Rprofile
         - /home/sdad:/home/sdad
-        - /mnt/volume_nyc1_01:/mnt/volume_nyc1_01         
+        - /mnt/volume_nyc1_01:/mnt/volume_nyc1_01
         - /mnt/volume_nyc1_02:/mnt/volume_nyc1_02
         - /etc/passwd:/etc/passwd:ro
         - /etc/group:/etc/group:ro
@@ -80,7 +80,7 @@ services:
       - USER=sss5sc
       - USERID=1019
       #- DISABLE_AUTH=true
- 
+
   rstudio_ci3uz:
     image: rocker/geospatial:3.5.1
     container_name: rstudio_ci3uz
@@ -88,7 +88,7 @@ services:
         - /home/ci3uz:/home/ci3uz
         - /home/ads7fg/git/infrastructure/dev/.Rprofile:/home/ci3uz/.Rprofile
         - /home/sdad:/home/sdad
-        - /mnt/volume_nyc1_01:/mnt/volume_nyc1_01         
+        - /mnt/volume_nyc1_01:/mnt/volume_nyc1_01
         - /mnt/volume_nyc1_02:/mnt/volume_nyc1_02
         - /etc/passwd:/etc/passwd:ro
         - /etc/group:/etc/group:ro
@@ -104,7 +104,7 @@ services:
       - USER=ci3uz
       - USERID=1021
       #- DISABLE_AUTH=true
-      
+
   rstudio_rs7te:
     image: rocker/geospatial:3.5.1
     container_name: rstudio_rs7te
@@ -112,7 +112,7 @@ services:
         - /home/rs7te:/home/rs7te
         - /home/ads7fg/git/infrastructure/dev/.Rprofile:/home/rs7te/.Rprofile
         - /home/sdad:/home/sdad
-        - /mnt/volume_nyc1_01:/mnt/volume_nyc1_01         
+        - /mnt/volume_nyc1_01:/mnt/volume_nyc1_01
         - /mnt/volume_nyc1_02:/mnt/volume_nyc1_02
         - /etc/passwd:/etc/passwd:ro
         - /etc/group:/etc/group:ro
@@ -128,7 +128,7 @@ services:
       - USER=rs7te
       - USERID=1022
       #- DISABLE_AUTH=true
-      
+
   rstudio_sm9dv:
     image: rocker/geospatial:3.5.1
     container_name: rstudio_sm9dv
@@ -136,7 +136,7 @@ services:
         - /home/sm9dv:/home/sm9dv
         - /home/ads7fg/git/infrastructure/dev/.Rprofile:/home/sm9dv/.Rprofile
         - /home/sdad:/home/sdad
-        - /mnt/volume_nyc1_01:/mnt/volume_nyc1_01         
+        - /mnt/volume_nyc1_01:/mnt/volume_nyc1_01
         - /mnt/volume_nyc1_02:/mnt/volume_nyc1_02
         - /etc/passwd:/etc/passwd:ro
         - /etc/group:/etc/group:ro
@@ -152,7 +152,7 @@ services:
       - USER=sm9dv
       - USERID=1023
       #- DISABLE_AUTH=true
-      
+
   rstudio_sp3sd:
     image: rocker/geospatial:3.5.1
     container_name: rstudio_sp3sd
@@ -160,7 +160,7 @@ services:
         - /home/sp3sd:/home/sp3sd
         - /home/ads7fg/git/infrastructure/dev/.Rprofile:/home/sp3sd/.Rprofile
         - /home/sdad:/home/sdad
-        - /mnt/volume_nyc1_01:/mnt/volume_nyc1_01         
+        - /mnt/volume_nyc1_01:/mnt/volume_nyc1_01
         - /mnt/volume_nyc1_02:/mnt/volume_nyc1_02
         - /etc/passwd:/etc/passwd:ro
         - /etc/group:/etc/group:ro
@@ -176,8 +176,8 @@ services:
       - USER=sp3sd
       - USERID=1024
       #- DISABLE_AUTH=true
-      
-  
+
+
   rstudio_ent4pn:
     image: rocker/geospatial:3.5.1
     container_name: rstudio_ent4pn
@@ -185,7 +185,7 @@ services:
         - /home/ent4pn:/home/ent4pn
         - /home/ads7fg/git/infrastructure/dev/.Rprofile:/home/ent4pn/.Rprofile
         - /home/sdad:/home/sdad
-        - /mnt/volume_nyc1_01:/mnt/volume_nyc1_01         
+        - /mnt/volume_nyc1_01:/mnt/volume_nyc1_01
         - /mnt/volume_nyc1_02:/mnt/volume_nyc1_02
         - /etc/passwd:/etc/passwd:ro
         - /etc/group:/etc/group:ro
@@ -200,8 +200,8 @@ services:
       - PASSWORD=password
       - USER=ent4pn
       - USERID=1026
-      #- DISABLE_AUTH=true 
-      
+      #- DISABLE_AUTH=true
+
   rstudio_jbs3hp:
     image: rocker/geospatial:3.5.1
     container_name: rstudio_jbs3hp
@@ -209,7 +209,7 @@ services:
         - /home/jbs3hp:/home/jbs3hp
         - /home/ads7fg/git/infrastructure/dev/.Rprofile:/home/jbs3hp/.Rprofile
         - /home/sdad:/home/sdad
-        - /mnt/volume_nyc1_01:/mnt/volume_nyc1_01         
+        - /mnt/volume_nyc1_01:/mnt/volume_nyc1_01
         - /mnt/volume_nyc1_02:/mnt/volume_nyc1_02
         - /etc/passwd:/etc/passwd:ro
         - /etc/group:/etc/group:ro
@@ -226,7 +226,7 @@ services:
       - USER=jbs3hp
       - USERID=1027
       #- DISABLE_AUTH=true
-      
+
   rstudio_jt9sz:
     image: rocker/geospatial:3.5.1
     container_name: rstudio_jt9sz
@@ -234,7 +234,7 @@ services:
         - /home/jt9sz:/home/jt9sz
         - /home/ads7fg/git/infrastructure/dev/.Rprofile:/home/jt9sz/.Rprofile
         - /home/sdad:/home/sdad
-        - /mnt/volume_nyc1_01:/mnt/volume_nyc1_01         
+        - /mnt/volume_nyc1_01:/mnt/volume_nyc1_01
         - /mnt/volume_nyc1_02:/mnt/volume_nyc1_02
         - /etc/passwd:/etc/passwd:ro
         - /etc/group:/etc/group:ro
@@ -250,7 +250,7 @@ services:
       - USER=jt9sz
       - USERID=1028
       #- DISABLE_AUTH=true
-      
+
   rstudio_gk8yj:
     image: rocker/geospatial:3.5.1
     container_name: rstudio_gk8yj
@@ -258,7 +258,7 @@ services:
         - /home/gk8yj:/home/gk8yj
         - /home/ads7fg/git/infrastructure/dev/.Rprofile:/home/gk8yj/.Rprofile
         - /home/sdad:/home/sdad
-        - /mnt/volume_nyc1_01:/mnt/volume_nyc1_01         
+        - /mnt/volume_nyc1_01:/mnt/volume_nyc1_01
         - /mnt/volume_nyc1_02:/mnt/volume_nyc1_02
         - /etc/passwd:/etc/passwd:ro
         - /etc/group:/etc/group:ro
@@ -274,7 +274,7 @@ services:
       - USER=gk8yj
       - USERID=1001
       #- DISABLE_AUTH=true
-  
+
   rstudio_kb7hp:
     image: rocker/geospatial:3.5.1
     container_name: rstudio_kb7hp
@@ -282,7 +282,7 @@ services:
         - /home/kb7hp:/home/kb7hp
         - /home/ads7fg/git/infrastructure/dev/.Rprofile:/home/kb7hp/.Rprofile
         - /home/sdad:/home/sdad
-        - /mnt/volume_nyc1_01:/mnt/volume_nyc1_01         
+        - /mnt/volume_nyc1_01:/mnt/volume_nyc1_01
         - /mnt/volume_nyc1_02:/mnt/volume_nyc1_02
         - /etc/passwd:/etc/passwd:ro
         - /etc/group:/etc/group:ro
@@ -297,7 +297,7 @@ services:
       - PASSWORD=password
       - USER=kb7hp
       - USERID=1032
-  
+
   rstudio_jrg3bs:
     image: rocker/geospatial:3.5.1
     container_name: rstudio_jrg3bs
@@ -305,7 +305,7 @@ services:
         - /home/jrg3bs:/home/jrg3bs
         - /home/ads7fg/git/infrastructure/dev/.Rprofile:/home/jrg3bs/.Rprofile
         - /home/sdad:/home/sdad
-        - /mnt/volume_nyc1_01:/mnt/volume_nyc1_01         
+        - /mnt/volume_nyc1_01:/mnt/volume_nyc1_01
         - /mnt/volume_nyc1_02:/mnt/volume_nyc1_02
         - /etc/passwd:/etc/passwd:ro
         - /etc/group:/etc/group:ro
@@ -320,7 +320,7 @@ services:
       - PASSWORD=password
       - USER=jrg3bs
       - USERID=1033
-      
+
   rstudio_nak3t:
     image: rocker/geospatial:3.5.1
     container_name: rstudio_nak3t
@@ -328,7 +328,7 @@ services:
         - /home/nak3t:/home/nak3t
         - /home/ads7fg/git/infrastructure/dev/.Rprofile:/home/nak3t/.Rprofile
         - /home/sdad:/home/sdad
-        - /mnt/volume_nyc1_01:/mnt/volume_nyc1_01         
+        - /mnt/volume_nyc1_01:/mnt/volume_nyc1_01
         - /mnt/volume_nyc1_02:/mnt/volume_nyc1_02
         - /etc/passwd:/etc/passwd:ro
         - /etc/group:/etc/group:ro
@@ -344,7 +344,7 @@ services:
       - PASSWORD=password
       - USER=nak3t
       - USERID=1034
-  
+
   rstudio_dtn2ep:
     image: rocker/geospatial:3.5.1
     container_name: rstudio_dtn2ep
@@ -352,7 +352,7 @@ services:
         - /home/dtn2ep:/home/dtn2ep
         - /home/ads7fg/git/infrastructure/dev/.Rprofile:/home/dtn2ep/.Rprofile
         - /home/sdad:/home/sdad
-        - /mnt/volume_nyc1_01:/mnt/volume_nyc1_01         
+        - /mnt/volume_nyc1_01:/mnt/volume_nyc1_01
         - /mnt/volume_nyc1_02:/mnt/volume_nyc1_02
         - /etc/passwd:/etc/passwd:ro
         - /etc/group:/etc/group:ro
@@ -368,7 +368,7 @@ services:
       - PASSWORD=password
       - USER=dtn2ep
       - USERID=1035
-      
+
   rstudio_gk8yj:
     image: rocker/geospatial:3.5.1
     container_name: rstudio_gk8yj
@@ -376,7 +376,7 @@ services:
         - /home/gk8yj:/home/gk8yj
         - /home/ads7fg/git/infrastructure/dev/.Rprofile:/home/gk8yj/.Rprofile
         - /home/sdad:/home/sdad
-        - /mnt/volume_nyc1_01:/mnt/volume_nyc1_01         
+        - /mnt/volume_nyc1_01:/mnt/volume_nyc1_01
         - /mnt/volume_nyc1_02:/mnt/volume_nyc1_02
         - /etc/passwd:/etc/passwd:ro
         - /etc/group:/etc/group:ro
@@ -400,7 +400,7 @@ services:
         - /home/gk8yj:/home/nr3xe
         - /home/ads7fg/git/infrastructure/dev/.Rprofile:/home/nr3xe/.Rprofile
         - /home/sdad:/home/sdad
-        - /mnt/volume_nyc1_01:/mnt/volume_nyc1_01         
+        - /mnt/volume_nyc1_01:/mnt/volume_nyc1_01
         - /mnt/volume_nyc1_02:/mnt/volume_nyc1_02
         - /etc/passwd:/etc/passwd:ro
         - /etc/group:/etc/group:ro
@@ -416,7 +416,7 @@ services:
       - PASSWORD=password
       - USER=nr3xe
       - USERID=1011
-      
+
   rstudio_camb98:
     image: rocker/geospatial:3.5.1
     container_name: rstudio_camb98
@@ -424,7 +424,7 @@ services:
         - /home/camb98:/home/camb98
         - /home/ads7fg/git/infrastructure/dev/.Rprofile:/home/camb98/.Rprofile
         - /home/sdad:/home/sdad
-        - /mnt/volume_nyc1_01:/mnt/volume_nyc1_01         
+        - /mnt/volume_nyc1_01:/mnt/volume_nyc1_01
         - /mnt/volume_nyc1_02:/mnt/volume_nyc1_02
         - /etc/passwd:/etc/passwd:ro
         - /etc/group:/etc/group:ro
@@ -439,7 +439,7 @@ services:
       - PASSWORD=password
       - USER=camb98
       - USERID=1038
-      
+
   rstudio_xiang97:
     image: rocker/geospatial:3.5.1
     container_name: rstudio_xiang97
@@ -447,7 +447,7 @@ services:
         - /home/xiang97:/home/xiang97
         - /home/ads7fg/git/infrastructure/dev/.Rprofile:/home/xiang97/.Rprofile
         - /home/sdad:/home/sdad
-        - /mnt/volume_nyc1_01:/mnt/volume_nyc1_01         
+        - /mnt/volume_nyc1_01:/mnt/volume_nyc1_01
         - /mnt/volume_nyc1_02:/mnt/volume_nyc1_02
         - /etc/passwd:/etc/passwd:ro
         - /etc/group:/etc/group:ro
@@ -462,7 +462,7 @@ services:
       - PASSWORD=password
       - USER=xiang97
       - USERID=1039
-      
+
   rstudio_ieuan97:
     image: rocker/geospatial:3.5.1
     container_name: rstudio_ieuan97
@@ -470,7 +470,7 @@ services:
         - /home/ieuan97:/home/ieuan97
         - /home/ads7fg/git/infrastructure/dev/.Rprofile:/home/ieuan97/.Rprofile
         - /home/sdad:/home/sdad
-        - /mnt/volume_nyc1_01:/mnt/volume_nyc1_01         
+        - /mnt/volume_nyc1_01:/mnt/volume_nyc1_01
         - /mnt/volume_nyc1_02:/mnt/volume_nyc1_02
         - /etc/passwd:/etc/passwd:ro
         - /etc/group:/etc/group:ro
@@ -485,7 +485,7 @@ services:
       - PASSWORD=password
       - USER=ieuan97
       - USERID=1040
-      
+
   rstudio_val7zv:
     image: rocker/geospatial:3.5.1
     container_name: rstudio_val7zv
@@ -493,7 +493,7 @@ services:
         - /home/val7zv:/home/val7zv
         - /home/ads7fg/git/infrastructure/dev/.Rprofile:/home/val7zv/.Rprofile
         - /home/sdad:/home/sdad
-        - /mnt/volume_nyc1_01:/mnt/volume_nyc1_01         
+        - /mnt/volume_nyc1_01:/mnt/volume_nyc1_01
         - /mnt/volume_nyc1_02:/mnt/volume_nyc1_02
         - /etc/passwd:/etc/passwd:ro
         - /etc/group:/etc/group:ro
@@ -509,3 +509,25 @@ services:
       - USER=val7zv
       - USERID=1041
 
+  rstudio_sc2pg:
+    image: rocker/geospatial:3.5.1
+    container_name: rstudio_sc2pg
+    volumes:
+        - /home/sc2pg:/home/sc2pg
+        - /home/ads7fg/git/infrastructure/dev/.Rprofile:/home/sc2pg/.Rprofile
+        - /home/sdad:/home/sdad
+        - /mnt/volume_nyc1_01:/mnt/volume_nyc1_01
+        - /mnt/volume_nyc1_02:/mnt/volume_nyc1_02
+        - /etc/passwd:/etc/passwd:ro
+        - /etc/group:/etc/group:ro
+        - /etc/shadow:/etc/shadow:ro
+        - /var/run/docker.sock:/var/run/docker.sock
+        - /usr/bin/docker:/usr/bin/docker
+    ports:
+        - "31031:8787"
+    cpus: 8
+    mem_limit: 100000000000
+    environment:
+      - PASSWORD=password
+      - USER=sc2pg
+      - USERID=1031
