@@ -1,0 +1,19 @@
+version: '3'
+
+networks:
+  default:
+    external:
+      name: root_default
+
+services:
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: pgadmin
+    restart: always
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=ads7fg@virginia.edu
+      - PGADMIN_DEFAULT_PASSWORD=SuperSecret
+    ports:
+      - 8808:80
+      
+      
