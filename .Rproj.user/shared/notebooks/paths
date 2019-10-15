@@ -7,7 +7,10 @@
 /home/ads7fg/git/dataset_metadata/functions.R="C58F225"
 /home/ads7fg/git/dspg19broadband/dashboard/app.R="4065C01B"
 /home/ads7fg/git/iarpa_embers/dt_freq_cast.R="66664FC8"
+/home/ads7fg/git/infrastructure.wiki/.gitignore="64964595"
 /home/ads7fg/git/infrastructure.wiki/Combining-and-Importing-Data-to-Database-from-the-Command-Line.md="486B191F"
+/home/ads7fg/git/infrastructure.wiki/Create-Permission-Groups-on-Rivanna.Rmd="4785DD47"
+/home/ads7fg/git/infrastructure.wiki/Create-Permission-Groups-on-Rivanna.md="F2FE1172"
 /home/ads7fg/git/infrastructure.wiki/Guide-to-spinning-up-new-containers!.md="32F0F281"
 /home/ads7fg/git/infrastructure.wiki/Home.md="B258FF85"
 /home/ads7fg/git/infrastructure/.gitignore="A182C4C4"
@@ -30,7 +33,6 @@
 /home/ads7fg/git/infrastructure/db/src/users_sdad.csv="4C9F8196"
 /home/ads7fg/git/infrastructure/dev/anaconda-compose.yml="5C575C54"
 /home/ads7fg/git/infrastructure/dev/rstudio-compose.yml="6B4594C0"
-/home/ads7fg/git/infrastructure/dev/rstudio_dspg_old.yml="C69404E3"
 /home/ads7fg/git/infrastructure/docker-compose.yml="54ACC6AC"
 /home/ads7fg/git/infrastructure/file/sftp/docker-compose.yml="78FB3FD0"
 /home/ads7fg/git/infrastructure/ldap/ldap_compose.yml="D51097B4"
@@ -52,4 +54,3 @@
 /home/ads7fg/git/oss/src/01-data_collection/scrape/Github/contributors_and_commits.R="E11BF0B7"
 /home/ads7fg/git/oss/src/02-data_processing/code_gov/03-get_github_slug_info.R="4B3BAFCE"
 /home/ads7fg/git/oss/src/count_repo_add_deletes.R="AFD80BD0"
-/home/ads7fg/git/oss/src/dspg17/ckelling/anal
