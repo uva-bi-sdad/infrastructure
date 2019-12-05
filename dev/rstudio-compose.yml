@@ -532,7 +532,7 @@ services:
       - USER=sc2pg
       - USERID=1031
       
-    rstudio_crobbins:
+  rstudio_crobbins:
     image: rocker/geospatial:3.5.1
     container_name: rstudio_crobbins
     volumes:
