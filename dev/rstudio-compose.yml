@@ -531,3 +531,26 @@ services:
       - PASSWORD=password
       - USER=sc2pg
       - USERID=1031
+      
+    rstudio_crobbins:
+    image: rocker/geospatial:3.5.1
+    container_name: rstudio_crobbins
+    volumes:
+        - /home/crobbins:/home/crobbins
+        - /home/ads7fg/git/infrastructure/dev/.Rprofile:/home/crobbins/.Rprofile
+        - /home/sdad:/home/sdad
+        - /mnt/volume_nyc1_01:/mnt/volume_nyc1_01
+        - /mnt/volume_nyc1_02:/mnt/volume_nyc1_02
+        - /etc/passwd:/etc/passwd:ro
+        - /etc/group:/etc/group:ro
+        - /etc/shadow:/etc/shadow:ro
+        - /var/run/docker.sock:/var/run/docker.sock
+        - /usr/bin/docker:/usr/bin/docker
+    ports:
+        - "31042:8787"
+    cpus: 8
+    mem_limit: 100000000000
+    environment:
+      - PASSWORD=password
+      - USER=crobbins
+      - USERID=1042
