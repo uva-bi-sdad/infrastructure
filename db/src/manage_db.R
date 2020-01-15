@@ -19,6 +19,14 @@ for (dbu in db_users) {
     db_host = "postgis_2")
 }
 
+# Create database user accounts on Rivanna
+source("db/src/db_create_user.R")
+for (dbu in db_users_sdad) {
+  create_db_user_rivanna(
+    dbu
+  )
+}
+
 # GRANT DB PERMISSIONS ----
 # Grant permissions to all users
 source("db/src/db_grant_permissions.R")
@@ -30,14 +38,16 @@ grant_db_permissions(
   db_host = "postgis_1"
 )
 
-for (dbu in db_users) {
+for (dbu in db_users_sdad) {
   grant_db_permissions(
     grant_username = dbu,
-    grant_database = "corelogic",
-    schema = "public",
-    db_host = "postgis_2"
+    grant_database = "sdad",
+    schema = "corelogic_usda",
+    db_host = "postgis1"
   )
 }
+
+
 
 # BACKUP DB ----
 
