@@ -6,6 +6,7 @@
 /home/ads7fg/git/infrastructure/db/docker/postgis-compose.yml="773816BB"
 /home/ads7fg/git/infrastructure/db/src/corelogic_sdad.R="53A2246B"
 /home/ads7fg/git/infrastructure/db/src/corelogic_usda.R="511BCEEF"
+/home/ads7fg/git/infrastructure/db/src/create_db_groups.R="14613C9B"
 /home/ads7fg/git/infrastructure/db/src/create_ghtorrent_pg.sql="DC85C07E"
 /home/ads7fg/git/infrastructure/db/src/db_connection.R="494CEF87"
 /home/ads7fg/git/infrastructure/db/src/db_create_user.R="681AEBDA"
