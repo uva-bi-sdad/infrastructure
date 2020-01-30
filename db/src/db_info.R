@@ -1,6 +1,21 @@
-source("db/src/db_connection.R")
 
-# DB Info Functions
+# DB INFO FUNCTIONS ----
+get_db_conn <-
+  function(db_name = "sdad",
+           db_host = "postgis1",
+           db_port = "5432",
+           db_user = Sys.getenv("db_userid"),
+           db_pass = Sys.getenv("db_pwd")) {
+    RPostgreSQL::dbConnect(
+      drv = RPostgreSQL::PostgreSQL(),
+      dbname = db_name,
+      host = db_host,
+      port = db_port,
+      user = db_user,
+      password = db_pass
+    )
+  }
+
 list_db_schemas <- function(db_con) {
   result <- DBI::dbGetQuery(db_con, "select schema_name from information_schema.schemata")
   DBI::dbDisconnect(db_con)
@@ -23,7 +38,7 @@ list_table_columns <- function(db_con, db_schema, db_table) {
   return(result)
 }
 
-
+# EXAMPLES ----
 # List Schemas
 con <- get_db_conn()
 list_db_schemas(con)
