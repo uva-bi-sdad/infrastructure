@@ -16,6 +16,19 @@ for (i in 1:length(projects)) {
     print(paste0("Creation of group ", group, " successful!"))
   }
   
+  # ASSIGN SCHEMA PERMISSIONS TO GROUP
+  for (k in 1:length(projects[[i]]$schemas)) {
+    schema <- projects[[i]]$schemas[[k]]
+    # CREATE SCHEMA IF NOT EXISTS
+    schema_create_sql <- paste0("CREATE SCHEMA IF NOT EXISTS ", schema)
+    create_schema_result <- DBI::dbGetQuery(con, schema_create_sql)
+    # ASSIGN PERMISSIONS
+    schema_permissions_sql <- paste0("GRANT ALL ON SCHEMA ", schema, " TO ", group)
+    schema_permissions_result <- DBI::dbGetQuery(con, schema_permissions_sql)
+    schema_table_permissions_sql <- paste0("GRANT ALL ON ALL TABLES IN SCHEMA ", schema, " TO ", group)
+    schema_table_permissions_result <- DBI::dbGetQuery(con, schema_table_permissions_sql)
+  }
+  
   # ASSIGN USERS TO DB GROUP
   for (j in 1:length(projects[[i]]$members)) {
     user <- projects[[i]]$members[[j]]
