@@ -4,7 +4,7 @@ get_db_conn <-
   function(db_name = "sdad",
            db_host = "postgis1",
            db_port = "5432",
-           db_user = Sys.getenv("db_userid"),
+           db_user = Sys.getenv("db_usr"),
            db_pass = Sys.getenv("db_pwd")) {
     RPostgreSQL::dbConnect(
       drv = RPostgreSQL::PostgreSQL(),
@@ -50,3 +50,9 @@ list_schema_tables(con, "burning_glass_jobs")
 # List Columns in a Table
 con <- get_db_conn()
 list_table_columns(con, "burning_glass_jobs", "Skills_2017-12")
+
+
+# Get Some Data
+con <- get_db_conn()
+DBI::dbGetQuery(con, 'SELECT "BGTJobId", "JobDate", "Skill" FROM "burning_glass_jobs"."Skills_2017-12" LIMIT 5')
+DBI::dbDisconnect(con)

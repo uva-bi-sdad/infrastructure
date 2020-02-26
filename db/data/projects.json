@@ -90,5 +90,33 @@
         "schemas": [
             "public"
         ]
+    },
+    {
+        "project": "gis_user",
+        "members": [
+            "ads7fg",
+            "ci3uz",
+            "ent4pn",
+            "gk8yj",
+            "jbs3hp",
+            "kb7hp",
+            "dtn2ep",
+            "nr3xe",
+            "sm9dv",
+            "val7zv",
+            "aek6p",
+            "jt9sz",
+            "sc2pg",
+            "sp3sd",
+            "sss5sc",
+            "kjl5t",
+            "tp2sk",
+            "nr3xe",
+            "kb7hp"
+        ],
+        "schemas": [
+            "gis_census_cb",
+            "gis_census_tl"
+        ]
     }
 ]
