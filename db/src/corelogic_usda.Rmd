@@ -4,6 +4,7 @@ output: html_notebook
 ---
 
 ```{r}
+<<<<<<< HEAD
 library(readr)
 library(stringr)
 library(data.table)
@@ -34,6 +35,13 @@ for (n in db_col_names) {
 dt[, V1 := NULL]
 
 
+=======
+
+col_delim <- "|"
+col_num <- 145
+col_delim_num <- col_num - 1
+file_path <- "/project/biocomplexity/sdad/projects_data/usda/bb/original/corelogic/8state/TaxHistory.Tax_History_05.csv"
+>>>>>>> 9a3e96ca8813b4656a11e8aa2ee467c6674cd943
 file_ext <- tools::file_ext(file_path)
 file_path_no_ext <- tools::file_path_sans_ext(file_path)
 cut_col_path <- paste0(file_path_no_ext, "_", col_num,"cols.", file_ext)
@@ -47,22 +55,33 @@ Sys.setenv(file_path=file_path)
 Sys.setenv(cut_col_path=cut_col_path)
 Sys.setenv(ascii_path=ascii_path)
 Sys.setenv(no_quote_path=no_quote_path)
+<<<<<<< HEAD
 Sys.setenv(db_schema_name=db_schema_name)
 Sys.setenv(db_table_name=db_table_name)
+=======
+>>>>>>> 9a3e96ca8813b4656a11e8aa2ee467c6674cd943
 Sys.setenv(PGUSER=Sys.getenv("db_usr"))
 Sys.setenv(PGPASSWORD=Sys.getenv("db_pwd"))
 
 ```
 
+<<<<<<< HEAD
 ```{bash}
 # select columns
 cut -d "$col_delim" -f 1-188 $file_path > $cut_col_path
 
+=======
+
+```{bash}
+# select columns
+cut -d "$col_delim" -f 1-$col_num $file_path > $cut_col_path
+>>>>>>> 9a3e96ca8813b4656a11e8aa2ee467c6674cd943
 ```
 
 ```{bash}
 # remove non-ascii
 tr -cd '\11\12\15\40-\176' < $cut_col_path > $ascii_path
+<<<<<<< HEAD
 #tr -cd '\11\12\15\40-\176' < $file_path > $ascii_path
 ```
 
@@ -79,12 +98,21 @@ echo '"34013"|"0200362000000011"|"02-00362-0000-00011"|"1"|""|"Y"|"TRD REALTY LL
 ```
 
 
+=======
+```
+
+```{bash}
+sed 's/\"//g' < $ascii_path > $no_quote_path
+```
+
+>>>>>>> 9a3e96ca8813b4656a11e8aa2ee467c6674cd943
 ```{bash}
 # validate number of delimiters
 #echo $col_delim'\n'
 tr -cd $col_delim'\n' < $no_quote_path | awk 'length!='$col_delim_num' {print NR}'
 ```
 
+<<<<<<< HEAD
 ```{r}
 source("db_connection.R")
 con <- get_db_conn()
@@ -97,6 +125,12 @@ DBI::dbDisconnect(con)
 # create copy command for upload
 # upload NO QUOTE
 echo "psql -U $PGUSER -h postgis1 -d sdad -c \"\copy $db_schema_name.$db_table_name from $no_quote_path WITH (FORMAT 'csv', DELIMITER E'\|', QUOTE E'\b', HEADER);\""
+=======
+```{bash}
+# create copy command for upload
+# upload NO QUOTE
+echo "psql -U $PGUSER -h postgis1 -d sdad -c \"\copy corelogic_usda.tax_hist_05 from $no_quote_path WITH (FORMAT 'csv', DELIMITER E'\|', QUOTE E'\b', HEADER);\""
+>>>>>>> 9a3e96ca8813b4656a11e8aa2ee467c6674cd943
 ```
 
 
@@ -189,6 +223,7 @@ for (i in 1:nrow(table_names)) {
   DBI::dbDisconnect(con)
 }
 
+<<<<<<< HEAD
 ```
 
 ```{r}
@@ -261,4 +296,6 @@ for (i in 1:nrow(table_names)) {
   DBI::dbDisconnect(con)
 }
 
+=======
+>>>>>>> 9a3e96ca8813b4656a11e8aa2ee467c6674cd943
 ```

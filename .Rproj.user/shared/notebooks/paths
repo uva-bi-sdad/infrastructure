@@ -8,8 +8,11 @@
 /home/ads7fg/git/infrastructure/db/docker/omnidb_compose.yml="EC01CC81"
 /home/ads7fg/git/infrastructure/db/docker/postgis-compose.yml="773816BB"
 /home/ads7fg/git/infrastructure/db/src/build_burning_glass_db.R="B45629E"
+<<<<<<< HEAD
 /home/ads7fg/git/infrastructure/db/src/cltemp.Rmd="20FEA16C"
 /home/ads7fg/git/infrastructure/db/src/corelogic_property_tax_rolls.Rmd="AD4A1894"
+=======
+>>>>>>> 9a3e96ca8813b4656a11e8aa2ee467c6674cd943
 /home/ads7fg/git/infrastructure/db/src/corelogic_sdad.R="53A2246B"
 /home/ads7fg/git/infrastructure/db/src/corelogic_usda.R="511BCEEF"
 /home/ads7fg/git/infrastructure/db/src/corelogic_usda.Rmd="3FDF797C"
@@ -35,4 +38,7 @@
 /home/ads7fg/git/infrastructure/web/http.server/docker-compose.yml="5480C600"
 /home/ads7fg/git/infrastructure/wiki/create_rstudio_servers_menu.R="4A9B821"
 /home/ads7fg/git/infrastructure/wiki/xwiki-compose.yml="76F025D2"
+<<<<<<< HEAD
 /sfs/qumulo/qhome/ads7fg/git/infrastructure/db/src/insert_into_db_table.R="5E11E324"
+=======
+>>>>>>> 9a3e96ca8813b4656a11e8aa2ee467c6674cd943
