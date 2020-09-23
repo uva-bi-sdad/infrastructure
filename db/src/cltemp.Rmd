@@ -1,0 +1,41 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r}
+source("db_connection.R")
+con <- get_db_conn()
+sql <- "SELECT table_name FROM information_schema.tables WHERE table_schema = 'corelogic_prop_tax_2003_2019'"
+table_names <- DBI::dbGetQuery(con, sql)
+DBI::dbDisconnect(con)
+
+for (i in 1:nrow(table_names)) {
+  table_name <- table_names[i,]
+  
+  con <- get_db_conn()
+  sql <- paste0("SELECT                             
+                    tablename,
+                    indexname,
+                    indexdef
+                FROM
+                    pg_indexes
+                WHERE
+                    tablename = '", table_name,"'
+                AND
+                    indexname LIKE '%fips_code%'
+                ORDER BY
+                    tablename,
+                    indexname;")
+  idx <- DBI::dbGetQuery(con, sql)
+  
+  if (nrow(idx) == 0) {
+    sql <- paste0("CREATE INDEX ", table_name,"_fips_code_idx ON corelogic_prop_tax_2003_2019.", table_name," (fips_code);")
+    print(paste("creating index on table", table_name))
+    DBI::dbGetQuery(con, sql)
+  }
+  DBI::dbDisconnect(con)
+}
+
+```
+

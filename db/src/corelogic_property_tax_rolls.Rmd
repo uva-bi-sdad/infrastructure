@@ -1,0 +1,59 @@
+---
+title: "Corelogic Property Tax Rolls"
+output: html_notebook
+---
+
+
+```{r}
+source("db_connection.R")
+
+if(!require(DataExplorer)){
+    install.packages("DataExplorer", "data.table")
+    library(DataExplorer)
+    library(data.table)
+}
+```
+
+```{r}
+con <- get_db_conn()
+#sql <- "select * from corelogic_prop_tax_2003_2019.dc_pl_prop_tax where false"
+sql <- "SELECT column_name
+        FROM information_schema.columns
+        WHERE table_schema = 'corelogic_prop_tax_2003_2019'
+        AND table_name   = 'dc_pl_prop_tax'"
+cols <- DBI::dbGetQuery(con, sql)
+DBI::dbDisconnect(con)
+
+```
+
+```{r}
+paste(cols[1:26, 1], collapse = ", ")
+sql <- paste("select", paste(cols[9:26, 1], collapse = ", "), "into corelogic_prop_tax_2003_2019.dc_pl_prop_tax_parcel from corelogic_prop_tax_2003_2019.dc_pl_prop_tax")
+parcel_info <- dat[, 1:26]
+plot_str(parcel_info)
+```
+
+```{r}
+plot_missing(parcel_info)
+parcel_info[, .N, p_id_iris_frmtd]
+nrow(unique(dat[, .(p_id_iris_frmtd)]))
+nrow(unique(dat[is.na(tax_year)],))
+
+nrow(unique(dat[, .(p_id_iris_frmtd, tax_year, map_reference_1, map_reference_2, census_tract, block_number, lot_number, range, township, section, quarter__section, flood_zone_community_panel_id, land_use, county_use_1, county_use_2, mobile_home_ind, zoning, property_indicator, municipality_name, municipality_code)]))
+
+nrow(unique(dat[, .(p_id_iris_frmtd, tax_year)]))
+nrow(unique(dat[!is.na(tax_year), .(p_id_iris_frmtd, tax_year)]))
+
+dat[!is.na(tax_year), .N,.(p_id_iris_frmtd, tax_year)][order(N, decreasing = T)]
+
+dat[p_id_iris_frmtd=="0002-0000-0803" & tax_year=="2010"]
+```
+
+```{r}
+prop_addr_info <- dat[, 31:43]
+plot_str(prop_addr_info)
+plot_missing(prop_addr_info)
+plot_missing(dat[, .(tax_year, tax_amount)])
+dat[is.na(tax_year),]
+```
+
