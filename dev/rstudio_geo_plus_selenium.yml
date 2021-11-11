@@ -1,0 +1,23 @@
+version: '2.4'
+services:
+  rstudio: 
+    image: geospatial_ip
+    container_name: rstudio
+    environment:
+      - DISABLE_AUTH=true
+    command: bash -c "/init"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    ports:
+      - "8787:8787"
+    depends_on:
+      - selenium
+    volumes:
+        - /Users/aschroed:/home/rstudio
+
+  selenium:
+    image: selenium/standalone-firefox:4.0.0-rc-1-prerelease-20210713
+    container_name: selenium
+    ports:
+      - "4444:4444"
+      - "7900:7900"
