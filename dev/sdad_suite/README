@@ -1,0 +1,32 @@
+## on Mac install Homebrew
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+
+## install these
+install autossh (for Mac: brew install autossh)
+install sshfs
+install pgcli
+
+
+## make sure this is in ~/.bash_profile
+if [ -f ~/.bashrc ]; then
+   source ~/.bashrc
+fi
+
+
+## add these commands to ~/.bashrc (create if doesn't exist)
+
+# port forwards port 5432 to the postgis1 server so that connections can be made locally
+alias pg_tunnel='autossh -M 0 -N -f -o "ServerAliveInterval 30" -o "ServerAliveCountMax 3" -L 0.0.0.0:5432:postgis1-s.bii.virginia.edu:5432 ads7fg@rivanna.hpc.virginia.edu'
+
+# a commandline client for PostgrSQL/PostGIS much superior to psql
+alias pg='pgcli -U ads7fg -d sdad -h localhost -p 5432'
+
+# mounts rivanna projects_data directory to local home directory
+# Mac
+alias mount_data='sshfs rivanna:/project/biocomplexity/sdad/projects_data projects_data -oauto_cache,reconnect,ConnectTimeout=3,ConnectionAttempts=1,ServerAliveInterval=15,ServerAliveCountMax=3,defer_permissions,negative_vncache,noappledouble,follow_symlinks -o IdentityFile=~/.ssh/id_rsa && echo "mounted projects_data"'
+#linux
+alias mount_data='sshfs rivanna:/project/biocomplexity/sdad/projects_data projects_data -oauto_cache,reconnect,ConnectTimeout=3,ConnectionAttempts=1,ServerAliveInterval=15,ServerAliveCountMax=3,negative_vncache,follow_symlinks -o IdentityFile=~/.ssh/id_rsa && echo "mounted projects_data"'
+
+
+## Once installed, user can run mount_data and pg_tunnel, then they can run pg as a databse client (or any other db client)

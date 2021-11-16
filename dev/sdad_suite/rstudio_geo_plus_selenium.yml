@@ -21,3 +21,17 @@ services:
     ports:
       - "4444:4444"
       - "7900:7900"
+      
+  pgadmin4:
+    image: dpage/pgadmin4
+    container_name: pgadmin4
+    environment:
+      - 'PGADMIN_DEFAULT_EMAIL=ads7fg@virginia.edu'
+      - 'PGADMIN_DEFAULT_PASSWORD=ads7fg'
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    ports:
+      - "8888:80"
+    volumes:
+      #- /Users/aschroed/pgadmin/servers.json:/pgadmin4/servers.json
+      - /Users/aschroed/pgadmin:/var/lib/pgadmin
