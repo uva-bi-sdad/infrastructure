@@ -14,7 +14,7 @@ if [ -f ~/.bashrc ]; then
 fi
 
 
-## add these commands to ~/.bashrc (create if doesn't exist)
+## add these three alias commands to ~/.bashrc (create if doesn't exist)
 
 # port forwards port 5432 to the postgis1 server so that connections can be made locally
 alias pg_tunnel='autossh -M 0 -N -f -o "ServerAliveInterval 30" -o "ServerAliveCountMax 3" -L 0.0.0.0:5432:postgis1-s.bii.virginia.edu:5432 ads7fg@rivanna.hpc.virginia.edu'
@@ -25,7 +25,7 @@ alias pg='pgcli -U ads7fg -d sdad -h localhost -p 5432'
 # mounts rivanna projects_data directory to local home directory
 # Mac
 alias mount_data='sshfs rivanna:/project/biocomplexity/sdad/projects_data projects_data -oauto_cache,reconnect,ConnectTimeout=3,ConnectionAttempts=1,ServerAliveInterval=15,ServerAliveCountMax=3,defer_permissions,negative_vncache,noappledouble,follow_symlinks -o IdentityFile=~/.ssh/id_rsa && echo "mounted projects_data"'
-#linux
+#Linux
 alias mount_data='sshfs rivanna:/project/biocomplexity/sdad/projects_data projects_data -oauto_cache,reconnect,ConnectTimeout=3,ConnectionAttempts=1,ServerAliveInterval=15,ServerAliveCountMax=3,negative_vncache,follow_symlinks -o IdentityFile=~/.ssh/id_rsa && echo "mounted projects_data"'
 
 
