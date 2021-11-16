@@ -29,4 +29,4 @@ alias mount_data='sshfs rivanna:/project/biocomplexity/sdad/projects_data projec
 alias mount_data='sshfs rivanna:/project/biocomplexity/sdad/projects_data projects_data -oauto_cache,reconnect,ConnectTimeout=3,ConnectionAttempts=1,ServerAliveInterval=15,ServerAliveCountMax=3,negative_vncache,follow_symlinks -o IdentityFile=~/.ssh/id_rsa && echo "mounted projects_data"'
 
 
-## Once installed, user can run mount_data and pg_tunnel, then they can run pg as a databse client (or any other db client)
+## Once installed, establish VPN connection, thenm user can run mount_data and pg_tunnel, then they can run pg as a databse client (or any other db client)
