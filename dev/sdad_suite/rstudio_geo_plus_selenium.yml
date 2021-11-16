@@ -1,7 +1,7 @@
 version: '2.4'
 services:
   rstudio: 
-    image: geospatial_ip
+    image: dads2busy/rstudio_geospatial_sdad:latest
     container_name: rstudio
     environment:
       - DISABLE_AUTH=true
