@@ -1,6 +1,10 @@
 ## on Mac install Homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
+## Need ssh key on the server!
+ssh-keygen (do not set a password!)
+ssh-copy-id ads7fg@rivanna.hpc.virginia.edu
+
 
 ## install these
 install autossh (for Mac: brew install autossh)
