@@ -13,7 +13,7 @@ services:
     depends_on:
       - selenium
     volumes:
-        - /Users/aschroed:/home/rstudio
+      - /Users/aschroed:/home/rstudio
 
   selenium:
     image: selenium/standalone-firefox:4.0.0-rc-1-prerelease-20210713
@@ -21,17 +21,32 @@ services:
     ports:
       - "4444:4444"
       - "7900:7900"
-      
+ 
+  vpn:
+    image: dads2busy/vpn
+    container_name: vpn
+    privileged: true
+    tty: true
+    cap_add:
+      - NET_ADMIN
+    network_mode: bridge
+    volumes:
+      - /Users/aschroed/Downloads:/host_downloads
+    ports:
+      - "8888:80" #pgadmin4
+
   pgadmin4:
     image: dpage/pgadmin4
     container_name: pgadmin4
     environment:
       - 'PGADMIN_DEFAULT_EMAIL=ads7fg@virginia.edu'
       - 'PGADMIN_DEFAULT_PASSWORD=ads7fg'
-    extra_hosts:
-      - "host.docker.internal:host-gateway"
-    ports:
-      - "8888:80"
+        #extra_hosts:
+            #- "host.docker.internal:host-gateway"
+    network_mode: "service:vpn" 
+    #ports:
+    #  - "8888:80"
     volumes:
       #- /Users/aschroed/pgadmin/servers.json:/pgadmin4/servers.json
       - /Users/aschroed/pgadmin:/var/lib/pgadmin
+
