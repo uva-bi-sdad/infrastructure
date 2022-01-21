@@ -45,6 +45,7 @@ services:
     ports:
       - "8888:80" #pgadmin4
       - "8787:8787" #rstudio
+      - "5432:5432"
 
   pgadmin4:
     image: dpage/pgadmin4
