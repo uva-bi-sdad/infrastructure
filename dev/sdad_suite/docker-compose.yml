@@ -8,7 +8,7 @@ services:
     environment:
       - DISABLE_AUTH=true
     command: bash -c "/init"
-    network_mode: "service:vpn"
+    network_mode: "service:alpine_net"
     # extra_hosts:
     #   - "host.docker.internal:host-gateway"
     # ports:
@@ -30,22 +30,22 @@ services:
       - "4444:4444"
       - "7900:7900"
  
-  vpn:
-    image: dads2busy/vpn
-    container_name: vpn
-    privileged: true
-    tty: true
-    cap_add:
-      - NET_ADMIN
-    network_mode: bridge
-    extra_hosts:
-      - "host.docker.internal:host-gateway"
-    volumes:
-      - /Users/aschroed/Downloads:/host_downloads
-    ports:
-      - "8888:80" #pgadmin4
-      - "8787:8787" #rstudio
-      - "5432:5432"
+  # vpn:
+  #   image: dads2busy/vpn
+  #   container_name: vpn
+  #   privileged: true
+  #   tty: true
+  #   cap_add:
+  #     - NET_ADMIN
+  #   network_mode: bridge
+  #   extra_hosts:
+  #     - "host.docker.internal:host-gateway"
+  #   volumes:
+  #     - /Users/aschroed/Downloads:/host_downloads
+  #   ports:
+  #   # - "8888:80" #pgadmin4
+  #   # - "8787:8787" #rstudio
+  #   # - "5432:5432"
 
   pgadmin4:
     image: dpage/pgadmin4
@@ -55,9 +55,31 @@ services:
       - 'PGADMIN_DEFAULT_PASSWORD=ads7fg'
     # extra_hosts:
     #   - "host.docker.internal:host-gateway"
-    network_mode: "service:vpn" 
+    network_mode: "service:alpine_net" 
     #ports:
     #  - "8888:80"
     volumes:
       #- /Users/aschroed/pgadmin/servers.json:/pgadmin4/servers.json
       - /Users/aschroed/pgadmin:/var/lib/pgadmin
+
+  alpine_net:
+    image: alpine
+    container_name: alpine_net
+    privileged: true
+    tty: true
+    cap_add:
+      - NET_ADMIN
+    network_mode: bridge
+    command: >
+      sh -c "apk add openssh &&
+             apk add autossh &&
+             autossh -M 0 -N -f -o 'ServerAliveInterval 30' -o 'ServerAliveCountMax 3' -L 0.0.0.0:5432:postgis1-s.bii.virginia.edu:5432 ads7fg@rivanna.hpc.virginia.edu &&
+             /bin/sh"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    volumes:
+      - /Users/aschroed/.ssh:/root/.ssh
+    ports:
+      - "8787:8787"
+      - "5432:5432"
+      - "8888:80"
