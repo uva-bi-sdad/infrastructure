@@ -5,6 +5,4 @@ RUN install2.r --error \
     RSelenium \
     rvest
     
-# Clean up
-RUN rm -rf /var/lib/apt/lists/*
-RUN rm -r /tmp/downloaded_packages
+CMD ["/init"]

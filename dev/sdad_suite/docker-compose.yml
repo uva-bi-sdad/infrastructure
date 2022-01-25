@@ -3,83 +3,55 @@ version: '2.4'
 services:
   rstudio: 
     image: dads2busy/rstudio_geospatial_sdad:latest
-    # image: rocker/geospatial:latest
     container_name: rstudio
     environment:
       - DISABLE_AUTH=true
     command: bash -c "/init"
-    network_mode: "service:alpine_net"
-    # extra_hosts:
-    #   - "host.docker.internal:host-gateway"
-    # ports:
-    #   - "8787:8787"
-    # depends_on:
-    #   - selenium
+    network_mode: "service:sdad_net"
     volumes:
-      - ~/git:/home/rstudio/git
-      - ~/projects_data:/home/rstudio/projects_data
-      - ~/.Renviron:/home/rstudio/.Renviron
-      - ~/.Rhistory:/home/rstudio/.Rhistory
-      - ~/.ssh:/home/rstudio/.ssh:ro
-      - ~/.gitconfig:/home/rstudio/.gitconfig
+      - ${USER_HOME_FOLDER}/git:/home/rstudio/git
+      - ${USER_HOME_FOLDER}/projects_data:/home/rstudio/projects_data
+      - ${USER_HOME_FOLDER}/.Renviron:/home/rstudio/.Renviron
+      - ${USER_HOME_FOLDER}/.Rhistory:/home/rstudio/.Rhistory
+      - ${USER_HOME_FOLDER}/.ssh:/home/rstudio/.ssh:ro
+      - ${USER_HOME_FOLDER}/.gitconfig:/home/rstudio/.gitconfig
 
   selenium:
     image: selenium/standalone-firefox:4.0.0-rc-1-prerelease-20210713
     container_name: selenium
-    ports:
-      - "4444:4444"
-      - "7900:7900"
- 
-  # vpn:
-  #   image: dads2busy/vpn
-  #   container_name: vpn
-  #   privileged: true
-  #   tty: true
-  #   cap_add:
-  #     - NET_ADMIN
-  #   network_mode: bridge
-  #   extra_hosts:
-  #     - "host.docker.internal:host-gateway"
-  #   volumes:
-  #     - /Users/aschroed/Downloads:/host_downloads
-  #   ports:
-  #   # - "8888:80" #pgadmin4
-  #   # - "8787:8787" #rstudio
-  #   # - "5432:5432"
+    network_mode: "service:sdad_net"
 
   pgadmin4:
     image: dpage/pgadmin4
     container_name: pgadmin4
     environment:
-      - 'PGADMIN_DEFAULT_EMAIL=ads7fg@virginia.edu'
-      - 'PGADMIN_DEFAULT_PASSWORD=ads7fg'
-    # extra_hosts:
-    #   - "host.docker.internal:host-gateway"
-    network_mode: "service:alpine_net" 
-    #ports:
-    #  - "8888:80"
+      - 'PGADMIN_DEFAULT_EMAIL=${PGADMIN_DEFAULT_EMAIL}'
+      - 'PGADMIN_DEFAULT_PASSWORD=${PGADMIN_DEFAULT_PASSWORD}'
+    network_mode: "service:sdad_net" 
     volumes:
-      #- /Users/aschroed/pgadmin/servers.json:/pgadmin4/servers.json
-      - /Users/aschroed/pgadmin:/var/lib/pgadmin
+      - ${USER_HOME_FOLDER}/pgadmin:/var/lib/pgadmin
 
-  alpine_net:
-    image: alpine
-    container_name: alpine_net
+  sdad_net:
+    image: sdad_net
+    container_name: sdad_net
     privileged: true
     tty: true
+    env_file:
+      - .env
     cap_add:
       - NET_ADMIN
     network_mode: bridge
     command: >
-      sh -c "apk add openssh &&
-             apk add autossh &&
-             autossh -M 0 -N -f -o 'ServerAliveInterval 30' -o 'ServerAliveCountMax 3' -L 0.0.0.0:5432:postgis1-s.bii.virginia.edu:5432 ads7fg@rivanna.hpc.virginia.edu &&
+      sh -c "autossh -M 0 -N -f -o 'ServerAliveInterval 30' -o 'ServerAliveCountMax 3' -L 0.0.0.0:5432:postgis1-s.bii.virginia.edu:5432 ${RIVANNA_PID}@rivanna.hpc.virginia.edu &&
              /bin/sh"
     extra_hosts:
       - "host.docker.internal:host-gateway"
     volumes:
-      - /Users/aschroed/.ssh:/root/.ssh
+      - ${SSH_CONFIG_FOLDER}:/root/.ssh
     ports:
-      - "8787:8787"
-      - "5432:5432"
-      - "8888:80"
+      - "8787:8787" # rstudio
+      - "5432:5432" # postgresql
+      - "8888:80"   # pgadmin4
+      - "4444:4444" # selenium
+      - "7900:7900" # selenium
+      
