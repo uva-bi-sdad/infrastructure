@@ -32,7 +32,7 @@ services:
       - ${USER_HOME_FOLDER}/pgadmin:/var/lib/pgadmin
 
   sdad_net:
-    image: sdad_net
+    image: dads2busy/sdad_net:latest
     container_name: sdad_net
     privileged: true
     tty: true
