@@ -43,12 +43,17 @@ services:
       - NET_ADMIN
     network_mode: bridge
     command: >
-      sh -c "autossh -M 0 -N -f -o 'StrictHostKeyChecking=no'  -o 'ServerAliveInterval 30' -o 'ServerAliveCountMax 3' -L 0.0.0.0:5432:postgis1-s.bii.virginia.edu:5432 ${RIVANNA_PID}@rivanna.hpc.virginia.edu &&
+      sh -c "cp -R /.ssh /root/.ssh &&
+             chmod 700 /root/.ssh &&
+             chmod 600 /root/.ssh/* &&
+             chmod 644 /root/.ssh/*.pub &&
+             chmod 644 /root/.ssh/known_hosts &&
+             autossh -M 0 -N -f -o 'StrictHostKeyChecking=no'  -o 'ServerAliveInterval 30' -o 'ServerAliveCountMax 3' -L 0.0.0.0:5432:postgis1-s.bii.virginia.edu:5432 ${RIVANNA_PID}@rivanna.hpc.virginia.edu &&
              /bin/sh"
     extra_hosts:
       - "host.docker.internal:host-gateway"
     volumes:
-      - ${SSH_CONFIG_FOLDER}:/root/.ssh
+      - ${SSH_CONFIG_FOLDER}:/.ssh
     ports:
       - "8787:8787" # rstudio
       - "5432:5432" # postgresql
