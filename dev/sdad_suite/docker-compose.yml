@@ -6,8 +6,8 @@ services:
     container_name: rstudio
     environment:
       - DISABLE_AUTH=true
-#      - R_LIBS_USER=/usr/local/lib/R/host-site-library
-      - R_LIBS=/usr/local/lib/R/host-site-library:/usr/local/lib/R/site-library:/usr/local/lib/R/library
+      - R_LIBS_USER=/home/rstudio/R/host-site-library
+      - R_LIBS=/home/rstudio/R/host-site-library:/usr/local/lib/R/site-library:/usr/local/lib/R/library
     command: bash -c "/init"
     network_mode: "service:sdad_net"
     volumes:
@@ -18,7 +18,7 @@ services:
       - ${USER_HOME_FOLDER}/.Rhistory:/home/rstudio/.Rhistory
       - ${USER_HOME_FOLDER}/.ssh:/home/rstudio/.ssh:ro
       - ${USER_HOME_FOLDER}/.gitconfig:/home/rstudio/.gitconfig
-      - ${USER_HOME_FOLDER}/R/host-site-library:/usr/local/lib/R/host-site-library
+      - ${USER_HOME_FOLDER}/R/host-site-library:/home/rstudio/R/host-site-library
       - ${USER_HOME_FOLDER}/.config/rstudio:/home/rstudio/.config/rstudio
 
   selenium:
