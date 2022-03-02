@@ -19,6 +19,7 @@ services:
       - ${USER_HOME_FOLDER}/.ssh:/home/rstudio/.ssh:ro
       - ${USER_HOME_FOLDER}/.gitconfig:/home/rstudio/.gitconfig
       - ${USER_HOME_FOLDER}/R/host-site-library:/usr/local/lib/R/host-site-library
+      - ${USER_HOME_FOLDER}/.config/rstudio:/home/rstudio/.config/rstudio
 
   selenium:
     image: selenium/standalone-firefox:4.0.0-rc-1-prerelease-20210713
