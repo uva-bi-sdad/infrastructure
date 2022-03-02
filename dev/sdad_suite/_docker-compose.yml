@@ -1,0 +1,60 @@
+
+version: '2.4'
+services:
+  rstudio: 
+    image: dads2busy/rstudio_geospatial_sdad:latest
+    container_name: rstudio
+    environment:
+      - DISABLE_AUTH=true
+    command: bash -c "/init"
+    network_mode: "service:sdad_net"
+    volumes:
+      - ${USER_HOME_FOLDER}/git:/home/rstudio/git
+      - ${USER_HOME_FOLDER}/projects_data:/home/rstudio/projects_data
+      - ${USER_HOME_FOLDER}/.Renviron:/home/rstudio/.Renviron
+      - ${USER_HOME_FOLDER}/.Rhistory:/home/rstudio/.Rhistory
+      - ${USER_HOME_FOLDER}/.ssh:/home/rstudio/.ssh:ro
+      - ${USER_HOME_FOLDER}/.gitconfig:/home/rstudio/.gitconfig
+      - ${USER_HOME_FOLDER}/.config/rstudio:/home/.config/rstudio
+
+  selenium:
+    image: selenium/standalone-firefox:4.0.0-rc-1-prerelease-20210713
+    container_name: selenium
+    network_mode: "service:sdad_net"
+
+  pgadmin4:
+    image: dpage/pgadmin4
+    container_name: pgadmin4
+    environment:
+      - 'PGADMIN_DEFAULT_EMAIL=${PGADMIN_DEFAULT_EMAIL}'
+      - 'PGADMIN_DEFAULT_PASSWORD=${PGADMIN_DEFAULT_PASSWORD}'
+    network_mode: "service:sdad_net" 
+    volumes:
+      - ${USER_HOME_FOLDER}/pgadmin:/var/lib/pgadmin
+
+  sdad_net:
+    image: dads2busy/sdad_net:latest
+    container_name: sdad_net
+    privileged: true
+    tty: true
+    env_file:
+      - .env
+    cap_add:
+      - NET_ADMIN
+    network_mode: bridge
+    command: >
+      sh -c "adduser -D ${USER} &&
+             su aschroed &&
+             autossh -M 0 -N -f -o 'ServerAliveInterval 30' -o 'ServerAliveCountMax 3' -L 0.0.0.0:5432:postgis1-s.bii.virginia.edu:5432 ${RIVANNA_PID}@rivanna.hpc.virginia.edu &&
+             /bin/sh"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    volumes:
+      - ${SSH_CONFIG_FOLDER}:/home/${USER}/.ssh
+    ports:
+      - "8787:8787" # rstudio
+      - "5432:5432" # postgresql
+      - "8888:80"   # pgadmin4
+      - "4444:4444" # selenium
+      - "7900:7900" # selenium
+      
