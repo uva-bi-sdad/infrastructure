@@ -13,7 +13,7 @@ services:
     volumes:
 #      - ${USER_HOME_FOLDER}:/home/rstudio
       - ${USER_HOME_FOLDER}/git:/home/rstudio/git
-      - ${USER_HOME_FOLDER}/projects_data:/home/rstudio/projects_data
+#      - ${USER_HOME_FOLDER}/projects_data:/home/rstudio/projects_data
       - ${USER_HOME_FOLDER}/.Renviron:/home/rstudio/.Renviron
       - ${USER_HOME_FOLDER}/.Rhistory:/home/rstudio/.Rhistory
       - ${USER_HOME_FOLDER}/.ssh:/home/rstudio/.ssh:ro
